@@ -1,0 +1,903 @@
+	menu.add('a101','0',"股票综合数据");   
+					
+					    	menu.add('a102','0',"公司与证券信息");   
+					
+					    	menu.add('a103','0',"行业分类");   
+					
+					    	menu.add('a104','0',"名称与状态变更");   
+					
+					    	menu.add('a105','0',"融投资与分配");   
+					
+					    	menu.add('a106','0',"股东与股本");   
+					
+					    	menu.add('a107','0',"行情与分配");   
+					
+					    	menu.add('a108','0',"现金红利统计");   
+					
+					    	menu.add('a109','0',"证券资讯");   
+					
+					    	menu.add('a110','0',"估值指标");   
+					
+					    	menu.add('a111','0',"业绩预告");   
+					
+					    	menu.add('a112','0',"股东权益");   
+					
+					    	menu.add('a115','0',"股权分置");   
+					
+					    	menu.add('a113','0',"组织治理结构");   
+					
+					    	menu.add('a114','0',"公司重大事项");   
+					
+					    	menu.add('aff8080814490d25301449a1ed1c30d36','0',"公司内部控制");   
+					
+					    	menu.add('a122','0',"财务报表");   
+					
+					    	menu.add('a124','0',"财务指标");   
+					
+					    	menu.add('a125','0',"财务报表附注");   
+					
+					    	menu.add('a116','0',"权证");   
+					
+					    	menu.add('a126','0',"指数");   
+					
+					    	menu.add('a127','0',"市盈率");   
+					
+					    	menu.add('a128','0',"换手率");   
+					
+					    	menu.add('a129','0',"市值");   
+					
+					    	menu.add('aff808081432dd4cd01434264d2951117','0',"持有期收益");   
+					
+					    	menu.add('aff808081432dd4cd01434265dcf51118','0',"累积收益");   
+					
+					    	menu.add('a131','0',"三板市场收益");   
+					
+					    	menu.add('a132','0',"波动率");   
+					
+					    	menu.add('a133','0',"三因子");   
+					
+					    	menu.add('aff8080814ddae396014ddafbe0380018','0',"惯性因子");   
+					
+					    	menu.add('a134','0',"CAPM风险因子Beta");   
+					
+					    			menu.add('a10101','a101',"日股票综合数据(1990-2000)",'../db/download/dataSearch.jsp?dlm=101&tableName=DRESSTK_1990_2000&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a10102','a101',"日股票综合数据(2001-2010)",'../db/download/dataSearch.jsp?dlm=101&tableName=DRESSTK_2001_2010&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a10103','a101',"日股票综合数据(2011-2015)",'../db/download/dataSearch.jsp?dlm=101&tableName=DRESSTK_2011_2015&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb06545235dc015456f00d3a0259','a101',"日股票综合数据(2016-)",'../db/download/dataSearch.jsp?dlm=101&tableName=DRESSTK_2016_&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10104','a101',"周股票综合数据",'../db/download/dataSearch.jsp?dlm=101&tableName=WRESSTK&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10105','a101',"月股票综合数据",'../db/download/dataSearch.jsp?dlm=101&tableName=MRESSTK&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10106','a101',"季股票综合数据",'../db/download/dataSearch.jsp?dlm=101&tableName=QRESSTK&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10107','a101',"年股票综合数据",'../db/download/dataSearch.jsp?dlm=101&tableName=YRESSTK&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10204','a102',"最新股票信息",'../db/download/dataSearch.jsp?dlm=102&tableName=LSTKINFO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10205','a102',"上市公司信息",'../db/download/dataSearch.jsp?dlm=102&tableName=CINFO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10206','a102',"证券代码变更信息",'../db/download/dataSearch.jsp?dlm=102&tableName=SECUCDCHGINFO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10207','a102',"退市信息",'../db/download/dataSearch.jsp?dlm=102&tableName=DELINFO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10208','a102',"三板股票信息",'../db/download/dataSearch.jsp?dlm=102&tableName=THIMKTSTKINFO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb09505d946701505fc9ff5a00ec','a102',"新三板股票信息",'../db/download/dataSearch.jsp?dlm=102&tableName=NEWTHIMKTSTKINFO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10209','a102',"概念板块列表",'../db/download/dataSearch.jsp?dlm=102&tableName=LSTCONSEC&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10210','a102',"佣金与印花税",'../db/download/dataSearch.jsp?dlm=102&tableName=COMMTAX&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10211','a102',"企业认定信息",'../db/download/dataSearch.jsp?dlm=102&tableName=COMCERTIFICATION&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10212','a102',"公司聘请财务及法律中介机构",'../db/download/dataSearch.jsp?dlm=102&tableName=FINLAWAGENCY&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10303','a103',"行业变更历史",'../db/download/dataSearch.jsp?dlm=103&tableName=INDHIS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10304','a103',"行业分类",'../db/download/dataSearch.jsp?dlm=103&tableName=INDCLS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10302','a103',"证监会行业变更历史",'../db/download/dataSearch.jsp?dlm=103&tableName=CSRCINDHIS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10301','a103',"证监会行业分类",'../db/download/dataSearch.jsp?dlm=103&tableName=CSRCINDCLS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff808081432852d501432d6d4bb205bc','a103',"证监会行业变更历史1990_2012",'../db/download/dataSearch.jsp?dlm=103&tableName=CSRCINDHIS_1990_2012&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff808081432852d501432d6e970205c2','a103',"证监会行业变更历史1990_2012_RESSET",'../db/download/dataSearch.jsp?dlm=103&tableName=CSRCINDHIS_1990_2012_RESSET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10401','a104',"公司名称变更历史",'../db/download/dataSearch.jsp?dlm=104&tableName=COMNMHIS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10402','a104',"名称变更历史",'../db/download/dataSearch.jsp?dlm=104&tableName=NMHIS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10403','a104',"上市状态变更历史",'../db/download/dataSearch.jsp?dlm=104&tableName=LSTSTTHIS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10501','a105',"分配",'../db/download/dataSearch.jsp?dlm=105&tableName=DIST&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff80808142db92080142fbf70c5521d7','a105',"股权分置分配",'../db/download/dataSearch.jsp?dlm=105&tableName=DISTDIVSHR&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb094580a407014582ac1d0701ce','a105',"首次发行与上市",'../db/download/dataSearch.jsp?dlm=105&tableName=IISSULST&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10503','a105',"分红_扩展",'../db/download/dataSearch.jsp?dlm=105&tableName=DIVIDEND_EXT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10504','a105',"A股发行与上市_扩展",'../db/download/dataSearch.jsp?dlm=105&tableName=AIPO_EXT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10505','a105',"B股发行与上市_扩展",'../db/download/dataSearch.jsp?dlm=105&tableName=BIPO_EXT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10506','a105',"A股配股",'../db/download/dataSearch.jsp?dlm=105&tableName=APLA&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10507','a105',"B股配股",'../db/download/dataSearch.jsp?dlm=105&tableName=BPLA&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10508','a105',"配股大股东认配信息",'../db/download/dataSearch.jsp?dlm=105&tableName=MSHPLAINFO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10509','a105',"A股增发_扩展",'../db/download/dataSearch.jsp?dlm=105&tableName=SISSUA_EXT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10510','a105',"B股增发_扩展",'../db/download/dataSearch.jsp?dlm=105&tableName=SISSUB_EXT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10511','a105',"H股增发_扩展",'../db/download/dataSearch.jsp?dlm=105&tableName=SISSUH_EXT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff8080815334b25501533539ba5600bd','a105',"股票发行与上市中介机构",'../db/download/dataSearch.jsp?dlm=105&tableName=STKISSLSTAGENT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10513','a105',"投资意向说明",'../db/download/dataSearch.jsp?dlm=105&tableName=CAPINVEST&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10514','a105',"发行审核信息",'../db/download/dataSearch.jsp?dlm=105&tableName=ISSEXMINFO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10515','a105',"A股权益变动信息",'../db/download/dataSearch.jsp?dlm=105&tableName=ASHRCHGINFO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10516','a105',"新股发行申报企业信息表",'../db/download/dataSearch.jsp?dlm=105&tableName=IPOISSDCLENPINFO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10601','a106',"公司股数变动历史",'../db/download/dataSearch.jsp?dlm=106&tableName=CSHRHIS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10602','a106',"股数变动历史",'../db/download/dataSearch.jsp?dlm=106&tableName=SHRHIS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10603','a106',"股东户数",'../db/download/dataSearch.jsp?dlm=106&tableName=SHNUMBER&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10604','a106',"主要股东名单与股权结构",'../db/download/dataSearch.jsp?dlm=106&tableName=MSHLSTANDOS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb09427c63bc01427e8ac77d01e9','a106',"大股东信息_扩展 ",'../db/download/dataSearch.jsp?dlm=106&tableName=MSHINFO_EXT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff808081438a21ce014399bde8870b46','a106',"公司实际控制人",'../db/download/dataSearch.jsp?dlm=106&tableName=CACTCTRL&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10605','a106',"机构投资者持股",'../db/download/dataSearch.jsp?dlm=106&tableName=INSHOLDSHR&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10606','a106',"股权集中度",'../db/download/dataSearch.jsp?dlm=106&tableName=OWNCON&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10607','a106',"流通股股权集中度",'../db/download/dataSearch.jsp?dlm=106&tableName=OWNCONTRD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10608','a106',"股权转让",'../db/download/dataSearch.jsp?dlm=106&tableName=SHRTRAN&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10609','a106',"股东股权冻结和质押",'../db/download/dataSearch.jsp?dlm=106&tableName=SHRFREPLDG&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10610','a106',"股份回购",'../db/download/dataSearch.jsp?dlm=106&tableName=SHRREPO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10611','a106',"法人配售与战略投资者",'../db/download/dataSearch.jsp?dlm=106&tableName=LGPLASTRINV&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10612','a106',"国有股配售",'../db/download/dataSearch.jsp?dlm=106&tableName=STATESHRPLA&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10613','a106',"股东股权托管",'../db/download/dataSearch.jsp?dlm=106&tableName=SHRTRST&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10614','a106',"企业之间参股情况",'../db/download/dataSearch.jsp?dlm=106&tableName=RELATEDSTOCKHOLDER&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10701','a107',"汇率",'../db/download/dataSearch.jsp?dlm=107&tableName=EXRATE&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a402881fa41d8b60d0141e8f403f8019e','a107',"行情(1990-2000)",'../db/download/dataSearch.jsp?dlm=107&tableName=QTTN_1990_2000&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a402881fa41d8b60d0141e8fa9b8801bc','a107',"行情(2001-2010)",'../db/download/dataSearch.jsp?dlm=107&tableName=QTTN_2001_2010&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb09545419a701545543ffcd010e','a107',"行情(2011-2015)",'../db/download/dataSearch.jsp?dlm=107&tableName=QTTN_2011_2015&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb09545419a701545544f0470115','a107',"行情(2016-)",'../db/download/dataSearch.jsp?dlm=107&tableName=QTTN_2016_&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10705','a107',"日历",'../db/download/dataSearch.jsp?dlm=107&tableName=CALENDAR&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb0942353cf001423660624b0142','a107',"日历_扩展",'../db/download/dataSearch.jsp?dlm=107&tableName=CALENDAR_EXT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a402881fa41d8b60d0141e48788230143','a107',"行情与分配(1990-2000)",'../db/download/dataSearch.jsp?dlm=107&tableName=QTTNDIST_1990_2000&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a402881fa41d8b60d0141e49472790186','a107',"行情与分配(2001-2010)",'../db/download/dataSearch.jsp?dlm=107&tableName=QTTNDIST_2001_2010&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb09545419a7015455466eaa011a','a107',"行情与分配(2011-2015)",'../db/download/dataSearch.jsp?dlm=107&tableName=QTTNDIST_2011_2015&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb095472f40301547430c632008e','a107',"行情与分配(2016-)",'../db/download/dataSearch.jsp?dlm=107&tableName=QTTNDIST_2016_&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb09426941fd014269472dc80006','a107',"股票最新行情表现",'../db/download/dataSearch.jsp?dlm=107&tableName=STKLQUOTPRFMC&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10707','a107',"股票资金流向表",'../db/download/dataSearch.jsp?dlm=107&tableName=STKCAPFLOW&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb094229c04701422cbadb13031e','a107',"股票复权因子",'../db/download/dataSearch.jsp?dlm=107&tableName=STKADJFAC&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb09426941fd01426949aade000e','a107',"大宗交易意向申报表",'../db/download/dataSearch.jsp?dlm=107&tableName=BLOCKTRDINT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb09426941fd01426948be4c000c','a107',"海外市场中国股票行情",'../db/download/dataSearch.jsp?dlm=107&tableName=OVEMKTCHISTKQUOT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb094230637c0142311f138d0101','a107',"海外市场中国股票",'../db/download/dataSearch.jsp?dlm=107&tableName=OVEMKTCHISTKID&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb09426941fd014269493909000d','a107',"证券月度数据",'../db/download/dataSearch.jsp?dlm=107&tableName=SECUMONDATA&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10704','a107',"三板市场行情",'../db/download/dataSearch.jsp?dlm=107&tableName=THIMKTQTTN&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb0943acd77f0143ade34372003b','a107',"三板市场行情与分配",'../db/download/dataSearch.jsp?dlm=107&tableName=THIMKTQTTNDIST&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb09505d946701505fd0b6a700f0','a107',"新三板市场行情",'../db/download/dataSearch.jsp?dlm=107&tableName=NEWTHIMKTQTTN&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb09505d946701505fd1b84800f1','a107',"新三板市场行情与分配",'../db/download/dataSearch.jsp?dlm=107&tableName=NEWTHIMKTQTTNDIST&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10801','a108',"年度现金红利总额",'../db/download/dataSearch.jsp?dlm=108&tableName=SUMCASDIV&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a402881fa41d8b60d0141df676d84000c','a109',"公司大事记",'../db/download/dataSearch.jsp?dlm=109&tableName=CMAJEVENT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10901','a109',"特别提示与停牌",'../db/download/dataSearch.jsp?dlm=109&tableName=SPENOTHALT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10902','a109',"股票特别处理与撤销",'../db/download/dataSearch.jsp?dlm=109&tableName=STKSPCTRMT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10903','a109',"交易所日交易信息",'../db/download/dataSearch.jsp?dlm=109&tableName=EXCHDAILYTRDINFO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10904','a109',"个股推荐",'../db/download/dataSearch.jsp?dlm=109&tableName=STKRCMD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10906','a109',"新股发行与定价信息",'../db/download/dataSearch.jsp?dlm=109&tableName=IPOISSPRINFO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10907','a109',"B股资讯",'../db/download/dataSearch.jsp?dlm=109&tableName=BNEWS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10908','a109',"三板市场资讯",'../db/download/dataSearch.jsp?dlm=109&tableName=THIMKTSTKNEWS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10909','a109',"预约披露",'../db/download/dataSearch.jsp?dlm=109&tableName=PRECONTDSCLS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff80808143be76fb0143c32deebd01d0','a109',"公司动态新闻_扩展",'../db/download/dataSearch.jsp?dlm=109&tableName=CNEWS_EXT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff80808143be76fb0143c32f2f9401d4','a109',"公司研究报告_扩展",'../db/download/dataSearch.jsp?dlm=109&tableName=CANAREPORT_EXT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff80808143be76fb0143c32fe85001d6','a109',"公司公告原文",'../db/download/dataSearch.jsp?dlm=109&tableName=CANNCMT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff80808143be76fb0143c3309f9801d7','a109',"公司公告原文非文本",'../db/download/dataSearch.jsp?dlm=109&tableName=CANNCMTNTXT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff80808143be76fb0143c33178f901d8','a109',"公司临时公告_扩展",'../db/download/dataSearch.jsp?dlm=109&tableName=CPROVNOTICE_EXT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10913','a109',"机构资讯",'../db/download/dataSearch.jsp?dlm=109&tableName=INSNEWS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a10914','a109',"证券知识",'../db/download/dataSearch.jsp?dlm=109&tableName=SECUKNLDG&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff80808143be76fb0143c33252c201d9','a109',"证券市场动态_扩展",'../db/download/dataSearch.jsp?dlm=109&tableName=SECUMKTNEWS_EXT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff80808143be76fb0143c332c0c401da','a109',"证券市场评论_扩展",'../db/download/dataSearch.jsp?dlm=109&tableName=SECUMKTVIEW_EXT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff80808143be76fb0143c333486d01dd','a109',"证券专题信息_扩展",'../db/download/dataSearch.jsp?dlm=109&tableName=SECUSPEINFO_EXT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb06545235dc0154571402600304','a109',"信息地雷(2007-2010)",'../db/download/dataSearch.jsp?dlm=109&tableName=INFOMINE_2007_2010&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb06545235dc0154571492be0305','a109',"信息地雷(2011)",'../db/download/dataSearch.jsp?dlm=109&tableName=INFOMINE_2011&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb06545235dc01545715e2b10308','a109',"信息地雷(2012)",'../db/download/dataSearch.jsp?dlm=109&tableName=INFOMINE_2012&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb06545235dc0154571798060309','a109',"信息地雷(2013)",'../db/download/dataSearch.jsp?dlm=109&tableName=INFOMINE_2013&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb06545235dc01545718373d030a','a109',"信息地雷(2014)",'../db/download/dataSearch.jsp?dlm=109&tableName=INFOMINE_2014&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb06545235dc01545718cd84030b','a109',"信息地雷(2015)",'../db/download/dataSearch.jsp?dlm=109&tableName=INFOMINE_2015&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb06545235dc01545722217c0320','a109',"信息地雷(2016)",'../db/download/dataSearch.jsp?dlm=109&tableName=INFOMINE_2016&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb065bb254a3015bb2957a6200e6','a109',"信息地雷(2017)",'../db/download/dataSearch.jsp?dlm=109&tableName=INFOMINE_2017&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb06518e94ab0151905ec2bb00b0','a109',"每日资讯_2000-2010",'../db/download/dataSearch.jsp?dlm=109&tableName=NEWSDAILY_EXT_2000_2010&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb06518e94ab0151905f76e700b2','a109',"每日资讯_2011",'../db/download/dataSearch.jsp?dlm=109&tableName=NEWSDAILY_EXT_2011&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb06518e94ab0151905fee2f00b3','a109',"每日资讯_2012",'../db/download/dataSearch.jsp?dlm=109&tableName=NEWSDAILY_EXT_2012&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb06518e94ab0151906065f200b4','a109',"每日资讯_2013",'../db/download/dataSearch.jsp?dlm=109&tableName=NEWSDAILY_EXT_2013&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb06518e94ab01519060e83600b5','a109',"每日资讯_2014",'../db/download/dataSearch.jsp?dlm=109&tableName=NEWSDAILY_EXT_2014&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb06518e94ab0151906148e700b7','a109',"每日资讯_2015",'../db/download/dataSearch.jsp?dlm=109&tableName=NEWSDAILY_EXT_2015&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb095459357b01545aaeca99017b','a109',"每日资讯_2016",'../db/download/dataSearch.jsp?dlm=109&tableName=NEWSDAILY_EXT_2016&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb065bb254a3015bb297febc0115','a109',"每日资讯_2017",'../db/download/dataSearch.jsp?dlm=109&tableName=NEWSDAILY_EXT_2017&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11001mi201605','a110',"证券风险评级",'../db/download/dataSearch.jsp?dlm=110&tableName=RISKRATING&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11002mi201605','a110',"估值指标",'../db/download/dataSearch.jsp?dlm=110&tableName=VALIDX&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11003mi201605','a110',"估值指标_旧准则",'../db/download/dataSearch.jsp?dlm=110&tableName=VALIDX_OLD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11101','a111',"业绩预告",'../db/download/dataSearch.jsp?dlm=111&tableName=EARPREANNCMT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11102','a111',"业绩快报",'../db/download/dataSearch.jsp?dlm=111&tableName=PERFORMLETTERS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11201','a112',"股东权益调节表",'../db/download/dataSearch.jsp?dlm=112&tableName=EQUADJ&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11202','a112',"所有者权益变动表",'../db/download/dataSearch.jsp?dlm=112&tableName=SCOE&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11301','a113',"管理层持股与薪酬 ",'../db/download/dataSearch.jsp?dlm=113&tableName=EXEHOLD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff8080814376458301437b5e509004a2','a113',"管理层持有股变动历史",'../db/download/dataSearch.jsp?dlm=113&tableName=EXEHOLDCHGHIS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11302','a113',"管理层薪酬",'../db/download/dataSearch.jsp?dlm=113&tableName=EXEREWARD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11303','a113',"管理层介绍",'../db/download/dataSearch.jsp?dlm=113&tableName=EXEINTRD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11304','a113',"管理层职位信息",'../db/download/dataSearch.jsp?dlm=113&tableName=EXEPOSINFO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11305','a113',"管理层兼职",'../db/download/dataSearch.jsp?dlm=113&tableName=EXEPTJOB&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff80808142465e76014249f6248f025d','a113',"董事会监事会特征",'../db/download/dataSearch.jsp?dlm=113&tableName=BOARDDIRSUPC&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff8080814376458301437b643ab804ad','a113',"激励计划",'../db/download/dataSearch.jsp?dlm=113&tableName=INCPLAN&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff8080814376458301437b65d6ca04b6','a113',"激励计划变动历史",'../db/download/dataSearch.jsp?dlm=113&tableName=INCPLANCHGHIS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11307','a113',"激励计划实施",'../db/download/dataSearch.jsp?dlm=113&tableName=INCPLANIMP&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11308','a113',"员工构成信息",'../db/download/dataSearch.jsp?dlm=113&tableName=EMPINFO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11401','a114',"采销情况",'../db/download/dataSearch.jsp?dlm=114&tableName=PURANDSALE&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11402','a114',"资产收购与出售",'../db/download/dataSearch.jsp?dlm=114&tableName=ASTBUYANDSALE&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11403','a114',"应收预付款欠款金额前五名",'../db/download/dataSearch.jsp?dlm=114&tableName=FSTFIVRPACC&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11404','a114',"委托理财明细",'../db/download/dataSearch.jsp?dlm=114&tableName=ENTRINV&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11405','a114',"借贷明细",'../db/download/dataSearch.jsp?dlm=114&tableName=CREDIT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11406','a114',"税负变动明细",'../db/download/dataSearch.jsp?dlm=114&tableName=TAXCHG&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11407','a114',"重大事项综合统计",'../db/download/dataSearch.jsp?dlm=114&tableName=MAJEVENTSTAT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb0942353cf001423645d3860133','a114',"重大事项违规处罚_扩展",'../db/download/dataSearch.jsp?dlm=114&tableName=DEREGULATION_EXT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11408','a114',"诉讼仲裁",'../db/download/dataSearch.jsp?dlm=114&tableName=SUITARBTR&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11409','a114',"担保明细",'../db/download/dataSearch.jsp?dlm=114&tableName=WRNT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11410','a114',"清欠情况",'../db/download/dataSearch.jsp?dlm=114&tableName=PAYDEBSUMMARY&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11411','a114',"清欠明细",'../db/download/dataSearch.jsp?dlm=114&tableName=PAYDEBDETAIL&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11412','a114',"资产重组",'../db/download/dataSearch.jsp?dlm=114&tableName=RSTU&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11413','a114',"吸收合并",'../db/download/dataSearch.jsp?dlm=114&tableName=MERG&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11414','a114',"关联关系",'../db/download/dataSearch.jsp?dlm=114&tableName=RELSHP&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11415','a114',"关联交易",'../db/download/dataSearch.jsp?dlm=114&tableName=RELTRD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11416','a114',"地址变更明细",'../db/download/dataSearch.jsp?dlm=114&tableName=ADDRCHG&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11501','a115',"股权分置",'../db/download/dataSearch.jsp?dlm=115&tableName=SHAREMERGERREFORM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11502','a115',"股权分置日期",'../db/download/dataSearch.jsp?dlm=115&tableName=REFORMCALENDAR&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11503','a115',"股权分置对价方案_扩展",'../db/download/dataSearch.jsp?dlm=115&tableName=REFORMPAIDSCHM_EXT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11504','a115',"股权分置股东承诺实施",'../db/download/dataSearch.jsp?dlm=115&tableName=SHPROMISEIMPLEMENT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11505','a115',"股权分置限售流通信息",'../db/download/dataSearch.jsp?dlm=115&tableName=RESTRICTEDTOFLOATSINFO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11506','a115',"上市公司限售股票解禁时间表",'../db/download/dataSearch.jsp?dlm=115&tableName=SHRTRDSCHM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11507','a115',"股东大会表决明细",'../db/download/dataSearch.jsp?dlm=115&tableName=SHVTDETAIL&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11601','a116',"权证信息",'../db/download/dataSearch.jsp?dlm=116&tableName=WRNTINFO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11602','a116',"权证创设信息",'../db/download/dataSearch.jsp?dlm=116&tableName=WRNTCREINFO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11603','a116',"权证交易信息",'../db/download/dataSearch.jsp?dlm=116&tableName=WRNTTRDINFO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11604','a116',"权证与基金持有人_扩展",'../db/download/dataSearch.jsp?dlm=116&tableName=WRNTFDHOLDER_EXT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff80808147e6bead0147e86423120146','a116',"权证发行与上市中介机构",'../db/download/dataSearch.jsp?dlm=116&tableName=WRNTISSLSTAGENT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11605','a116',"权证行情",'../db/download/dataSearch.jsp?dlm=116&tableName=WRNTQTTN&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11606','a116',"权证日收益",'../db/download/dataSearch.jsp?dlm=116&tableName=WRNTDRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11607','a116',"权证周收益",'../db/download/dataSearch.jsp?dlm=116&tableName=WRNTWKRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11608','a116',"权证月收益",'../db/download/dataSearch.jsp?dlm=116&tableName=WRNTMONRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11609','a116',"权证季收益",'../db/download/dataSearch.jsp?dlm=116&tableName=WRNTQTRRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a11610','a116',"权证年收益",'../db/download/dataSearch.jsp?dlm=116&tableName=WRNTYRRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    	menu.add('a12201','a122',"财务报表");   
+					
+					    	menu.add('a12202','a122',"单季财务数据");   
+					
+					    	menu.add('a12203','a122',"旧准则财务报表");   
+					
+					    	menu.add('a12204','a122',"旧准则单季财务数据");   
+					
+					    			menu.add('a12205','a122',"审计意见表",'../db/download/dataSearch.jsp?dlm=122&tableName=ADTO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff8080814858424d014882afebd30cc0','a122',"审计意见表_非上市公司",'../db/download/dataSearch.jsp?dlm=122&tableName=ADTO_NLC&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a12206','a122',"公司模型指标",'../db/download/dataSearch.jsp?dlm=122&tableName=COMMODIDX&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    	menu.add('a12401','a124',"财务指标");   
+					
+					    	menu.add('a12402','a124',"旧准则财务指标");   
+					
+					    			menu.add('a12403','a124',"最新调整财务指标",'../db/download/dataSearch.jsp?dlm=124&tableName=LADJFININD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    	menu.add('a12501','a125',"利润表附注");   
+					
+					    	menu.add('a12502','a125',"资产负债表附注");   
+					
+					    	menu.add('aff8080814490d253014496a0eb4209df','a125',"不更新数据");   
+					
+					    			menu.add('a12601','a126',"指数信息",'../db/download/dataSearch.jsp?dlm=126&tableName=IDXINFO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a12602','a126',"国际股票指数信息",'../db/download/dataSearch.jsp?dlm=126&tableName=INTIDXINFO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff80808147e6bead0147e865abf9014b','a126',"指数发行与上市中介机构",'../db/download/dataSearch.jsp?dlm=126&tableName=IDXISSLSTAGENT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a12603','a126',"指数成分",'../db/download/dataSearch.jsp?dlm=126&tableName=IDXCOMPO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff8080814d563142014d56370841000d','a126',"指数成分股权重(2002-2010)",'../db/download/dataSearch.jsp?dlm=126&tableName=IDXCOMPOWGH_2002_2010&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff8080814d563142014d563619250008','a126',"指数成分股权重(2011)",'../db/download/dataSearch.jsp?dlm=126&tableName=IDXCOMPOWGH_2011&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff8080814d563142014d56364a120009','a126',"指数成分股权重(2012)",'../db/download/dataSearch.jsp?dlm=126&tableName=IDXCOMPOWGH_2012&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff8080814d563142014d563673f8000a','a126',"指数成分股权重(2013)",'../db/download/dataSearch.jsp?dlm=126&tableName=IDXCOMPOWGH_2013&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff8080814d563142014d5636974f000b','a126',"指数成分股权重(2014)",'../db/download/dataSearch.jsp?dlm=126&tableName=IDXCOMPOWGH_2014&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff8080814d563142014d5636bf8f000c','a126',"指数成分股权重(2015)",'../db/download/dataSearch.jsp?dlm=126&tableName=IDXCOMPOWGH_2015&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb06545235dc0154572858840323','a126',"指数成分股权重(2016)",'../db/download/dataSearch.jsp?dlm=126&tableName=IDXCOMPOWGH_2016&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb065bb254a3015bb29ed5a0013a','a126',"指数成分股权重(2017)",'../db/download/dataSearch.jsp?dlm=126&tableName=IDXCOMPOWGH_2017&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a12605','a126',"指数行情",'../db/download/dataSearch.jsp?dlm=126&tableName=IDXQTTN&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a12606','a126',"国际指数行情与收益",'../db/download/dataSearch.jsp?dlm=126&tableName=INTIDXQTTNRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a12607','a126',"指数日收益",'../db/download/dataSearch.jsp?dlm=126&tableName=IDXDRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a12608','a126',"指数周收益",'../db/download/dataSearch.jsp?dlm=126&tableName=IDXWKRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a12609','a126',"指数月收益",'../db/download/dataSearch.jsp?dlm=126&tableName=IDXMONRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a12610','a126',"指数季收益",'../db/download/dataSearch.jsp?dlm=126&tableName=IDXQTRRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a12611','a126',"指数年收益",'../db/download/dataSearch.jsp?dlm=126&tableName=IDXYRRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a12701','a127',"市盈率(1990-2000)",'../db/download/dataSearch.jsp?dlm=127&tableName=PERATIO_1990_2000&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a12702','a127',"市盈率(2001-2010)",'../db/download/dataSearch.jsp?dlm=127&tableName=PERATIO_2001_2010&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb09545419a701545597f1bb025b','a127',"市盈率(2011-2015 )",'../db/download/dataSearch.jsp?dlm=127&tableName=PERATIO_2011_2015&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb09545419a701545598c017025e','a127',"市盈率(2016- )",'../db/download/dataSearch.jsp?dlm=127&tableName=PERATIO_2016_&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a12708','a127',"市场市盈率",'../db/download/dataSearch.jsp?dlm=127&tableName=PERATIOM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb0947e6c8820147e8693f3f00a9','a127',"中小板市盈率",'../db/download/dataSearch.jsp?dlm=127&tableName=PERATIO_SMBOARD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb0947e6c8820147e869845700aa','a127',"创业板市盈率",'../db/download/dataSearch.jsp?dlm=127&tableName=PERATIO_GEM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a12707','a127',"沪深300市盈率",'../db/download/dataSearch.jsp?dlm=127&tableName=PERATIOCSI300&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    	menu.add('a12801','a128',"个股");   
+					
+					    	menu.add('a12802','a128',"市场");   
+					
+					    			menu.add('a12901','a129',"日市值(1990-2000)",'../db/download/dataSearch.jsp?dlm=129&tableName=DMV_1990_2000&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a12902','a129',"日市值(2001-2010)",'../db/download/dataSearch.jsp?dlm=129&tableName=DMV_2001_2010&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb09545419a7015455ae102502ed','a129',"日市值(2011-2015)",'../db/download/dataSearch.jsp?dlm=129&tableName=DMV_2011_2015&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb09545419a7015455af44fb02f5','a129',"日市值(2016- )",'../db/download/dataSearch.jsp?dlm=129&tableName=DMV_2016_&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a12904','a129',"月市值",'../db/download/dataSearch.jsp?dlm=129&tableName=MONMV&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a12905','a129',"年市值",'../db/download/dataSearch.jsp?dlm=129&tableName=YRMV&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a12906','a129',"市场日市值",'../db/download/dataSearch.jsp?dlm=129&tableName=DMVM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a12907','a129',"市场月市值",'../db/download/dataSearch.jsp?dlm=129&tableName=MONMVM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a12908','a129',"市场年市值",'../db/download/dataSearch.jsp?dlm=129&tableName=YRMVM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb0947e6c8820147e86c396500ac','a129',"中小板日市值",'../db/download/dataSearch.jsp?dlm=129&tableName=DMV_SMBOARD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb0947e6c8820147e86ce1da00ad','a129',"中小板月市值",'../db/download/dataSearch.jsp?dlm=129&tableName=MONMV_SMBOARD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb0947e6c8820147e86d33d200ae','a129',"中小板年市值",'../db/download/dataSearch.jsp?dlm=129&tableName=YRMV_SMBOARD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb0947e6c8820147e86d89f100af','a129',"创业板日市值",'../db/download/dataSearch.jsp?dlm=129&tableName=DMV_GEM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb0947e6c8820147e86df25f00b0','a129',"创业板月市值",'../db/download/dataSearch.jsp?dlm=129&tableName=MONMV_GEM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb0947e6c8820147e86e231400b1','a129',"创业板年市值",'../db/download/dataSearch.jsp?dlm=129&tableName=YRMV_GEM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    	menu.add('a12909','a129',"行业市值");   
+					
+					    	menu.add('aff808081432dd4cd014341dde3a01079','a129',"行业市值_2001证监会行业标准");   
+					
+					    	menu.add('a13101','a131',"持有期收益");   
+					
+					    	menu.add('a13102','a131',"累积收益");   
+					
+					    			menu.add('a13201','a132',"日收益标准差_简单移动平均(1990-2000)",'../db/download/dataSearch.jsp?dlm=132&tableName=DSTDDEVIATION_1990_2000&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a13202','a132',"日收益标准差_简单移动平均(2001-2010)",'../db/download/dataSearch.jsp?dlm=132&tableName=DSTDDEVIATION_2001_2010&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb06545235dc01545705dd9f02a5','a132',"日收益标准差_简单移动平均(2011-2015)",'../db/download/dataSearch.jsp?dlm=132&tableName=DSTDDEVIATION_2011_2015&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb06545235dc015457064e5602a6','a132',"日收益标准差_简单移动平均(2016- )",'../db/download/dataSearch.jsp?dlm=132&tableName=DSTDDEVIATION_2016_&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a13204','a132',"日波动率(1990-2000)",'../db/download/dataSearch.jsp?dlm=132&tableName=DVOLATILITY_1990_2000&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a13205','a132',"日波动率(2001-2010)",'../db/download/dataSearch.jsp?dlm=132&tableName=DVOLATILITY_2001_2010&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb09545419a7015455c1baef0359','a132',"日波动率(2011-2015)",'../db/download/dataSearch.jsp?dlm=132&tableName=DVOLATILITY_2011_2015&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb09545419a7015455c22486035b','a132',"日波动率(2016- )",'../db/download/dataSearch.jsp?dlm=132&tableName=DVOLATILITY_2016_&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb09426941fd0142694ab856000f','a132',"日收益波动率_年度数据",'../db/download/dataSearch.jsp?dlm=132&tableName=DRETVOLATILITY_YR&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb094267cf8c014268c92ec70024','a132',"指数日波动率",'../db/download/dataSearch.jsp?dlm=132&tableName=IDXDVOLATILITY&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb0942699679014269eb617d0021','a132',"指数日收益波动率_年度数据",'../db/download/dataSearch.jsp?dlm=132&tableName=IDXDRETVOLATILITY_YR&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a13301','a133',"月三因子数据",'../db/download/dataSearch.jsp?dlm=133&tableName=THRFACDAT_MONTHLY&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a13302','a133',"周三因子数据",'../db/download/dataSearch.jsp?dlm=133&tableName=THRFACDAT_WEEKLY&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a13303','a133',"日三因子数据",'../db/download/dataSearch.jsp?dlm=133&tableName=THRFACDAT_DAILY&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a13304','a133',"Fama-French股票组合日收益率",'../db/download/dataSearch.jsp?dlm=133&tableName=PDRET_FF&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a13305','a133',"Fama-French股票组合月收益率",'../db/download/dataSearch.jsp?dlm=133&tableName=PMONRET_FF&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb0949a676a20149a89be40c026b','a133',"Fama-French月短期收益反转",'../db/download/dataSearch.jsp?dlm=133&tableName=MONSTRETREV_FF&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    	menu.add('a13401','a134',"个股");   
+					
+					    	menu.add('a13402','a134',"行业组合");   
+					
+					    	menu.add('aff808081432dd4cd01434260a37e110d','a134',"行业组合_2001证监会行业标准");   
+					
+					    			menu.add('aff8080814490d25301449a5cd11f0d7f','aff8080814490d25301449a1ed1c30d36',"内控审计报告信息",'../db/download/dataSearch.jsp?dlm=ff8080814490d25301449a1ed1c30d36&tableName=INTCTRLAUDRPTINFO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff8080814490d25301449a5d4a2a0d80','aff8080814490d25301449a1ed1c30d36',"内控评价报告信息",'../db/download/dataSearch.jsp?dlm=ff8080814490d25301449a1ed1c30d36&tableName=INTCTRLEVARPTINFO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff8080814490d25301449a5dc95d0d82','aff8080814490d25301449a1ed1c30d36',"内控评价报告整改明细",'../db/download/dataSearch.jsp?dlm=ff8080814490d25301449a1ed1c30d36&tableName=INTCTRLEVARPTREC&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff8080814490d25301449a5e4e910d84','aff8080814490d25301449a1ed1c30d36',"内控评价报告缺陷明细",'../db/download/dataSearch.jsp?dlm=ff8080814490d25301449a1ed1c30d36&tableName=INTCTRLEVARPTDEFECT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff8080814490d25301449a5ed36e0d87','aff8080814490d25301449a1ed1c30d36',"公司经营状况自评",'../db/download/dataSearch.jsp?dlm=ff8080814490d25301449a1ed1c30d36&tableName=COPSTATUSRMK&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff808081432dd4cd0143427075ee1128','aff808081432dd4cd01434264d2951117',"日收益(1990-2000)",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434264d2951117&tableName=DRET_1990_2000&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd014342734ffe1133','aff808081432dd4cd01434264d2951117',"日收益(2001-2010)",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434264d2951117&tableName=DRET_2001_2010&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb09545419a70154556a461401c0','aff808081432dd4cd01434264d2951117',"日收益(2011-2015 )",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434264d2951117&tableName=DRET_2011_2015&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb09545419a7015455776ff401d3','aff808081432dd4cd01434264d2951117',"日收益(2016- )",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434264d2951117&tableName=DRET_2016_&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff808081432dd4cd014342781a7c113d','aff808081432dd4cd01434264d2951117',"周收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434264d2951117&tableName=WKRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff808081432dd4cd0143427ffe771142','aff808081432dd4cd01434264d2951117',"月收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434264d2951117&tableName=MONRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff808081432dd4cd0143428923db114b','aff808081432dd4cd01434264d2951117',"季收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434264d2951117&tableName=QTRRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff808081432dd4cd014342964e551159','aff808081432dd4cd01434264d2951117',"年收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434264d2951117&tableName=YRRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff808081432dd4cd01434299c31e115f','aff808081432dd4cd01434264d2951117',"市场日收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434264d2951117&tableName=DRETM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff808081432dd4cd0143429d866c1167','aff808081432dd4cd01434264d2951117',"市场周收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434264d2951117&tableName=WKRETM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff808081432dd4cd014342a4c83a116d','aff808081432dd4cd01434264d2951117',"市场月收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434264d2951117&tableName=MONRETM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff808081432dd4cd014342a64c8b116f','aff808081432dd4cd01434264d2951117',"市场季收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434264d2951117&tableName=QTRRETM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff808081432dd4cd014342ab6c391172','aff808081432dd4cd01434264d2951117',"市场年收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434264d2951117&tableName=YRRETM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    	menu.add('a5317bb0947e6c8820147e871e10600b3','aff808081432dd4cd01434264d2951117',"中小板收益");   
+					
+					    	menu.add('a5317bb0947e6c8820147e872925500b5','aff808081432dd4cd01434264d2951117',"创业板收益");   
+					
+					    	menu.add('aff80808147e6bead0147ebe2b09b024b','aff808081432dd4cd01434264d2951117',"行业收益");   
+					
+					    	menu.add('aff808081432dd4cd014342fc677811c6','aff808081432dd4cd01434264d2951117',"行业收益_2001证监会行业标准");   
+					
+					    			menu.add('aff808081432dd4cd014342d6a48c11a4','aff808081432dd4cd01434265dcf51118',"周累积收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434265dcf51118&tableName=WKCRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff808081432dd4cd014342d86d7d11a6','aff808081432dd4cd01434265dcf51118',"月累积收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434265dcf51118&tableName=MONCRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff808081432dd4cd014342da0ce811a8','aff808081432dd4cd01434265dcf51118',"季累积收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434265dcf51118&tableName=QTRCRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff808081432dd4cd014342dba2c511aa','aff808081432dd4cd01434265dcf51118',"年累积收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434265dcf51118&tableName=YRCRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff808081432dd4cd014342dd054011ac','aff808081432dd4cd01434265dcf51118',"市场周累积收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434265dcf51118&tableName=WKCRETM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff808081432dd4cd014342de7afc11ae','aff808081432dd4cd01434265dcf51118',"市场月累积收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434265dcf51118&tableName=MONCRETM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff808081432dd4cd014342e03bda11b1','aff808081432dd4cd01434265dcf51118',"市场季累积收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434265dcf51118&tableName=QTRCRETM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff808081432dd4cd014342e1978f11b3','aff808081432dd4cd01434265dcf51118',"市场年累积收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434265dcf51118&tableName=YRCRETM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb094dd9e647014ddb2878150093','aff8080814ddae396014ddafbe0380018',"月惯性因子_30%分位点",'../db/download/dataSearch.jsp?dlm=ff8080814ddae396014ddafbe0380018&tableName=MOMFAC_MONTHLY_30PER&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb094dd9e647014ddb2934dd0094','aff8080814ddae396014ddafbe0380018',"月惯性因子_10%分位点",'../db/download/dataSearch.jsp?dlm=ff8080814ddae396014ddafbe0380018&tableName=MOMFAC_MONTHLY_10PER&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb094dd9e647014ddb29b5c50095','aff8080814ddae396014ddafbe0380018',"月惯性因子_是否盈利",'../db/download/dataSearch.jsp?dlm=ff8080814ddae396014ddafbe0380018&tableName=MOMFAC_MONTHLY_IFPROFIT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1220101','a12201',"非金融行业资产负债表",'../db/download/dataSearch.jsp?dlm=12201&tableName=BS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1220102','a12201',"非金融行业利润表",'../db/download/dataSearch.jsp?dlm=12201&tableName=IS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1220103','a12201',"非金融行业现金流量表",'../db/download/dataSearch.jsp?dlm=12201&tableName=SCF&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1220104','a12201',"金融行业资产负债表",'../db/download/dataSearch.jsp?dlm=12201&tableName=FBS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1220105','a12201',"金融行业利润表",'../db/download/dataSearch.jsp?dlm=12201&tableName=FIS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1220106','a12201',"金融行业现金流量表",'../db/download/dataSearch.jsp?dlm=12201&tableName=FSCF&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb095449c96301544bedfc3c02c4','a12201',"资产负债表",'../db/download/dataSearch.jsp?dlm=12201&tableName=BS_ALL&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb095449c96301544bee7e0e02c5','a12201',"利润分配表",'../db/download/dataSearch.jsp?dlm=12201&tableName=IS_ALL&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb095449c96301544bef0bf602c7','a12201',"现金流量表",'../db/download/dataSearch.jsp?dlm=12201&tableName=SCF_ALL&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1220201','a12202',"单季利润表",'../db/download/dataSearch.jsp?dlm=12202&tableName=QIS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1220202','a12202',"单季现金流量表",'../db/download/dataSearch.jsp?dlm=12202&tableName=QSCF&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1220301','a12203',"非金融行业资产负债表",'../db/download/dataSearch.jsp?dlm=12203&tableName=BS_OLD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1220302','a12203',"非金融行业利润和利润分配表",'../db/download/dataSearch.jsp?dlm=12203&tableName=IS_OLD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1220303','a12203',"非金融行业现金流量表",'../db/download/dataSearch.jsp?dlm=12203&tableName=SCF_OLD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1220304','a12203',"金融行业资产负债表",'../db/download/dataSearch.jsp?dlm=12203&tableName=FBS_OLD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1220305','a12203',"金融行业利润及利润分配表",'../db/download/dataSearch.jsp?dlm=12203&tableName=FIS_OLD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1220306','a12203',"金融行业现金流量表",'../db/download/dataSearch.jsp?dlm=12203&tableName=FSCF_OLD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1220401','a12204',"非金融行业单季利润表",'../db/download/dataSearch.jsp?dlm=12204&tableName=QIS_OLD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1220402','a12204',"非金融行业单季现金流量表",'../db/download/dataSearch.jsp?dlm=12204&tableName=QSCF_OLD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1220403','a12204',"金融行业单季利润表",'../db/download/dataSearch.jsp?dlm=12204&tableName=QFIS_OLD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1220404','a12204',"金融行业单季现金流量表",'../db/download/dataSearch.jsp?dlm=12204&tableName=QFSCF_OLD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1240101','a12401',"财务指标",'../db/download/dataSearch.jsp?dlm=12401&tableName=FININD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1240102','a12401',"单季财务指标",'../db/download/dataSearch.jsp?dlm=12401&tableName=QFININD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1240103','a12401',"财务比率",'../db/download/dataSearch.jsp?dlm=12401&tableName=FINRATIO&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1240201','a12402',"财务指标与比率",'../db/download/dataSearch.jsp?dlm=12402&tableName=FININDRATIO_OLD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1240202','a12402',"单季财务指标",'../db/download/dataSearch.jsp?dlm=12402&tableName=QFININD_OLD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff8080814eccf19f014ecd747f2d003f','a12501',"利润分配表附注",'../db/download/dataSearch.jsp?dlm=12501&tableName=ISNOTE&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250101','a12501',"财务费用",'../db/download/dataSearch.jsp?dlm=12501&tableName=ISNOTE_FINEXPENSE&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250102','a12501',"企业税率",'../db/download/dataSearch.jsp?dlm=12501&tableName=ISNOTE_ENTTAXRAT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250103','a12501',"公允价值变动收益",'../db/download/dataSearch.jsp?dlm=12501&tableName=ISNOTE_FVCHGINCOME&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250201','a12502',"其他应付款",'../db/download/dataSearch.jsp?dlm=12502&tableName=BSNOTE_OTHACCPAY&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250202','a12502',"其他应收款",'../db/download/dataSearch.jsp?dlm=12502&tableName=BSNOTE_OTHRECV&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250203','a12502',"存货",'../db/download/dataSearch.jsp?dlm=12502&tableName=BSNOTE_INVENTORY&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250204','a12502',"应付账款",'../db/download/dataSearch.jsp?dlm=12502&tableName=BSNOTE_ACCPAY&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250205','a12502',"应收账款",'../db/download/dataSearch.jsp?dlm=12502&tableName=BSNOTE_ACCRECV&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250206','a12502',"货币资金",'../db/download/dataSearch.jsp?dlm=12502&tableName=BSNOTE_MONFUND&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250207','a12502',"资本公积",'../db/download/dataSearch.jsp?dlm=12502&tableName=BSNOTE_CAPSUR&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250208','a12502',"预付账款",'../db/download/dataSearch.jsp?dlm=12502&tableName=BSNOTE_PREPAYMENT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250209','a12502',"预收账款",'../db/download/dataSearch.jsp?dlm=12502&tableName=BSNOTE_ADVFROMCUSTOMER&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250210','a12502',"工业产权无形资产 ",'../db/download/dataSearch.jsp?dlm=12502&tableName=BSNOTE_INDRIGINTGASS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250211','a12502',"盈余公积",'../db/download/dataSearch.jsp?dlm=12502&tableName=BSNOTE_SURRES&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250212','a12502',"资产减值准备",'../db/download/dataSearch.jsp?dlm=12502&tableName=BSNOTE_PIMPLOSASS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250213','a12502',"资产减值准备_旧准则",'../db/download/dataSearch.jsp?dlm=12502&tableName=BSNOTE_PIMPLOSASS_OLD&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250214','a12502',"应付职工薪酬",'../db/download/dataSearch.jsp?dlm=12502&tableName=BSNOTE_EMPSALPAY&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250215','a12502',"无形资产",'../db/download/dataSearch.jsp?dlm=12502&tableName=BSNOTE_INTGASS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250216','a12502',"可供出售金融资产",'../db/download/dataSearch.jsp?dlm=12502&tableName=BSNOTE_FINASSAVA&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250217','a12502',"交易性金融资产",'../db/download/dataSearch.jsp?dlm=12502&tableName=BSNOTE_TRAFINASS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250218','a12502',"持有至到期投资",'../db/download/dataSearch.jsp?dlm=12502&tableName=BSNOTE_HOLDMATINV&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250219','a12502',"固定资产及折旧",'../db/download/dataSearch.jsp?dlm=12502&tableName=BSNOTE_FIXASSDEPR&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1250220','a12502',"其他资产",'../db/download/dataSearch.jsp?dlm=12502&tableName=BSNOTE_OTHERASS&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    	menu.add('aff8080814490d253014496a311e009e5','aff8080814490d253014496a0eb4209df',"利润表附注");   
+					
+					    	menu.add('aff8080814490d253014496a4a22709e9','aff8080814490d253014496a0eb4209df',"资产负债表附注");   
+					
+					    			menu.add('a1271201','a127',"证监会门类行业市盈率",'../db/download/dataSearch.jsp?dlm=127&tableName=PERATIO_INDUSTRY_1&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1271202','a127',"证监会大类行业市盈率",'../db/download/dataSearch.jsp?dlm=127&tableName=PERATIO_INDUSTRY_2&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    	menu.add('aff808081432dd4cd014341d7ae041075','a127',"行业市盈率_2001证监会行业标准");   
+					
+					    			menu.add('a1280101','a12801',"日换手率(1990-2000)",'../db/download/dataSearch.jsp?dlm=12801&tableName=DTURNR_1990_2000&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a1280102','a12801',"日换手率(2001-2010)",'../db/download/dataSearch.jsp?dlm=12801&tableName=DTURNR_2001_2010&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb09545419a70154559f7783028f','a12801',"日换手率(2011-2015)",'../db/download/dataSearch.jsp?dlm=12801&tableName=DTURNR_2011_2015&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb09545419a70154559fe5600291','a12801',"日换手率(2016-)",'../db/download/dataSearch.jsp?dlm=12801&tableName=DTURNR_2016_&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1280104','a12801',"周换手率",'../db/download/dataSearch.jsp?dlm=12801&tableName=WKTURNR&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1280105','a12801',"月换手率",'../db/download/dataSearch.jsp?dlm=12801&tableName=MONTURNR&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1280106','a12801',"季换手率",'../db/download/dataSearch.jsp?dlm=12801&tableName=QTRTURNR&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1280107','a12801',"年换手率",'../db/download/dataSearch.jsp?dlm=12801&tableName=YRTURNR&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1280201','a12802',"日换手率",'../db/download/dataSearch.jsp?dlm=12802&tableName=DTURNRM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a5317bb09436e41cb01436fde8a22009e','a12802',"周换手率",'../db/download/dataSearch.jsp?dlm=12802&tableName=WKTURNRM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1280203','a12802',"月换手率",'../db/download/dataSearch.jsp?dlm=12802&tableName=MONTURNRM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1280204','a12802',"季换手率",'../db/download/dataSearch.jsp?dlm=12802&tableName=QTRTURNRM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1280205','a12802',"年换手率",'../db/download/dataSearch.jsp?dlm=12802&tableName=YRTURNRM&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1290901','a12909',"证监会门类行业日市值",'../db/download/dataSearch.jsp?dlm=12909&tableName=DMV_INDUSTRY_1&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1290902','a12909',"证监会门类行业月市值",'../db/download/dataSearch.jsp?dlm=12909&tableName=MONMV_INDUSTRY_1&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1290903','a12909',"证监会门类行业年市值",'../db/download/dataSearch.jsp?dlm=12909&tableName=YRMV_INDUSTRY_1&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1290904','a12909',"证监会大类行业日市值",'../db/download/dataSearch.jsp?dlm=12909&tableName=DMV_INDUSTRY_2&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1290905','a12909',"证监会大类行业月市值",'../db/download/dataSearch.jsp?dlm=12909&tableName=MONMV_INDUSTRY_2&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1290906','a12909',"证监会大类行业年市值",'../db/download/dataSearch.jsp?dlm=12909&tableName=YRMV_INDUSTRY_2&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff808081432dd4cd0143422f724610c5','aff808081432dd4cd014341dde3a01079',"证监会门类行业日市值",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd014341dde3a01079&tableName=DMV_INDUSTRY_1_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd0143423c434b10e3','aff808081432dd4cd014341dde3a01079',"证监会门类行业月市值",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd014341dde3a01079&tableName=MONMV_INDUSTRY_1_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd01434246384310e7','aff808081432dd4cd014341dde3a01079',"证监会门类行业年市值",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd014341dde3a01079&tableName=YRMV_INDUSTRY_1_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd01434646be501435','aff808081432dd4cd014341dde3a01079',"证监会次类行业日市值",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd014341dde3a01079&tableName=DMV_INDUSTRY_2_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd014346542631144a','aff808081432dd4cd014341dde3a01079',"证监会次类行业月市值",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd014341dde3a01079&tableName=MONMV_INDUSTRY_2_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd0143465dbf121463','aff808081432dd4cd014341dde3a01079',"证监会次类行业年市值",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd014341dde3a01079&tableName=YRMV_INDUSTRY_2_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a1310101','a13101',"日收益",'../db/download/dataSearch.jsp?dlm=13101&tableName=THIDRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1310102','a13101',"周收益",'../db/download/dataSearch.jsp?dlm=13101&tableName=THIWKRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1310103','a13101',"月收益",'../db/download/dataSearch.jsp?dlm=13101&tableName=THIMONRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1310104','a13101',"季收益",'../db/download/dataSearch.jsp?dlm=13101&tableName=THIQTRRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1310105','a13101',"年收益",'../db/download/dataSearch.jsp?dlm=13101&tableName=THIYRRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1310201','a13102',"周累积收益",'../db/download/dataSearch.jsp?dlm=13102&tableName=THIWKCRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1310202','a13102',"月累积收益",'../db/download/dataSearch.jsp?dlm=13102&tableName=THIMONCRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1310203','a13102',"季累积收益",'../db/download/dataSearch.jsp?dlm=13102&tableName=THIQTRCRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1310204','a13102',"年累积收益",'../db/download/dataSearch.jsp?dlm=13102&tableName=THIYRCRET&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1340101','a13401',"日收益Beta_年度数据",'../db/download/dataSearch.jsp?dlm=13401&tableName=SDRETBETA_YR&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1340102','a13401',"日收益Beta_240天滚动(1990-2000)",'../db/download/dataSearch.jsp?dlm=13401&tableName=SDRETBETA_BFDT240_1990_2000&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a1340103','a13401',"日收益Beta_240天滚动(2001-2010)",'../db/download/dataSearch.jsp?dlm=13401&tableName=SDRETBETA_BFDT240_2001_2010&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb09545419a70154565a90f90463','a13401',"日收益Beta_240天滚动(2011-2015)",'../db/download/dataSearch.jsp?dlm=13401&tableName=SDRETBETA_BFDT240_2011_2015&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('a5317bb09545419a70154565af7060464','a13401',"日收益Beta_240天滚动(2016- )",'../db/download/dataSearch.jsp?dlm=13401&tableName=SDRETBETA_BFDT240_2016_&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1340105','a13401',"月收益Beta_时点前数据",'../db/download/dataSearch.jsp?dlm=13401&tableName=SMONRETBETA_BFDT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1340106','a13401',"月收益Beta_12个月滚动",'../db/download/dataSearch.jsp?dlm=13401&tableName=SMONRETBETA_BFDT12&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1340107','a13401',"月收益Beta_24个月滚动",'../db/download/dataSearch.jsp?dlm=13401&tableName=SMONRETBETA_BFDT24&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1340108','a13401',"月收益Beta_36个月滚动",'../db/download/dataSearch.jsp?dlm=13401&tableName=SMONRETBETA_BFDT36&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1340201','a13402',"日收益Beta_年度数据",'../db/download/dataSearch.jsp?dlm=13402&tableName=INDPDRETBETA_YR&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1340202','a13402',"日收益Beta_240天滚动",'../db/download/dataSearch.jsp?dlm=13402&tableName=INDPDRETBETA_BFDT240&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1340203','a13402',"月收益Beta_时点前数据",'../db/download/dataSearch.jsp?dlm=13402&tableName=INDPMONRETBETA_BFDT&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1340204','a13402',"月收益Beta_12个月滚动",'../db/download/dataSearch.jsp?dlm=13402&tableName=INDPMONRETBETA_BFDT12&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1340205','a13402',"月收益Beta_24个月滚动",'../db/download/dataSearch.jsp?dlm=13402&tableName=INDPMONRETBETA_BFDT24&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('a1340206','a13402',"月收益Beta_36个月滚动",'../db/download/dataSearch.jsp?dlm=13402&tableName=INDPMONRETBETA_BFDT36&dbMsgId=4028818a2206ecbc012206edd0d10001','','main');   
+					
+					    			menu.add('aff808081432dd4cd0143474b72a816b5','aff808081432dd4cd01434260a37e110d',"日收益Beta_年度数据",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434260a37e110d&tableName=INDPDRETBETA_YR_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd01434753553716d3','aff808081432dd4cd01434260a37e110d',"日收益Beta_240天滚动",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434260a37e110d&tableName=INDPDRETBETA_BFDT240_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd0143475aa82416f8','aff808081432dd4cd01434260a37e110d',"月收益Beta_时点前数据",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434260a37e110d&tableName=INDPMONRETBETA_BFDT_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd0143476310731720','aff808081432dd4cd01434260a37e110d',"月收益Beta_12个月滚动",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434260a37e110d&tableName=INDPMONRETBETA_BFDT12_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd01434769ebf51747','aff808081432dd4cd01434260a37e110d',"月收益Beta_24个月滚动",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434260a37e110d&tableName=INDPMONRETBETA_BFDT24_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd01434797d77717bb','aff808081432dd4cd01434260a37e110d',"月收益Beta_36个月滚动",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd01434260a37e110d&tableName=INDPMONRETBETA_BFDT36_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd0143420a727f1092','aff808081432dd4cd014341d7ae041075',"证监会门类行业市盈率",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd014341d7ae041075&tableName=PERATIO_INDUSTRY_1_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd01434213911b1099','aff808081432dd4cd014341d7ae041075',"证监会次类行业市盈率",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd014341d7ae041075&tableName=PERATIO_INDUSTRY_2_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd0143466c06331495','aff808081432dd4cd014342fc677811c6',"证监会门类行业日收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd014342fc677811c6&tableName=DRET_INDUSTRY_1_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd01434674787714af','aff808081432dd4cd014342fc677811c6',"证监会门类行业周收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd014342fc677811c6&tableName=WKRET_INDUSTRY_1_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd0143467d003a14cb','aff808081432dd4cd014342fc677811c6',"证监会门类行业月收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd014342fc677811c6&tableName=MONRET_INDUSTRY_1_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd01434683777c14ef','aff808081432dd4cd014342fc677811c6',"证监会门类行业季收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd014342fc677811c6&tableName=QTRRET_INDUSTRY_1_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd01434688aa5b1509','aff808081432dd4cd014342fc677811c6',"证监会门类行业年收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd014342fc677811c6&tableName=YRRET_INDUSTRY_1_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd0143468e80ab1528','aff808081432dd4cd014342fc677811c6',"证监会次类行业日收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd014342fc677811c6&tableName=DRET_INDUSTRY_2_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd0143469833781554','aff808081432dd4cd014342fc677811c6',"证监会次类行业周收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd014342fc677811c6&tableName=WKRET_INDUSTRY_2_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd014346a208ab158a','aff808081432dd4cd014342fc677811c6',"证监会次类行业月收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd014342fc677811c6&tableName=MONRET_INDUSTRY_2_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd014346aa511f15a4','aff808081432dd4cd014342fc677811c6',"证监会次类行业季收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd014342fc677811c6&tableName=QTRRET_INDUSTRY_2_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff808081432dd4cd0143472d65c8167a','aff808081432dd4cd014342fc677811c6',"证监会次类行业年收益",'../db/download/dataSearch.jsp?dlm=ff808081432dd4cd014342fc677811c6&tableName=YRRET_INDUSTRY_2_2001STD&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff8080814490d253014496a59afc09ea','aff8080814490d253014496a311e009e5',"企业税项",'../db/download/dataSearch.jsp?dlm=ff8080814490d253014496a311e009e5&tableName=ISNOTE_ENTTAX&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff8080814490d253014496ab21fb09fc','aff8080814490d253014496a311e009e5',"投资收益",'../db/download/dataSearch.jsp?dlm=ff8080814490d253014496a311e009e5&tableName=ISNOTE_INVESTINCM&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff8080814490d253014496af1cf60a0b','aff8080814490d253014496a311e009e5',"补贴收入",'../db/download/dataSearch.jsp?dlm=ff8080814490d253014496a311e009e5&tableName=ISNOTE_SUBSYINCM&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff8080814490d253014496b020c10a0d','aff8080814490d253014496a311e009e5',"营业外收入",'../db/download/dataSearch.jsp?dlm=ff8080814490d253014496a311e009e5&tableName=ISNOTE_NOPERINCM&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff8080814490d253014496b158230a12','aff8080814490d253014496a311e009e5',"营业外支出",'../db/download/dataSearch.jsp?dlm=ff8080814490d253014496a311e009e5&tableName=ISNOTE_NOPEREXP&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff8080814490d253014496b3b64f0a1f','aff8080814490d253014496a4a22709e9',"短期投资",'../db/download/dataSearch.jsp?dlm=ff8080814490d253014496a4a22709e9&tableName=BSNOTE_STINVE&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff8080814490d253014496b4bb5a0a25','aff8080814490d253014496a4a22709e9',"长期投资",'../db/download/dataSearch.jsp?dlm=ff8080814490d253014496a4a22709e9&tableName=BSNOTE_LTINVE&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff8080814490d253014496b5a63b0a28','aff8080814490d253014496a4a22709e9',"短期借款",'../db/download/dataSearch.jsp?dlm=ff8080814490d253014496a4a22709e9&tableName=BSNOTE_SHORTERML&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff8080814490d253014496b72fd50a2b','aff8080814490d253014496a4a22709e9',"应交税金",'../db/download/dataSearch.jsp?dlm=ff8080814490d253014496a4a22709e9&tableName=BSNOTE_TAXPAY&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff8080814490d253014496b8522e0a2f','aff8080814490d253014496a4a22709e9',"其他应交款",'../db/download/dataSearch.jsp?dlm=ff8080814490d253014496a4a22709e9&tableName=BSNOTE_OTHPAY&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff8080814490d253014496b8d82b0a32','aff8080814490d253014496a4a22709e9',"预提费用",'../db/download/dataSearch.jsp?dlm=ff8080814490d253014496a4a22709e9&tableName=BSNOTE_ACCRDEXP&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff8080814490d253014496b9870d0a37','aff8080814490d253014496a4a22709e9',"一年内到期的长期借款",'../db/download/dataSearch.jsp?dlm=ff8080814490d253014496a4a22709e9&tableName=BSNOTE_LTLOY&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff8080814490d253014496ba61160a3c','aff8080814490d253014496a4a22709e9',"长期借款",'../db/download/dataSearch.jsp?dlm=ff8080814490d253014496a4a22709e9&tableName=BSNOTE_LTLOAN&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   
+					
+					    			menu.add('aff8080814490d253014496bae4a20a42','aff8080814490d253014496a4a22709e9',"预计负债",'../db/download/dataSearch.jsp?dlm=ff8080814490d253014496a4a22709e9&tableName=BSNOTE_ESTMLIA&dbMsgId=ff808081432dd4cd014331c9b6b602a8','','main');   

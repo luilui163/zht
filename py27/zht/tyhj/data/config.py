@@ -1,0 +1,1 @@
+DATA_BASE_DIR=r'D:\quantData\stock'

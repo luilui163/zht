@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.ico?_debugResources=y&n=1499297523726" type="image/x-icon">
+    
+
+    
+    
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="layout" content="pcLogin"/>
+  
+    
+
+    <script src="/plugins/jquery-1.11.1/js/jquery/jquery-1.11.1.min.js?_debugResources=y&n=1499297523726" type="text/javascript" ></script>
+<link href="/style/pc/css/login.css?_debugResources=y&n=1499297523726" type="text/css" rel="stylesheet" media="screen, projection" />
+
+</head>
+<body>
+<!-- 浏览器升级提示 -->
+
+<div id="update_browser_box">
+    <div class="update_browser">
+        <div class="subtitle">您正在使用的IE浏览器版本过<em>低</em>，<br>我们建议您升级或者更换浏览器，以便体验顺畅、兼容、安全的互联网。</div>
+        <div class="title">选择一款<span>新</span>浏览器吧</div>
+        <div class="browser">
+            <a href="http://windows.microsoft.com/zh-CN/internet-explorer/downloads/ie" class="ie" target="_blank" title="ie浏览器">ie浏览器</a>
+            <a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html" class="chrome" target="_blank" title="谷歌浏览器">谷歌浏览器</a>
+            <a href="http://www.firefox.com.cn" class="firefox" target="_blank" title="火狐浏览器">火狐浏览器</a>
+            <a href="http://www.opera.com" class="opera" target="_blank" title="opera浏览器">opera浏览器</a>
+            <a href="http://www.apple.com.cn/safari" class="safari" target="_blank" title="safari浏览器">safari浏览器</a>
+        </div>
+        <div class="bottomtitle">[&nbsp;<a href="http://www.baidu.com/search/theie6countdown.html" target="_blank">对IE6说再见</a>&nbsp;]</div>
+    </div>
+</div>
+
+<div style="display: none;" id="msgBoxDIV" class="msgBoxDIV">
+    <span class="msg">
+    </span>
+</div>
+<div class="w960 top">
+    <div class="left">
+        <a href="/" class="logo"><img src="/client/logo.png?_debugResources=y&amp;n=1499297523726" width="220" height="62" /></a>
+        <img src="/style/pc/img/webtit.png?_debugResources=y&amp;n=1499297523726" class="webtit" width="251" height="50" />
+
+    </div>
+    <div class="time right" >
+        <span id="currentDate">2013-02-21</span><span id="currentTime">16:48</span>
+    </div>
+
+    <div class="clear"></div>
+</div>
+<div class="w960">
+    <div class="main_t"></div>
+    
+<div class="main login_main heightAuto">
+    <div class="left notice">
+    	<div class="bottom">
+            <div class="left l"></div>
+            <div class="mid left">
+                2017年07月06日&nbsp;&nbsp;&nbsp;&nbsp;当前可预约座位数量<span class="fcred">2381</span>个
+            </div>
+            <div class="left r"></div>
+        </div>
+        <div>
+            <h3>欢迎使用空间预约系统</h3>
+            选座系统使用注意事项：<br/>1.微信预约方式：关注“武汉大学图书馆”公众号，点击 我--座位预约：第一次输账号绑定后即可进行座位预约。<br/>2.手机预约方式:下载APP后，登录前请先设置APP服务器：点击“服务器设置”，选择“根据网址访问服务器”，IOS版网址地址为：seat.lib.whu.edu.cn:8443，安卓版网址地址为：seat.lib.whu.edu.cn。<br/>3.网页预约方式:seat.lib.whu.edu.cn 预约地址:到达各馆楼层检索机上预约。<br/>4.座位系统预约当日时间为01:00到21:30,当日预约次日时间为22:30-23:30。<br/>5.读者使用学号或工号登录选座系统，密码与图书馆借书系统密码一致。有快速预约和自选座位两种方式。<br/>6.预约完成后座位保留30分钟，请在规定时间内刷卡进馆即签到，如在规定时间内没有到馆也没有取消预约将会产生违约记录。<br/>7.读者出馆刷通道机为暂离，超过暂离时间，系统将自动释放座位，记违约一次。暂离时间为30分钟,用餐暂离时间为60分钟(用餐时间段11点到13点,17点到19点)。<br/>8.读者离开座位且不再使用时必须点击结束使用以释放座位,否则产生违约记录。<br/>9.读者使用自习助手“暂离”、“续座”时需要连接到图书馆网络中心wifi或使用各楼层检索机进行操作。<br/>10.为了让读者熟悉座位预约系统使用流程及其规则，目前产生的违约记录暂不处理。
+        </div>
+        
+    </div>
+    <div class="left mline"><img src="/style/pc/img/login_mline.png?_debugResources=y&n=1499297523726" width="55" height="556" /></div>
+    <div class="left form">
+        <dl>
+            <dt><span id="hellomsg">上午好！</span>欢迎预约图书馆座位</dt>
+            <form action="/auth/signIn" method="post" >
+                <dd><input class="input1" name="username" type="text"  value="请输入学号" onfocus="global_change_value(this,'请输入学号')"/></dd>
+                <dd><input class="input2" name="password" type="password" value="请输入密码" onfocus="global_change_value(this,'请输入密码')"/></dd>
+                <dd>
+                    <input type="text" name="captcha" class="input3" value="验证码" onFocus="global_change_value(this,&#39;验证码&#39;);" id="captcha" />
+                    <img class="code" src="/simpleCaptcha/captcha" />
+                </dd>
+                <dd><label><input class="checkbox1" name="" type="checkbox" value="" />保存用户名密码</label></dd>
+                <dd><input class="btn1" name="" type="submit" value="登录" /></dd>
+            </form>
+        </dl>
+        <div style="text-align: center; width: 100%; margin-top: 20px">
+            
+                <img src="/client/qrcode4phones.jpg?_debugResources=y&n=1499297523726" />
+            
+        </div>
+    </div>
+    <div class="clear"></div>
+
+</div>
+
+
+
+
+    <div class="main_b"></div>
+</div>
+
+<div id="spinner" class="spinner" style="display:none;">载入中</div>
+
+
+<!--[if lte IE 6]><script src="/js/pngfix.js?_debugResources=y&n=1499297523726" type="text/javascript" ></script><![endif]-->
+<script src="/js/application.js?_debugResources=y&n=1499297523726" type="text/javascript" ></script>
+<script src="/js/jquery-migrate-1.2.1.min.js?_debugResources=y&n=1499297523726" type="text/javascript" ></script>
+<script src="/style/pc/js/base.js?_debugResources=y&n=1499297523726" type="text/javascript" ></script>
+<script type="text/javascript">
+        var d = new Date();
+        var hour = d.getHours();
+        var text="";
+        if(hour>=6 &&hour<=12){
+            text ="上午好！";
+        }else if(hour>12 &&hour<=18){
+            text = "下午好！"
+        }else{
+            text ="晚上好！";
+        }
+        $("#hellomsg").html(text);
+
+    
+        function setDateTime(){
+            var today = new Date();
+            var y = today.getFullYear();
+            var m = today.getMonth() + 1;
+            var d = today.getDate();
+            var h = today.getHours();
+            var min = today.getMinutes();
+
+            var dateStr = y + '-' + (m<=9 ? '0' + m : m) + '-' + (d<=9? '0'+d: d);
+            var timeStr = (h<=9? '0'+h: h) + ':' + (min<=9? '0'+min: min);
+            $('#currentDate').text(dateStr);
+            $('#currentTime').text(timeStr);
+        }
+        setInterval(function(){
+            setDateTime();
+        }, 1000);
+        $(function(){
+            setDateTime();
+            
+        });
+
+        //清空文本框初始值
+        function global_change_value(obj,str){
+            if ($(obj).val() == str) {
+                $(obj).val("");
+                $(obj).css("color","#333333");
+            }
+            $(obj).blur(function() {
+                //失去焦点时，如果值为空，则设置为默认值
+                if (this.value == "") {
+                    this.value = str;
+                    $(obj).css("color","");
+                }
+            });
+        }
+
+        $(function(){
+            //IE下禁止选中
+            document.body.onselectstart = document.body.ondrag = function(){return false;}
+            //IE6,7升级提示
+            if($.browser.msie && $.browser.version < 8)
+            {
+		$(".w960").hide();
+                if($.browser.version < 7){
+                    //虽然不支持IE6，但还是得修复PNG图片透明的问题
+                    DD_belatedPNG.fix('#update_browser_box .browser');
+                }
+                $('#update_browser_box').show();
+            }
+            else{
+
+            }
+        });
+    </script>
+
+</body>
+</html>

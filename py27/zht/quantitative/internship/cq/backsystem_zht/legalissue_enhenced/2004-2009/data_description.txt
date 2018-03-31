@@ -1,0 +1,13 @@
+name	datatype	name_raw
+v0	sid	代码
+v1	date	公告日期
+v2	d	违规类型
+v3	d	处罚对象
+v4	d	关系
+v5	d	处分类型
+v6	d	处理人
+v7	c	处罚金额(万元)
+v8	d	相关法规
+v9	d	是否发债
+v10	d	证监会行业(2012)
+v11	d	东财行业

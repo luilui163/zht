@@ -1,0 +1,5 @@
+win rate	nan
+profit and loss ratio	nan
+annual return	0.000000
+max drawdown	0.000000
+max drawdown duration	0 days

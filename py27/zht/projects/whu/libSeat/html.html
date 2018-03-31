@@ -1,0 +1,580 @@
+
+
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>自选座位 :: 图书馆预约系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="利昂系统，利昂软件，空间预约系统，占座系统，私有云网盘开发商"/>
+    <meta name="description" content=""/>
+    <link rel="shortcut icon" href="/images/favicon.ico?_debugResources=y&n=1499259523307" type="image/x-icon">
+    
+    <script src="/plugins/jquery-1.11.1/js/jquery/jquery-1.11.1.min.js?_debugResources=y&n=1499259523307" type="text/javascript" ></script>
+<link href="/plugins/jquery-ui-1.10.4/jquery-ui/themes/ui-lightness/jquery-ui-1.10.4.custom.css?_debugResources=y&n=1499259523307" type="text/css" rel="stylesheet" media="screen, projection" />
+<script src="/plugins/jquery-ui-1.10.4/jquery-ui/js/jquery-ui-1.10.4.custom.min.js?_debugResources=y&n=1499259523307" type="text/javascript" ></script>
+<link href="/style/pc/css/style.css?_debugResources=y&n=1499259523307" type="text/css" rel="stylesheet" media="screen, projection" />
+<script src="/style/admin/js/common.js?_debugResources=y&n=1499259523307" type="text/javascript" ></script>
+
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="layout" content="pcMain2"/>
+    
+
+
+    
+</head>
+<body onselectstart="return&nbsp;false">
+<div class="header">
+    <h1 class="logo fl"><img src="/client/logo.png?_debugResources=y&amp;n=1499259523307" width="181" height="51" /></h1>
+    <h2 class="logoName fl"><img src="/style/pc/img/logoName.png?_debugResources=y&amp;n=1499259523307" width="204" height="44" /></h2>
+    <div class="userInfor fr">
+        <ul>
+            <li><i class="timeIcon"></i><span id="currentDate">2013-02-21</span> <span id="currentTime">16:48</span></li>
+            <li><i class="renIcon"></i><strong>张海涛</strong> 同学</li>
+        </ul>
+    </div>
+</div>
+<div class="handleBtns" style="display: none">
+    <div class="topHandle">
+        <ul>
+            <li>
+                <a id="btnStop" href="#" action="stopUsing">结束使用</a>
+            </li>
+            <li>
+                <a id="btnExtend" href="#" action="getTimeExtend">续约</a>
+            </li>
+            <li id="awayBlock">
+                <a id="btnAway" href="#" action="leave">暂离</a>
+            </li>
+            <li style="display: none" id="resumeBlock">
+                <a id="btnResume" href="#" action="resume" >返回</a>
+            </li>
+            <li>
+                <a id="btnCheckIn" href="#" action="checkIn">签到</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--header end of-->
+<div class="warp">
+    <div style="display: none;" id="msgBoxDIV" class="msgBoxDIV">
+        <span class="msg">
+        </span>
+    </div>
+</div>
+
+
+<div class="warp">
+    
+<div class="menu fl">
+    <ul>
+        
+            <li class="onHover"><a href="/" onFocus="this.blur()"><i class="seatHover"></i>自选座位</a></li>
+            <li class=""><a href="/map" onFocus="this.blur()"><i class="layout"></i>布局选座</a></li>
+            <li class=""><a href="/freeBook/fav" onFocus="this.blur()"><i class="layout"></i>常用座位</a></li>
+        
+        
+        <li class=""><a href="/history?type=SEAT" onFocus="this.blur()"><i class="myReserve"></i>我的预约</a></li>
+        <li class=""><a href="/user/violations" onFocus="this.blur()"><i class="myViolation"></i>违约记录</a></li>
+        <li class=""><a href="/logout" onFocus="this.blur()"><i class="goBack"></i> 退  出</a></li>
+    </ul>
+</div>
+    <!--menu end of-->
+    <div class="mainContent fr">
+
+        <div class="content">
+            <div class="selectContent">
+                <form onsubmit="jQuery.ajax({type:'POST',data:jQuery(this).serialize(), url:'/freeBook/ajaxSearch',success:function(data,textStatus){firstSearch(data);},error:function(XMLHttpRequest,textStatus,errorThrown){}});return false" method="post" action="/freeBook/ajaxSearch" id="search">
+                    <div class="selectBox">
+                        <dl>
+                            <dd>
+                                
+                                    <div class="select_box168 fl zindex_20" name="onDate_select" id="onDate_select" >
+<a href='javascript:void(0);' id='display_onDate' class='selectBoxValue'>选择日期</a><p id='options_onDate'><a href='javascript:void(0)' value='2017-07-05'>2017-07-05</a></p><input type='hidden' name='onDate' id='onDate' value='' /></div>
+                                
+                            </dd>
+                            <dd>
+                                <div class="select_box168 fl zindex_20" name="building_select" id="building_select" >
+<a href='javascript:void(0);' id='display_building' class='selectBoxValue'>不限场馆</a><p id='options_building'><a href='javascript:void(0)' value='null'>不限场馆</a>
+<a href='javascript:void(0)' value='1'>信息科学分馆</a><a href='javascript:void(0)' value='2'>工学分馆</a><a href='javascript:void(0)' value='3'>医学分馆</a><a href='javascript:void(0)' value='4'>总馆</a></p><input type='hidden' name='building' id='building' value='null' /></div>
+                            </dd>
+                            <dd>
+                                
+                                <div class="select_box168 fl zindex_15" name="room_select" id="room_select" >
+<a href='javascript:void(0);' id='display_room' class='selectBoxValue'>不限房间</a><p id='options_room'><a href='javascript:void(0)' value='null'>不限房间</a>
+<a href='javascript:void(0)' value='4'>一楼3C创客空间</a><a href='javascript:void(0)' value='6'>二楼自然科学图书借阅区西</a><a href='javascript:void(0)' value='5'>一楼创新学习讨论区</a><a href='javascript:void(0)' value='8'>三楼社会科学图书借阅区西</a><a href='javascript:void(0)' value='7'>二楼自然科学图书借阅区东</a><a href='javascript:void(0)' value='10'>三楼社会科学图书借阅区东</a><a href='javascript:void(0)' value='9'>四楼图书阅览区西</a><a href='javascript:void(0)' value='11'>四楼图书阅览区东</a><a href='javascript:void(0)' value='12'>三楼自主学习区</a><a href='javascript:void(0)' value='13'>3C创客-电子资源阅览区（20台）</a><a href='javascript:void(0)' value='14'>3C创客-双屏电脑（20台）</a><a href='javascript:void(0)' value='15'>创新学习-MAC电脑（12台）</a><a href='javascript:void(0)' value='16'>创新学习-云桌面（42台）</a><a href='javascript:void(0)' value='19'>201室+东部自科图书借阅区</a><a href='javascript:void(0)' value='29'>2楼+中部走廊</a><a href='javascript:void(0)' value='31'>205室+中部电子阅览室笔记本区</a><a href='javascript:void(0)' value='32'>301室+东部自科图书借阅区</a><a href='javascript:void(0)' value='33'>305室+中部自科图书借阅区</a><a href='javascript:void(0)' value='34'>401室+东部自科图书借阅区</a><a href='javascript:void(0)' value='37'>501室+东部外文图书借阅区</a><a href='javascript:void(0)' value='38'>505室+中部自科图书借阅区</a><a href='javascript:void(0)' value='35'>405室+中部期刊阅览区</a><a href='javascript:void(0)' value='50'>团体研修室Ⅶ</a></p><input type='hidden' name='room' id='room' value='null' /></div>
+                            </dd>
+                            <dd><input name="" type="button" class="seatBtn fl" /></dd>
+                        </dl>
+                    </div>
+                    <div class="selectBox line" id="select_line_2">
+                        <dl>
+                            <dd>
+                                <div class="select_box168 fl zindex_15" name="hour_select" id="hour_select" >
+<a href='javascript:void(0);' id='display_hour' class='selectBoxValue'>不限时长</a><p id='options_hour'><a href='javascript:void(0)' value='null'>不限时长</a>
+<a href='javascript:void(0)' value='14'>14 小时</a><a href='javascript:void(0)' value='13'>13 小时</a><a href='javascript:void(0)' value='12'>12 小时</a><a href='javascript:void(0)' value='11'>11 小时</a><a href='javascript:void(0)' value='10'>10 小时</a><a href='javascript:void(0)' value='9'>9 小时</a><a href='javascript:void(0)' value='8'>8 小时</a><a href='javascript:void(0)' value='7'>7 小时</a><a href='javascript:void(0)' value='6'>6 小时</a><a href='javascript:void(0)' value='5'>5 小时</a><a href='javascript:void(0)' value='4'>4 小时</a><a href='javascript:void(0)' value='3'>3 小时</a><a href='javascript:void(0)' value='2'>2 小时</a><a href='javascript:void(0)' value='1'>1 小时</a></p><input type='hidden' name='hour' id='hour' value='null' /></div>
+                            </dd>
+                            <dd>
+                                <div class="select_box168 fl zindex_15" name="startMin_select" id="startMin_select" >
+<a href='javascript:void(0);' id='display_startMin' class='selectBoxValue'>开始时间</a><p id='options_startMin'><a href='javascript:void(0)' value='null'>不限时间</a>
+<a href='javascript:void(0)' value='0'>00:00</a><a href='javascript:void(0)' value='15'>00:15</a><a href='javascript:void(0)' value='30'>00:30</a><a href='javascript:void(0)' value='45'>00:45</a><a href='javascript:void(0)' value='60'>01:00</a><a href='javascript:void(0)' value='75'>01:15</a><a href='javascript:void(0)' value='90'>01:30</a><a href='javascript:void(0)' value='105'>01:45</a><a href='javascript:void(0)' value='120'>02:00</a><a href='javascript:void(0)' value='135'>02:15</a><a href='javascript:void(0)' value='150'>02:30</a><a href='javascript:void(0)' value='165'>02:45</a><a href='javascript:void(0)' value='180'>03:00</a><a href='javascript:void(0)' value='195'>03:15</a><a href='javascript:void(0)' value='210'>03:30</a><a href='javascript:void(0)' value='225'>03:45</a><a href='javascript:void(0)' value='240'>04:00</a><a href='javascript:void(0)' value='255'>04:15</a><a href='javascript:void(0)' value='270'>04:30</a><a href='javascript:void(0)' value='285'>04:45</a><a href='javascript:void(0)' value='300'>05:00</a><a href='javascript:void(0)' value='315'>05:15</a><a href='javascript:void(0)' value='330'>05:30</a><a href='javascript:void(0)' value='345'>05:45</a><a href='javascript:void(0)' value='360'>06:00</a><a href='javascript:void(0)' value='375'>06:15</a><a href='javascript:void(0)' value='390'>06:30</a><a href='javascript:void(0)' value='405'>06:45</a><a href='javascript:void(0)' value='420'>07:00</a><a href='javascript:void(0)' value='435'>07:15</a><a href='javascript:void(0)' value='450'>07:30</a><a href='javascript:void(0)' value='465'>07:45</a><a href='javascript:void(0)' value='480'>08:00</a><a href='javascript:void(0)' value='495'>08:15</a><a href='javascript:void(0)' value='510'>08:30</a><a href='javascript:void(0)' value='525'>08:45</a><a href='javascript:void(0)' value='540'>09:00</a><a href='javascript:void(0)' value='555'>09:15</a><a href='javascript:void(0)' value='570'>09:30</a><a href='javascript:void(0)' value='585'>09:45</a><a href='javascript:void(0)' value='600'>10:00</a><a href='javascript:void(0)' value='615'>10:15</a><a href='javascript:void(0)' value='630'>10:30</a><a href='javascript:void(0)' value='645'>10:45</a><a href='javascript:void(0)' value='660'>11:00</a><a href='javascript:void(0)' value='675'>11:15</a><a href='javascript:void(0)' value='690'>11:30</a><a href='javascript:void(0)' value='705'>11:45</a><a href='javascript:void(0)' value='720'>12:00</a><a href='javascript:void(0)' value='735'>12:15</a><a href='javascript:void(0)' value='750'>12:30</a><a href='javascript:void(0)' value='765'>12:45</a><a href='javascript:void(0)' value='780'>13:00</a><a href='javascript:void(0)' value='795'>13:15</a><a href='javascript:void(0)' value='810'>13:30</a><a href='javascript:void(0)' value='825'>13:45</a><a href='javascript:void(0)' value='840'>14:00</a><a href='javascript:void(0)' value='855'>14:15</a><a href='javascript:void(0)' value='870'>14:30</a><a href='javascript:void(0)' value='885'>14:45</a><a href='javascript:void(0)' value='900'>15:00</a><a href='javascript:void(0)' value='915'>15:15</a><a href='javascript:void(0)' value='930'>15:30</a><a href='javascript:void(0)' value='945'>15:45</a><a href='javascript:void(0)' value='960'>16:00</a><a href='javascript:void(0)' value='975'>16:15</a><a href='javascript:void(0)' value='990'>16:30</a><a href='javascript:void(0)' value='1005'>16:45</a><a href='javascript:void(0)' value='1020'>17:00</a><a href='javascript:void(0)' value='1035'>17:15</a><a href='javascript:void(0)' value='1050'>17:30</a><a href='javascript:void(0)' value='1065'>17:45</a><a href='javascript:void(0)' value='1080'>18:00</a><a href='javascript:void(0)' value='1095'>18:15</a><a href='javascript:void(0)' value='1110'>18:30</a><a href='javascript:void(0)' value='1125'>18:45</a><a href='javascript:void(0)' value='1140'>19:00</a><a href='javascript:void(0)' value='1155'>19:15</a><a href='javascript:void(0)' value='1170'>19:30</a><a href='javascript:void(0)' value='1185'>19:45</a><a href='javascript:void(0)' value='1200'>20:00</a><a href='javascript:void(0)' value='1215'>20:15</a><a href='javascript:void(0)' value='1230'>20:30</a><a href='javascript:void(0)' value='1245'>20:45</a><a href='javascript:void(0)' value='1260'>21:00</a><a href='javascript:void(0)' value='1275'>21:15</a><a href='javascript:void(0)' value='1290'>21:30</a><a href='javascript:void(0)' value='1305'>21:45</a><a href='javascript:void(0)' value='1320'>22:00</a><a href='javascript:void(0)' value='1335'>22:15</a><a href='javascript:void(0)' value='1350'>22:30</a><a href='javascript:void(0)' value='1365'>22:45</a><a href='javascript:void(0)' value='1380'>23:00</a><a href='javascript:void(0)' value='1395'>23:15</a><a href='javascript:void(0)' value='1410'>23:30</a><a href='javascript:void(0)' value='1425'>23:45</a></p><input type='hidden' name='startMin' id='startMin' value='null' /></div>
+                            </dd>
+                            <dd>
+                                <div class="select_box168 fl zindex_5" name="endMin_select" id="endMin_select" >
+<a href='javascript:void(0);' id='display_endMin' class='selectBoxValue'>结束时间</a><p id='options_endMin'><a href='javascript:void(0)' value='null'>不限时间</a>
+<a href='javascript:void(0)' value='0'>00:00</a><a href='javascript:void(0)' value='15'>00:15</a><a href='javascript:void(0)' value='30'>00:30</a><a href='javascript:void(0)' value='45'>00:45</a><a href='javascript:void(0)' value='60'>01:00</a><a href='javascript:void(0)' value='75'>01:15</a><a href='javascript:void(0)' value='90'>01:30</a><a href='javascript:void(0)' value='105'>01:45</a><a href='javascript:void(0)' value='120'>02:00</a><a href='javascript:void(0)' value='135'>02:15</a><a href='javascript:void(0)' value='150'>02:30</a><a href='javascript:void(0)' value='165'>02:45</a><a href='javascript:void(0)' value='180'>03:00</a><a href='javascript:void(0)' value='195'>03:15</a><a href='javascript:void(0)' value='210'>03:30</a><a href='javascript:void(0)' value='225'>03:45</a><a href='javascript:void(0)' value='240'>04:00</a><a href='javascript:void(0)' value='255'>04:15</a><a href='javascript:void(0)' value='270'>04:30</a><a href='javascript:void(0)' value='285'>04:45</a><a href='javascript:void(0)' value='300'>05:00</a><a href='javascript:void(0)' value='315'>05:15</a><a href='javascript:void(0)' value='330'>05:30</a><a href='javascript:void(0)' value='345'>05:45</a><a href='javascript:void(0)' value='360'>06:00</a><a href='javascript:void(0)' value='375'>06:15</a><a href='javascript:void(0)' value='390'>06:30</a><a href='javascript:void(0)' value='405'>06:45</a><a href='javascript:void(0)' value='420'>07:00</a><a href='javascript:void(0)' value='435'>07:15</a><a href='javascript:void(0)' value='450'>07:30</a><a href='javascript:void(0)' value='465'>07:45</a><a href='javascript:void(0)' value='480'>08:00</a><a href='javascript:void(0)' value='495'>08:15</a><a href='javascript:void(0)' value='510'>08:30</a><a href='javascript:void(0)' value='525'>08:45</a><a href='javascript:void(0)' value='540'>09:00</a><a href='javascript:void(0)' value='555'>09:15</a><a href='javascript:void(0)' value='570'>09:30</a><a href='javascript:void(0)' value='585'>09:45</a><a href='javascript:void(0)' value='600'>10:00</a><a href='javascript:void(0)' value='615'>10:15</a><a href='javascript:void(0)' value='630'>10:30</a><a href='javascript:void(0)' value='645'>10:45</a><a href='javascript:void(0)' value='660'>11:00</a><a href='javascript:void(0)' value='675'>11:15</a><a href='javascript:void(0)' value='690'>11:30</a><a href='javascript:void(0)' value='705'>11:45</a><a href='javascript:void(0)' value='720'>12:00</a><a href='javascript:void(0)' value='735'>12:15</a><a href='javascript:void(0)' value='750'>12:30</a><a href='javascript:void(0)' value='765'>12:45</a><a href='javascript:void(0)' value='780'>13:00</a><a href='javascript:void(0)' value='795'>13:15</a><a href='javascript:void(0)' value='810'>13:30</a><a href='javascript:void(0)' value='825'>13:45</a><a href='javascript:void(0)' value='840'>14:00</a><a href='javascript:void(0)' value='855'>14:15</a><a href='javascript:void(0)' value='870'>14:30</a><a href='javascript:void(0)' value='885'>14:45</a><a href='javascript:void(0)' value='900'>15:00</a><a href='javascript:void(0)' value='915'>15:15</a><a href='javascript:void(0)' value='930'>15:30</a><a href='javascript:void(0)' value='945'>15:45</a><a href='javascript:void(0)' value='960'>16:00</a><a href='javascript:void(0)' value='975'>16:15</a><a href='javascript:void(0)' value='990'>16:30</a><a href='javascript:void(0)' value='1005'>16:45</a><a href='javascript:void(0)' value='1020'>17:00</a><a href='javascript:void(0)' value='1035'>17:15</a><a href='javascript:void(0)' value='1050'>17:30</a><a href='javascript:void(0)' value='1065'>17:45</a><a href='javascript:void(0)' value='1080'>18:00</a><a href='javascript:void(0)' value='1095'>18:15</a><a href='javascript:void(0)' value='1110'>18:30</a><a href='javascript:void(0)' value='1125'>18:45</a><a href='javascript:void(0)' value='1140'>19:00</a><a href='javascript:void(0)' value='1155'>19:15</a><a href='javascript:void(0)' value='1170'>19:30</a><a href='javascript:void(0)' value='1185'>19:45</a><a href='javascript:void(0)' value='1200'>20:00</a><a href='javascript:void(0)' value='1215'>20:15</a><a href='javascript:void(0)' value='1230'>20:30</a><a href='javascript:void(0)' value='1245'>20:45</a><a href='javascript:void(0)' value='1260'>21:00</a><a href='javascript:void(0)' value='1275'>21:15</a><a href='javascript:void(0)' value='1290'>21:30</a><a href='javascript:void(0)' value='1305'>21:45</a><a href='javascript:void(0)' value='1320'>22:00</a><a href='javascript:void(0)' value='1335'>22:15</a><a href='javascript:void(0)' value='1350'>22:30</a><a href='javascript:void(0)' value='1365'>22:45</a><a href='javascript:void(0)' value='1380'>23:00</a><a href='javascript:void(0)' value='1395'>23:15</a><a href='javascript:void(0)' value='1410'>23:30</a><a href='javascript:void(0)' value='1425'>23:45</a></p><input type='hidden' name='endMin' id='endMin' value='null' /></div>
+                            </dd>
+                            <dd><input type="submit" name="search" class="searchBtn fl" value="" id="search" /></dd>
+                        </dl>
+                    </div>
+                    <div class="selectBox" style="padding-top:11px;margin-top: -22px; clear: both;height:10px"><a href="#" class="moreBtn">&nbsp;</a></div>
+                    <div class="selectBox line" style="display: none" id="moreOptionBlock">
+                        <dl>
+                            <dd>
+                                <div class="select_box168 fl zindex_5" name="power_select" id="power_select" >
+<a href='javascript:void(0);' id='display_power' class='selectBoxValue'>不限电源</a><p id='options_power'><a href='javascript:void(0)' value='null'>不限电源</a>
+<a href='javascript:void(0)' value='1'>有电源</a><a href='javascript:void(0)' value='0'>无电源</a></p><input type='hidden' name='power' id='power' value='null' /></div>
+                            </dd>
+                            <dd>
+                                <div class="select_box168 fl zindex_5" name="window_select" id="window_select" >
+<a href='javascript:void(0);' id='display_window' class='selectBoxValue'>不限靠窗</a><p id='options_window'><a href='javascript:void(0)' value='null'>不限靠窗</a>
+<a href='javascript:void(0)' value='1'>靠窗</a><a href='javascript:void(0)' value='0'>不靠窗</a></p><input type='hidden' name='window' id='window' value='null' /></div>
+                            </dd>
+			    <dd id="close_more" style="font-size:12px;padding-top:10px;"><a href="javascript:void(0);" class="closeMB">关闭更多选项</a></dd>
+                        </dl>
+                    </div>
+                </form>
+            <!--selectBox end of-->
+            </div>
+            <!--selectContent end of-->
+            <div class="detailContent">
+                <h3 class="seatTip">可用座位列表</h3>
+                <div class="tipContent" id="ctips"><i></i>选择条件后，点击“查询按钮”进行查询</div>
+                <div class="seatList">
+                    <div class="scrollPic">
+                        <a href="javascript:void(0)" class="prev"></a>
+                        <div class="scrollable">
+                            <div class="items" id="seats">
+                                <ul class="item"></ul>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="next fr"></a>
+                    </div>
+                    <!--scrollPic end of-->
+                </div>
+                <!--seatList end of-->
+
+                <!--page end of-->
+            </div>
+            <!--detailContent end of-->
+            <!--cotent end of-->
+        </div>
+    </div>
+</div>
+
+<form action="/selfRes" method="post" name="reserveForm" id="reserveForm" >
+    <input type="hidden" name="date" value="" id="date" />
+    <input type="hidden" name="seat" value="" id="seat" />
+    <input type="hidden" name="start" value="" id="start" />
+    <input type="hidden" name="end" value="" id="end" />
+    <input type="hidden" name="captcha" value="" id="captcha" />
+</form>
+
+
+<div class="seatTime">
+    <h6 class="fl"><span id="selected_description">您选择的座位是：</span><code id="seatNumber">788</code> (日期: <span class="reserveDate" id="reserveDate"></span>)</h6>
+    <div class="seatTimeTop" style="height:332px">
+        <div class="reserve_detail" id="reserve_detail">
+
+        </div>
+        <div class="startTime fl" id="startTime">
+            <h4>开始时间</h4>
+	    <dl>
+		<div class="loading" id="load_start"><i class="loadIcon"></i>加载中，请稍候...</div>
+		<ul></ul>
+	    </dl>
+        </div>
+        <div class="endTime fr" id="endTime">
+            <h4>结束时间</h4>
+            <dl>
+                <p>请先选择左侧开始时间</p>
+                <div class="loading" id="load_end"><i class="loadIcon"></i>加载中，请稍候...</div>
+                <ul id="endTimeCotent"></ul>
+            </dl>
+        </div>
+    </div>
+    <div id="reservationCaptcha"></div>
+    <div class="seatTimeFoot fl" id="reservationAction">
+        <a href="#" class="sureBtn" id="reserveBtn">预 约</a>
+        <a href="#" class="cancelBtn">取 消</a>
+    </div>
+</div>
+
+<div class="seatSearch">
+    <h3>按座位号来选择</h3>
+    <dl>
+        <dt><input name="" type="text"  class="seatInput" id="seatInput" size="24" value="请输入座位号"/></dt>
+        <dd class="seatLink">1</dd>
+        <dd class="seatLink">2</dd>
+        <dd class="seatLink">3</dd>
+        <dd class="seatLink">4</dd>
+        <dd class="seatLink">5</dd>
+        <dd class="seatLink">6</dd>
+        <dd class="seatLink">7</dd>
+        <dd class="seatLink">8</dd>
+        <dd class="seatLink">9</dd>
+        <dd class="seatLink">0</dd>
+        <dd class="seatLinkBtn" id="seatLinkBtn" >清 除</dd>
+        <a href="#" class="closeSeat">关 闭</a>
+        <a href="#" class="sureSeat" id="searchBySeatID">确 认</a>
+    </dl>
+</div>
+
+<div class="loading2"></div>
+<div class="dialog" style="left: 780px; top: 424px;"><i class="loadIcon"></i>数据加载中, 请稍候 ...</div>
+
+<!--签到-->
+<div class="ToolTip_show SignIn_show" id="resultMessageDiv">
+    <div class="ui_dialog">
+        <a href="#" class="closeDIV">关闭</a>
+        <div class="resultMessage">签到成功（失败原因）</div>
+        <div class="handle">
+            <input type="button" value="确定" class="btnOK" />
+            <input type="button" value="退出系统" class="btnClose" id="btnExit"/>
+        </div>
+    </div>
+</div>
+
+<!--续约-->
+<div class="ToolTip_show Renewal_show" id="extendDiv">
+    <div class="ui_dialog">
+        <a href="#" class="closeDIV">关闭</a>
+        <p class="messageHead">选中下列时段进行续约</p>
+        <ul class="renewal_List clear">
+            <li>
+                <a href="#">05:00</a>
+            </li>
+            <li>
+                <a href="#">06:00</a>
+            </li>
+
+        </ul>
+        <div class="resultMessage"></div>
+        <div class="handle">
+            <input type="button" value="确定" class="btnOK" action="extend"/>
+        </div>
+    </div>
+</div>
+
+<div id="spinner" class="spinner" style="display:none;">载入中</div>
+
+<script src="/js/application.js?_debugResources=y&n=1499259523307" type="text/javascript" ></script>
+<script src="/style/pc/js/base.js?_debugResources=y&n=1499259523307" type="text/javascript" ></script>
+<script src="/style/pc/js/select.js?_debugResources=y&n=1499259523307" type="text/javascript" ></script>
+<script src="/js/jquery-migrate-1.2.1.min.js?_debugResources=y&n=1499259523307" type="text/javascript" ></script>
+<script src="/js/jquery.tools.min.js?_debugResources=y&n=1499259523307" type="text/javascript" ></script>
+<script src="/js/jquery/jquery.dialog.js?_debugResources=y&n=1499259523307" type="text/javascript" ></script>
+<script src="/js/pages/pcMain.js?_debugResources=y&n=1499259523307" type="text/javascript" ></script>
+<script type="text/javascript">
+    var searchMode = 'NORMAL'; // or 'NAME'
+    $('#onDate').change(function(){
+        var scrollableDiv = $("div.scrollable");
+        var api = scrollableDiv.data("scrollable");
+        api.getItems().each (function(index) {
+            $(this).remove();
+        });
+    });
+
+    $('#building').change(function(){
+        var id = $(this).val();
+        jQuery.ajax({type:'POST',data:'id=' + id, url:'/freeBook/ajaxGetRooms',success:function(data,textStatus){onSuccessFromBuildingChange(data);},error:function(XMLHttpRequest,textStatus,errorThrown){}});
+    });
+
+    function onSuccessFromBuildingChange(data){
+       $('#options_room').html(data);
+       $("#room").attr('value', '');
+       $('#display_room').text('不限房间');
+    }
+
+    var noMoreResult = false;
+
+    $('#search').submit(function(){
+	    searchMode = 'NORMAL';
+        showSpinner();
+    });
+
+    function firstSearch(data){
+
+        if (data.seatNum >= 0)
+    	{
+            var scrollableDiv = $("div.scrollable");
+            var api = scrollableDiv.data("scrollable");
+            api.getItems().each (function(index) {
+                $(this).remove();
+            });
+
+            api.addItem(data.seatStr);
+            api.addItem('<ul class="item"></ul>');
+            api.seekTo(0);
+
+            noMoreResult = false;
+            var offset = data.offset;
+            if (offset == -1) {
+                $("#linkSearchDiv").hide();
+            } else {
+                $('#offset').val(offset);
+            }
+	   
+            if(data.seatNum==0) {
+                var offset = data.offset;
+                var msg = offset < 0?"没有符合条件的座位，请重新选择其他条件":"已显示所有符合条件的座位";
+                //showmsg(msg, 5000)
+                shake($("#ctips"),"tipContentred",3);
+                $("#ctips").html("<i></i>"+msg).show();
+            }
+        }
+        removeSpinner();
+    }
+
+    function reserve(){
+        var startTime = $("#startTime").val();
+        var endTime = $("#endTime").val();
+        if (startTime == 'null' || endTime == 'null'){
+            alert('请选择开始结束时间');
+        }else{
+            $("#reserveForm").submit();
+            selectli();
+        }
+    }
+
+    $(function() {
+        var scrollableDiv = $("div.scrollable");
+        scrollableDiv.scrollable({
+            size: 3,
+            vertical:false,
+            loop:false,
+            items: '#items',
+            //speed: 1000,
+            //interval: 3000,
+            prevPage:'.prev',//跳转到上一页
+            nextPage:'.next',//跳转到下一页
+            hoverClass: 'hover',
+            easing:'linear'
+        });
+        var api = scrollableDiv.data("scrollable");
+        api.onBeforeSeek(function(event, pos){
+            var _index = this.getIndex();
+            $("#ctips").hide();
+            //console.log("current = " + _index + ", size = " + this.getSize() + ', pos = ' + pos);
+            if (pos < this.getSize() - 1 || noMoreResult){
+                return;
+            }
+
+            showSpinner();
+            var onDate = $('#onDate').val();
+            var urlParams = 'onDate=' + onDate + '&building=' + $("#building").val() + '&room=' + $("#room").val() + '&hour=' + $("#hour").val() + '&power=' + $("#power").val() + '&startMin=' + $("#startMin").val() + '&endMin=' + $("#endMin").val() + '&offset=' + pos;
+            if (searchMode == "NAME"){
+                urlParams = 'onDate=' + onDate + '&name=' + $("#seatInput").val() + '&offset=' + pos;
+            }
+            $.ajax({
+                url : searchUrl = "/freeBook/ajaxSearch",
+                type : "GET",
+                data: urlParams,
+                dataType : "html",
+                success : function (data) {
+                    if (data.length > 0) {
+                        var result = jQuery.parseJSON(data);
+                        api.getItems().eq(pos).remove();
+                        if (result.seatNum > 0){
+                            api.addItem(result.seatStr);
+                        } else {
+                            var msg = "已显示所有符合条件的座位";
+                            $("#ctips").show().html("<i></i>已显示所有符合条件的座位");
+                            shake($("#ctips"),"tipContentred",3);
+                            event.preventDefault();
+                        }
+                        if (result.offset > 0){
+                            api.addItem('<ul class="item"></ul>');
+                        } else {
+                            noMoreResult = true;
+                        }
+                        removeSpinner();
+                    }
+                }
+            })
+        });
+
+        $("#searchBySeatID").click(function(){
+            searchMode = "NAME";
+            var name = $("#seatInput").val();
+            var onDate = $('#onDate').val();
+	    $("#seatInput").val("请输入座位号");
+            if (name.indexOf('请输入座位号') >= 0){
+                name = '';
+		        var scrollableDiv = $("div.scrollable");
+	            var api = scrollableDiv.data("scrollable");
+	            api.getItems().each (function(index) {
+		            $(this).remove();
+	            });
+		        shake($("#ctips"),"tipContentred",3);
+                $("#ctips").html("<i></i>输入座位号查询，返回查询结果").show();
+                return;
+            }
+            showSpinner();
+            $("#ctips").hide();
+            if (name){
+                $.ajax({
+                    url: "/freeBook/ajaxSearch",
+                    data: 'name=' + name + (onDate?'&date=' + onDate:''),
+                    success: function(data){
+                                removeSpinner();
+                                if (data){
+                                    firstSearch(data);
+                                }
+                             }
+                });
+            }
+        });
+    });
+
+    var currentSeat, startTime, endTime;
+    $("#seats").on("click", 'li', function() {
+        startTime = null;
+        endTime = null;
+        currentSeat = this.id.replace('seat_', '');
+        var onDate = $("#onDate").val();
+        $('.reserveDate').html(onDate ? onDate : '今天');
+
+
+        $(".seatTime").show();
+	    $("#startTime").find('ul').html("");
+	    $('#endTime').find('ul').html('');
+
+	    $("#load_start").show();
+        $(".loading2").hide()
+        var this_text = ' 座位 ' + $(this).find('dt').text();
+        $("#seatNumber").text(this_text);
+
+        jQuery.ajax({type:'POST',data:'id=' + currentSeat + '&date=' + onDate, url:'/freeBook/ajaxGetTime',success:function(data,textStatus){onSuccessFromGetTime(data);},error:function(XMLHttpRequest,textStatus,errorThrown){}});
+    });
+
+    function onSuccessFromGetTime(data){
+        if (data){
+	        $("#load_start").hide();
+            $("#startTime").find('ul').html(data);
+            // show captcha based on setting
+            
+
+        }
+    }
+
+    $("#startTime").on("click", 'a', function() {
+        startTime = $(this).attr('time');
+        var onDate = $("#onDate").val();
+        jQuery.ajax({type:'POST',data:'start=' + startTime +'&seat=' + currentSeat +'&date=' + onDate, url:'/freeBook/ajaxGetEndTime',success:function(data,textStatus){onSuccessFromGetEndTime(data);},error:function(XMLHttpRequest,textStatus,errorThrown){}});
+        $('#endTimeCotent').html('');
+    });
+
+    function onSuccessFromGetEndTime(data){
+        if (data){
+            $("#endTimeCotent").html(data);
+            $(".loading").hide();
+        }
+    }
+    $("#endTime").on("click", 'a', function(){
+        $(this).addClass("onEndTime");
+        endTime = $(this).attr('time');
+    });
+
+    $('#reserveBtn').click(function(){
+        if (startTime == null) {
+            alert('请选择开始时间');
+        }else if (endTime == null){
+            alert('请选择结束时间');
+        }else{
+            showSeatTime();
+            $(".seatTime").hide();
+            $('#date').val($('#onDate').val());
+            $('#reserveForm #seat').val(currentSeat);
+            $('#start').val(startTime);
+            $('#end').val(endTime);
+            $('#captcha').val($('#captchaValue').val())
+            $("#reserveForm").submit();
+        }
+    });
+
+    $(".cancelBtn").click(function() {
+        $(".loading2").hide();
+        $(".seatTime").hide(); //显示提示对话框
+    })
+
+    $(".moreBtn").click(function(){
+        var moreBlock = $('#moreOptionBlock');
+        if (moreBlock.css('display') == 'none') {
+	    $(this).parent().hide();
+            $("#power").attr('value', '');
+            $("#window").attr('value', '');
+            $("#select_line_2").removeClass("line");
+            moreBlock.show();
+        }else{
+            $("#select_line_2").addClass("line");
+	    $(this).parent().show();
+            moreBlock.hide();
+        }
+    });
+
+    $(".closeMB").click(function(){
+      $("#moreOptionBlock").hide();
+      $(".moreBtn").parent().show();
+      $("#select_line_2").addClass("line");
+
+    });
+
+    function showSpinner() {
+        $(".loading2").show();
+        showDialogLoading();
+        $(".dialog").show();
+    }
+    function removeSpinner(){
+        $(".dialog").hide();
+        $(".loading2").hide();
+    }
+
+
+        setInterval(function(){setDateTime();}, 1000);
+
+        $(function(){
+            setDateTime();
+            $(".handleBtns").hide();
+            var userInfo = '{"currentReservationStatus":"NO_RESERVATION","hasPrevUnStoppedReservation":false,"userCheckedIn":false,"lastIn":null,"wifiAwayDisabled":false,"wifiStopDisabled":false,"softMode":true}';
+            userInfo = $.parseJSON(userInfo);
+            initializePage(userInfo);
+            $("#btnExit").click(function(){
+                window.location = "/logout";
+            });
+            
+        });
+
+        function btnClick(btn, param) {
+            btn.css('backgroundColor','#ef9d45');
+            $(".loading2").css('display','block');
+            var actionName = btn.attr("action");
+            var paramAll = actionName;
+            if (param) {
+                paramAll += param;
+            }
+            $.ajax({
+                url: "/user/" + paramAll,
+                success: function(data){
+                    showResult(actionName, true, data);
+                },
+                error:function(){
+                    showResult(actionName, false, data);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

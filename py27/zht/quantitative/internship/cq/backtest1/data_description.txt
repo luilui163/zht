@@ -1,0 +1,5 @@
+stock_number	2	c
+holding_ratio	3	c
+industry	4	d
+category	5	d
+continuous_variable	6	c

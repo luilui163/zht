@@ -1,0 +1,3148 @@
+X-Alimail-AntiSpam:AC=PASS;BC=-1|-1;BR=01201311R191e1;FP=0|-1|-1|-1|0|-1|-1|-1;HT=e02c03285;MF=cqalpha@cqfunds.com;NM=1;PH=DS;RN=3;SR=0;TI=SMTPD_----4iBWFmO_1460860891;
+Received: from zhangwc(mailfrom:cqalpha@cqfunds.com ip:123.123.49.250)
+          by smtp.aliyun-inc.com(10.147.41.231);
+          Sun, 17 Apr 2016 10:41:32 +0800
+From: "cqalpha" <cqalpha@cqfunds.com>
+To: <jyang@cqfunds.com>,
+	<xcai@cqfunds.com>
+Cc: "he" <heqi@cqfunds.com>
+Subject: Info: Coding Standard
+Date: Sun, 17 Apr 2016 10:40:39 +0800
+Message-ID: <017901d19852$87b1ed20$9715c760$@cqfunds.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_017A_01D19895.9607FCF0"
+X-Mailer: Microsoft Outlook 16.0
+Thread-Index: AdGYUagZirs24DcnSoyvTV9aMWKwyg==
+Content-Language: zh-cn
+
+This is a multipart message in MIME format.
+
+------=_NextPart_000_017A_01D19895.9607FCF0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+Please read and follow our internal coding standard. It was wiki-format and
+mostly for c++, though.
+
+ 
+
+== Purpose ==
+
+ 
+
+The conventions listed herein are designed to meet the following goals:
+
+* Promote ease of maintenance via consistency in usage, across source code
+files and developers.
+
+ 
+
+* Reduce the chance of common mistakes.
+
+ 
+
+* Promote reuse across projects by lowering the barriers to understanding
+that differing formatting styles can raise.
+
+ 
+
+* Keep developers focused more on producing code that solves our customers'
+problems than on keeping to an arbitrary set of formatting rules.
+
+ 
+
+The conventions are also designed to be easily assimilated into the
+
+day-to-day work of any developer. Most are already in use by the team;
+
+this document merely records them. Others have proven, over time, to
+
+reduce the chances that certain common mistakes will be made.
+
+ 
+
+These rules are not the only ones that would achieve these goals; others
+
+are possible. The point is that these goals are most likely to be achieved
+
+if all of us adhere to the same set of rules, whatever they are.
+
+ 
+
+These conventions apply to source code written in C, C++, Perl and Java,
+
+unless otherwise specified. Fortunately, these languages are similar
+
+enough that few language-specific exceptions are necessary.
+
+ 
+
+== General ==
+
+ 
+
+All lines of code shall be formatted to fit on an 80-character line,
+
+without wrapping. The purpose of this rule is to assure that the code
+
+is easily read in default-sized windows. Code where every other line
+
+wraps becomes very difficult to read, as the line wraps obscure the
+
+indentation and similar hints as to the code's structure.
+
+ 
+
+To facilitate development, Emacs default auto-indentation is
+
+the official standard.  Cases where it deviates from the
+
+style guides below should be reviewed.
+
+ 
+
+NOTE: this standard doesn't apply to lex rules; lex rules are
+
+line-based, and hence splitting lines changes the functionality.  The
+
+rule does apply to the C code in a lex file, though.
+
+ 
+
+=== Comments ===
+
+ 
+
+Comments shall be used to note the purpose of each function, each
+
+functionally-separate block of code within each function, and anywhere
+
+non-obvious processing is performed. The definition of "non-obvious" is
+
+subjective; developers should remember the overall goals of making the
+
+code easy for unfamiliar developers to understand, while spending most
+
+of their time on the code. As a rule of thumb, about 15% of the text in
+
+most source files should be commentary.
+
+ 
+
+Comment blocks shall be at the same level of indentation as the code
+
+they describe (except one-line comments on the same line as the code).
+
+Multi-line comments shall be formatted so that the left edges of the
+
+text lines line up. Here are two examples of same-line comments:
+
+<source lang="cpp">
+
+a = NULL;       /* mark it as empty */
+
+</source>
+
+ 
+
+or, for C++ and Java:
+
+<source lang="cpp">
+
+a = NULL;       // mark it as empty
+
+</source>
+
+ 
+
+But not this:
+
+<source lang="cpp">
+
+a = NULL;       /* This comment should be */
+
+                /* a multi-line comment */
+
+                /* as shown below. */
+
+</source>
+
+ 
+
+Here are two examples of one-line comments:
+
+<source lang="cpp">
+
+/* Give up */
+
+exit(1);
+
+</source>
+
+ 
+
+or, for C++ and Java:
+
+<source lang="cpp">
+
+// Give up
+
+exit(1);
+
+</source>
+
+ 
+
+Here are two examples of multi-line comments (note how the text lines up):
+
+<source lang="cpp">
+
+/*
+
+This comment is a bit contrived, as its purpose is to show how
+
+to write a comment that spans lines.
+
+*/
+
+</source>
+
+or
+
+<source lang="cpp">
+
+// This comment is a bit contrived, as its purpose is to show how
+
+// to write a comment that spans lines.
+
+</source>
+
+ 
+
+In general, comments should say why something is done, not what is
+
+being done.
+
+ 
+
+"Slash slash" style comments should not be used in C code, as they
+
+confuse some C compilers.  In Java and C++, "slash slash" comments
+
+should be used for single-line comments and "slash star" comments
+
+should be used for multi-line comments.
+
+ 
+
+ 
+
+=== Javadoc ===
+
+ 
+
+Java source code shall be commented according to the Java Development
+
+Kit's (JDK) javadoc guidelines for documentation.  For example, the
+
+comment header blocks for methods shall begin with <code>/**</code>, the
+<code>@param</code> tag
+
+shall be used, and so on.
+
+ 
+
+ 
+
+=== Global, Static, and Class-Static Variables ===
+
+ 
+
+Global and static (or class static) variables shall not be used
+
+without explicit prior approval.  There are at least two reasons for
+
+this guideline:
+
+ 
+
+* Code with global and static variables is unlikely to be thread-safe, and
+the conversion to thread safety, should it ever be necessary, will probably
+be quite time-consuming.
+
+ 
+
+* When a function uses information from global and static variables, i.e.
+from somewhere other than what was passed as arguments, the way the function
+works is harder for a new developer to understand.
+
+ 
+
+This guideline is stricter for functions designed to be part of a
+
+library for other developers to use, whether internal or external.
+
+That is, exceptions are VERY unlikely to be granted for new library
+
+development.  Of course, this coding guideline doesn't apply to global
+
+and static variables defined by third-party libraries.
+
+ 
+
+In some very limited circumstances (signal handlers, for example),
+
+global variables are a necessary evil.
+
+ 
+
+== Object Names ==
+
+ 
+
+The support for long object (variables and functions) names shall be
+
+exploited to reduce the need for prose descriptions of the objects'
+
+purposes.  Once again, developer discretion is necessary to balance the
+
+goals of these conventions. Thirty-character variable and function names
+
+may be supported by the compiler and linker, and may be very descriptive,
+
+but they drastically increase the frequency of multi-line statements,
+
+not to mention the raw time taken up by all that typing!
+
+ 
+
+In general shorter, simpler names are easier to read at a glance than
+
+long, complex names. Use simple names for local variables. For example,
+
+<source lang="cpp">
+
+for (i = 0; i < num_of_hits; i++) {
+
+  printf("  hit %d:  dataDoc=%2d        query=%d\n",
+
+    i + j, hits[i].dataDocument, hits[i].query);
+
+}
+
+</source>
+
+ 
+
+is much easier to understand at a glance than
+
+<source lang="cpp">
+
+for (iicurOfHitsToWrite = 0; iicurOfHitsToWrite < iNumOfHitsToWrite;
+
+  iicurOfHitsToWrite++)
+
+{
+
+  printf("  hit %d:  dataDoc=%2d        query=%d\n",
+
+    iicurOfHitsToWrite e +j, hits[iicurOfHitsToWrite].dataDocument,
+
+    hits[iicurOfHitsToWrite].query);
+
+}
+
+</source>
+
+ 
+
+All external names, such as function names, should begin with a prefix
+related to the project.  For example, all externally-accessible functions in
+the BTK library begin with "<code>Btk_</code>".  Similarly, all user-defined
+types should begin with something like "<code>BTK_</code>".
+
+ 
+
+All file-scoped names, (for instance static functions and
+<code>#define</code> in source
+
+files) should begin with the prefix "<code>Fs_</code>" or
+"<code>FS_</code>".  This prefix is
+
+project-independent, and makes explicit the file-scoping.  For example,
+
+"<code>Fs_DoSomething()</code>" or "<code>FS_SOME_DEFINITION</code>".
+
+ 
+
+Group functions that operate on a single entity (structs in C, classes
+
+in C++ and Java) in a file named after the entity (Java actually
+
+requires this).  For example, all the functions that manipulate BTK's
+
+<code>BTK_QUERY</code> data structure reside in <code>Btk_query.c</code>.
+Doing so makes it
+
+easier to figure out which file contains which function.
+
+ 
+
+ 
+
+== Naming Conventions ==
+
+ 
+
+* Words in multiple-word variable and function names shall be denoted by
+capitalizing the first character of the second and later words. For example,
+<code>numberOfHits</code>. There are two exceptions to this rule:
+
+** Two-word names can omit special formatting, as in <code>numhits</code>.
+
+** Names that must be in all upper case letters, such as preprocessor
+macros, shall use underscores, as in <code>DEFAULT_NUM_HITS</code>.
+
+ 
+
+* Local variable names shall be in mixed case starting with lower case. For
+example, <code>message</code>, <code>symbolTable</code>.
+
+ 
+
+* Global and static variable names (should they exist at all) shall be in
+mixed case starting with upper case. For example, <code>Region</code>,
+<code>BetaGroup</code>.
+
+ 
+
+* Preprocessor macros and named constants (including enumeration values)
+shall be all upper case using underscore to separate words. For example,
+<code>UNIVERSE_SIZE</code>.
+
+ 
+
+* Enumeration constants can be prefixed by a common type name. For example,
+<code>COLOR_RED</code>, <code>COLOR_GREEN</code>.
+
+ 
+
+* Type names (a la typedef) shall be all upper case using underscore to
+separate words. For example, <code>IEN_PENDING_REASON</code>.
+
+ 
+
+* Class names shall be all upper case using underscore to separate words.
+They shall begin with a prefix related to the project. For example,
+<code>IEN_DAEMON_PRICEINFO</code>.
+
+ 
+
+* Java interface names shall be be all upper case using underscore to
+separate words. They shall end with "<code>_I</code>".
+
+ 
+
+* Instance variables shall obey the same rule as local variables.
+
+ 
+
+* Class variables (i.e., static data members) shall obey the same rule as
+global variables.
+
+ 
+
+* Method and function names shall be verbs and written in mixed case
+starting with lower case. For example, <code>loadDates()</code>,
+<code>getRisk()</code>.
+
+** In C, when a function name begins with a prefix, the prefix shall start
+with upper case and end with underscore. And then the stem of the function
+name shall obey the rule of starting with lower case. For example,
+<code>Btk_loadDates()</code>.
+
+** In C++/Java, method names shall not begin with a prefix.
+
+ 
+
+* Namespace names shall be in mixed case starting with upper case. For
+example, <code>IoManager</code>.
+
+ 
+
+* Template type names shall be a single uppercase letter. For example,
+template <code><typename T></code>.
+
+ 
+
+* Abbreviations and acronyms shall not be uppercase when used as name. For
+example, <code>exportHtmlSource()</code> (NOT
+<code>exportHTMLSource()</code>).
+
+ 
+
+ 
+
+== White Space ==
+
+ 
+
+Blank lines shall be used to separate function definitions, static
+
+and global variable definitions, external symbol declarations, file
+
+inclusion directives, local variable definitions, code, and similar
+
+constructs from one another. Blanks lines shall also be used within code
+
+to separate functional blocks from one another.  Blank lines shall have
+
+no characters on them besides the newline, that is no spaces or tabs. At
+
+least one commonly-used editor (vi) can quickly move through a file by
+
+scanning for truly blank (empty) lines with a single keystroke.
+
+ 
+
+Space characters shall be used before and after all binary operators
+
+(such as <code>+</code>, <code>/</code>, <code><<</code>, <code>=</code>,
+and <code>==</code>), after all commas in parameter lists or
+
+loop statements, and around and between keywords. Spaces shall not
+
+appear in function invocations between the parentheses and the
+
+function's name or arguments. These rules make it easier to see each
+
+expression in the list, and to see every operation. For example, code
+
+like this:
+
+<source lang="cpp">
+
+prog = argv[0];
+
+(void)fprintf(stderr, "usage: %s <path>\n", argv[0]);
+
+</source>
+
+not like this:
+
+<source lang="cpp">
+
+prog=argv[0];
+
+(void)fprintf ( stderr,"usage: %s <path>\n",argv[0] );
+
+</source>
+
+ 
+
+Long argument lists shall be broken into lines between arguments. The
+
+second and later lines shall be indented so that the argument list as a
+
+whole is at the closest indentation level that lines up with the function
+
+invocation's opening parenthesis. For example:
+
+<source lang="cpp">
+
+(void)fprintf(stderr, "The first four arguments are %s, %s, %s, %s\n",
+
+              argv[0], argv[1], argv[2], argv[3]);
+
+</source>
+
+ 
+
+Complex arithmetic computations shall be broken into lines between the
+
+left-hand operand and an operator. The second and later lines shall be
+
+indented so that the expression as a whole is indented from the lvalue
+
+(where the result of the calculation goes), and so that the indentation
+
+reflects the structure of the expression (e.g. parenthesis nesting or
+
+precedence of operations). For example, code like this:
+
+<source lang="cpp">
+
+elapsed_time = (end_time.tv_sec - start_time.tv_sec)
+
+             + (end_time.tv_usec - start_time.tv_usec) / 1000000.0;
+
+</source>
+
+whose spacial organization suggests that only the usec sub-expression
+
+gets divided, and not like this:
+
+<source lang="cpp">
+
+elapsed_time = (end_time.tv_sec - start_time.tv_sec) + (end_time.tv_usec
+
+             - start_time.tv_usec) / 1000000.0;
+
+</source>
+
+nor like this (the line break before the division disguises the fact
+
+that only the usec sub-expression is divided):
+
+<source lang="cpp">
+
+elapsed_time = (end_time.tv_sec - start_time.tv_sec)
+
+             + (end_time.tv_usec - start_time.tv_usec)
+
+             / 1000000.0;
+
+</source>
+
+ 
+
+Conditionals (<code>if</code>, <code>while</code>, <code>until</code>)
+should have spaces before the condition:
+
+"<code>if ()</code>", not "<code>if()</code>".
+
+ 
+
+C is a language with pointers; don't obscure pointer arithmetic and
+
+similar C-specific idioms with extraneous parentheses.  In other words,
+
+work with C in these areas and not against it.  For example, this
+
+expression is fairly concise and deterministic:
+
+<source lang="cpp">
+
+while (*s++ == *t++) {
+
+  ...
+
+}
+
+</source>
+
+ 
+
+While it's true that <code>*(a + i)</code> means the same thing as
+<code>a[i]</code>, the
+
+latter is far easier to understand at a glance.  Similarly,
+<code>&a[i]</code>,
+
+<code>&(a[i])</code>, and <code>a + i</code> all mean the same thing.  The
+former is better
+
+when the address of a specific element of an array is needed, while the
+
+latter is better when stepping along some number of bytes in a buffer.
+
+The middle expression, while technically correct, obscures the meaning
+
+of the expression.  Ditto for
+
+<source lang="cpp">
+
+otherpointer = (othertype *)(structpointer->elementthatsapointer);
+
+</source>
+
+ 
+
+Use
+
+<source lang="cpp">
+
+otherpointer = (othertype *)structpointer->elementthatsapointer;
+
+</source>
+
+instead.
+
+ 
+
+ 
+
+Complex boolean expressions, such as those in <code>if ()</code> statements,
+should be
+
+broken across lines so that the relational operator (<code>&&</code>,
+<code>||</code>, and so on)
+
+is at the front of the line.  For example:
+
+<source lang="cpp">
+
+if ((s = strtok(NULL, Whitespace) != NULL)
+
+    && (sscanf(s, "%d", &n) != 1)
+
+    && (n < really_long_function_that_returns_the_limit())) {
+
+    ...
+
+}
+
+</source>
+
+ 
+
+Note how the expressions line up nicely when this scheme is used, and
+
+how the code inside the <code>if ()</code> block clearly stands out
+distinctly from
+
+the expression.  Of course, the rule that line splits should not
+
+obscure precedence of operations applies to boolean expressions as well.
+
+ 
+
+Use more than one space around assignments when several appear in a
+
+row, so that they all line up.  Doing so makes it easier to see when
+
+one of them does something slightly different.  For example, code like
+
+this:
+
+<source lang="cpp">
+
+var             = 0;
+
+anothervar      = 0;
+
+var2            = initvar2();
+
+stillanothervar = 0;
+
+</source>
+
+instead of like this:
+
+<source lang="cpp">
+
+var = 0;
+
+anothervar = 0;
+
+var2 = initvar2();
+
+stillanothervar = 0;
+
+</source>
+
+ 
+
+ 
+
+== C Function Definitions ==
+
+ 
+
+Each function shall be defined by a line containing its return type and
+
+scope, if any, followed by the name of the function on the next line,
+
+without any leading white space. That is, the return type and the name
+
+shall not be on the same line. The reason for this rule is so that a
+
+developer can easily find the definition of a function by searching the
+
+file for the name of the function at the beginning of a line.
+
+Otherwise, it is difficult to distinguish the definition from
+
+invocations (the regular expression to find the definition of function
+
+"foo" is therefore <code>^foo</code>).
+
+ 
+
+The arguments shall follow, one per line, indented one tab stop.  For
+
+example:
+
+<source lang="cpp">
+
+int
+
+main(
+
+  int argc;
+
+  char *argv[])
+
+{
+
+</source>
+
+ 
+
+This rule is relaxed for single-, or no-argument functions.
+
+ 
+
+All externally-accessible functions shall be declared in a C/C++ header
+
+file. The header file's name shall begin with the source file name's
+
+beginning and end in <code>.h</code>. For example, if the file
+<code>foo.c</code> defines
+
+externally-accessible functions, then the file <code>foo.h</code> will have
+their
+
+prototypes. Full ANSI prototypes shall be used. For example:
+
+<source lang="cpp">
+
+extern unsigned sleep(unsigned seconds);
+
+</source>
+
+ 
+
+Note the use of the <code>extern</code> keyword; all externally-defined
+objects,
+
+functions and variables, shall be declared as <code>extern</code> in the
+files where
+
+they are used.
+
+ 
+
+ 
+
+== Code Blocks ==
+
+ 
+
+Blocks of code shall be indented two spaces from their enclosing
+
+braces. The preferred method for this indentation is "soft tabs",
+
+a feature supported by the vi and emacs editors, among others. By
+
+using "soft tabs" instead of setting tab stops to the same number of
+
+characters, code can be printed directly in a form that preserves the
+
+block indentation, without needing special formatting. It also ensures
+
+that programs such as more and less will correctly display the block
+
+indentation without any special setup or formatting commands.
+
+ 
+
+For vi, the following commands can be placed in <code>.vimrc</code> file:
+
+<source lang="bash">
+
+  set tabstop=2
+
+  set softtabstop=2
+
+  set shiftwidth=2
+
+  set expandtab
+
+</source>
+
+ 
+
+The last command replaces any instances of tab during edit with number
+
+of spaces specified in <code>tabstop</code> (in this case 2 spaces).
+
+ 
+
+ 
+
+For emacs, this is the default in C code, but must be overwritten for Perl
+
+code with the following commands in your <code>.emacs</code> file:
+
+<source lang="lisp">
+
+; two space indentation in perl mode:
+
+(defun my-perl-mode-hook ()
+
+  (setq perl-indent-level 2)
+
+)
+
+(add-hook 'perl-mode-hook 'my-perl-mode-hook)
+
+</source>
+
+ 
+
+The following comments on brace style are described more concisely, and
+
+certainly more humorously, in "The Ten Commandments for C Programmers",
+
+by Henry Spencer [http://www.lysator.liu.se/c/ten-commandments.html].
+
+Its contents are included here by reference.
+
+ 
+
+Each opening brace may be on the same line as its opening statement
+
+if it will fit. If the brace can't fit, it shall appear on the next
+
+line, by itself. If the brace appears on the next line, it shall be
+
+at the same indentation as the opening statement. Closing braces shall
+
+be indented to the same level as the statement that opened the block,
+
+i.e. one stop to the left of the code in the block. For example, this
+
+code is indented properly:
+
+<source lang="cpp">
+
+int
+
+main(
+
+  int argc,
+
+  char *argv[])
+
+{
+
+  if (argc != 1) {
+
+    (void)fprintf(stderr, "usage: %s <path>\n", argv[0]);
+
+    exit(2);
+
+  }
+
+  ...
+
+}
+
+</source>
+
+ 
+
+This code is not:
+
+<source lang="cpp">
+
+int
+
+main(
+
+    int argc,
+
+    char *argv[])
+
+{
+
+    if (argc != 1) {
+
+        (void)fprintf(stderr, "usage: %s <path>\n", argv[0]);
+
+        exit(2);
+
+        }
+
+    ...
+
+    }
+
+</source>
+
+and neither is this:
+
+<source lang="cpp">
+
+int
+
+main(
+
+    int argc,
+
+    char *argv[])
+
+    {
+
+    if (argc != 1)
+
+        {
+
+        (void)fprintf(stderr, "usage: %s <path>\n", argv[0]);
+
+        exit(2);
+
+        }
+
+    ...
+
+    }
+
+</source>
+
+nor this:
+
+<source lang="cpp">
+
+int
+
+main(
+
+    int argc,
+
+    char *argv[])
+
+  {
+
+    if (argc != 1)
+
+      {
+
+        (void)fprintf(stderr, "usage: %s <path>\n", argv[0]);
+
+        exit(2);
+
+      }
+
+    ...
+
+  }
+
+</source>
+
+ 
+
+Furthermore all sub-blocks, even one-statement sub-blocks, shall
+
+use braces. The reason for this rule is that it tends to reduce the
+
+chance of error when adding a statement to an existing <code>if</code>,
+<code>while</code>, or <code>do</code>
+
+statement. For example, without this rule, it can be easy to change this:
+
+<source lang="cpp">
+
+  if (argc != 1)
+
+    exit(2);
+
+  ...
+
+}
+
+</source>
+
+to this:
+
+<source lang="cpp">
+
+  if (argc != 1)
+
+    (void)fprintf(stderr, "usage: %s <path>\n", argv[0]);
+
+    exit(2);
+
+  ...
+
+}
+
+</source>
+
+when this is what was intended:
+
+<source lang="cpp">
+
+  if (argc != 1) {
+
+    (void)fprintf(stderr, "usage: %s <path>\n", argv[0]);
+
+    exit(2);
+
+  }
+
+  ...
+
+}
+
+</source>
+
+ 
+
+(the former code always exits, regardless of the result of the
+<code>if</code>'s
+
+condition).
+
+ 
+
+=== Lex ===
+
+ 
+
+For lex (and flex) rules and associated code, use similar blocking as
+
+for <code>if</code> statements.  For example:
+
+<source lang="cpp">
+
+<STATE>(somerule)* {
+
+  /* C code here. */
+
+}
+
+</source>
+
+ 
+
+Note that the code associated with the rule appears in braces, even if
+
+it's only a single line.  Note also that the opening brace appears on
+
+the same line as the rule.  As noted earlier, lex rules must be on a
+
+single line by themselves (lex syntax doesn't allow for line breaks in
+
+the middle of rules), so the 80-char wrap rule doesn't apply.
+
+ 
+
+ 
+
+== Comment Header Blocks ==
+
+ 
+
+Every function shall have a header block of comments that describes what
+
+the function does, what its arguments mean, and what its return value
+
+(if any) means. The reason for this rule is that such headers make it
+
+possible for developers unfamiliar with the code to get a "big picture"
+
+idea of what it does without reading every line of it. Here is an example,
+
+pulled from <code>PreHmm.c</code> in the BTK:
+
+<source lang="cpp">
+
+/*********************************************************************/
+
+/*
+
+  This function parses an HMM and saves the parsed code out. Its synopsis
+is:
+
+ 
+
+  success = save_query(file, ifp, ofp, template, msg)
+
+ 
+
+  where
+
+        file     is a pointer to the name of the input file
+
+        ifp      is the input FILE*
+
+        ofp      is the output FILE*
+
+        template is a pointer to a blank, but initialized, BTK_QUERYREF
+
+        msg      is a pointer to a BTK_MESSAGE structure that will be
+
+                 filled in on error
+
+ 
+
+        success  is BTK_SUCCESS on success, BTK_ERROR otherwise
+
+*/
+
+/*********************************************************************/
+
+</source>
+
+ 
+
+== Miscellaneous ==
+
+ 
+
+This section lists some common idioms in C, constructs that should be
+
+used in their idiomatic form because of common understanding and concise
+
+formulation.  It also lists some other items that didn't seem to fit
+
+very well elsewhere.
+
+ 
+
+For infinite loops, use
+
+<source lang="cpp">
+
+for (;;) {
+
+  ...
+
+}
+
+</source>
+
+instead of
+
+<source lang="cpp">
+
+while (1) {
+
+  ...
+
+}
+
+</source>
+
+ 
+
+ 
+
+Use
+
+<source lang="cpp">
+
+  return 7;
+
+</source>
+
+instead of
+
+<source lang="cpp">
+
+  return(7);
+
+</source>
+
+or
+
+<source lang="cpp">
+
+  return (7);
+
+</source>
+
+ 
+
+The unnecessary parentheses can lead someone new to the code to think
+
+something unobvious is going on.
+
+ 
+
+ 
+
+Avoid initializing local variables in their declarations, for two reasons:
+
+* The debugger can confuse one easily by asserting that there's executable
+code in the variable declarations.  For example, if one types "<code>b
+foo</code>" to gdb, it means "stop on entry to function <code>foo</code>".
+If there's an initialization in the declarations, you'll see the code stop
+in the middle of a bunch of variable declarations, which can be quite
+confusing.
+
+ 
+
+* If the function doesn't fit in a single screen, the initialized value
+might not be visible when looking at the line of code where the variable is
+first used.  Initializing at the point of first use can make the code easier
+to understand.
+
+ 
+
+There are some surprising precedence orderings between bit-wise and
+
+relational boolean operators, that is between <code>&</code> and
+<code>|</code> on the one
+
+hand and <code>&&</code> and <code>||</code> on the other.  Always use
+parentheses when using
+
+any of these operators. [http://www.lysator.liu.se/c/dmr-on-or.html#main]
+
+ 
+
+Do not imply 0 for numeric tests.  For example, code like this:
+
+<source lang="cpp">
+
+if (x != 0) {
+
+  ...
+
+}
+
+</source>
+
+not like this:
+
+<source lang="cpp">
+
+if (x) {
+
+  ...
+
+}
+
+</source>
+
+ 
+
+In pointer comparisons, do not imply NULL, nor imply equality between 0
+
+and NULL (the former is a numeric constant; the latter is a
+
+preprocessor variable in C <code>#define</code>d in <code>stdio.h</code>).
+For example, code
+
+like this:
+
+<source lang="cpp">
+
+if (p != NULL) {
+
+  ...
+
+}
+
+</source>
+
+not like this:
+
+<source lang="cpp">
+
+if (p) {
+
+  ...
+
+}
+
+</source>
+
+ 
+
+Is is OK to use ints as booleans in C, where there is no native
+
+boolean type.  When doing so, don't compare to any literal value and
+
+don't <code>#define</code> <code>TRUE</code> and <code>FALSE</code>.  Use a
+name for the variable that implies
+
+its boolean nature in <code>if()</code> and loop constructs.  For example:
+
+<source lang="cpp">
+
+if (runnable) {
+
+  run();
+
+}
+
+</source>
+
+or
+
+<source lang="cpp">
+
+while (!done) {
+
+  ...
+
+}
+
+</source>
+
+ 
+
+When <code>#define</code>ing numeric preprocessor variables, always put
+parentheses
+
+around the expression, even if it's a single number.  Doing so makes
+
+sure you get what you intended no matter how the preprocessor variable
+
+is used later in code.  For example, code like this:
+
+<source lang="cpp">
+
+#define NEG_INFINITY_16 (-32768)
+
+</source>
+
+not like this:
+
+<source lang="cpp">
+
+#define NEG_INFINITY_16 -32768
+
+</source>
+
+ 
+
+As as example of where the latter can lead you wrong, consider this
+
+simple-looking assignment:
+
+<source lang="cpp">
+
+int i = -NEG_INFINITY_16;
+
+</source>
+
+ 
+
+After the preprocessor runs, you get
+
+<source lang="cpp">
+
+int i = --32768;
+
+</source>
+
+ 
+
+On some compilers (like on the Alpha), this line causes a compile-time
+
+error complaining that 32768 isn't an lvalue (the compiler is
+
+interpreting the code as a prefix decrement, not a double negation).
+
+ 
+
+ 
+
+== Compiler Warnings ==
+
+ 
+
+No warnings are allowed, with the exception of deprecation messages that
+
+arise as a result of library API changes.  Developers are required to
+
+use suitable data types, casts, or other appropriate mechanisms so that
+
+their code compiles without warnings.
+
+ 
+
+Code should be built with <code>-Wall -W</code> to catch any warnings that
+the compiler
+
+might catch.
+
+ 
+
+ 
+
+== Copyright ==
+
+ 
+
+All source files should have a copyright as their first line
+
+(or second line for shell scripts with <code>#!</code> lines).
+
+ 
+
+The copyright notice should read as follows:
+
+<source lang="text">
+
+Copyright (C) 20__ CQFunds. All Rights Reserved.
+
+</source>
+
+ 
+
+The year in the above copyright notice should be the year in which the
+
+document was created.  If a document was modified in a subsequent
+
+year, the notice should specify a range from the year in which it was
+
+created until the year in which it was last modified.
+
+ 
+
+ 
+
+== Makefiles ==
+
+ 
+
+The number of makefiles should be minimized.  As much as possible, a single
+
+makefile should be used for everything.  Recursive make should NOT be used.
+
+Makefiles should not include other Makefiles.  This makes it possible to
+
+capture all dependencies in one place, and provides maximum leverage for
+
+the effort spent on making a good makefile.
+
+ 
+
+== C++ ==
+
+ 
+
+In general, the rules for C++ are the same as those for C.  Fancy C++
+
+code, like overloaded functions, complicated constructors and destructors,
+
+virtual functions, etc., should be avoided.  Reference
+
+parameters should not be used, as they can make functions look like they
+
+don't modify parameters when they really do, and the cure for this --
+
+using const all over the place -- is worse than the disease.  C++ exceptions
+
+should not be used, as they're very hard to read and debug and not
+
+reliably portable between compilers.
+
+ 
+
+In-line declarations and assignment-delcarations should be avoided in
+
+C++ just like in C.
+
+ 
+
+== Python ==
+
+ 
+
+(part of this adapted from python style guide
+[http://www.python.org/doc/essays/styleguide.html])
+
+ 
+
+In python, blocks of code, is identified by indentation. Although the
+
+indentation length of the first statement of a block could be arbitrary, all
+
+instructions of a block have to be indented the same. We recommend
+indentation
+
+in steps of 4 space characters.  Caution should be made such that no mixing
+of
+
+tab and space characters occurs for indentation. The indentation length is
+not
+
+the length you see in the buffer, but equal to the number of separation
+
+characters.
+
+ 
+
+When defining a function, always put a doc string immediately after the
+
+definition line to explain the exact work the function does. Be sure to
+indent
+
+the doc string the same as the function block. For consistency, always use
+
+<code>"""triple double quotes"""</code> around doc strings. One-line doc
+strings are for
+
+really obvious cases. They should really fit on one line. Multi-line doc
+strings
+
+consist of a summary line just like a one-line doc string, followed by a
+blank
+
+line, followed by a more elaborate description. The summary line may be used
+by
+
+automatic indexing tools; it is important that it fits on one line and is
+
+separated from the rest of the doc string by a blank line.
+
+ 
+
+Example one-line doc string:
+
+<source lang="python">
+
+def kos_root():
+
+    """Return the pathname of the KOS root directory."""
+
+    global _kos_root
+
+    if _kos_root: return _kos_root
+
+    ...
+
+</source>
+
+ 
+
+Example multi-line doc string:
+
+<source lang="python">
+
+def complex(real=0.0, imag=0.0):
+
+    """Form a complex number.
+
+ 
+
+    Keyword arguments:
+
+    real -- the real part (default 0.0)
+
+    imag -- the imaginary part (default 0.0)
+
+ 
+
+    """
+
+    if imag == 0.0 and real == 0.0: return complex_zero
+
+    ...
+
+</source>
+
+ 
+
+It's not necessary to and should not append a "<code>;</code>" after each
+statement.
+
+ 
+
+== File operations ==
+
+ 
+
+Following these rules will simplify forensic analysis if (when) something
+goes wrong:
+
+* Print the paths that you use.
+
+* If you end up using a default path, print that fact and print the default
+value.
+
+* If you cannot open a file or directory, print the output of
+<code>strerror_r</code>.
+
+* Add a library specific prefix to log messages, that way we can easily tell
+who is generating the error.
+
+ 
+
+== Conclusion ==
+
+ 
+
+The purpose of these formatting conventions is to reduce the amount of
+
+time, energy, and money it takes for a competent developer to understand
+
+code written by someone else. They will also tend to make the code
+
+easier for a particular developer to understand his or her own code,
+
+after months away from it. 
+
+
+------=_NextPart_000_017A_01D19895.9607FCF0
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" =
+xmlns=3D"http://www.w3.org/TR/REC-html40"><head><meta =
+http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dus-ascii"><meta name=3DGenerator content=3D"Microsoft Word 15 =
+(filtered medium)"><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#954F72;
+	text-decoration:underline;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri",sans-serif;}
+/* Page Definitions */
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body lang=3DZH-CN =
+link=3D"#0563C1" vlink=3D"#954F72" =
+style=3D'text-justify-trim:punctuation'><div class=3DWordSection1><p =
+class=3DMsoNormal><span lang=3DEN-US>Please read and follow our internal =
+coding standard. It was wiki-format and mostly for c++, =
+though.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>=3D=3D Purpose =3D=3D<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>The conventions listed herein are =
+designed to meet the following goals:<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>* Promote ease of maintenance via =
+consistency in usage, across source code files and =
+developers.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>* Reduce the chance of common =
+mistakes.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>* Promote reuse across projects by lowering the barriers to =
+understanding that differing formatting styles can =
+raise.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>* Keep developers focused more on producing code that =
+solves our customers' problems than on keeping to an arbitrary set of =
+formatting rules.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>The conventions are also designed to be easily assimilated =
+into the<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>day-to-day work of any developer. Most are already in use =
+by the team;<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>this document merely records them. Others have proven, over =
+time, to<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>reduce the chances that certain common mistakes will be =
+made.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>These rules are not the only ones that would achieve these =
+goals; others<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>are possible. The point is that these goals are most likely =
+to be achieved<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>if all of us adhere to the same set of rules, whatever they =
+are.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>These conventions apply to source code written in C, C++, =
+Perl and Java,<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>unless otherwise specified. Fortunately, these languages =
+are similar<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>enough that few language-specific exceptions are =
+necessary.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>=3D=3D General =3D=3D<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>All lines of code shall be =
+formatted to fit on an 80-character line,<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>without wrapping. The purpose of =
+this rule is to assure that the code<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>is easily read in default-sized =
+windows. Code where every other line<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>wraps becomes very difficult to =
+read, as the line wraps obscure the<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>indentation and similar hints as to =
+the code's structure.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>To facilitate development, Emacs default auto-indentation =
+is<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>the =
+official standard.&nbsp; Cases where it deviates from =
+the<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>style =
+guides below should be reviewed.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>NOTE: this standard doesn't apply =
+to lex rules; lex rules are<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>line-based, and hence splitting =
+lines changes the functionality.&nbsp; The<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>rule does apply to the C code in a =
+lex file, though.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>=3D=3D=3D Comments =3D=3D=3D<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>Comments shall be used to note the =
+purpose of each function, each<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>functionally-separate block of code =
+within each function, and anywhere<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>non-obvious processing is =
+performed. The definition of &quot;non-obvious&quot; =
+is<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>subjective; developers should remember the overall goals of =
+making the<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>code easy for unfamiliar developers to understand, while =
+spending most<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>of their time on the code. As a rule of thumb, about 15% of =
+the text in<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>most source files should be =
+commentary.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>Comment blocks shall be at the same level of indentation as =
+the code<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>they describe (except one-line comments on the same line as =
+the code).<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>Multi-line comments shall be formatted so that the left =
+edges of the<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>text lines line up. Here are two examples of same-line =
+comments:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>a =3D =
+NULL;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* mark it as empty =
+*/<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>or, for C++ and =
+Java:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>a =3D =
+NULL;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // mark it as =
+empty<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>But not =
+this:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>a =3D =
+NULL;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* This comment should be =
+*/<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* a multi-line comment =
+*/<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* as shown below. =
+*/<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>Here are two examples of one-line =
+comments:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>/* Give up =
+*/<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>exit(1);<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>or, for C++ and =
+Java:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>// Give up<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>exit(1);<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>Here are two examples of multi-line =
+comments (note how the text lines up):<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>/*<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US> This comment is a bit contrived, =
+as its purpose is to show how<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US> to write a comment that spans =
+lines.<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US> =
+*/<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>or<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>// This comment is a bit contrived, =
+as its purpose is to show how<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>// to write a comment that spans =
+lines.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>In general, comments should say why =
+something is done, not what is<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>being done.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&quot;Slash slash&quot; style =
+comments should not be used in C code, as they<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>confuse some C compilers.&nbsp; In =
+Java and C++, &quot;slash slash&quot; comments<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>should be used for single-line =
+comments and &quot;slash star&quot; comments<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>should be used for multi-line =
+comments.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>=3D=3D=3D Javadoc =3D=3D=3D<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>Java source code shall be commented =
+according to the Java Development<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>Kit's (JDK) javadoc guidelines for =
+documentation.&nbsp; For example, the<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>comment header blocks for methods =
+shall begin with &lt;code&gt;/**&lt;/code&gt;, the =
+&lt;code&gt;@param&lt;/code&gt; tag<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>shall be used, and so =
+on.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>=3D=3D=3D Global, Static, and Class-Static Variables =
+=3D=3D=3D<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>Global and static (or class static) variables shall not be =
+used<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>without explicit prior approval.&nbsp; There are at least =
+two reasons for<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>this guideline:<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>* Code with global and static =
+variables is unlikely to be thread-safe, and the conversion to thread =
+safety, should it ever be necessary, will probably be quite =
+time-consuming.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>* When a function uses information from global and static =
+variables, i.e. from somewhere other than what was passed as arguments, =
+the way the function works is harder for a new developer to =
+understand.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>This guideline is stricter for functions designed to be =
+part of a<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>library for other developers to use, whether internal or =
+external.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>That is, exceptions are VERY unlikely to be granted for new =
+library<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>development.&nbsp; Of course, this coding guideline doesn't =
+apply to global<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>and static variables defined by third-party =
+libraries.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>In some very limited circumstances (signal handlers, for =
+example),<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>global variables are a necessary =
+evil.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>=3D=3D Object Names =3D=3D<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>The support for long object =
+(variables and functions) names shall be<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>exploited to reduce the need for =
+prose descriptions of the objects'<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>purposes.&nbsp; Once again, =
+developer discretion is necessary to balance the<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>goals of these conventions. =
+Thirty-character variable and function names<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>may be supported by the compiler =
+and linker, and may be very descriptive,<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>but they drastically increase the =
+frequency of multi-line statements,<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>not to mention the raw time taken =
+up by all that typing!<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>In general shorter, simpler names are easier to read at a =
+glance than<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>long, complex names. Use simple names for local variables. =
+For example,<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>for (i =3D 0; i &lt; num_of_hits; =
+i++) {<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp; printf(&quot;&nbsp; hit %d:&nbsp; =
+dataDoc=3D%2d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+query=3D%d\n&quot;,<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; i + j, hits[i].dataDocument, =
+hits[i].query);<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>}<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>is much easier to understand at a =
+glance than<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>for (iicurOfHitsToWrite =3D 0; =
+iicurOfHitsToWrite &lt; iNumOfHitsToWrite;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp; =
+iicurOfHitsToWrite++)<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>{<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp; printf(&quot;&nbsp; hit %d:&nbsp; =
+dataDoc=3D%2d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+query=3D%d\n&quot;,<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; iicurOfHitsToWrite e +j, =
+hits[iicurOfHitsToWrite].dataDocument,<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp;&nbsp;&nbsp; =
+hits[iicurOfHitsToWrite].query);<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>}<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>All external names, such as =
+function names, should begin with a prefix related to the project.&nbsp; =
+For example, all externally-accessible functions in the BTK library =
+begin with &quot;&lt;code&gt;Btk_&lt;/code&gt;&quot;.&nbsp; Similarly, =
+all user-defined types should begin with something like =
+&quot;&lt;code&gt;BTK_&lt;/code&gt;&quot;.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>All file-scoped names, (for =
+instance static functions and &lt;code&gt;#define&lt;/code&gt; in =
+source<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>files) should begin with the prefix =
+&quot;&lt;code&gt;Fs_&lt;/code&gt;&quot; or =
+&quot;&lt;code&gt;FS_&lt;/code&gt;&quot;.&nbsp; This prefix =
+is<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>project-independent, and makes explicit the =
+file-scoping.&nbsp; For example,<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&quot;&lt;code&gt;Fs_DoSomething()&lt;/code&gt;&quot; or =
+&quot;&lt;code&gt;FS_SOME_DEFINITION&lt;/code&gt;&quot;.<o:p></o:p></span=
+></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>Group functions that operate on a single entity (structs in =
+C, classes<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>in C++ and Java) in a file named after the entity (Java =
+actually<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>requires this).&nbsp; For example, all the functions that =
+manipulate BTK's<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;code&gt;BTK_QUERY&lt;/code&gt; data structure reside in =
+&lt;code&gt;Btk_query.c&lt;/code&gt;.&nbsp; Doing so makes =
+it<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>easier =
+to figure out which file contains which =
+function.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>=3D=3D Naming Conventions =3D=3D<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>* Words in multiple-word variable =
+and function names shall be denoted by capitalizing the first character =
+of the second and later words. For example, =
+&lt;code&gt;numberOfHits&lt;/code&gt;. There are two exceptions to this =
+rule:<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>** =
+Two-word names can omit special formatting, as in =
+&lt;code&gt;numhits&lt;/code&gt;.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>** Names that must be in all upper =
+case letters, such as preprocessor macros, shall use underscores, as in =
+&lt;code&gt;DEFAULT_NUM_HITS&lt;/code&gt;.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>* Local variable names shall be in =
+mixed case starting with lower case. For example, =
+&lt;code&gt;message&lt;/code&gt;, =
+&lt;code&gt;symbolTable&lt;/code&gt;.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>* Global and static variable names =
+(should they exist at all) shall be in mixed case starting with upper =
+case. For example, &lt;code&gt;Region&lt;/code&gt;, =
+&lt;code&gt;BetaGroup&lt;/code&gt;.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>* Preprocessor macros and named =
+constants (including enumeration values) shall be all upper case using =
+underscore to separate words. For example, =
+&lt;code&gt;UNIVERSE_SIZE&lt;/code&gt;.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>* Enumeration constants can be =
+prefixed by a common type name. For example, =
+&lt;code&gt;COLOR_RED&lt;/code&gt;, =
+&lt;code&gt;COLOR_GREEN&lt;/code&gt;.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>* Type names (a la typedef) shall =
+be all upper case using underscore to separate words. For example, =
+&lt;code&gt;IEN_PENDING_REASON&lt;/code&gt;.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>* Class names shall be all upper =
+case using underscore to separate words. They shall begin with a prefix =
+related to the project. For example, =
+&lt;code&gt;IEN_DAEMON_PRICEINFO&lt;/code&gt;.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>* Java interface names shall be be =
+all upper case using underscore to separate words. They shall end with =
+&quot;&lt;code&gt;_I&lt;/code&gt;&quot;.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>* Instance variables shall obey the =
+same rule as local variables.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>* Class variables (i.e., static =
+data members) shall obey the same rule as global =
+variables.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>* Method and function names shall be verbs and written in =
+mixed case starting with lower case. For example, =
+&lt;code&gt;loadDates()&lt;/code&gt;, =
+&lt;code&gt;getRisk()&lt;/code&gt;.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>** In C, when a function name =
+begins with a prefix, the prefix shall start with upper case and end =
+with underscore. And then the stem of the function name shall obey the =
+rule of starting with lower case. For example, =
+&lt;code&gt;Btk_loadDates()&lt;/code&gt;.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>** In C++/Java, method names shall =
+not begin with a prefix.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>* Namespace names shall be in mixed case starting with =
+upper case. For example, =
+&lt;code&gt;IoManager&lt;/code&gt;.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>* Template type names shall be a =
+single uppercase letter. For example, template &lt;code&gt;&lt;typename =
+T&gt;&lt;/code&gt;.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>* Abbreviations and acronyms shall not be uppercase when =
+used as name. For example, &lt;code&gt;exportHtmlSource()&lt;/code&gt; =
+(NOT =
+&lt;code&gt;exportHTMLSource()&lt;/code&gt;).<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>=3D=3D White Space =
+=3D=3D<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>Blank lines shall be used to separate function definitions, =
+static<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>and =
+global variable definitions, external symbol declarations, =
+file<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>inclusion directives, local variable definitions, code, and =
+similar<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>constructs from one another. Blanks lines shall also be =
+used within code<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>to separate functional blocks from one another.&nbsp; Blank =
+lines shall have<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>no characters on them besides the newline, that is no =
+spaces or tabs. At<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>least one commonly-used editor (vi) can quickly move =
+through a file by<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>scanning for truly blank (empty) lines with a single =
+keystroke.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>Space characters shall be used before and after all binary =
+operators<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>(such as &lt;code&gt;+&lt;/code&gt;, =
+&lt;code&gt;/&lt;/code&gt;, &lt;code&gt;&lt;&lt;&lt;/code&gt;, =
+&lt;code&gt;=3D&lt;/code&gt;, and &lt;code&gt;=3D=3D&lt;/code&gt;), =
+after all commas in parameter lists or<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>loop statements, and around and =
+between keywords. Spaces shall not<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>appear in function invocations =
+between the parentheses and the<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>function's name or arguments. These =
+rules make it easier to see each<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>expression in the list, and to see =
+every operation. For example, code<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>like this:<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>prog =3D =
+argv[0];<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>(void)fprintf(stderr, &quot;usage: %s &lt;path&gt;\n&quot;, =
+argv[0]);<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>not like =
+this:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>prog=3Dargv[0];<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>(void)fprintf ( stderr,&quot;usage: =
+%s &lt;path&gt;\n&quot;,argv[0] );<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>Long argument lists shall be broken =
+into lines between arguments. The<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>second and later lines shall be =
+indented so that the argument list as a<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>whole is at the closest indentation =
+level that lines up with the function<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>invocation's opening parenthesis. =
+For example:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>(void)fprintf(stderr, &quot;The =
+first four arguments are %s, %s, %s, %s\n&quot;,<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp; argv[0], argv[1], argv[2], =
+argv[3]);<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>Complex arithmetic computations =
+shall be broken into lines between the<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>left-hand operand and an operator. =
+The second and later lines shall be<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>indented so that the expression as =
+a whole is indented from the lvalue<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>(where the result of the =
+calculation goes), and so that the indentation<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>reflects the structure of the =
+expression (e.g. parenthesis nesting or<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>precedence of operations). For =
+example, code like this:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>elapsed_time =3D (end_time.tv_sec - =
+start_time.tv_sec)<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp; + (end_time.tv_usec - start_time.tv_usec) / =
+1000000.0;<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>whose spacial organization suggests =
+that only the usec sub-expression<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>gets divided, and not like =
+this:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>elapsed_time =3D (end_time.tv_sec - =
+start_time.tv_sec) + (end_time.tv_usec<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp; - start_time.tv_usec) / 1000000.0;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>nor like this (the line break =
+before the division disguises the fact<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>that only the usec sub-expression =
+is divided):<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>elapsed_time =3D (end_time.tv_sec - =
+start_time.tv_sec)<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp; + (end_time.tv_usec - =
+start_time.tv_usec)<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp; / 1000000.0;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>Conditionals =
+(&lt;code&gt;if&lt;/code&gt;, &lt;code&gt;while&lt;/code&gt;, =
+&lt;code&gt;until&lt;/code&gt;) should have spaces before the =
+condition:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&quot;&lt;code&gt;if ()&lt;/code&gt;&quot;, not =
+&quot;&lt;code&gt;if()&lt;/code&gt;&quot;.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>C is a language with pointers; =
+don't obscure pointer arithmetic and<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>similar C-specific idioms with =
+extraneous parentheses.&nbsp; In other words,<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>work with C in these areas and not =
+against it.&nbsp; For example, this<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>expression is fairly concise and =
+deterministic:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>while (*s++ =3D=3D *t++) =
+{<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>&nbsp; =
+...<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>}<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>While it's true that =
+&lt;code&gt;*(a + i)&lt;/code&gt; means the same thing as =
+&lt;code&gt;a[i]&lt;/code&gt;, the<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>latter is far easier to understand =
+at a glance.&nbsp; Similarly, =
+&lt;code&gt;&amp;a[i]&lt;/code&gt;,<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&lt;code&gt;&amp;(a[i])&lt;/code&gt;, and &lt;code&gt;a + =
+i&lt;/code&gt; all mean the same thing.&nbsp; The former is =
+better<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>when =
+the address of a specific element of an array is needed, while =
+the<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>latter =
+is better when stepping along some number of bytes in a =
+buffer.<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>The =
+middle expression, while technically correct, obscures the =
+meaning<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>of =
+the expression.&nbsp; Ditto for<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>otherpointer =3D (othertype =
+*)(structpointer-&gt;elementthatsapointer);<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>Use<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>otherpointer =3D (othertype =
+*)structpointer-&gt;elementthatsapointer;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>instead.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>Complex boolean expressions, such =
+as those in &lt;code&gt;if ()&lt;/code&gt; statements, should =
+be<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>broken =
+across lines so that the relational operator =
+(&lt;code&gt;&amp;&amp;&lt;/code&gt;, &lt;code&gt;||&lt;/code&gt;, and =
+so on)<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>is =
+at the front of the line.&nbsp; For example:<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>if ((s =3D strtok(NULL, Whitespace) =
+!=3D NULL)<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; &amp;&amp; (sscanf(s, &quot;%d&quot;, =
+&amp;n) !=3D 1)<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; &amp;&amp; (n &lt; =
+really_long_function_that_returns_the_limit())) =
+{<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; ...<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>}<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>Note how the expressions line up =
+nicely when this scheme is used, and<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>how the code inside the =
+&lt;code&gt;if ()&lt;/code&gt; block clearly stands out distinctly =
+from<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>the =
+expression.&nbsp; Of course, the rule that line splits should =
+not<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>obscure =
+precedence of operations applies to boolean expressions as =
+well.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>Use more than one space around assignments when several =
+appear in a<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>row, so that they all line up.&nbsp; Doing so makes it =
+easier to see when<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>one of them does something slightly different.&nbsp; For =
+example, code like<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>this:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>var&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp; =3D 0;<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>anothervar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =3D =
+0;<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>var2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp; =3D initvar2();<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>stillanothervar =3D =
+0;<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>instead of like =
+this:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>var =3D 0;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>anothervar =3D =
+0;<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>var2 =3D =
+initvar2();<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>stillanothervar =3D 0;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>=3D=3D C Function Definitions =
+=3D=3D<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>Each function shall be defined by a line containing its =
+return type and<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>scope, if any, followed by the name of the function on the =
+next line,<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>without any leading white space. That is, the return type =
+and the name<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>shall not be on the same line. The reason for this rule is =
+so that a<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>developer can easily find the definition of a function by =
+searching the<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>file for the name of the function at the beginning of a =
+line.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>Otherwise, it is difficult to distinguish the definition =
+from<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>invocations (the regular expression to find the definition =
+of function<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&quot;foo&quot; is therefore =
+&lt;code&gt;^foo&lt;/code&gt;).<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>The arguments shall follow, one per =
+line, indented one tab stop.&nbsp; For<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>example:<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>int<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>main(<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp; int =
+argc;<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp; char *argv[])<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>{<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>This rule is relaxed for single-, =
+or no-argument functions.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>All externally-accessible functions =
+shall be declared in a C/C++ header<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>file. The header file's name shall =
+begin with the source file name's<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>beginning and end in =
+&lt;code&gt;.h&lt;/code&gt;. For example, if the file =
+&lt;code&gt;foo.c&lt;/code&gt; defines<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>externally-accessible functions, =
+then the file &lt;code&gt;foo.h&lt;/code&gt; will have =
+their<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>prototypes. Full ANSI prototypes shall be used. For =
+example:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>extern unsigned sleep(unsigned =
+seconds);<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>Note the use of the =
+&lt;code&gt;extern&lt;/code&gt; keyword; all externally-defined =
+objects,<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>functions and variables, shall be declared as =
+&lt;code&gt;extern&lt;/code&gt; in the files =
+where<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>they =
+are used.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>=3D=3D Code Blocks =3D=3D<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>Blocks of code shall be indented =
+two spaces from their enclosing<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>braces. The preferred method for =
+this indentation is &quot;soft tabs&quot;,<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>a feature supported by the vi and =
+emacs editors, among others. By<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>using &quot;soft tabs&quot; instead =
+of setting tab stops to the same number of<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>characters, code can be printed =
+directly in a form that preserves the<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>block indentation, without needing =
+special formatting. It also ensures<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>that programs such as more and less =
+will correctly display the block<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>indentation without any special =
+setup or formatting commands.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>For vi, the following commands can =
+be placed in &lt;code&gt;.vimrc&lt;/code&gt; =
+file:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;bash&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp; set =
+tabstop=3D2<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp; set softtabstop=3D2<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp; set =
+shiftwidth=3D2<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp; set expandtab<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>The last command replaces any =
+instances of tab during edit with number<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>of spaces specified in =
+&lt;code&gt;tabstop&lt;/code&gt; (in this case 2 =
+spaces).<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>For emacs, this is the default in C code, but must be =
+overwritten for Perl<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>code with the following commands in your =
+&lt;code&gt;.emacs&lt;/code&gt; file:<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&lt;source =
+lang=3D&quot;lisp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>; two space indentation in perl =
+mode:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>(defun my-perl-mode-hook ()<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp; (setq perl-indent-level =
+2)<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>)<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>(add-hook 'perl-mode-hook =
+'my-perl-mode-hook)<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>The following comments on brace =
+style are described more concisely, and<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>certainly more humorously, in =
+&quot;The Ten Commandments for C =
+Programmers&quot;,<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>by Henry Spencer =
+[http://www.lysator.liu.se/c/ten-commandments.html].<o:p></o:p></span></p=
+><p class=3DMsoNormal><span lang=3DEN-US>Its contents are included here =
+by reference.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>Each opening brace may be on the same line as its opening =
+statement<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>if it will fit. If the brace can't fit, it shall appear on =
+the next<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>line, by itself. If the brace appears on the next line, it =
+shall be<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>at =
+the same indentation as the opening statement. Closing braces =
+shall<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>be =
+indented to the same level as the statement that opened the =
+block,<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>i.e. =
+one stop to the left of the code in the block. For example, =
+this<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>code =
+is indented properly:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>int<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>main(<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp; int =
+argc,<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp; char *argv[])<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>{<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp; if (argc !=3D 1) =
+{<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; (void)fprintf(stderr, &quot;usage: %s =
+&lt;path&gt;\n&quot;, argv[0]);<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp;&nbsp;&nbsp; =
+exit(2);<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp; }<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp; ...<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>}<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>This code is =
+not:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>int<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>main(<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp;&nbsp;&nbsp; int =
+argc,<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; char *argv[])<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>{<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp;&nbsp;&nbsp; if (argc !=3D 1) =
+{<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+(void)fprintf(stderr, &quot;usage: %s &lt;path&gt;\n&quot;, =
+argv[0]);<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+exit(2);<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+}<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; ...<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp;&nbsp;&nbsp; =
+}<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>and neither is =
+this:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>int<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>main(<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp;&nbsp;&nbsp; int =
+argc,<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; char *argv[])<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp;&nbsp;&nbsp; =
+{<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; if (argc !=3D 1)<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+{<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+(void)fprintf(stderr, &quot;usage: %s &lt;path&gt;\n&quot;, =
+argv[0]);<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+exit(2);<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+}<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; ...<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp;&nbsp;&nbsp; =
+}<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>nor this:<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>int<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>main(<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp;&nbsp;&nbsp; int =
+argc,<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; char *argv[])<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp; {<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp;&nbsp;&nbsp; if (argc !=3D =
+1)<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+(void)fprintf(stderr, &quot;usage: %s &lt;path&gt;\n&quot;, =
+argv[0]);<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+exit(2);<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp;&nbsp;&nbsp; =
+...<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>&nbsp; =
+}<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>Furthermore all sub-blocks, even =
+one-statement sub-blocks, shall<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>use braces. The reason for this =
+rule is that it tends to reduce the<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>chance of error when adding a =
+statement to an existing &lt;code&gt;if&lt;/code&gt;, =
+&lt;code&gt;while&lt;/code&gt;, or =
+&lt;code&gt;do&lt;/code&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>statement. For example, without =
+this rule, it can be easy to change this:<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp; if (argc !=3D =
+1)<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; exit(2);<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp; ...<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>}<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>to this:<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp; if (argc !=3D =
+1)<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; (void)fprintf(stderr, &quot;usage: %s =
+&lt;path&gt;\n&quot;, argv[0]);<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp;&nbsp;&nbsp; =
+exit(2);<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp; ...<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>}<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>when this is what was =
+intended:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp; if (argc !=3D 1) =
+{<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; (void)fprintf(stderr, &quot;usage: %s =
+&lt;path&gt;\n&quot;, argv[0]);<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp;&nbsp;&nbsp; =
+exit(2);<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp; }<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp; ...<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>}<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>(the former code always exits, =
+regardless of the result of the =
+&lt;code&gt;if&lt;/code&gt;'s<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>condition).<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>=3D=3D=3D Lex =
+=3D=3D=3D<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>For lex (and flex) rules and associated code, use similar =
+blocking as<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>for &lt;code&gt;if&lt;/code&gt; statements.&nbsp; For =
+example:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&lt;STATE&gt;(somerule)* =
+{<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>&nbsp; /* =
+C code here. */<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>}<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>Note that the code associated with =
+the rule appears in braces, even if<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>it's only a single line.&nbsp; Note =
+also that the opening brace appears on<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>the same line as the rule.&nbsp; As =
+noted earlier, lex rules must be on a<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>single line by themselves (lex =
+syntax doesn't allow for line breaks in<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>the middle of rules), so the =
+80-char wrap rule doesn't apply.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>=3D=3D Comment Header Blocks =
+=3D=3D<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>Every function shall have a header block of comments that =
+describes what<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>the function does, what its arguments mean, and what its =
+return value<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>(if any) means. The reason for this rule is that such =
+headers make it<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>possible for developers unfamiliar with the code to get a =
+&quot;big picture&quot;<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>idea of what it does without reading every line of it. Here =
+is an example,<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>pulled from &lt;code&gt;PreHmm.c&lt;/code&gt; in the =
+BTK:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>/***********************************************************=
+**********/<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>/*<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp; This function parses an HMM and saves the parsed =
+code out. Its synopsis is:<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp; success =3D save_query(file, =
+ifp, ofp, template, msg)<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp; where<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+file&nbsp;&nbsp;&nbsp;&nbsp; is a pointer to the name of the input =
+file<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+ifp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is the input =
+FILE*<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+ofp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is the output =
+FILE*<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; template is a =
+pointer to a blank, but initialized, =
+BTK_QUERYREF<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+msg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is a pointer to a BTK_MESSAGE =
+structure that will be<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; filled in on =
+error<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; success&nbsp; is =
+BTK_SUCCESS on success, BTK_ERROR otherwise<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US> */<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>/***********************************************************=
+**********/<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>=3D=3D Miscellaneous =
+=3D=3D<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>This section lists some common idioms in C, constructs that =
+should be<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>used in their idiomatic form because of common =
+understanding and concise<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>formulation.&nbsp; It also lists =
+some other items that didn't seem to fit<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>very well =
+elsewhere.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>For infinite loops, use<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>for (;;) {<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp; ...<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>}<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>instead of<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>while (1) {<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp; ...<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>}<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>Use<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp; return =
+7;<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>instead of<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp; =
+return(7);<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>or<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp; return =
+(7);<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>The unnecessary parentheses can =
+lead someone new to the code to think<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>something unobvious is going =
+on.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>Avoid initializing local variables in their declarations, =
+for two reasons:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>* The debugger can confuse one easily by asserting that =
+there's executable code in the variable declarations.&nbsp; For example, =
+if one types &quot;&lt;code&gt;b foo&lt;/code&gt;&quot; to gdb, it means =
+&quot;stop on entry to function =
+&lt;code&gt;foo&lt;/code&gt;&quot;.&nbsp; If there's an initialization =
+in the declarations, you'll see the code stop in the middle of a bunch =
+of variable declarations, which can be quite =
+confusing.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>* If the function doesn't fit in a single screen, the =
+initialized value might not be visible when looking at the line of code =
+where the variable is first used.&nbsp; Initializing at the point of =
+first use can make the code easier to =
+understand.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>There are some surprising precedence orderings between =
+bit-wise and<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>relational boolean operators, that is between =
+&lt;code&gt;&amp;&lt;/code&gt; and &lt;code&gt;|&lt;/code&gt; on the =
+one<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>hand =
+and &lt;code&gt;&amp;&amp;&lt;/code&gt; and &lt;code&gt;||&lt;/code&gt; =
+on the other.&nbsp; Always use parentheses when =
+using<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>any =
+of these operators. =
+[http://www.lysator.liu.se/c/dmr-on-or.html#main]<o:p></o:p></span></p><p=
+ class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>Do not imply 0 for numeric =
+tests.&nbsp; For example, code like this:<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>if (x !=3D 0) =
+{<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>&nbsp; =
+...<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>}<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>not like =
+this:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>if (x) {<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp; ...<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>}<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>In pointer comparisons, do not =
+imply NULL, nor imply equality between 0<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>and NULL (the former is a numeric =
+constant; the latter is a<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>preprocessor variable in C =
+&lt;code&gt;#define&lt;/code&gt;d in =
+&lt;code&gt;stdio.h&lt;/code&gt;).&nbsp; For example, =
+code<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>like =
+this:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>if (p !=3D NULL) =
+{<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>&nbsp; =
+...<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>}<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>not like =
+this:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>if (p) {<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp; ...<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>}<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>Is is OK to use ints as booleans in =
+C, where there is no native<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>boolean type.&nbsp; When doing so, =
+don't compare to any literal value and<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>don't =
+&lt;code&gt;#define&lt;/code&gt; &lt;code&gt;TRUE&lt;/code&gt; and =
+&lt;code&gt;FALSE&lt;/code&gt;.&nbsp; Use a name for the variable that =
+implies<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>its =
+boolean nature in &lt;code&gt;if()&lt;/code&gt; and loop =
+constructs.&nbsp; For example:<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>if (runnable) =
+{<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>&nbsp; =
+run();<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>}<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>or<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>while (!done) =
+{<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>&nbsp; =
+...<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>}<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>When =
+&lt;code&gt;#define&lt;/code&gt;ing numeric preprocessor variables, =
+always put parentheses<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>around the expression, even if it's a single number.&nbsp; =
+Doing so makes<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>sure you get what you intended no matter how the =
+preprocessor variable<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>is used later in code.&nbsp; For example, code like =
+this:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>#define NEG_INFINITY_16 =
+(-32768)<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>not like =
+this:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>#define NEG_INFINITY_16 =
+-32768<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>As as example of where the latter =
+can lead you wrong, consider this<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>simple-looking =
+assignment:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>int i =3D =
+-NEG_INFINITY_16;<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>After the preprocessor runs, you =
+get<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;cpp&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>int i =3D =
+--32768;<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>On some compilers (like on the =
+Alpha), this line causes a compile-time<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>error complaining that 32768 isn't =
+an lvalue (the compiler is<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>interpreting the code as a prefix =
+decrement, not a double negation).<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>=3D=3D Compiler Warnings =
+=3D=3D<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>No warnings are allowed, with the exception of deprecation =
+messages that<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>arise as a result of library API changes.&nbsp; Developers =
+are required to<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>use suitable data types, casts, or other appropriate =
+mechanisms so that<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>their code compiles without =
+warnings.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>Code should be built with &lt;code&gt;-Wall -W&lt;/code&gt; =
+to catch any warnings that the compiler<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>might =
+catch.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>=3D=3D Copyright =3D=3D<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>All source files should have a =
+copyright as their first line<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>(or second line for shell scripts =
+with &lt;code&gt;#!&lt;/code&gt; lines).<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>The copyright notice should read as =
+follows:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;text&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>Copyright (C) 20__ CQFunds. All =
+Rights Reserved.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>The year in the above copyright =
+notice should be the year in which the<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>document was created.&nbsp; If a =
+document was modified in a subsequent<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>year, the notice should specify a =
+range from the year in which it was<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>created until the year in which it =
+was last modified.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>=3D=3D Makefiles =3D=3D<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>The number of makefiles should be =
+minimized.&nbsp; As much as possible, a single<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>makefile should be used for =
+everything.&nbsp; Recursive make should NOT be =
+used.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>Makefiles should not include other Makefiles.&nbsp; This =
+makes it possible to<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>capture all dependencies in one place, and provides maximum =
+leverage for<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>the effort spent on making a good =
+makefile.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>=3D=3D C++ =3D=3D<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>In general, the rules for C++ are =
+the same as those for C.&nbsp; Fancy C++<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>code, like overloaded functions, =
+complicated constructors and destructors,<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>virtual functions, etc., should be =
+avoided.&nbsp; Reference<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>parameters should not be used, as they can make functions =
+look like they<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>don't modify parameters when they really do, and the cure =
+for this --<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>using const all over the place -- is worse than the =
+disease.&nbsp; C++ exceptions<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>should not be used, as they're very =
+hard to read and debug and not<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>reliably portable between =
+compilers.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>In-line declarations and assignment-delcarations should be =
+avoided in<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>C++ just like in C.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>=3D=3D Python =
+=3D=3D<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>(part of this adapted from python style guide =
+[http://www.python.org/doc/essays/styleguide.html])<o:p></o:p></span></p>=
+<p class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>In python, blocks of code, is =
+identified by indentation. Although the<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>indentation length of the first =
+statement of a block could be arbitrary, all<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>instructions of a block have to be =
+indented the same. We recommend indentation<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>in steps of 4 space =
+characters.&nbsp; Caution should be made such that no mixing =
+of<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>tab and =
+space characters occurs for indentation. The indentation length is =
+not<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>the =
+length you see in the buffer, but equal to the number of =
+separation<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>characters.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>When defining a function, always put a doc string =
+immediately after the<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>definition line to explain the exact work the function =
+does. Be sure to indent<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>the doc string the same as the function block. For =
+consistency, always use<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;code&gt;&quot;&quot;&quot;triple double =
+quotes&quot;&quot;&quot;&lt;/code&gt; around doc strings. One-line doc =
+strings are for<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>really obvious cases. They should really fit on one line. =
+Multi-line doc strings<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>consist of a summary line just like a one-line doc string, =
+followed by a blank<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>line, followed by a more elaborate description. The summary =
+line may be used by<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>automatic indexing tools; it is important that it fits on =
+one line and is<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>separated from the rest of the doc string by a blank =
+line.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>Example one-line doc string:<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&lt;source =
+lang=3D&quot;python&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>def =
+kos_root():<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; &quot;&quot;&quot;Return the pathname of =
+the KOS root directory.&quot;&quot;&quot;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>&nbsp;&nbsp;&nbsp; global =
+_kos_root<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; if _kos_root: return =
+_kos_root<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; ...<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>Example multi-line doc =
+string:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&lt;source =
+lang=3D&quot;python&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>def complex(real=3D0.0, =
+imag=3D0.0):<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; &quot;&quot;&quot;Form a complex =
+number.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; Keyword =
+arguments:<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; real -- the real part (default =
+0.0)<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; imag -- the imaginary part (default =
+0.0)<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; =
+&quot;&quot;&quot;<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; if imag =3D=3D 0.0 and real =3D=3D 0.0: =
+return complex_zero<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>&nbsp;&nbsp;&nbsp; ...<o:p></o:p></span></p><p =
+class=3DMsoNormal><span =
+lang=3DEN-US>&lt;/source&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>It's not necessary to and should =
+not append a &quot;&lt;code&gt;;&lt;/code&gt;&quot; after each =
+statement.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>=3D=3D File operations =3D=3D<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>Following these rules will simplify =
+forensic analysis if (when) something goes =
+wrong:<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>* =
+Print the paths that you use.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>* If you end up using a default =
+path, print that fact and print the default =
+value.<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US>* If =
+you cannot open a file or directory, print the output of =
+&lt;code&gt;strerror_r&lt;/code&gt;.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>* Add a library specific prefix to =
+log messages, that way we can easily tell who is generating the =
+error.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US>=3D=3D Conclusion =3D=3D<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>The purpose of these formatting =
+conventions is to reduce the amount of<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>time, energy, and money it takes =
+for a competent developer to understand<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>code written by someone else. They =
+will also tend to make the code<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>easier for a particular developer =
+to understand his or her own code,<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US>after months away from it. =
+<o:p></o:p></span></p></div></body></html>
+------=_NextPart_000_017A_01D19895.9607FCF0--

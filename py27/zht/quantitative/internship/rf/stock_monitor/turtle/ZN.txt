@@ -1,0 +1,5 @@
+win rate	0.532432
+profit and loss ratio	0.857974
+annual return	-0.009487
+max drawdown	0.252798
+max drawdown duration	1453 days

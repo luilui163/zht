@@ -1,0 +1,342 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <link rel="shortcut icon" href="https://zhangzhihu.github.io/images/favicon.jpg" />
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="ZHANG HAITAO" />
+        <title>assetPricing</title>
+
+<meta name="description" content="&lt;p&gt;Summary: Short version for index and feeds&lt;/p&gt;
+&lt;h1&gt;Empirical asset pricing:the cross section of stock returns&lt;/h1&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h2&gt;1 Preliminaries&lt;/h2&gt;
+&lt;h3&gt;1.1 deal with outliers&lt;/h3&gt;
+&lt;p&gt;There are two techniques that are commonly used in empirical asset pricing  research to deal with the effect of outliers:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;winsorization&lt;/strong&gt;:simply sets the value of a given variable that are above or below a certain cutoff to that cutoff.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;truncation&lt;/strong&gt;:simply tatkes values of a given variable that are deemed extreme to be missing.&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;There are few ways that winsorization or truncation can be implemented.&lt;strong&gt;The first&lt;/strong&gt; is to winsorize or truncate using all values …&lt;/p&gt;" />
+<meta name="keywords" content=" tag1 tag2  "/>
+
+        <!--[if !IE 7]>
+        <style type="text/css">
+            #main-content {display:table;height:100%}
+        </style>
+        <![endif]-->
+        <link rel="stylesheet" href="https://zhangzhihu.github.io/theme/css/backdrop.css" />
+        <link rel="stylesheet" href="https://zhangzhihu.github.io/theme/css/pygments.css" />
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+        <script src="https://zhangzhihu.github.io/theme/js/modernizr.js"></script>
+
+
+    </head>
+
+
+    <body>
+        <div class="master-row">
+
+            <div class="content-pane main-content">
+                <nav class="top-bar" data-topbar role="navigation">
+                    <ul class="title-area">
+                        <li class="name"><!-- Leave this empty --></li>
+                        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+                    </ul>
+                    <section class="top-bar-section">
+                        <ul class="left">
+                            <li><a href="https://zhangzhihu.github.io/category/econometrics.html">econometrics</a></li>
+                            <li class="active"><a href="https://zhangzhihu.github.io/category/finance.html">finance</a></li>
+                            <li><a href="https://zhangzhihu.github.io/category/it.html">IT</a></li>
+                            <li><a href="https://zhangzhihu.github.io/category/posts.html">posts</a></li>
+                            <li><a href="https://zhangzhihu.github.io/category/statistics.html">statistics</a></li>
+                            <li><a href="https://zhangzhihu.github.io/category/todo.html">TODO</a></li>
+                        </ul>
+                        <ul class="right">
+                        </ul>
+                    </section>
+                </nav>
+
+                <div class="row title-bar">
+                    <div class="small-12 columns">
+                        <h1><a href="https://zhangzhihu.github.io">ZHANG HAITAO</a></h1><h2> <small>Master in Financial Engineering,Wuhan University</small></h2>
+                        <hr>
+                    </div>
+                </div>
+
+                <div id="contents">
+<div class="row">
+    <div class="small-12 columns article">
+        <h2>assetPricing</h2>
+        <div class="row info-bar" style="margin-left:0rem;margin-bottom:6px;">
+    <div class="small-12 columns">
+        <ul class="inline-list">
+            <li><span><i class="fa fa-calendar"></i>&nbsp; 2017-11-03</span></li>
+            <li><span><i class="fa fa-folder-open"></i>&nbsp; <a href="https://zhangzhihu.github.io/category/finance.html">finance</a></span></li>
+            <li>
+                <span>
+                    <i class="fa fa-tags"></i>&nbsp;
+                    <a href="https://zhangzhihu.github.io/tag/tag1.html"><span class="label">tag1</span></a>
+                    <a href="https://zhangzhihu.github.io/tag/tag2.html"><span class="label">tag2</span></a>
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
+        <section class="article">
+            <p>Summary: Short version for index and feeds</p>
+<h1>Empirical asset pricing:the cross section of stock returns</h1>
+<p>[TOC]</p>
+<h2>1 Preliminaries</h2>
+<h3>1.1 deal with outliers</h3>
+<p>There are two techniques that are commonly used in empirical asset pricing  research to deal with the effect of outliers:</p>
+<ol>
+<li>
+<p><strong>winsorization</strong>:simply sets the value of a given variable that are above or below a certain cutoff to that cutoff.</p>
+</li>
+<li>
+<p><strong>truncation</strong>:simply tatkes values of a given variable that are deemed extreme to be missing.</p>
+<p>​</p>
+</li>
+</ol>
+<p>There are few ways that winsorization or truncation can be implemented.<strong>The first</strong> is to winsorize or truncate using all values of the given variable <span class="math">\(X\)</span> over all entities <span class="math">\(i\)</span> and time periods <span class="math">\(t\)</span>.<strong>The second</strong> is to winsorize or truncate <span class="math">\(X\)</span> seperately for each time period <span class="math">\(t\)</span>.</p>
+<p>Ususally,the first method is used to winsorize or truncateIf a single analysis will be performed on the entire panel of data,the first medhod of winsorizatio or truncation is most appropriate.</p>
+<p>Most empirical asset pricing researchers choose to use winsorization instead of truncation.However,if the results of an analysis are substantially impacted by this choice,they should be viewed with skepticism.</p>
+<h3>1.2 Newey and West (1987) adjustment</h3>
+<p>In many cases,the values used during the time-series step may exhibit autocorrelation and /or heteroskedasticity.If this is the case,the standard errors and thus p-values and t-statistics used to test a null hypothesis may be inaccurate.Newey and West (1987) developed a methodology that adjusts the standard errors of estimated values to account for the impact of autocorrelation and heteroskedasticity.</p>
+<p>The only input required for the Newey and West (1987) adjustment is the number of lags to use when performing the adjustment. As discussed in Newey and West (1994), the choice of lags is arbitrary.
+Frequently, econometrics software sets the number of lags to 4(T/100)a, where T is the number of periods in the time series, a = 2/9 when using the Bartlett kernel, and a = 4/25 when using the quadratic spectral kernel to calculate the autocorrelation and heteroscedasticity-adjusted standard errors.A large proportion of empirical asset pricing studies use monthly samples covering the period from 1963 through the
+present (2012, or T = 600 months for the data used in this book). Plugging in the value T = 600 and taking a to be either 2/9 or 4/25 results in a value between five and six. Most studies, therefore, choose six as the number of lags.For python code,refer to C:\Python27\zht\study\studyNotes\Estimating Standard Errors in Python.ipynb</p>
+<h2>2 Summary statistics</h2>
+<h3>2.1 Implementation</h3>
+<p>The summary statistics procedure consists of two steps. In the first step, for each time period t, certain characteristics of the cross-sectional distribution of the given variable, X, are calculated. In the second step, the time-series properties of the periodic cross-sectional characteristics are calculated. </p>
+<h4>2.1.1 Periodic cross-sectional summary statistics</h4>
+<h4>2.1.2 Average cross-sectional summary statistics</h4>
+<h3>2.2 presentation and interpretation</h3>
+<p>In most cases, these details are not very important when interpreting and drawing conclusions from the results of subsequent analyses in the article. However, as a researcher, it is important to be aware of such patterns and to assess whether these patterns may have a signifcant impact on the main conclusions of the study. In many cases, this is done by subsample analyses aimed at examining whether the main conclusions hold in both early periods of the study as well as in late periods. Frequently, it is also worthwhile to investigate whether the main results hold in periods of normal economic conditions as well as periods of deteriorating or poor economic conditions. This is especially the case if the summary statistics for the focal variables of the study are substantially different for these subperiods.</p>
+<h3>2.3 Summary</h3>
+<p>In summary, the main objective of presenting summary statistics is to give the reader a suffcient but succinct understanding of the data being used and the characteristics of the entities that comprise the sample. In addition, the summary statistics can be used to identify and remedy any potential issues with using statistical analysis on the data.The approach that we have discussed presents the distribution of the given variables.</p>
+<p>While the results presented in the summary statistics table may be suffcient for a reader, they are likely not suffcient for the researcher. It is diffcult to conduct high-quality research without having an in-depth understanding of the data. A good researcher will understand any potential issues with the data that are not evident in the summary statistics and address these issues in the statistical analyses presented in the research article. </p>
+<h2>3 Correlation</h2>
+<p><strong>The Pearson product-moment correlation</strong> is most applicable when the relation between the two variables denoted as <span class="math">\(X\)</span> and <span class="math">\(Y\)</span>,is thought to be linear.The Pearson correlation can take values between −1 and 1, with −1 indicating a perfectly negative linear relation, 0 indicating no linear relation between the variables, and 1 indicating a perfectly positive linear relation.<strong>In many cases,the values of <span class="math">\(X\)</span> and <span class="math">\(Y\)</span> are winsorized prior to calculating the Pearson product-moment correlation to minimize the effect of a small number of extreme observations.Winsorization is performed on a period-by-period basis using only entities for which valid values of both <span class="math">\(X\)</span> and <span class="math">\(Y\)</span> are available.</strong></p>
+<p><strong>The Spearman rank correlation</strong>:The Spearman rank correlation is most applicable when the relation between the variables is thought to be monotonic, but not necessarily linear. The rank correlation, as the name implies, measures how closely related the ordering of X is to the ordering of Y, with no regard to the actual values of the variables. As with the product–moment correlation, the rank correlation can take on values between −1 and 1, with a Spearman correlation of 1 indicating that X and Y are perfectly monotonically increasing functions of each other and a value of −1 indicating that X and Y are perfectly monotonically decreasing functions of each other.<strong>It should be noted that when calculating the Spearman rank correlation,the data should not be winsorized.</strong></p>
+<h3>3.1 Implementation</h3>
+<p>Similar to the summary statistics procedure, the correlation procedure is executed in two steps. The first step is to calculate the cross-sectional correlation between the two variables in question, X and Y, for each period t. The second step is to take the time-series average of these cross-sectional correlations. </p>
+<h4>3.1.1 Periodic Cross-sectional correlations</h4>
+<p>The Pearson product-moment correlation between <span class="math">\(X\)</span> and <span class="math">\(Y\)</span> for period t is defined as:
+</p>
+<div class="math">$$
+\rho_t(X,Y)=\frac{\sum_{i=1}^{n_t}{(X_{i,t}-\bar{X_t})(Y_{i,t}-\bar{Y_t})}}{\sqrt{\sum_{i=1}^{n_t}{(X_{i,t}-\bar{X_t})^2}}\sqrt{\sum_{i=1}^{n_t}{(Y_{i,t}-\bar{Y_t})^2}}}
+$$</div>
+<p>
+The Spearman rank correlation between <span class="math">\(X\)</span> and <span class="math">\(Y\)</span> for period <span class="math">\(t\)</span> is calculated as:
+</p>
+<div class="math">$$
+\rho_t^S(X,Y)=1-\frac{6\sum_{i=1}^{n_t}{d_{i,t}^2}}{n_t(n_t^2-1)}
+$$</div>
+<p>
+<img alt="" src=".\img_empiricalAssetPricingStudyNotes\3.1.png"></p>
+<h4>3.1.2 Average Cross-sectional correlations</h4>
+<div class="math">$$
+\rho(X,Y)=\frac{\sum_{i=1}^N{\rho_t(X,Y)}}{N}
+$$</div>
+<div class="math">$$
+\rho^S(X,Y)=\frac{\sum_{i=1}^N{\rho_t^S(X,Y)}}{N}
+$$</div>
+<p>Where N is the number of periods in the sample.</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+        </section>
+    </div>
+</div>
+                </div>
+
+                <footer class="show-for-large-up">
+<div class="row">
+    <div class="small-6 medium-3 columns">
+        <ul class="left-nav">
+            <li><a href="https://zhangzhihu.github.io">Home &nbsp;<i class="fa fa-home fa-fw"></i></a></li>
+        </ul>
+    </div>
+    <div class="small-6 medium-3 medium-push-6 columns">
+        <ul class="right-nav">
+            <li><a href="https://zhangzhihu.github.io/archives.html"><i class="fa fa-archive fa-fw"></i>&nbsp; Archives</a></li>
+        </ul>
+    </div>
+    <div class="small-12 medium-6 medium-pull-3 columns text-center">
+        <p class="tag-cloud">
+            <a href="https://zhangzhihu.github.io/tags.html"><i class="fa fa-tags"></i>&nbsp;Tags:</a>&nbsp;&nbsp;
+            <a href="https://zhangzhihu.github.io/tag/asset-pricing.html"><span class="label">Asset pricing</span></a>
+            <a href="https://zhangzhihu.github.io/tag/capm.html"><span class="label">CAPM</span></a>
+            <a href="https://zhangzhihu.github.io/tag/cross-section.html"><span class="label">cross section</span></a>
+            <a href="https://zhangzhihu.github.io/tag/ff3.html"><span class="label">FF3</span></a>
+            <a href="https://zhangzhihu.github.io/tag/gmm.html"><span class="label">GMM</span></a>
+            <a href="https://zhangzhihu.github.io/tag/python.html"><span class="label">python</span></a>
+            <a href="https://zhangzhihu.github.io/tag/tag1.html"><span class="label">tag1</span></a>
+            <a href="https://zhangzhihu.github.io/tag/tag2.html"><span class="label">tag2</span></a>
+            <a href="https://zhangzhihu.github.io/tag/todo.html"><span class="label">todo</span></a>
+            <a href="https://zhangzhihu.github.io/tag/typora.html"><span class="label">typora</span></a>
+            <a href="https://zhangzhihu.github.io/tag/vba.html"><span class="label">VBA</span></a>
+            &nbsp;&hellip;
+        </p>
+    </div>
+    <div class="small-12 columns sub-footer">
+        <hr>
+        <div class="small-12 medium-6 columns">
+            <p class="small-text-center medium-text-left">
+                &copy; 2017 ZHANG HAITAO
+                <!-- <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="cc.png" /></a>-->
+            </p>
+        </div>
+    </div>
+</div>                </footer>
+            </div>
+
+            <div class="image-pane main-content" style="background: url('https://zhangzhihu.github.io/images/palm.jpg'); background-size:cover; background-position: right;">
+                <div class="row">
+                    <div class="small-12 medium-4 large-12 columns">
+                        <h5 class='text-center'>About</h5>
+                        <div class="about-me">
+                            <div class="hide-for-medium-only small-3 columns no-buffer">
+                                <a class="th" href="https://zhangzhihu.github.io/images/profile.jpg">
+                                    <img src="https://zhangzhihu.github.io/images/profile.jpg">
+                                </a>
+                            </div>
+                            <div class="small-9 medium-12 large-9 columns text-justify">
+                                This is my Not today, not tomorrow, not next year, not in a decade, or hell, not even in a century and beyond. But that’s a bit too generic and boring to say, isn’t it?
+                            </div>
+                            <div class="small-12 columns">
+                                <ul class="inline-center social-list">
+                                    <li><a href="mailto:986340770@qq.com"><i class="fa fa-envelope"></i>&nbsp; Email</a></li>
+                                    <li><a href="https://github.com/zhangzhihu"><i class="fa fa-github"></i>&nbsp; github</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-12 medium-4  large-12 columns link-list">
+                        <h5 class='text-center'>Links</h5>
+                        <ul class="inline-center">
+                            <li><a href="https://github.com/zhangzhihu">github</a></li>
+                            <li><a href="https://www.zhihu.com/">知乎</a></li>
+                        </ul>
+                    </div>
+
+<!--
+                    <div class="small-12 medium-3 large-12 columns">
+                    </div>
+-->
+               </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <footer class="hide-for-large-up">
+<div class="row">
+    <div class="small-6 medium-3 columns">
+        <ul class="left-nav">
+            <li><a href="https://zhangzhihu.github.io">Home &nbsp;<i class="fa fa-home fa-fw"></i></a></li>
+        </ul>
+    </div>
+    <div class="small-6 medium-3 medium-push-6 columns">
+        <ul class="right-nav">
+            <li><a href="https://zhangzhihu.github.io/archives.html"><i class="fa fa-archive fa-fw"></i>&nbsp; Archives</a></li>
+        </ul>
+    </div>
+    <div class="small-12 medium-6 medium-pull-3 columns text-center">
+        <p class="tag-cloud">
+            <a href="https://zhangzhihu.github.io/tags.html"><i class="fa fa-tags"></i>&nbsp;Tags:</a>&nbsp;&nbsp;
+            <a href="https://zhangzhihu.github.io/tag/asset-pricing.html"><span class="label">Asset pricing</span></a>
+            <a href="https://zhangzhihu.github.io/tag/capm.html"><span class="label">CAPM</span></a>
+            <a href="https://zhangzhihu.github.io/tag/cross-section.html"><span class="label">cross section</span></a>
+            <a href="https://zhangzhihu.github.io/tag/ff3.html"><span class="label">FF3</span></a>
+            <a href="https://zhangzhihu.github.io/tag/gmm.html"><span class="label">GMM</span></a>
+            <a href="https://zhangzhihu.github.io/tag/python.html"><span class="label">python</span></a>
+            <a href="https://zhangzhihu.github.io/tag/tag1.html"><span class="label">tag1</span></a>
+            <a href="https://zhangzhihu.github.io/tag/tag2.html"><span class="label">tag2</span></a>
+            <a href="https://zhangzhihu.github.io/tag/todo.html"><span class="label">todo</span></a>
+            <a href="https://zhangzhihu.github.io/tag/typora.html"><span class="label">typora</span></a>
+            <a href="https://zhangzhihu.github.io/tag/vba.html"><span class="label">VBA</span></a>
+            &nbsp;&hellip;
+        </p>
+    </div>
+    <div class="small-12 columns sub-footer">
+        <hr>
+        <div class="small-12 medium-6 columns">
+            <p class="small-text-center medium-text-left">
+                &copy; 2017 ZHANG HAITAO
+                <!-- <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="cc.png" /></a>-->
+            </p>
+        </div>
+    </div>
+</div>            </footer>
+        </div>
+
+
+        <script src="https://zhangzhihu.github.io/theme/js/jquery.min.js"></script>
+        <script src="https://zhangzhihu.github.io/theme/js/foundation.min.js"></script>
+        <script src="https://zhangzhihu.github.io/theme/js/app.js"></script>
+    </body>
+
+</html>

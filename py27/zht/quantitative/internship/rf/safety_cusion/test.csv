@@ -1,0 +1,3 @@
+amount,cash,total_position_ratio,total_position,short_term_ratio,short_term_position,long_term_position,cash,short_term_revenue,long_term_revenue,short_term_return,long_term_return,breakeven_loss_range,cusion_times_risk_score,bonus_to_cusion_times_risk_score,total_risk_score,suggested_cusion_times
+6000000,6000000,0.2,1200000,0.8,960000,143254,6000000,1935.32,1034.34,0.002015958,0.007220322,0.25,8,7.130044843,15.13004484,7.130044843
+,,,1200000,,960000,,,,,,,,,,,

@@ -1,0 +1,11 @@
+name	datatype	name_raw
+v0	sid	sid
+v1	date	unlock_date
+v2	c	total_equity
+v3	c	ratio_to_total_equity
+v4	d	type
+v5	c	after_ratio_to_total_equity
+v6	c	before_ratio_to_total_equity
+v7	c	after_total_number
+v8	c	before_total_number
+v9	d	cumsum_unlock_times

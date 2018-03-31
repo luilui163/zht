@@ -1,0 +1,533 @@
+X-Alimail-AntiSpam:AC=PASS;BC=-1|-1;BR=01201311R601e1;FP=0|-1|-1|-1|0|-1|-1|-1;HT=e02c03278;MF=cqalpha@cqfunds.com;NM=1;PH=DS;RN=2;SR=0;TI=SMTPD_----4jdU7DQ_1461494574;
+Received: from zhangwc(mailfrom:cqalpha@cqfunds.com ip:123.123.54.162)
+          by smtp.aliyun-inc.com(10.147.40.244);
+          Sun, 24 Apr 2016 18:42:54 +0800
+From: "cqalpha" <cqalpha@cqfunds.com>
+To: =?gb2312?B?J7LMzvXM2ic=?= <xcai@cqfunds.com>,
+	=?gb2312?B?J9HuvM7P6Sc=?= <jyang@cqfunds.com>
+Subject: Info: Alpha Package
+Date: Sun, 24 Apr 2016 18:41:47 +0800
+Message-ID: <003001d19e15$e72ccdb0$b5866910$@cqfunds.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0031_01D19E58.F5593570"
+X-Mailer: Microsoft Outlook 16.0
+Thread-Index: AdGeFZVzt64B3CDLQYues6Dqrkt3ag==
+Content-Language: zh-cn
+
+This is a multipart message in MIME format.
+
+------=_NextPart_000_0031_01D19E58.F5593570
+Content-Type: text/plain;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Both,
+
+=20
+
+   This document describes the protocol to formalize and later produce =
+the
+alphas that you made. Please read and raise questions. Then please =
+modify
+your alpha codes so that it follows below format and can be runned by
+reading the config. Let me know if you finished first package following
+below, and I will check. Thanks,
+
+  =20
+
+   1. Alpha Package
+
+  =20
+
+   An Alpha Package is a package that contains below files:
+
+   Source code=A3=A8c++ or python codes)
+
+   Config file (should be xml in most cases)
+
+   Readme file
+
+   Make file / environment file (to compile c++ or python codes)
+
+   Command file (for python or other scripting language based package =
+only)
+
+  =20
+
+   An Alpha shall have below basic information in config files:
+
+   Name, AuthorID, Region, Category, Neutralization
+
+  =20
+
+   Alpha package naming convention:=20
+
+      AuthoridAlphaname-version. Example: Cq005Newstimingabc-1.0.0
+
+     =20
+
+   Source code naming convention:=20
+
+      For main alpha code: alphaAuthoridAlphaname.cpp (.py)
+
+      For other utility code: utilAuthoridAlphaNameUtilname.hh (python =
+lib)
+
+  =20
+
+   Readme file naming convention:
+
+      readme.txt. Describe the idea, performance and correlation of your
+alphas in plain text in this file.
+
+  =20
+
+   Command file naming:=20
+
+      run.sh. Inside run.sh, your code reads config.xml and output
+corresponding alphas or other files into current folder.
+
+     =20
+
+   2. Config file
+
+   Config file naming convention:
+
+      config.xml. in case there are multiple version, name as
+config_version.xml.
+
+   A config file shall always looks like below, usage of each module is =
+in
+comment as below:
+
+  =20
+
+  <?xml version=3D"1.0" encoding=3D"ISO-8859-1"?>
+
+  <CQSim>
+
+  <Constants python_path=3D"xxx" production_path=3D"xxx"/>
+
+  <!--Defines global constants used in config>
+
+  <Universe minvol=3D"1000000" minprice=3D"2" =
+validwindow=3D=A1=B010=A1=B1/>
+
+  <!--Defined variable to select stocks, e.g: mininum volume, minimum =
+price,
+minmum cap, have valid price for N-days>
+
+  <Modules>
+
+   <!--Defines all data sources that are used in alpha, alpha shall read
+their data sources and the data sources related parameters from the =
+lines
+here. Use ${YYYYMMDD} to replace the actual paths, and generate the real
+paths in code-->=20
+
+    <Module id=3D"sina_news" =
+dataPath=3D"/dat/cqdata/news/sina/companyNews/news.
+${YYYYMMDD}" para1=3D"xxx" para2=3D"xxx"/>
+
+    <Module id=3D=A1=B1basedata"
+dataPath=3D"/dat/cqdata/marketdata/bloomberg/${YYYY}/{MM}/RAWPRICES.${YYY=
+YMMDD
+}" />
+
+   <Module id=3D"classification=A1=B1
+dataPath=3D"/dat/cqdata/classification/wind/wind/${YYYYMMDD}.txt=A1=B1 =
+/>
+
+   ....
+
+  =20
+
+  </Modules>
+
+=20
+
+  <Portfolio>
+
+    <Alpha id=3D"myalpha" universeId=3D"Ashare" delay=3D"1" =
+dumpAlphaDir=3D"./alpha"
+booksize=3D"2e7" para1=3D"3" para2=3D"0.33=A1=B0 =
+para3=3D=A1=B1abc=A1=B1>
+
+      <Description author=3D"cq005" region=3D"CHN" instrument=3D"equity"
+birthday=3D"20160402" category=3D"market_timing" =
+neutralization=3D"none"/>
+
+    <Alpha/>
+
+    <Alpha id=3D"myalpha2" universeId=3D"Ashare" delay=3D"1"
+dumpAlphaDir=3D"./alpha2" booksize=3D"2e7" para1=3D=A1=B04=A1=B1 =
+para2=3D"0.5" para3=3D=A1=B0def">
+
+      <Description author=3D"cq005" region=3D"CHN" instrument=3D"equity"
+birthday=3D"20160402" category=3D"market_timing" =
+neutralization=3D"none"/>  =20
+
+    </Alpha>
+
+  </Portfolio>
+
+  </CQSim>  =20
+
+  =20
+
+   instruments: equity, futures, etf
+
+   Birthday: the date you made this alpha
+
+   category: for long/short basically equal to the dataset category, for
+others can use market_timing or others.
+
+   neutralization: none, market, sector, industry.
+
+   booksize: the max booksize of this alpha, for long/short equity every =
+day
+shall re-scale to this value
+
+   Usually one config only has one alpha, but if you have multiple =
+versions
+of one alpha (e.g different parameters), can put multiple of them, but =
+your
+script need to handle this.
+
+   All the parameter of the alpha, shall be read from the <Alpha /> tag, =
+e.g
+para1-para3. All the datasources of the alpha, shall be read from the
+<Module> by reading the module ids.
+
+   Ideally the alpha code shall not contain any hard-coded paths and any
+hard-coded parameters.
+
+  =20
+
+   3. Alpha run
+
+  =20
+
+   The alphas shall output the daily alpha position into production_path =
++
+dumpAlphaDir, in below format: alpha/alpha.YYYYMMDD
+
+   in each alpha file, it has below format:
+
+   ticker|alpha_value
+
+   e.g: 000001.SZ|203054
+
+     =20
+
+   The alpha shall be able to run with:
+
+      run.sh config.xml
+
+=20
+
+   The alpha shall output necessary information and error information so
+that they can be recorded.
+
+     =20
+
+   Thanks,
+
+  =20
+
+CQAlpha
+
+
+------=_NextPart_000_0031_01D19E58.F5593570
+Content-Type: text/html;
+	charset="gb2312"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" =
+xmlns=3D"http://www.w3.org/TR/REC-html40"><head><meta =
+http-equiv=3DContent-Type content=3D"text/html; charset=3Dgb2312"><meta =
+name=3DGenerator content=3D"Microsoft Word 15 (filtered =
+medium)"><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:=CB=CE=CC=E5;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"\@=CB=CE=CC=E5";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#954F72;
+	text-decoration:underline;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri",sans-serif;}
+/* Page Definitions */
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body lang=3DZH-CN =
+link=3D"#0563C1" vlink=3D"#954F72" =
+style=3D'text-justify-trim:punctuation'><div class=3DWordSection1><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>Dear Both,<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier =
+New"'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier New"'>&nbsp;&nbsp; This =
+document describes the protocol to formalize and later produce the =
+alphas that you made. Please read and raise questions. Then please =
+modify your alpha codes so that it follows below format and can be =
+runned by reading the config. Let me know if you finished first package =
+following below, and I will check. Thanks,<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp; <o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier New"'>&nbsp;&nbsp; 1. Alpha =
+Package<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp;&nbsp; =
+<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp;&nbsp; An Alpha Package is a =
+package that contains below files:<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp; Source code</span><span =
+style=3D'font-family:=CB=CE=CC=E5'>=A3=A8</span><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>c++ or python =
+codes)<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp;&nbsp; Config file (should be =
+xml in most cases)<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier New"'>&nbsp;&nbsp; Readme =
+file<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp;&nbsp; Make file / environment =
+file (to compile c++ or python codes)<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp; Command file (for python or other scripting language =
+based package only)<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier New"'>&nbsp;&nbsp; =
+<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp;&nbsp; An Alpha shall have =
+below basic information in config files:<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp; Name, AuthorID, Region, Category, =
+Neutralization<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier New"'>&nbsp;&nbsp; =
+<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp;&nbsp; Alpha package naming =
+convention: <o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AuthoridAlphaname-version. Example: =
+Cq005Newstimingabc-1.0.0<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp; Source code naming convention: =
+<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For =
+main alpha code: alphaAuthoridAlphaname.cpp =
+(.py)<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For =
+other utility code: utilAuthoridAlphaNameUtilname.hh (python =
+lib)<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp;&nbsp; =
+<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp;&nbsp; Readme file naming =
+convention:<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+readme.txt. Describe the idea, performance and correlation of your =
+alphas in plain text in this file.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp; <o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier New"'>&nbsp;&nbsp; Command =
+file naming: <o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; run.sh. Inside run.sh, your code =
+reads config.xml and output corresponding alphas or other files into =
+current folder.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp; 2. Config file<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp; Config file naming =
+convention:<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+config.xml. in case there are multiple version, name as =
+config_version.xml.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier New"'>&nbsp;&nbsp; A config =
+file shall always looks like below, usage of each module is in comment =
+as below:<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp;&nbsp; =
+<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp; &lt;?xml =
+version=3D&quot;1.0&quot; =
+encoding=3D&quot;ISO-8859-1&quot;?&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp; &lt;CQSim&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp; &lt;Constants python_path=3D&quot;xxx&quot; =
+production_path=3D&quot;xxx&quot;/&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp; &lt;!--Defines global constants used in =
+config&gt;<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp; &lt;Universe =
+minvol=3D&quot;1000000&quot; minprice=3D&quot;2&quot; =
+validwindow=3D=A1=B010=A1=B1/&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp; &lt;!--Defined variable to select stocks, e.g: mininum =
+volume, minimum price, minmum cap, have valid price for =
+N-days&gt;<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp; =
+&lt;Modules&gt;<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier New"'>&nbsp;&nbsp; =
+&lt;!--Defines all data sources that are used in alpha, alpha shall read =
+their data sources and the data sources related parameters from the =
+lines here. Use ${YYYYMMDD} to replace the actual paths, and generate =
+the real paths in code--&gt; <o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp;&nbsp;&nbsp;&lt;Module id=3D&quot;sina_news&quot; =
+dataPath=3D&quot;/dat/cqdata/news/sina/companyNews/news.${YYYYMMDD}&quot;=
+ para1=3D&quot;xxx&quot; =
+para2=3D&quot;xxx&quot;/&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp;&nbsp; &lt;Module id=3D=A1=B1basedata&quot; =
+dataPath=3D&quot;/dat/cqdata/marketdata/bloomberg/${YYYY}/{MM}/RAWPRICES.=
+${YYYYMMDD}&quot; /&gt;<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier New"'>&nbsp;&nbsp; &lt;Module =
+id=3D&quot;classification=A1=B1 =
+dataPath=3D&quot;/dat/cqdata/classification/wind/wind/${YYYYMMDD}.txt=A1=B1=
+ /&gt;<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp;&nbsp; =
+....<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp;&nbsp; =
+<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp; =
+&lt;/Modules&gt;<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier =
+New"'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier New"'>&nbsp; =
+&lt;Portfolio&gt;<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier New"'>&nbsp;&nbsp;&nbsp; =
+&lt;Alpha id=3D&quot;myalpha&quot; universeId=3D&quot;Ashare&quot; =
+delay=3D&quot;1&quot; dumpAlphaDir=3D&quot;./alpha&quot; =
+booksize=3D&quot;2e7&quot; para1=3D&quot;3&quot; =
+para2=3D&quot;0.33=A1=B0 =
+para3=3D=A1=B1abc=A1=B1&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Description =
+author=3D&quot;cq005&quot; region=3D&quot;CHN&quot; =
+instrument=3D&quot;equity&quot; birthday=3D&quot;20160402&quot; =
+category=3D&quot;market_timing&quot; =
+neutralization=3D&quot;none&quot;/&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp;&nbsp; &lt;Alpha/&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp;&nbsp; &lt;Alpha id=3D&quot;myalpha2&quot; =
+universeId=3D&quot;Ashare&quot; delay=3D&quot;1&quot; =
+dumpAlphaDir=3D&quot;./alpha2&quot; booksize=3D&quot;2e7&quot; =
+para1=3D=A1=B04=A1=B1 para2=3D&quot;0.5&quot; =
+para3=3D=A1=B0def&quot;&gt;<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Description =
+author=3D&quot;cq005&quot; region=3D&quot;CHN&quot; =
+instrument=3D&quot;equity&quot; birthday=3D&quot;20160402&quot; =
+category=3D&quot;market_timing&quot; =
+neutralization=3D&quot;none&quot;/&gt;&nbsp;&nbsp; =
+<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp;&nbsp;&nbsp; =
+&lt;/Alpha&gt;<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier New"'>&nbsp; =
+&lt;/Portfolio&gt;<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier New"'>&nbsp; =
+&lt;/CQSim&gt;&nbsp;&nbsp; <o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp; <o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier New"'>&nbsp;&nbsp; =
+instruments: equity, futures, etf<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp; Birthday: the date you made this =
+alpha<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp;&nbsp; category: for =
+long/short basically equal to the dataset category, for others can use =
+market_timing or others.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier New"'>&nbsp;&nbsp; =
+neutralization: none, market, sector, industry.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp; booksize: the max booksize of this alpha, for =
+long/short equity every day shall re-scale to this =
+value<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp;&nbsp; Usually one config only =
+has one alpha, but if you have multiple versions of one alpha (e.g =
+different parameters), can put multiple of them, but your script need to =
+handle this.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier New"'>&nbsp;&nbsp; All the =
+parameter of the alpha, shall be read from the &lt;Alpha /&gt; tag, e.g =
+para1-para3. All the datasources of the alpha, shall be read from the =
+&lt;Module&gt; by reading the module ids.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp; Ideally the alpha code shall not contain any =
+hard-coded paths and any hard-coded parameters.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp; <o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier New"'>&nbsp;&nbsp; 3. Alpha =
+run<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp;&nbsp; =
+<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp;&nbsp; The alphas shall output =
+the daily alpha position into production_path + dumpAlphaDir, in below =
+format: alpha/alpha.YYYYMMDD<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp; in each alpha file, it has below =
+format:<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp;&nbsp; =
+ticker|alpha_value<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier New"'>&nbsp;&nbsp; e.g: =
+000001.SZ|203054<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp; The alpha shall be able to run =
+with:<o:p></o:p></span></p><p class=3DMsoNormal><span lang=3DEN-US =
+style=3D'font-family:"Courier New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+run.sh config.xml<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier =
+New"'><o:p>&nbsp;</o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier New"'>&nbsp;&nbsp; The alpha =
+shall output necessary information and error information so that they =
+can be recorded.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp; Thanks,<o:p></o:p></span></p><p =
+class=3DMsoNormal><span lang=3DEN-US style=3D'font-family:"Courier =
+New"'>&nbsp;&nbsp; <o:p></o:p></span></p><p class=3DMsoNormal><span =
+lang=3DEN-US style=3D'font-family:"Courier =
+New"'>CQAlpha<o:p></o:p></span></p></div></body></html>
+------=_NextPart_000_0031_01D19E58.F5593570--

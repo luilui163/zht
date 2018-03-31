@@ -1,0 +1,14 @@
+eps	2	c
+eps_lastyear	3	c
+revenue	4	c
+revenue_annualgrowth	5	c
+revenue_quartergrowth	6	c
+netprofit	7	c
+netprofit_annualgrowth	8	c
+netprofit_quartergrowth	9	c
+bps	10	c
+roe	11	c
+cps	12	c
+earingtosale	13	c
+quarter	14	d
+undefine	15	d

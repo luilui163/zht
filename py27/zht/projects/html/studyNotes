@@ -1,0 +1,314 @@
+w3schools html  https://www.w3schools.com/html/html_intro.asp
+
+THML tags are not case sensitive
+Browsers do not display the HTML tags,but use them to render the content of the page.
+Only the content inside the <body> section is displayed in a browser.
+The <!DOCTYPE> declaration represents the document type,and helps browsers to display webpages correctly.
+It must only appear once,at the top of the page (before any HTML tags).
+
+HTML elements with no content are called empty elements.Empty elements do not
+have an end tag,such as <br> element (which indicates a line break).
+
+
+Some HTML elements will display correctly,even if you forget the end tag.
+
+Empty elements can be 'closed' in the opening tag like this:<br/>
+
+HTML5 does not require empty elements to be closed.But if you want stricter validation,
+or if you want to make your document readable by XML parsers,you must close all HTML elements properly.
+
+The HTML5 standard does not require values.For example,the href attribute,demonstrated above,
+can be written as:
+<a href=http://www.w3schools.com>
+W3C recommends quotes in HTML,and demands quotas for stricter document types like XHTML.
+Sometimes it is necessary to use quotes.The following exmaple will not display the title attribute
+correctly,because it contains a space:
+<p title=About W3Schools>
+
+
+The <!DOCTYPE html> decleration defines this document to be HTML5
+The <html> element is the root element of an HTML page
+The <head> element contains meta information about the document
+The <title> element specifies a title for the document
+The <body> element contains the visible page content
+The <h1> element difines a large heading
+The <p> element defines a paragraph
+
+
+<h1> This is heading 1</h1>
+<h2> This is heading 2</h2>
+<h3> This is heading 3</h3>
+<h4> This is heading 4</h4>
+
+<p> This is a paragraph.</p>
+<p> This is another paragraph.</p>
+
+
+Attributes are used to provide additional information about HTML elements.
+For more attributes refer to https://www.w3schools.com/tags/ref_attributes.asp
+
+<a href='https:www.w3schools.com'>This is a link</a>
+<img src='w3schools.jpg' alt='W3Schools.com' width ='104' height='142'>
+
+
+The language is declared with the lang attribute.
+<html lang='en-US'>
+
+The title Attribute
+The value of the title attribute will be displayed as a tooltip when you
+mouse over the paragraph:
+<p title="I'm a tooltip">
+This is a paragraph
+</p>
+
+
+The alt Attribute
+The alt attribute specifies an alternative text to be used,when an image cannot be displayed.
+<img src='w3schools.jpg' alt='W3Schools.com' width='104' height='142'>
+
+
+The <hr> tag defines a thematic break in an HTML page,and is most often displayed as a
+horizonal rule.The <hr> element is used to separate content (or define a change) in an
+HTML page.
+
+
+The HTML <head> element has nothing to do with HTML headings.
+The <head> element is a container for metadata.HTML meatadata is about the HTML document.
+Metedata is not displayed.
+
+Metadata typically define the document title,character set,styles,links,scripts,and other meta information.
+
+Browsers automatically add some white space (a margin) before and after a paragraph.
+
+
+With HTML,you cannot change the output by adding extra spaces or extra lines in your HTML code.
+The browser will remove any extra spaces and extra lines when the page is displayed.
+
+In HTML,spaces and new lines are ignored.
+
+
+The HTML <pre> element defines preformatted text.
+The text inside a <pre> element is displayed in a fixed-width font (usually Courier),and it
+preserves both spaces and line breaks.
+
+The HTML style attribute has the following syntex:
+<tagname style='property:value;'>
+The property is a CSS property.The value is a CSS value.
+
+<body style='background-color:powderblue;'>
+<h1 style='color:blue;'>This is a heading</h1>
+<p style='font-family:courier;'>This is a paragraph.</p>
+<p style='font-size:300%;'>This is a paragraph.</p>
+<p style='text-align:center;'>This is a paragraph.</p>
+
+
+Formatting elements were designed to display special types of text,For example:
+<p><b>This text is bold</b><p>
+<p><i>This text is italic</i><p>
+<p>This is <sub> subscript</sub> and <sup>superscript</sup></p>
+
+
+<b>-Bold text
+<strong>-Important text
+<i>-Italic text
+<em>-Emphasized text
+<mark>-Marked text
+<small>-Small text
+<del>-Deleted text
+<ins>-Inserted text
+<sub>-Subscript text
+<sup>-Superscript text
+
+
+The HTML <q> element defines a short quotation.
+The HTML <blockquote> element defines a section that is quoted from another source.
+
+
+You can add comments to your HTML source by using the following syntax:
+<!-- Write your comments here -->
+
+<!-- Do not display this at the moment
+<img border='0' src='pic_mountain.jpg' alt='Mountain'>
+-->
+
+
+
+CSS stands for Cascading Style Sheets.
+CSS describes how HTML elements are to be displayed on screen,paper,or in other media.
+
+
+For more details,refer to https://www.w3schools.com/html/html_css.asp
+<style> element to define the internal CSS
+<link> element to refer to an external CSS file
+<head> element to store <style> and <link> elements
+
+
+In HTML,links are defined with the <a> tag:
+<a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+HTML links are hyperlinks.You can click on a link and jump to another document.
+
+By default,a link will appear like this:
+- An unvisited link is underlined and blue
+- A visited link is underlined and purple
+- An active link is underlined and red
+
+The target attribute specifies where to open the linked document.
+The target attribute can have one of the following values:
+_blank - Opens the linked document in a new window or tab
+_self - Opens the linked document in the same window/tab as it was cliked (this is default)
+_parent - Opens the linked document in the parent frame
+_top - Opens the linked document in the full body of the window
+framename - Opens the linked document in a named frame
+
+
+It is common to use images as links:
+<a href="default.asp">
+  <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
+</a>
+
+
+HTML Links - Create a Bookmark
+For example:
+First,create a bookmark with the id attribute:
+<h2 id='C4'>Chapter 4</h2>
+Then,add a link to the bookmark('Jump to Chapter 4'),from within the same page:
+<a href='#C4'>Jump to Chapter 4</a>
+Or,add a link to the bookmark('Jump to Chapter 4'),from another page:
+<a href='html_demo.html#4'>Jump to Chapter 4</a>
+
+
+The <img> tag is empty,it contains attributes only,and does not have a closing tag.
+The alt attribute is required.A web page will not validate correctly without it.
+
+Image Size:
+You can use the style attribute to specify the width and the height of an image.
+<img src='html5.gif' alt='HTML5 Icon' style='width:128px;height:128px;'>
+Alternatively,you can use the width and height attributes.
+<img src='html5.gif alt='HTML5 Icon' width='128' height='128'>
+
+
+HTML Table tags:
+<table> defines a table
+<th> defines a header cell in a table  (table header)
+<tr> defines a row in a table (table row)
+<td> defines a cell in a table (table data)
+
+
+HTML List Tags:
+<ul> defines an unordered list
+<ol> defines an ordered list
+<li> defines a list item
+<dl> defines a description list
+<dt> defines a term in a description list
+<dd> describes the term in a description list
+
+
+HTML Grouping Tags:
+<div> defines a section in a document (block-level)
+<span> defines a section in a document (inline)
+
+HTML Iframes:
+An iframe is used to display a web page within a web page
+
+
+HTML <script> Tag:
+To select an HTML element,JavaScript very often use the document.getElementByID(id) method.
+
+
+HTML Head:
+Define keywords for search engines:
+<meta name='keywords' content='HTML,CSS,XML,JavaScript'>
+
+HTML Computercode:
+<code> defines programming code
+<kbd> defines keyboard input
+<samp> defines computer output
+<var> defines a variable
+<pre> defines preformatted text
+
+
+
+
+<pre>
+<code>
+x=5;
+y=6;
+z=x+y;
+</code>
+</pre>
+
+<var> element defines a variable
+
+For example,Einstein wrote:
+<var>E</var>=<var>mc</var><sup>2</sup>
+
+
+
+HTML Entities:
+Reserved characters in HTML must be replaced with character entities.
+&entity_name;
+OR
+&#entity_number
+
+&nbsp   non-breaking space
+&lt     less than
+&gt     greater than
+&amp    ampersand
+&quot   double quotation mark
+&apos   single quotation mark(apostrophe)
+
+
+HTML URL Encode:
+A URL can be composed of words(w3schools.com),or an Internet Protocl(IP)
+address(192.68.20.50)
+
+A web address,like https://www.w3schools.com/html/default.asp follows these syntax rules:
+scheme://prefix.domain.port/path/filename
+
+
+scheme-defines the type of Internet service (most common is http or https)
+prefix-defines a domain prefix (default for http is www)
+
+http-HyperText Transfer Protocol:Common web pages.Not encrypted
+https-Secure HyperText Transfer Protocol:Secure web pages.Encrypted
+ftp-File Transfer Protocol:Downloading or uploading files
+file-A file on your computer
+
+
+URL encoding:
+URLs can only be sent over the Internet using the ASCII character-set.If a URL
+contains character outside the ASCII set,the URL has to be converted.
+
+URL encoding replaces non-ASCII characters with a "%" followed by hexadecimal digits.
+URLs cannot contain spaces.URL encoding normally replaces a space with a plus (+) sign,or %20
+
+
+
+
+
+
+
+
+
+
+
+HTML Forms
+<input type='text'> defines a one-line text input field
+<input type='radio'> defines a radio button (for selecting one of many choices)
+<input type='submit'> defines a submit button (for submitting the form)
+
+
+<form action='/action_page.php' method='get'>
+<form action='/action_page.php' method='post'>
+The action attribute defines the action to be performed
+when the form is submitted.
+
+The default method when submitting form data is GET.
+However,when GET is used,the submitted form data will be
+visible in the page address field:
+/action_page.php?firstname=Mickey&lastname=Mouse
+
+
+JSON:JavaScript Object Notation
+PHP:Hypertext Preprocessor
+

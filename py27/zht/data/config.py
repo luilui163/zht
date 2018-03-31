@@ -1,0 +1,1 @@
+DATA_BASE_DIR=r'D:\quantDb\mkt\daily\stockBars'

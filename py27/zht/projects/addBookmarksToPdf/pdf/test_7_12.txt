@@ -1,0 +1,626 @@
+Contents
+Foreword by Cliﬀord Asness
+
+xi
+
+Acknowledgments
+
+xvii
+
+Abbreviations and acronyms
+
+xix
+
+PART I
+
+OVERVIEW, HISTORICAL RETURNS, AND
+ACADEMIC THEORIES
+
+1
+
+1
+
+Introduction
+1.1
+Historical performance
+1.2
+Financial and behavioral theories: A brief history of ideas
+1.3
+Forward-looking indicators
+1.4
+View-based expected returns
+1.5
+General comments about the book
+1.6
+Notes
+
+3
+7
+9
+13
+15
+16
+20
+
+2
+
+Whetting the appetite: Historical averages and forward-looking returns
+2.1
+Historical performance since 1990
+2.2
+Sample-speciﬁc results: Dealing with the pitfalls
+2.3
+Forward-looking return indicators
+2.4
+Notes
+
+23
+24
+27
+32
+35
+
+3
+
+The historical record: The past 20 years in a longer perspective
+3.1
+Stocks
+3.2
+Bonds
+3.3
+Real asset investing and active investing
+3.4
+FX and money markets
+3.5
+Real return histories
+3.6
+Notes
+
+37
+39
+43
+47
+50
+52
+52
+
+4
+
+Road map to terminology
+4.1
+Constant or time-varying expected returns?
+4.2
+Rational or irrational expectations formation?
+
+57
+57
+58
+
+vi
+
+Contents
+
+4.3
+4.4
+4.5
+4.6
+4.7
+
+Return measurement issues
+Returns in what currency?
+Risk-adjusted returns
+Biased returns
+Notes
+
+59
+60
+61
+63
+63
+65
+66
+68
+81
+83
+
+5
+
+Rational theories on expected return determination
+5.1
+The old world
+5.2
+The new world
+5.3
+Detour: a brief survey of the eﬃcient markets hypothesis
+5.4
+Notes
+
+6
+
+Behavioral ﬁnance
+6.1
+Limits to arbitrage
+6.2
+Psychology
+6.3
+Applications
+6.4
+Conclusion
+6.5
+Notes
+
+87
+87
+89
+98
+106
+107
+
+7
+
+Alternative interpretations for return predictability
+7.1
+Risk premia or market ineﬃciency
+7.2
+Data mining and other ‘‘mirage’’ explanations
+7.3
+Notes
+
+111
+111
+112
+115
+
+PART II
+8
+
+9
+
+A DOZEN CASE STUDIES
+
+117
+
+Equity risk premium
+8.1
+Introduction and terminology
+8.2
+Theories and the equity premium puzzle
+8.3
+Historical equity premium
+8.4
+Forward-looking (ex ante objective) long-term expected return
+measures
+8.5
+Survey-based subjective expectations
+8.6
+Tactical forecasting for market timing
+8.7
+Notes
+
+119
+119
+120
+122
+
+Bond
+9.1
+9.2
+9.3
+9.4
+9.5
+9.6
+9.7
+
+153
+153
+157
+160
+161
+164
+174
+177
+
+risk premium
+Introduction, terminology, and theories
+Historical average returns
+Alternative ex ante measures of the BRP
+Yield curve steepness: important predictive relations
+Explaining BRP behavior: ﬁrst targets, then four drivers
+Tactical forecasting—duration timing
+Notes
+
+128
+141
+144
+149
+
+10 Credit
+10.1
+10.2
+10.3
+10.4
+10.5
+10.6
+10.7
+10.8
+
+Contents
+
+vii
+
+risk premium
+Introduction, terminology, and theory
+Historical average excess returns
+Focus on front-end trading—a pocket of attractive reward to risk
+Understanding credit spreads and their drivers
+Tactical forecasting of corporate bond outperformance
+Assessing other non-government debt
+Concluding remarks
+Notes
+
+179
+179
+183
+188
+191
+198
+199
+204
+205
+
+11 Alternative asset premia
+11.1 Introduction to alternatives
+11.2 Real estate
+11.3 Commodities
+11.4 Hedge funds
+11.5 Private equity funds
+11.6 Notes
+
+207
+207
+210
+219
+226
+241
+245
+
+12 Value-oriented equity selection
+12.1 Introduction to dynamic strategies
+12.2 Equity value: introduction and historical performance
+12.3 Tweaks including style timing
+12.4 The reasons value works
+12.5 Does the value strategy work in equities beyond individual stock
+selection or in market or sector selection in other asset classes?
+12.6 Relations between value and other indicators for equity selection
+12.7 Notes
+
+249
+249
+251
+258
+261
+
+13 Currency carry
+13.1 Introduction
+13.2 Historical average returns
+13.3 Improvements/reﬁnements to the baseline carry strategy
+13.4 Why do carry strategies work?
+13.5 Carry here, carry there, carry everywhere
+13.6 Notes
+
+271
+271
+272
+276
+282
+288
+290
+
+14 Commodity momentum and trend following
+14.1 Introduction
+14.2 Performance of simple commodity momentum strategies
+14.3 Tweaks
+14.4 Why does momentum—such a naive strategy—work?
+14.5 Momentum in other asset classes
+14.6 Notes
+
+293
+293
+294
+298
+299
+301
+305
+
+15 Volatility selling (on equity indices)
+15.1 Introduction
+15.2 Historical performance of volatility-trading strategies
+
+307
+307
+311
+
+265
+267
+268
+
+viii
+
+Contents
+
+15.3
+15.4
+15.5
+15.6
+
+Tweaks/Reﬁnements
+The reasons volatility selling is proﬁtable
+Other assets
+Notes
+
+314
+315
+319
+319
+
+16 Growth factor and growth premium
+16.1 Introduction to underlying factors in Chapters 16–19
+16.2 Introduction to the growth factor
+16.3 Theory and evidence on growth
+16.4 Asset market relations
+16.5 Time-varying growth premium
+16.6 Notes
+
+321
+321
+327
+328
+331
+338
+338
+
+17 Inﬂation factor and inﬂation premium
+17.1 Introduction
+17.2 Inﬂation process—history, determinants, expectations
+17.3 Inﬂation sensitivity of major asset classes and the inﬂation
+premium
+17.4 Time-varying inﬂation premium
+17.5 Notes
+
+341
+341
+345
+
+18 Liquidity factor and illiquidity premium
+18.1 Introduction
+18.2 Factor history: how does liquidity itself vary over time?
+18.3 Historical evidence on average liquidity-related premia
+18.4 Time-varying illiquidity premia
+18.5 Note
+
+359
+359
+362
+365
+370
+374
+
+19 Tail risks (volatility, correlation, skewness)
+19.1 Introduction
+19.2 Factor history
+19.3 Historical evidence on average asset returns vs. volatility and
+correlation
+19.4 Theory and evidence on the skewness premium
+19.5 Verdict on why high-volatility assets fare so poorly
+19.6 Time-varying premia for tail risk exposures
+19.7 Notes
+
+375
+375
+378
+
+PART III
+
+399
+
+BACK TO BROADER THEMES
+
+20 Endogenous return and risk: Feedback eﬀects on expected returns
+20.1 Feedback loops on the direction of risky assets
+20.2 Feedback loops on less directional positions
+20.3 Agenda for market timers and researchers
+20.4 Notes
+
+350
+356
+356
+
+380
+389
+392
+395
+396
+
+401
+401
+403
+405
+407
+
+Contents
+
+ix
+
+21 Forward-looking measures of asset returns
+21.1 Popular value and carry indicators and their pitfalls
+21.2 Building blocks of expected returns
+21.3 Notes
+
+409
+410
+413
+416
+
+22 Interpreting carry or non-zero yield spreads
+22.1 Introduction
+22.2 Future excess returns or market expectations?
+22.3 Empirical horse races for various assets
+22.4 Conclusions
+22.5 Notes
+
+419
+419
+420
+424
+428
+429
+
+23 Survey-based subjective expected returns
+23.1 Notes
+
+431
+435
+
+24 Tactical return forecasting models
+24.1 Introduction
+24.2 What type of model?
+24.3 Which assets/trades?
+24.4 Which indicator types?
+24.5 Enhancements and pitfalls
+24.6 Notes
+
+437
+437
+438
+441
+442
+443
+444
+
+25 Seasonal regularities
+25.1 Seasonal, cyclical, and secular patterns in asset returns
+25.2 Monthly seasonals and the January eﬀect
+25.3 Other seasonals
+
+445
+445
+446
+453
+
+26 Cyclical variation in asset returns
+26.1 Typical behavior of realized returns and ex ante indicators through
+the business cycle
+26.2 Typical behavior of realized returns and ex ante indicators across
+diﬀerent economic regimes
+26.3 Notes
+
+457
+
+27 Secular trends and the next 20 years
+27.1 Contrasting 1988–2007 with 1968–1987
+27.2 Reversible and sustainable secular trends
+27.3 The next 20 years
+27.4 Notes
+
+467
+467
+468
+474
+478
+
+28 Enhancing returns through managing risks, horizon, skill, and costs
+28.1 Introduction: how can investors enhance returns?
+28.2 Risk
+28.3 Investment horizon
+28.4 Skill
+28.5 Costs
+28.6 Notes
+
+479
+479
+482
+492
+496
+499
+501
+
+458
+461
+465
+
+x
+
+Contents
+
+29 Takeaways for long-horizon investors
+29.1 Key takeaways from theory
+29.2 Empirical return sources
+29.3 My take on key debates
+29.4 Know thyself: large long-horizon investors’ natural edges
+29.5 Institutional practices
+29.6 Notes
+
+503
+504
+504
+506
+512
+513
+514
+
+APPENDICES
+
+515
+
+A
+
+World
+A.1
+A.2
+A.3
+
+515
+516
+516
+518
+
+B
+
+Data
+B.1
+B.2
+B.3
+B.4
+B.5
+B.6
+
+wealth
+Global total
+Asset class detail
+Notes
+
+sources and data series construction
+Asset class and sector returns
+Strategy style returns
+Factor proxies
+Forward-looking yields and spreads
+Survey data and expected inﬂation
+Miscellaneous other
+
+519
+519
+521
+522
+523
+523
+524
+
+Bibliography
+
+527
+
+Index
+
+551
+
+

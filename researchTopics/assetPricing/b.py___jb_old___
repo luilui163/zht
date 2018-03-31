@@ -1,0 +1,21 @@
+#-*-coding: utf-8 -*-
+#author:tyhj
+#b.py 2017/9/8 21:24
+import os
+
+import pandas as pd
+import numpy as np
+
+a=pd.DataFrame([range(10)]*5)
+
+
+from zht.util.mathu import getSortedPortId
+
+print getSortedPortId(a,[0.3,0.7])
+
+
+
+
+
+
+

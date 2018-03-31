@@ -1,0 +1,289 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <link rel="shortcut icon" href="localhost:8000/images/favicon.jpg" />
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="ZHANG HAITAO" />
+        <title>ZHANG HAITAO</title>
+
+        <meta name="description" content="Master in Financial Engineering,Wuhan University" />
+        <meta name="keywords" content="Blog asset pricing python crawler finance econometrics quantitative finance algorithm trading "/>
+
+        <!--[if !IE 7]>
+        <style type="text/css">
+            #main-content {display:table;height:100%}
+        </style>
+        <![endif]-->
+        <link rel="stylesheet" href="localhost:8000/theme/css/backdrop.css" />
+        <link rel="stylesheet" href="localhost:8000/theme/css/pygments.css" />
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+        <script src="localhost:8000/theme/js/modernizr.js"></script>
+
+
+    </head>
+
+
+    <body>
+        <div class="master-row">
+
+            <div class="content-pane main-content">
+                <nav class="top-bar" data-topbar role="navigation">
+                    <ul class="title-area">
+                        <li class="name"><!-- Leave this empty --></li>
+                        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+                    </ul>
+                    <section class="top-bar-section">
+                        <ul class="left">
+                            <li><a href="localhost:8000/category/econometrics.html">econometrics</a></li>
+                            <li><a href="localhost:8000/category/finance.html">finance</a></li>
+                            <li><a href="localhost:8000/category/it.html">IT</a></li>
+                        </ul>
+                        <ul class="right">
+                            <li><a href="localhost:8000/pages/blogPlanning.html">blogPlanning</a></li>
+                        </ul>
+                    </section>
+                </nav>
+
+                <div class="row title-bar">
+                    <div class="small-12 columns">
+                        <h1><a href="localhost:8000">ZHANG HAITAO</a></h1><h2> <small>Master in Financial Engineering,Wuhan University</small></h2>
+                        <hr>
+                    </div>
+                </div>
+
+                <div id="contents">
+
+<div class="row">
+    <div class="small-12 medium-12 columns">
+        <section class="summary">
+    <h3><a href="localhost:8000/Typora study notes.html" rel="bookmark" title="Permalink to Typora study notes">Typora study notes</a></h3>
+    <div class="row info-bar" style="margin-left:0rem;margin-bottom:6px;">
+    <div class="small-12 columns">
+        <ul class="inline-list">
+            <li><span><i class="fa fa-calendar"></i>&nbsp; 2017-10-31</span></li>
+            <li><span><i class="fa fa-folder-open"></i>&nbsp; <a href="localhost:8000/category/it.html">IT</a></span></li>
+            <li>
+                <span>
+                    <i class="fa fa-tags"></i>&nbsp;
+                    <a href="localhost:8000/tag/typora.html"><span class="label">typora</span></a>
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
+    <div class="row summary">
+        <div class="small-12 medium-7 columns">
+            <h1>Welcome</h1>
+<p>Thank <strong>Typora</strong>.This document will help you to start Typora.</p>
+<p>[TOC]</p>
+<h2>Live Preview</h2>
+<p><strong>Typora</strong> use the feature:<em>Live Preview</em>,meaning that you could see these inline styles after you finish typing,and see block styles when you type or after you press <code>Enter</code> key or focus to another paragraph.Just try to type some markdown in typora,and you would see how it works.</p>
+<p><strong>Note</strong>:Markdown tags for inline styles,such as <code>**</code> will be hided or displayed smartly.Markdown tags for block level styles,such as <code>###</code> or <code>-[x]</code> will be hided once the block is rendered.</p>
+<p>You could use …</p>
+            <p class='text-right'><a href="localhost:8000/Typora study notes.html">Continue reading&hellip;</a></p>
+        </div>
+        <div class="small-12 medium-5 columns">
+            <a class="th" href="localhost:8000/Typora study notes.html">
+                <img src="http://typora.io/img/inline-math.gif">
+            </a>
+        </div>
+    </div>
+</section>
+    </div>
+    <div class="small-12 medium-6 columns small-articles">
+        <section class="summary">
+    <h3><a href="localhost:8000/Fama MacBeth regression.html" rel="bookmark" title="Permalink to Fama MacBeth regression">Fama MacBeth regression</a></h3>
+    <div class="row info-bar" style="margin-left:0rem;margin-bottom:6px;">
+    <div class="small-12 columns">
+        <ul class="inline-list">
+            <li><span><i class="fa fa-calendar"></i>&nbsp; 2017-10-30</span></li>
+            <li><span><i class="fa fa-folder-open"></i>&nbsp; <a href="localhost:8000/category/finance.html">finance</a></span></li>
+            <li>
+                <span>
+                    <i class="fa fa-tags"></i>&nbsp;
+                    <a href="localhost:8000/tag/asset-pricing.html"><span class="label">Asset pricing</span></a>
+                    <a href="localhost:8000/tag/cross-section.html"><span class="label">cross section</span></a>
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
+    <div class="row summary">
+        <div class="small-12 medium-12 columns">
+            <h1>implementation</h1>
+<h2>Jason C.Hsu</h2>
+<p>The methodology is the same as that of Cochrane.</p>
+<p>For example:</p>
+<p>Using the Fama Macbeth methodology,we would regress the 25 portfolio's <strong>excess returns</strong> against <span class="math">\(r_m\)</span>,<span class="math">\(HML\)</span>,and <span class="math">\(SMB\)</span> in 25 separate regressions.Then,we would run a second regression with 25 observations of all 25 portolio's <strong>returns</strong> against their factor exposures to <span class="math">\(r_m\)</span>,<span class="math">\(HML\)</span>,and <span class="math">\(SMB\)</span> in 500 (500 months) separate regressions.We would then average our coefficients across all regressions to get our factor premia for each regression.</p>
+<p>other points:</p>
+<ol>
+<li>macroeconomic versus tradable factors</li>
+<li>why creating portfolios?</li>
+<li>why not just take the mean of …</li></ol>
+            <p class='text-right'><a href="localhost:8000/Fama MacBeth regression.html">Continue reading&hellip;</a></p>
+        </div>
+    </div>
+</section>
+    </div>
+    <div class="small-12 medium-6 columns small-articles">
+        <section class="summary">
+    <h3><a href="localhost:8000/CAPMandAPT.html" rel="bookmark" title="Permalink to CAPMandAPT">CAPMandAPT</a></h3>
+    <div class="row info-bar" style="margin-left:0rem;margin-bottom:6px;">
+    <div class="small-12 columns">
+        <ul class="inline-list">
+            <li><span><i class="fa fa-calendar"></i>&nbsp; 2017-10-27</span></li>
+            <li><span><i class="fa fa-folder-open"></i>&nbsp; <a href="localhost:8000/category/finance.html">finance</a></span></li>
+            <li>
+                <span>
+                    <i class="fa fa-tags"></i>&nbsp;
+                    <a href="localhost:8000/tag/asset-pricing.html"><span class="label">Asset pricing</span></a>
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
+    <div class="row summary">
+        <div class="small-12 medium-12 columns">
+            <p>Image:{filename}/images/palm.jpg</p>
+<h4>Capital asset pricing model(CAPM)</h4>
+<p>The CAPM allows investors to quantify the expected return on investment given the investment risk,risk-free rate of return,expected market return and beta of an asset or portfolio.The formula used in CAPM is:
+</p>
+<div class="math">$$
+E[r_i]=r_f+\beta_i(E[r_M]-r_f)
+$$</div>
+<h4>Arbitrage pricing Theory(APT)</h4>
+<p>The APT uses fewer assumptions and may be harder to implement than the CAPM.Ross developed the APT on a basis that the prices of securities are driven by multiple factors,which could be grouped into macroeconomic or company-specific factors.<strong><em>Unlike the CAPM,the …</em></strong></p>
+            <p class='text-right'><a href="localhost:8000/CAPMandAPT.html">Continue reading&hellip;</a></p>
+        </div>
+    </div>
+</section>
+    </div>
+</div>
+<div class="row">
+    <div class="small-12 columns">
+        <a class="button" href="localhost:8000/archives.html">Older Articles&hellip;</a>
+    </div>
+</div>
+                </div>
+
+                <footer class="show-for-large-up">
+<div class="row">
+    <div class="small-6 medium-3 columns">
+        <ul class="left-nav">
+            <li><a href="localhost:8000">Home &nbsp;<i class="fa fa-home fa-fw"></i></a></li>
+        </ul>
+    </div>
+    <div class="small-6 medium-3 medium-push-6 columns">
+        <ul class="right-nav">
+            <li><a href="localhost:8000/archives.html"><i class="fa fa-archive fa-fw"></i>&nbsp; Archives</a></li>
+        </ul>
+    </div>
+    <div class="small-12 medium-6 medium-pull-3 columns text-center">
+        <p class="tag-cloud">
+            <a href="localhost:8000/tags.html"><i class="fa fa-tags"></i>&nbsp;Tags:</a>&nbsp;&nbsp;
+            <a href="localhost:8000/tag/asset-pricing.html"><span class="label">Asset pricing</span></a>
+            <a href="localhost:8000/tag/capm.html"><span class="label">CAPM</span></a>
+            <a href="localhost:8000/tag/cross-section.html"><span class="label">cross section</span></a>
+            <a href="localhost:8000/tag/ff3.html"><span class="label">FF3</span></a>
+            <a href="localhost:8000/tag/gmm.html"><span class="label">GMM</span></a>
+            <a href="localhost:8000/tag/typora.html"><span class="label">typora</span></a>
+            &nbsp;&hellip;
+        </p>
+    </div>
+    <div class="small-12 columns sub-footer">
+        <hr>
+        <div class="small-12 medium-6 columns">
+            <p class="small-text-center medium-text-left">
+                &copy; 2017 ZHANG HAITAO
+                <!-- <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="cc.png" /></a>-->
+            </p>
+        </div>
+    </div>
+</div>                </footer>
+            </div>
+            <div class="image-pane main-content" style="background: url('localhost:8000/images/palm.jpg'); background-size:cover; background-position: right;">
+                <div class="row">
+                    <div class="small-12 medium-4 large-12 columns">
+                        <h5 class='text-center'>About</h5>
+                        <div class="about-me">
+                            <div class="hide-for-medium-only small-3 columns no-buffer">
+                                <a class="th" href="localhost:8000/images/profile.jpg">
+                                    <img src="localhost:8000/images/profile.jpg">
+                                </a>
+                            </div>
+                            <div class="small-9 medium-12 large-9 columns text-justify">
+                                This is my Not today, not tomorrow, not next year, not in a decade, or hell, not even in a century and beyond. But that’s a bit too generic and boring to say, isn’t it?
+                            </div>
+                            <div class="small-12 columns">
+                                <ul class="inline-center social-list">
+                                    <li><a href="mailto:986340770@qq.com"><i class="fa fa-envelope"></i>&nbsp; Email</a></li>
+                                    <li><a href="https://github.com/zhangzhihu"><i class="fa fa-github"></i>&nbsp; github</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="small-12 medium-4  large-12 columns link-list">
+                        <h5 class='text-center'>Links</h5>
+                        <ul class="inline-center">
+                            <li><a href="https://github.com/zhangzhihu">github</a></li>
+                            <li><a href="https://www.zhihu.com/">知乎</a></li>
+                        </ul>
+                    </div>
+
+<!--
+                    <div class="small-12 medium-3 large-12 columns">
+                    </div>
+-->
+               </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <footer class="hide-for-large-up">
+<div class="row">
+    <div class="small-6 medium-3 columns">
+        <ul class="left-nav">
+            <li><a href="localhost:8000">Home &nbsp;<i class="fa fa-home fa-fw"></i></a></li>
+        </ul>
+    </div>
+    <div class="small-6 medium-3 medium-push-6 columns">
+        <ul class="right-nav">
+            <li><a href="localhost:8000/archives.html"><i class="fa fa-archive fa-fw"></i>&nbsp; Archives</a></li>
+        </ul>
+    </div>
+    <div class="small-12 medium-6 medium-pull-3 columns text-center">
+        <p class="tag-cloud">
+            <a href="localhost:8000/tags.html"><i class="fa fa-tags"></i>&nbsp;Tags:</a>&nbsp;&nbsp;
+            <a href="localhost:8000/tag/asset-pricing.html"><span class="label">Asset pricing</span></a>
+            <a href="localhost:8000/tag/capm.html"><span class="label">CAPM</span></a>
+            <a href="localhost:8000/tag/cross-section.html"><span class="label">cross section</span></a>
+            <a href="localhost:8000/tag/ff3.html"><span class="label">FF3</span></a>
+            <a href="localhost:8000/tag/gmm.html"><span class="label">GMM</span></a>
+            <a href="localhost:8000/tag/typora.html"><span class="label">typora</span></a>
+            &nbsp;&hellip;
+        </p>
+    </div>
+    <div class="small-12 columns sub-footer">
+        <hr>
+        <div class="small-12 medium-6 columns">
+            <p class="small-text-center medium-text-left">
+                &copy; 2017 ZHANG HAITAO
+                <!-- <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="cc.png" /></a>-->
+            </p>
+        </div>
+    </div>
+</div>            </footer>
+        </div>
+
+
+        <script src="localhost:8000/theme/js/jquery.min.js"></script>
+        <script src="localhost:8000/theme/js/foundation.min.js"></script>
+        <script src="localhost:8000/theme/js/app.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,128 @@
+#-*-coding: utf-8 -*-
+#author:tyhj
+#detectFactors.py 2017/9/3 9:13
+
+import pandas as pd
+import os
+import numpy as np
+
+from zht.util import pandasu
+from zht.util import mathu
+from zht.data.gta import gtaApi
+from zht.util.dfFilter import filterDf
+from zht.util.pandasu import flatten2panel
+from zht.util.listu import chunkify
+from zht.util.quantu import plotCumulativeRet,informationRatio
+
+
+from params import *
+from regressionModels import *
+
+
+#get raw indicators
+
+def getIndicators():
+    '''
+    get indicators from the series of '财务指标系列'
+    :return:
+    '''
+    ns=['1','3','8','7','11','4','9','6','5']
+    #10,2 are special,there is no colname 'Typrep'
+    tbnames=['FI_T'+n for n in ns]
+    for tbname in tbnames:
+        q='Typrep == A'#combined balance sheet
+        df=gtaApi.readFromSrc(tbname)
+        df=filterDf(df,q)
+
+        variables=[col for col in df.columns if col not in ['Stkcd','Indcd','Accper','Typrep']]
+        tmpdf=pd.read_csv(os.path.join(r'D:\quantDb\sourceData\gta\data\tablesNew',tbname+'.csv'),index_col=0)
+        adict={tmpdf['Fldname'].values[i]:tmpdf['Title'].values[i] for i in range(tmpdf.shape[0])}
+        for variable in variables:
+            indvar='Accper'
+            colvar='Stkcd'
+            vname=variable
+            mydf=flatten2panel(df,indvar,colvar,vname)
+            mydf.to_csv(os.path.join(myIndicatorPath,adict[vname]+'.csv'))
+            print tbname,vname
+
+
+def getIndicatorId():
+    cwd=os.getcwd()
+    scriptPath=os.path.join(cwd,'multi_getIndicatorId.py')
+    os.system('python %s'%scriptPath)
+
+#getIndicatorId()
+
+
+def getPortRet():
+    cwd=os.getcwd()
+    scriptPath=os.path.join(cwd,'multi_getPortRet.py')
+    os.system('python %s'%scriptPath)
+
+# getPortRet()
+
+
+#----------------------------------------------------------
+#validate the factors
+
+#method 1:high-low
+
+def highMinusLow(fn):
+    df=pd.read_csv(os.path.join(prp,fn),index_col=0)
+    spread=df.iloc[:,-1]-df.iloc[:,0]
+
+    fig=plotCumulativeRet(spread)
+    fig.savefig(os.path.join(spreadPath,fn[:-4]+'.png'))
+
+def plotSpread():
+    fns=os.listdir(prp)
+    for fn in fns:
+        highMinusLow(fn)
+        print fn
+
+def getIR():
+    fns=os.listdir(prp)
+    irdf=pd.DataFrame()
+    for fn in fns:
+        df=pd.read_csv(os.path.join(prp,fn),index_col=0)
+        spread=df.iloc[:,-1]-df.iloc[:,0]
+        ir=informationRatio(spread)
+        irdf.loc[fn[:-4],'ir']=ir
+        print fn
+    irdf['abs_ir']=irdf['ir'].abs()
+    irdf=irdf.sort_values('abs_ir',ascending=False)
+    irdf.to_csv(os.path.join(myFactorPath,'IR.csv'))
+
+# getIR()
+
+
+#TODO:method 2:fama mecbeth
+
+#+====================================================================
+#regress my factors
+
+fns=os.listdir(prp)
+for fn in fns:
+    df=pd.read_csv(os.path.join(prp,fn),index_col=0)
+    directory=os.path.exists(os.path.join(r'D:\quantDb\researchTopics\assetPricing\myFactor\regress',fn[:-4]))
+    if not directory:
+        os.makedirs(directory)
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

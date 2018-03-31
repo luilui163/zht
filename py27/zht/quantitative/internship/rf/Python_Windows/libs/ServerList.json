@@ -1,0 +1,160 @@
+{
+   "ServerList" : [
+      {
+         "Host" : "183.136.162.47",
+         "Name" : "DLYZ",
+         "Net" : 11,
+         "NetName" : "南方电信一",
+         "Port" : 1818,
+         "Select" : 1,
+         "SerName" : "登录验证服务",
+         "ServiceGroup" : "1",
+         "Type" : 1,
+         "URL" : ""
+      },
+      {
+         "Host" : "183.136.162.33",
+         "Name" : "ZBFW",
+         "Net" : 11,
+         "NetName" : "南方电信一",
+         "Port" : 1818,
+         "Select" : 1,
+         "SerName" : "指标服务",
+         "ServiceGroup" : "2",
+         "Type" : 2,
+         "URL" : ""
+      },
+      {
+         "Host" : "183.136.163.21",
+         "Name" : "JGFW",
+         "Net" : 11,
+         "NetName" : "杭州电信一",
+         "Port" : 1818,
+         "Select" : 1,
+         "SerName" : "行情报价服务",
+         "ServiceGroup" : "3",
+         "Type" : 3,
+         "URL" : ""
+      },
+      {
+         "Host" : "183.136.163.254",
+         "Name" : "JGFW",
+         "Net" : 11,
+         "NetName" : "杭州电信一",
+         "Port" : 1818,
+         "Select" : 0,
+         "SerName" : "行情报价服务",
+         "ServiceGroup" : "3",
+         "Type" : 3,
+         "URL" : ""
+      },
+      {
+         "Host" : "121.52.237.244",
+         "Name" : "JGFW",
+         "Net" : 11,
+         "NetName" : "杭州网通一",
+         "Port" : 1818,
+         "Select" : 0,
+         "SerName" : "行情报价服务",
+         "ServiceGroup" : "3",
+         "Type" : 3,
+         "URL" : ""
+      },
+      {
+         "Host" : "123.129.209.246",
+         "Name" : "JGFW",
+         "Net" : 11,
+         "NetName" : "济南一",
+         "Port" : 1818,
+         "Select" : 0,
+         "SerName" : "行情报价服务",
+         "ServiceGroup" : "3",
+         "Type" : 3,
+         "URL" : ""
+      },
+      {
+         "Host" : "202.104.236.212",
+         "Name" : "JGFW",
+         "Net" : 11,
+         "NetName" : "汕头一",
+         "Port" : 1818,
+         "Select" : 0,
+         "SerName" : "行情报价服务",
+         "ServiceGroup" : "3",
+         "Type" : 3,
+         "URL" : ""
+      },
+      {
+         "Host" : "120.55.198.111",
+         "Name" : "JGFW",
+         "Net" : 11,
+         "NetName" : "阿里云(杭州)一",
+         "Port" : 1818,
+         "Select" : 0,
+         "SerName" : "行情报价服务",
+         "ServiceGroup" : "3",
+         "Type" : 3,
+         "URL" : ""
+      },
+      {
+         "Host" : "101.200.96.107",
+         "Name" : "JGFW",
+         "Net" : 11,
+         "NetName" : "阿里云(北京)一",
+         "Port" : 1818,
+         "Select" : 0,
+         "SerName" : "行情报价服务",
+         "ServiceGroup" : "3",
+         "Type" : 3,
+         "URL" : ""
+      },
+      {
+         "Host" : "42.96.170.130",
+         "Name" : "JGFW",
+         "Net" : 11,
+         "NetName" : "阿里云(青岛)一",
+         "Port" : 1818,
+         "Select" : 0,
+         "SerName" : "行情报价服务",
+         "ServiceGroup" : "3",
+         "Type" : 3,
+         "URL" : ""
+      },
+      {
+         "Host" : "112.74.142.69",
+         "Name" : "JGFW",
+         "Net" : 11,
+         "NetName" : "阿里云(深圳)一",
+         "Port" : 1818,
+         "Select" : 0,
+         "SerName" : "行情报价服务",
+         "ServiceGroup" : "3",
+         "Type" : 3,
+         "URL" : ""
+      },
+      {
+         "Host" : "183.136.162.47",
+         "Name" : "XTFW",
+         "Net" : 11,
+         "NetName" : "南方电信一",
+         "Port" : 7074,
+         "Select" : 1,
+         "SerName" : "心跳服务",
+         "ServiceGroup" : "4",
+         "Type" : 4,
+         "URL" : ""
+      },
+	  {
+         "Host" : "183.136.163.96",
+         "Name" : "FZKX",
+         "Net" : 11,
+         "NetName" : "上海电信一",
+         "Port" : 1818,
+         "Select" : 1,
+         "SerName" : "历史分钟K线服务",
+         "ServiceGroup" : "6",
+         "Type" : 6,
+         "URL" : ""
+      }
+   ]
+}

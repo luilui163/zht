@@ -1,0 +1,9 @@
+Open
+High
+low
+Close
+AvgPrice
+Turn
+Volume
+Amount
+Tnum
