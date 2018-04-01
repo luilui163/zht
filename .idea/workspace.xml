@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/researchTopics/assetPricing1/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing1/template.py" afterPath="$PROJECT_DIR$/researchTopics/assetPricing1/template.py" />
       <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2" />
-      <change beforePath="$PROJECT_DIR$/utils/dfu.py" afterPath="$PROJECT_DIR$/utils/dfu.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
