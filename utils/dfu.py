@@ -98,7 +98,6 @@ def filterDf(df,query):
         df=_filterDf(df,query)
     return df
 
-
 def flatten2panel(df,indVar,colVar,vname):
     '''
         transfer df like:
@@ -137,11 +136,44 @@ def flatten2panel(df,indVar,colVar,vname):
     w=pd.concat(subdfs,axis=1)
     return w
 
-
-
 def get_group_n(grouped,n):
     return list(grouped)[n][1]
 
 def get_first_group(grouped):
     return list(grouped)[0][1]
+
+
+def join_dfs(xs):
+    '''
+    join Series or DataFrames mixed with single and multiple index.
+    :param xs:
+    :return: DataFrame
+    '''
+    single_dfs=[]
+    multi_dfs=[]
+    for x in xs:
+        if isinstance(x.index,pd.core.index.MultiIndex):
+            multi_dfs.append(x)
+        else:
+            single_dfs.append(x)
+
+    s=None
+    if len(single_dfs)>=2:
+        s = pd.concat(single_dfs, axis=1)
+    elif len(single_dfs)==1:
+        s=single_dfs[0]
+
+    m=None
+    if len(multi_dfs)>=2:
+        m=pd.concat(multi_dfs,axis=1)
+    elif len(multi_dfs)==1:
+        m=multi_dfs[0]
+
+    if s is None:
+        return m
+    elif m is None:
+        return s
+    else:#there is both singleIndex dataframe and multiIndex dataframe
+        return m.join(s,how='outer')
+
 

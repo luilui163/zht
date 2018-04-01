@@ -242,9 +242,9 @@ class Univariate(CrossSection):
             print(indicator)
 
         pd.concat(tables_e,axis=0,keys=self.indicators).to_csv(
-            os.path.join(os.path.join(self.path,'univariate portfolio analysis-equal weighted.csv')))
+            os.path.join(self.path,'univariate portfolio analysis-equal weighted.csv'))
         pd.concat(tables_w,axis=0,keys=self.indicators).to_csv(
-            os.path.join(os.path.join(self.path,'univariate portfolio analysis-value weighted.csv')))
+            os.path.join(self.path,'univariate portfolio analysis-value weighted.csv'))
 
     def portfolio_analysis_with_ff3_alpha(self):
         all_indicators=list(set(self.indicators+['mktCap','eret','mktRetM']))
@@ -542,43 +542,10 @@ class Bivariate(CrossSection):
 
         return pd.concat([_a,_b1,_b2],axis=0)
 
-
-    def _dependent_portfolio_analysis0(self,group_ts,col='g1',ind='g2'):
-        # Table 9.6
-        colname=group_ts.index.get_level_values(col)[0][:-1]
-        indname=group_ts.index.get_level_values(ind)[0][:-1]
-
-        #A
-        a_data=group_ts.groupby(['t',col,ind]).mean().unstack(level=[col])
-        a_data.columns=a_data.columns.astype(str)
-
-        #A1
-        a1_data=group_ts.groupby(['t',col,ind]).mean().groupby(['t',ind]).mean()
-        a_data[colname+' avg']=a1_data
-        _a=a_data.groupby(ind).mean()
-
-        def _get_spread(df):
-            time=df.index.get_level_values('t')[0]
-            return df.loc[(time,indname+str(self.q))]-df.loc[(time,indname+'1')]
-        #B
-        b_data=a_data.groupby('t').apply(_get_spread)
-        _b1=b_data.apply(self._excess_ret)
-        _b2=b_data.apply(self._alpha)
-
-        _b1.index=[indname+str(self.q)+'-1',indname+str(self.q)+'-1 t']
-        _b2.index=[indname+str(self.q)+'-1 capm alpha',indname+str(self.q)+'-1 capm alpha t']
-
-        _a.index=_a.index.astype(str)
-        _a.columns=_a.columns.astype(str)
-
-        return pd.concat([_a,_b1,_b2],axis=0)
-
     def _dependent_portfolio_analysis_twin(self, group_ts,controlGroup='g2',targetGroup='g1'):
         #table 10.5 panel B
-        group_ts.head()
-
         targetIndicator = group_ts.index.get_level_values(targetGroup)[0][:-1]# targetGroup
-        controlIndicator = group_ts.index.get_level_values(controlGroup)[0][:-1]#controlGroup
+        # controlIndicator = group_ts.index.get_level_values(controlGroup)[0][:-1]#controlGroup
 
         a1_data=group_ts.groupby(['t', targetGroup, controlGroup]).mean().groupby(['t', targetGroup]).mean()
 
