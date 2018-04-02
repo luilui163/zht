@@ -176,4 +176,5 @@ def join_dfs(xs):
     else:#there is both singleIndex dataframe and multiIndex dataframe
         return m.join(s,how='outer')
 
-
+        multi_dfs[0].tail()
+        multi_dfs[1].tail()
