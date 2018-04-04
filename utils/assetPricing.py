@@ -94,7 +94,7 @@ def corr(df,method='pearson',winsorize=False):
 
     '''
     if winsorize==True:
-        df = mathu.winsorize(df, (0.01, 0.01), axis = 0)
+        df = mathu.winsorize(df, (0.01, 0.01), axis = 0) #TODO: winsorize limit
 
     if method=='pearson':
         return df.corr(method='pearson')
