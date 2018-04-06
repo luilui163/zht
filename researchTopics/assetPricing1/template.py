@@ -357,8 +357,11 @@ class Size(Univariate):
     def get_percent_ratio(self):
 
         def _get_ratio(s):
-            ratios = [1, 5, 10, 25]
-            return pd.Series([s.nlargest(r).sum() / s.sum() for r in ratios],
+            s=s.dropna()
+            total=s.shape[0]
+            ratios = [0.01, 0.05, 0.10, 0.25]
+            num=[int(r*total) for r in ratios]
+            return pd.Series([s.nlargest(n).sum() / s.sum() for n in num],
                              index=ratios)
 
         df=dataset.get_by_indicators('mktCap')
@@ -728,7 +731,8 @@ if __name__=='__main__':
 
     # chapter11()
 
-    Beta().run()
+    # Beta().run()
+    Size().run()
 
 
 
