@@ -48,7 +48,7 @@ def GRS_test(factor,resid,alpha):
     pvalue = scipy.stats.f.sf(GRS, N, (T - N - L))
     return GRS[0,0],pvalue[0,0]
 
-def summary_statistics(data,percentiles=[0.05, 0.25, 0.5, 0.75, 0.95],axis=1):
+def summary_statistics(data,percentiles=(0.05, 0.25, 0.5, 0.75, 0.95),axis=1):
     '''
     calculate the summary statistics.
     Args:

@@ -27,7 +27,45 @@ def std(a,weights=None):
     else:
         return a.std()
 
-def winsorize(df, limits, axis=1, inclusive=(True, True)):
+
+def winsorize(x,limits,axis=1,inclusive=(True,True)):
+    '''
+    Different with scipy.stats.mstats.winsorize,this reconstructed function ignores
+    the `np.NaN`s in the df.
+
+    Args:
+        df: pandas dataframe
+        limits: (downlimit,uplimit),tuple of floats like (0.05,0.05)
+        inclusive:{(True, True) tuple}, optional
+            Tuple indicating whether the number of data being masked on each side
+            should be rounded (True) or truncated (False).
+        axis:{int}, optional
+            Axis along which to trim,that is,if the axis==0,the function will take
+            out a column to trim the data along the axis0 each time,and vice versa.
+            If None,the whole array is trimmed,but its shape is maintained.
+    Returns:
+
+    '''
+    def _for_series(s, limits, inclusive):
+        ind = s.index
+        ns = s.dropna()
+        ns = pd.Series(wsz(ns.values, limits, inclusive),index=ns.index)
+        ns = ns.reindex(index=ind)
+        return ns
+
+    if x.ndim==1:
+        return _for_series(x,limits,inclusive)
+    elif x.ndim==2:
+        if axis==0:#col-by_col
+            return x.apply(lambda s:_for_series(s,limits,inclusive))
+        elif axis==1:#row by row
+            return x.T.apply(lambda s:_for_series(s,limits,inclusive)).T
+
+#TODO: use decorator to simply the span process (from series to dataframe)
+
+
+
+def winsorize_old(df, limits, axis=1, inclusive=(True, True)):
     '''
     Different with scipy.stats.mstats.winsorize,this reconstructed function ignores
     the `np.NaN`s in the df.
