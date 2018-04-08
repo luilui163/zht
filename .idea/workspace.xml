@@ -2,65 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/Estimating Standard Errors in Python-checkpoint.ipynb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/cite2c-A jupyter extension for zotero-checkpoint.ipynb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/dataAnalysis_summary-checkpoint.ipynb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/latex equation field-checkpoint.ipynb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/pandas handbook-checkpoint.ipynb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/python handbook-checkpoint.ipynb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/visualization-checkpoint.ipynb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/Estimating Standard Errors in Python.ipynb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/cite2c-A jupyter extension for zotero.ipynb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/dataAnalysis_summary.ipynb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/df.csv" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/example.log" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/02.05-broadcasting.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/03.08-split-apply-combine.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.01-classification-1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.01-classification-2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.01-classification-3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.01-clustering-1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.01-clustering-2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.01-dimesionality-1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.01-dimesionality-2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.01-regression-1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.01-regression-2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.01-regression-3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.01-regression-4.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.02-samples-features.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.03-2-fold-CV.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.03-5-fold-CV.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.03-bias-variance-2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.03-bias-variance.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.03-learning-curve.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.03-validation-curve.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.05-gaussian-NB.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.06-gaussian-basis.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.08-decision-tree-levels.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.08-decision-tree-overfitting.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.08-decision-tree.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.09-PCA-rotation.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.09-digits-pca-components.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.09-digits-pixel-components.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.10-LLE-vs-MDS.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.11-expectation-maximization.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.12-covariance-type.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/hello.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/helpers_05_08.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/latex equation field.ipynb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/mprun_demo.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/notebook.tex" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/output_10_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/output_12_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/output_13_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/output_5_1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/output_8_0.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/pandas handbook.ipynb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/pnb.bat" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/python handbook.ipynb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/pythoncode.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/test_data.csv" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/visualization.ipynb" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/researchTopics/assetPricing1/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2" />
@@ -146,7 +87,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
@@ -434,7 +375,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1060" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19688842" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295838" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
