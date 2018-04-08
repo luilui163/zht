@@ -2,12 +2,68 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/data/gta/parse_src.py" afterPath="$PROJECT_DIR$/data/gta/parse_src.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/Estimating Standard Errors in Python-checkpoint.ipynb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/cite2c-A jupyter extension for zotero-checkpoint.ipynb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/dataAnalysis_summary-checkpoint.ipynb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/latex equation field-checkpoint.ipynb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/pandas handbook-checkpoint.ipynb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/python handbook-checkpoint.ipynb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/visualization-checkpoint.ipynb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/Estimating Standard Errors in Python.ipynb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/cite2c-A jupyter extension for zotero.ipynb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/dataAnalysis_summary.ipynb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/df.csv" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/example.log" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/02.05-broadcasting.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/03.08-split-apply-combine.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.01-classification-1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.01-classification-2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.01-classification-3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.01-clustering-1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.01-clustering-2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.01-dimesionality-1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.01-dimesionality-2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.01-regression-1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.01-regression-2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.01-regression-3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.01-regression-4.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.02-samples-features.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.03-2-fold-CV.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.03-5-fold-CV.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.03-bias-variance-2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.03-bias-variance.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.03-learning-curve.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.03-validation-curve.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.05-gaussian-NB.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.06-gaussian-basis.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.08-decision-tree-levels.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.08-decision-tree-overfitting.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.08-decision-tree.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.09-PCA-rotation.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.09-digits-pca-components.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.09-digits-pixel-components.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.10-LLE-vs-MDS.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.11-expectation-maximization.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/figures/05.12-covariance-type.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/hello.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/helpers_05_08.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/latex equation field.ipynb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/mprun_demo.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/notebook.tex" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/output_10_0.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/output_12_0.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/output_13_0.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/output_5_1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/output_8_0.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/pandas handbook.ipynb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/pnb.bat" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/python handbook.ipynb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/pythoncode.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/test_data.csv" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/notebook/visualization.ipynb" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/researchTopics/assetPricing1/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/8idiosyncraticVolatility.py" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/8idiosyncraticVolatility.py" />
-      <change beforePath="$PROJECT_DIR$/utils/assetPricing.py" afterPath="$PROJECT_DIR$/utils/assetPricing.py" />
-      <change beforePath="$PROJECT_DIR$/utils/mathu.py" afterPath="$PROJECT_DIR$/utils/mathu.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,25 +74,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="assetPricing.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="assetPricing.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/utils/assetPricing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="271" column="52" lean-forward="true" selection-start-line="271" selection-start-column="52" selection-end-line="271" selection-end-column="52" />
+            <state relative-caret-position="259">
+              <caret line="242" column="0" lean-forward="false" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
               <folding>
                 <element signature="e#135#153#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parse_src.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data/gta/parse_src.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding>
-                <element signature="e#124#133#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -46,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/utils/mathu.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="279" column="0" lean-forward="true" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
+              <caret line="279" column="0" lean-forward="false" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -56,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/researchTopics/assetPricing/template.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="293">
-              <caret line="370" column="0" lean-forward="true" selection-start-line="370" selection-start-column="0" selection-end-line="370" selection-end-column="0" />
+              <caret line="370" column="0" lean-forward="false" selection-start-line="370" selection-start-column="0" selection-end-line="370" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -166,13 +210,7 @@
             <path>
               <item name="zht" type="b2602c69:ProjectViewProjectNode" />
               <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="gta" type="462c0819:PsiDirectoryNode" />
+              <item name="notebook" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -193,12 +231,15 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\app\python36\zht\notebook" />
+      <recent name="D:\app\python36\zht" />
+      <recent name="D:\app\python36\zht\projects" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\app\python36\zht\notebook" />
       <recent name="D:\app\python36\zht\py27\zht\projects" />
       <recent name="D:\app\python36\zht\data" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\app\python36\zht\projects" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -702,7 +743,7 @@
     <entry file="file://$PROJECT_DIR$/researchTopics/assetPricing/template.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
-          <caret line="370" column="0" lean-forward="true" selection-start-line="370" selection-start-column="0" selection-end-line="370" selection-end-column="0" />
+          <caret line="370" column="0" lean-forward="false" selection-start-line="370" selection-start-column="0" selection-end-line="370" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -710,7 +751,7 @@
     <entry file="file://$PROJECT_DIR$/utils/mathu.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="279" column="0" lean-forward="true" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
+          <caret line="279" column="0" lean-forward="false" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -723,22 +764,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/assetPricing.py">
+    <entry file="file://$PROJECT_DIR$/data/gta/parse_src.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="271" column="52" lean-forward="true" selection-start-line="271" selection-start-column="52" selection-end-line="271" selection-end-column="52" />
+        <state relative-caret-position="555">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <element signature="e#135#153#0" expanded="true" />
+            <element signature="e#124#133#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/gta/parse_src.py">
+    <entry file="file://$PROJECT_DIR$/utils/assetPricing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="259">
+          <caret line="242" column="0" lean-forward="false" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
           <folding>
-            <element signature="e#124#133#0" expanded="true" />
+            <element signature="e#135#153#0" expanded="true" />
           </folding>
         </state>
       </provider>

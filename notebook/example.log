@@ -1,0 +1,10 @@
+INFO:root:Running "add" with arguments (3, 3)
+INFO:root:Running "add" with arguments (4, 5)
+INFO:root:Running "sub" with arguments (10, 5)
+INFO:root:Running "sub" with arguments (20, 10)
+INFO:root:Ran with args: ('Hank', 30), and kwargs: {}
+INFO:root:Ran with args: ('Tom', 22), and kwargs: {}
+INFO:root:Ran with args: ('Tom', 22), and kwargs: {}
+INFO:root:Ran with args: ('Tom', 22), and kwargs: {}
+INFO:root:Ran with args: ('Hank', 30), and kwargs: {}
+INFO:root:Ran with args: ('Tom', 22), and kwargs: {}
