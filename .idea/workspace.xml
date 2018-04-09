@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/pycharm_settings_20180410.jar" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/pandas handbook-checkpoint.ipynb" afterPath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/pandas handbook-checkpoint.ipynb" />
+      <change beforePath="$PROJECT_DIR$/notebook/pandas handbook.ipynb" afterPath="$PROJECT_DIR$/notebook/pandas handbook.ipynb" />
       <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/researchTopics/assetPricing1/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2" />
     </list>
@@ -18,8 +21,8 @@
       <file leaf-file-name="assetPricing.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/utils/assetPricing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="242" column="0" lean-forward="false" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
+            <state relative-caret-position="281">
+              <caret line="243" column="14" lean-forward="true" selection-start-line="243" selection-start-column="14" selection-end-line="243" selection-end-column="14" />
               <folding>
                 <element signature="e#135#153#0" expanded="true" />
               </folding>
@@ -148,11 +151,6 @@
               <item name="zht" type="b2602c69:ProjectViewProjectNode" />
               <item name="zht" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="notebook" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -173,8 +171,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\app\python36\zht\notebook" />
       <recent name="D:\app\python36\zht" />
+      <recent name="D:\app\python36\zht\notebook" />
       <recent name="D:\app\python36\zht\projects" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -717,8 +715,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/assetPricing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="242" column="0" lean-forward="false" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
+        <state relative-caret-position="281">
+          <caret line="243" column="14" lean-forward="true" selection-start-line="243" selection-start-column="14" selection-end-line="243" selection-end-column="14" />
           <folding>
             <element signature="e#135#153#0" expanded="true" />
           </folding>
