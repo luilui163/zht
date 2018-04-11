@@ -83,7 +83,7 @@ def get_nodeid_tbid():
     comb.to_csv(os.path.join(PATH,'nodeid_tbid.csv'))
     return comb
 
-def get_json(update=False):
+def downlaod_all_json(update=False):
     def _func(url,nodeid,tbid):
         response=urlopen(url)
         content = response.read()
@@ -110,10 +110,10 @@ def get_json(update=False):
                     _func(url,nodeid,tbid)
                     refuse=False
                 except:
-                    print('refused!')
+                    print(time.strftime('%Y-%m-%d %H:%M:%S'),'refused!')
                     time.sleep(2)
-        print(i, nodeid, tbid)
+        print(time.strftime('%Y-%m-%d %H:%M:%S'),i, nodeid, tbid)
 
 
 if __name__=='__main__':
-    get_json()
+    downlaod_all_json()

@@ -8,58 +8,20 @@
 import urllib.request
 import pandas as pd
 import os
-import json
 import time
-import pandas as pd
 
-def download_documents1():
-    directory=r'E:\a\pdf'
+def download_documents():
+    directory=r'D:\zht\database\quantDb\sourceData\gta\20180410\crawler\documents'
 
-    info=pd.read_csv(r'D:\zht\database\quantDb\sourceData\gta\data\menuNew1.csv',encoding='gbk')
-    info=info[['dbname','DBTitle','Dbid']]
-    info['name']=info['dbname']+'-'+info['DBTitle']
-
-    info=info.drop_duplicates(subset=['Dbid'])
-
-    for ind in info.index:
-        name=info.loc[ind,'name']
-        dbid=info.loc[ind,'Dbid']
+    info=pd.read_csv(r'D:\zht\database\quantDb\sourceData\gta\20180410\crawler\info.csv',index_col=0,encoding='gbk')
+    info=info.drop_duplicates(subset=['DBID','DBTitle'])
+    for i,ind in enumerate(info.index):
+        dbid=info.loc[ind,'DBID']
+        dbTitle=info.loc[ind,'DBTitle']
         url = r'http://www.gtarsc.com/SingleTable/DownLoadUseHelper?dbid={dbid}'.format(dbid=dbid)
-        urllib.request.urlretrieve(url,os.path.join(directory,name+'.pdf'))
+        urllib.request.urlretrieve(url,os.path.join(directory,'{}_{}.pdf'.format(dbTitle,dbid)))
         time.sleep(0.1)
-        print(ind)
-
-def parse_json():
-    directory=r'D:\zht\database\quantDb\sourceData\gta\20180410\crawler\json'
-    fns=os.listdir(directory)
-
-    items=[]
-    for fn in fns:
-        with open(os.path.join(directory,fn)) as f:
-            js=json.load(f)
-
-            #db information
-            dbid=js['DBID']
-            dbTitle=js['DBTitle']
-
-            #node information
-            nodeid=js['TableView']['NodeId']
-            nodeTitle=js['TableView']['NodeTitle']
-
-            #table information
-            tbTitle=js['TableView']['TBTitle']
-            tbName=js['TableView']['TBName']
-            tbId=js['TableView']['TBId']
-
-            startTime=js['TableView']['StartTime']
-            endTime=js['TableView']['EndTime']
-
-            downloadPath=js['DownSimplePath']
-            items.append((dbid,dbTitle,nodeid,nodeTitle,tbTitle,tbName,tbId,startTime,endTime,downloadPath))
-
-    df=pd.DataFrame(items,
-                    columns=['DBID','DBTitle','nodeId','NodeTitle',
-                             'TBTitle','TBName','TBId','StartTime','EndTime','DownSimplePath'],
-                    index=[s[:-4] for s in fns])
+        print(time.strftime('%Y-%m-%d %H:%M:%S'),i,ind)
 
 
+download_documents()
