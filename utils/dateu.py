@@ -7,6 +7,7 @@
 import datetime
 import pandas as pd
 from pandas.tseries.offsets import MonthEnd, Day, YearEnd
+import time
 
 
 def get_today():
@@ -78,3 +79,6 @@ def convert_freq(x, freq):
     elif freq=='Y':
         #for freq=='Y',the element in x must be like 1995.
         return pd.to_datetime(x,format='%Y')+YearEnd()
+
+def get_current_time(format='%Y-%m-%d %H:%M:%S'):
+    return time.strftime(format)
