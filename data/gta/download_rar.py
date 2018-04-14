@@ -13,8 +13,8 @@ import time
 
 from utils.dateu import get_current_time
 
-path_rar=r'e:\a\rars'
-path_unrar=r'e:\a\unrars'
+path_rar=r'E:\a\gta20180412\rars'
+path_unrar=r'E:\a\gta20180412\unrars'
 
 def download_all_rar():
     info=pd.read_csv(r'D:\zht\database\quantDb\sourceData\gta\20180410\crawler\info.csv',index_col=0,encoding='gbk')
@@ -31,11 +31,8 @@ def download_all_rar():
 def get_undownload():
     info = pd.read_csv(r'D:\zht\database\quantDb\sourceData\gta\20180410\crawler\info.csv', index_col=0, encoding='gbk')
     downloaded=os.listdir(path_rar)
-    undownloaded=[]
-    for f in info['DownSimplePath']:
-        if f.split('/')[-1] not in downloaded:
-            undownloaded.append(f)
-    return undownloaded
+    undowdloaded=info['DownSimplePath'][~(info['DownSimplePath'].str.split('/').str[-1].isin(downloaded))]
+    return undowdloaded
 
 def unrar_all():
     directory=r'E:\a\rars'

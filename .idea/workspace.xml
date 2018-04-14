@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/data/gta/download_rar.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/notebook/cite2c-A jupyter extension for zotero.ipynb" afterPath="$PROJECT_DIR$/notebook/cite2c-A jupyter extension for zotero.ipynb" />
-      <change beforePath="$PROJECT_DIR$/notebook/latex equation field.ipynb" afterPath="$PROJECT_DIR$/notebook/latex equation field.ipynb" />
+      <change beforePath="$PROJECT_DIR$/data/gta/download_rar.py" afterPath="$PROJECT_DIR$/data/gta/download_rar.py" />
+      <change beforePath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/pandas handbook-checkpoint.ipynb" afterPath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/pandas handbook-checkpoint.ipynb" />
+      <change beforePath="$PROJECT_DIR$/notebook/pandas handbook.ipynb" afterPath="$PROJECT_DIR$/notebook/pandas handbook.ipynb" />
       <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2" />
-      <change beforePath="$PROJECT_DIR$/utils/dateu.py" afterPath="$PROJECT_DIR$/utils/dateu.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +16,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="download_documents.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/gta/download_documents.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="download_rar.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/gta/download_rar.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+              <folding>
+                <element signature="e#138#176#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -119,6 +141,32 @@
             <path>
               <item name="zht" type="b2602c69:ProjectViewProjectNode" />
               <item name="zht" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="py27" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="py27" type="462c0819:PsiDirectoryNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="py27" type="462c0819:PsiDirectoryNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="quantitative" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="py27" type="462c0819:PsiDirectoryNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="quantitative" type="462c0819:PsiDirectoryNode" />
+              <item name="backtest_system_yjx" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zht" type="b2602c69:ProjectViewProjectNode" />
@@ -410,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523451605063</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="update">
+      <created>1523621607441</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1523621607441</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -429,11 +484,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295838" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41732284" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38132733" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20247468" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.431946" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15450644" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06491416" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46906638" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47806525" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -484,13 +539,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/gta/df2mysql.py" />
-    <entry file="file://$PROJECT_DIR$/data/gta/dataApi.py" />
     <entry file="file://$PROJECT_DIR$/data/gta/ff3.py" />
     <entry file="file://$PROJECT_DIR$/data/gta/gtaApi.py" />
     <entry file="file://$PROJECT_DIR$/data/gta/downloadRAR.py" />
@@ -769,7 +822,7 @@
         <state relative-caret-position="1694">
           <caret line="80" column="54" lean-forward="false" selection-start-line="80" selection-start-column="54" selection-end-line="80" selection-end-column="54" />
           <folding>
-            <element signature="e#128#143#0" expanded="true" />
+            <element signature="e#128#143#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -782,20 +835,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/gta/download_rar.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/gta/download_documents.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/quantitative/backtest_system_yjx/backtest_system.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8272">
+          <caret line="379" column="0" lean-forward="true" selection-start-line="379" selection-start-column="0" selection-end-line="379" selection-end-column="0" />
           <folding>
-            <element signature="e#145#166#0" expanded="true" />
+            <element signature="e#22#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../WeChat/documents/WeChat Files/tyhj986340770/Files/均线策略.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="34" column="8" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+          <folding>
+            <element signature="e#85#103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/gta/download_rar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+          <folding>
+            <element signature="e#138#176#0" expanded="true" />
           </folding>
         </state>
       </provider>
