@@ -10,5 +10,7 @@ txtpath=r'D:\zht\database\quantDb\sourceData\gta\data_20180314\source\txt'
 csvpath=r'D:\zht\database\quantDb\sourceData\gta\data_20180314\source\csv'
 
 
+#TODO: multiprocessing
+
 
 
