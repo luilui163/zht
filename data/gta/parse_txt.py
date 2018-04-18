@@ -56,11 +56,15 @@ if __name__=='__main__':
     fns=[a[0] for a in z]
 
     multi_fns=fns[:-50]
-    single_fns=fns[-50:]
+    single_fns=fns[-50:]# the last 50 files is of big size.
 
     p=Pool(4)
     items1=p.map(txt2csv,multi_fns)
-    items2=[txt2csv(fn) for fn in single_fns]
+
+    items2=[]
+    for fn in single_fns[-6:]:#TODO:
+        items2.append(txt2csv(fn))
+    # items2=[txt2csv(fn) for fn in single_fns]
 
     df=pd.DataFrame(items1+items2,columns=['fn','n','failed'])
     df.to_csv(r'e:\a\parse_result.csv')
