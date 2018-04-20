@@ -23,7 +23,9 @@ def clean_txt(fn):
     bunch=[]
     with open(inputPath,encoding='ISO-8859-1',newline='\r\n') as r,\
             open(outputPath,'w',encoding='ISO-8859-1') as w:
-        coln=len(r.readline().split('\t'))
+        header=r.readline()
+        bunch.append(header.replace('\n',''))
+        coln=len(header.split('\t'))
         for line in r:
             if len(line.split('\t'))==coln:
                 # bunch.append(line+'\n') #'\n` denote CRLF in python3
@@ -54,7 +56,7 @@ def txt2csv(fn):
 
 if __name__=='__main__':
     fns = os.listdir(txtDir)
-    p=Pool(10)
+    p=Pool()
     items=p.map(clean_txt, fns)
 
     df=pd.DataFrame(items, columns=['fn', 'valid', 'invalid'])
@@ -70,3 +72,5 @@ if __name__=='__main__':
     #     for i,fn in enumerate(single_fns):
     #         log.write('{},{},{}'.format(*clean_txt(fn[:-4])))
     #         print(get_current_time(),i,fn)
+
+#TODO: update this script
