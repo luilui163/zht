@@ -8,14 +8,14 @@ import pandas as pd
 import os
 
 from zht.data.wind.config import SRC
-from zht.utils.dateu import convert_freq
+from zht.utils.dateu import freq_end
 
 
 
 def read_wind(fn, freq):
     df = pd.read_csv(os.path.join(SRC, fn + '.csv'),
                      index_col=0, skipfooter=3)
-    df.index=convert_freq(df.index,freq)
+    df.index=freq_end(df.index, freq)
     return df
 
 

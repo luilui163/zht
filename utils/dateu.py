@@ -64,7 +64,7 @@ def normalize_date(dates):
     else:
         return [_normalize_date(date) for date in dates]
 
-def convert_freq(x, freq):
+def freq_end(x, freq):
     '''
     convert the date format,this funnction is useful,especially for dataframe
 
@@ -72,13 +72,15 @@ def convert_freq(x, freq):
     :param freq: offsets from pandas.tseries.offsets,such as 'Y','M','D'
     :return:
     '''
-    if freq=='M':
-        return pd.to_datetime(x)+MonthEnd(0)
-    elif freq=='D': #TODO: test with freq=='D'
-        return pd.to_datetime(x)+Day(0)
-    elif freq=='Y':
+    if freq=='Y':
         #for freq=='Y',the element in x must be like 1995.
-        return pd.to_datetime(x,format='%Y')+YearEnd()
+        x=pd.to_datetime(x,format='%Y')+YearEnd(0)
+    elif freq=='M':
+        x=pd.to_datetime(x)+MonthEnd(0)
+    elif freq=='D': #TODO: test with freq=='D'
+        x=pd.to_datetime(x)+Day(0)
+        #for freq=='Y',the element in x must be like 1995.
+    return x
 
 def get_current_time(format='%Y-%m-%d %H:%M:%S'):
     return time.strftime(format)
