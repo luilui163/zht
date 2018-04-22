@@ -6,7 +6,9 @@
     <bookmark url="file://$PROJECT_DIR$/researchTopics/assetPricing2/data/din.py" line="35" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="update" />
+    <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="update">
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -458,6 +460,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295838" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
