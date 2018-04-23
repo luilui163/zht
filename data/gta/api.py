@@ -9,7 +9,8 @@ import pandas as pd
 from zht.data.gta.config import SRC
 
 
-def read_gta(fn):
-    return pd.read_csv(os.path.join(SRC,fn+'.csv'))
+def read_gta(tbname, *args, **kwargs):
+    return pd.read_csv(os.path.join(SRC,tbname+'.csv'),*args,**kwargs)
+
 
 

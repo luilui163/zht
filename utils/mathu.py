@@ -116,6 +116,8 @@ def get_inter_frame(dflist):
 
     '''
     #sometimes,the columns are unicode and the others are str,unify them.
+
+    # TODO: x, y = df1.align(df2,join='inner')
     for df in dflist:
         df.rename(columns=lambda x:str(x),inplace=True)
 
