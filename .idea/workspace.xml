@@ -7,7 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="update">
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -158,7 +159,7 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="request&#9;null&#9;null&#10;summary_statistics&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lib/site-packages/tushare" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/learning_python" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -464,7 +465,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295838" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -526,6 +526,8 @@
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/researchTopics/assetPricing1" />
+      <path value="D:\app\python36\zht\learning_python\parallel-tutorial" />
+      <path value="D:\app\python36\zht\projects\MultipleFactorRiskModel" />
     </ignored-roots>
     <MESSAGE value="create python36_zht" />
     <MESSAGE value="add a new function to a.py" />
