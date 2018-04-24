@@ -7,10 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="update">
-      <change beforePath="$PROJECT_DIR$/data/gta/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/gta/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebook/pandas handbook.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebook/pandas handbook.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/mathu.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/mathu.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
