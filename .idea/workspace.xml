@@ -7,8 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playingField/parse_JEL.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/data/dataApi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/parse_xml.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/din.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/din.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators_new/6 liquidity.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators_new/6 liquidity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators_new/7 skewness.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators_new/7 skewness.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators_new/8 idiosyncraticVolatility.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators_new/8 idiosyncraticVolatility.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,30 +24,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="parse_txt.py" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/data/gta/parse_txt.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="361">
-                    <caret line="61" column="11" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
-                    <folding>
-                      <element signature="e#136#145#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/zht$parse_JEL.coverage" NAME="parse_JEL Coverage Results" MODIFIED="1524662815496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/playingField" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -48,6 +36,11 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>xml</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -85,6 +78,10 @@
         <option value="$PROJECT_DIR$/data/gta/parse_txt.py" />
         <option value="$PROJECT_DIR$/data/gta/a.py" />
         <option value="$PROJECT_DIR$/utils/dateu.py" />
+        <option value="$PROJECT_DIR$/projects/miscellaneous/pase_xml.py" />
+        <option value="$PROJECT_DIR$/projects/miscellaneous/parse_xml.py" />
+        <option value="$PROJECT_DIR$/utils/parse_xml.py" />
+        <option value="$PROJECT_DIR$/playingField/parse_JEL.py" />
       </list>
     </option>
   </component>
@@ -98,9 +95,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1939" />
     <option name="height" value="1060" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -142,7 +139,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -150,16 +146,27 @@
               <item name="zht" type="b2602c69:ProjectViewProjectNode" />
               <item name="zht" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="playingField" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="request&#9;null&#9;null&#10;summary_statistics&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/learning_python" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -170,16 +177,17 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\app\python36\zht\data\gta" />
-      <recent name="D:\app\python36\zht\notebook" />
-      <recent name="D:\app\python36\zht\py27\zht\projects" />
-      <recent name="D:\app\python36\zht\data" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\app\python36\zht" />
       <recent name="D:\app\python36\zht\notebook" />
       <recent name="D:\app\python36\zht\projects" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\app\python36\zht\utils" />
+      <recent name="D:\app\python36\zht\data\gta" />
+      <recent name="D:\app\python36\zht\notebook" />
+      <recent name="D:\app\python36\zht\py27\zht\projects" />
+      <recent name="D:\app\python36\zht\data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -194,7 +202,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.a">
+  <component name="RunManager" selected="Python.parse_JEL">
     <configuration name="Introduction" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="zht" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -233,25 +241,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="download_documents" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="zht" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data/gta" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/gta/download_documents.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="download_rar" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="zht" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -266,6 +255,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/gta/download_rar.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="parse_JEL" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="zht" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/playingField" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/playingField/parse_JEL.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -291,19 +299,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.download_documents" />
       <item itemvalue="Python.download_rar" />
       <item itemvalue="Python.parse_txt" />
       <item itemvalue="Python.Introduction" />
       <item itemvalue="Python.a" />
+      <item itemvalue="Python.parse_JEL" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.parse_JEL" />
         <item itemvalue="Python.a" />
         <item itemvalue="Python.parse_txt" />
         <item itemvalue="Python.Introduction" />
         <item itemvalue="Python.download_rar" />
-        <item itemvalue="Python.download_documents" />
       </list>
     </recent_temporary>
   </component>
@@ -468,24 +476,24 @@
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295838" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39803094" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.46006748" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.25421822" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3295838" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.34177214" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21983914" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20107238" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.4556962" />
-      <window_info anchor="right" id="SciView" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.3297587" />
       <window_info anchor="right" id="Structure" order="3" side_tool="true" weight="0.20439914" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.57102674" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.38582677" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
   </component>
@@ -543,6 +551,9 @@
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -676,9 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Lib/urllib/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Lib/site-packages/patoolib/__init__.py" />
     <entry file="file://$PROJECT_DIR$/../Lib/urllib/request.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -802,9 +810,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="40" column="50" lean-forward="true" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
-          <folding>
-            <element signature="e#127#136#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -826,16 +831,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/gta/parse_txt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="61" column="11" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
-          <folding>
-            <element signature="e#136#145#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -865,13 +860,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/third_party/3/six/__init__.pyi">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Lib/site-packages/tushare/trader/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/gta/parse_txt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="817">
+          <caret line="61" column="11" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
+          <folding>
+            <element signature="e#136#145#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playingField/parse_JEL.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#136#170#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/parse_xml.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
