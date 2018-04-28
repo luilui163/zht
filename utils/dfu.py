@@ -152,7 +152,7 @@ def join_dfs(xs):
     single_dfs=[]
     multi_dfs=[]
     for x in xs:
-        if isinstance(x.index,pd.core.index.MultiIndex):
+        if isinstance(x.index,pd.MultiIndex):
             multi_dfs.append(x)
         else:
             single_dfs.append(x)
@@ -175,6 +175,3 @@ def join_dfs(xs):
         return s
     else:#there is both singleIndex dataframe and multiIndex dataframe
         return m.join(s,how='outer')
-
-        multi_dfs[0].tail()
-        multi_dfs[1].tail()
