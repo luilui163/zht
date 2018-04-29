@@ -7,15 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="update">
-      <change afterPath="$PROJECT_DIR$/playingField/parse_JEL.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/data/dataApi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/parse_xml.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/crawler/A standard frame of crawler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/crawler/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/core/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/core/test_main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/din.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/din.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators_new/6 liquidity.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators_new/6 liquidity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators_new/7 skewness.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators_new/7 skewness.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators_new/8 idiosyncraticVolatility.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators_new/8 idiosyncraticVolatility.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/data/dataApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/data/dataApi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/data/sampleControl.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/data/sampleControl.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,6 +23,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/zht$A_standard_frame_of_crawler.coverage" NAME="A standard frame of crawler Coverage Results" MODIFIED="1524916889508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/crawler" />
     <SUITE FILE_PATH="coverage/zht$parse_JEL.coverage" NAME="parse_JEL Coverage Results" MODIFIED="1524662815496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/playingField" />
   </component>
   <component name="FileEditorManager">
@@ -82,6 +81,7 @@
         <option value="$PROJECT_DIR$/projects/miscellaneous/parse_xml.py" />
         <option value="$PROJECT_DIR$/utils/parse_xml.py" />
         <option value="$PROJECT_DIR$/playingField/parse_JEL.py" />
+        <option value="$PROJECT_DIR$/projects/crawler/A standard frame of crawler.py" />
       </list>
     </option>
   </component>
@@ -97,7 +97,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
-    <option name="width" value="1939" />
+    <option name="width" value="1940" />
     <option name="height" value="1060" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -139,6 +139,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -149,18 +150,18 @@
             <path>
               <item name="zht" type="b2602c69:ProjectViewProjectNode" />
               <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="playingField" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zht" type="b2602c69:ProjectViewProjectNode" />
               <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="crawler" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -202,7 +203,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.parse_JEL">
+  <component name="RunManager" selected="Python.A standard frame of crawler">
+    <configuration name="A standard frame of crawler" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="zht" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/projects/crawler" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projects/crawler/A standard frame of crawler.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="Introduction" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="zht" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -236,25 +256,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/gta/a.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="download_rar" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="zht" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data/gta" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/gta/download_rar.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -299,19 +300,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.download_rar" />
       <item itemvalue="Python.parse_txt" />
       <item itemvalue="Python.Introduction" />
       <item itemvalue="Python.a" />
       <item itemvalue="Python.parse_JEL" />
+      <item itemvalue="Python.A standard frame of crawler" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.A standard frame of crawler" />
         <item itemvalue="Python.parse_JEL" />
         <item itemvalue="Python.a" />
         <item itemvalue="Python.parse_txt" />
         <item itemvalue="Python.Introduction" />
-        <item itemvalue="Python.download_rar" />
       </list>
     </recent_temporary>
   </component>
@@ -477,15 +478,14 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295838" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.39803094" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.49226442" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.46006748" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.34177214" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20107238" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20375335" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.4556962" />
-      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.3297587" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.25938338" />
       <window_info anchor="right" id="Structure" order="3" side_tool="true" weight="0.20439914" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.57102674" />
       <window_info id="Favorites" order="1" side_tool="true" />
@@ -495,6 +495,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.4556962" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -565,13 +566,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/utils/dfu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="177" selection-start-line="177" selection-end-line="177" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/researchTopics/assetPricing/template.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
@@ -881,9 +875,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#136#170#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -891,6 +882,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/crawler/A standard frame of crawler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
