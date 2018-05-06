@@ -7,33 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="update">
+      <change afterPath="$PROJECT_DIR$/learning_python/dataScience/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning_python/dataScience/statistics/Fstats.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learning_python/dataScience/statistics/__init__.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/asset_pricing_test.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/dictionaries/zht.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/.idea/other.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/relevant/Example_Fama-MacBeth_regression.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/relevant/FamaFrench.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/relevant/GRS_R" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/relevant/GRS_matlab.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/relevant/GRS_stata.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/relevant/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/relevant/assetPricing_Siriwardane.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/relevant/fama_macbeth_Kevin_Sheppard.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/relevant/fama_macbeth_Vincent_Grégoire.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/relevant/getBaseData.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/relevant/reg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/.idea/assetPricing2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/.idea/assetPricing2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/core/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/core/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/core/test_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/core/test_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/data/dataApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/data/dataApi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/documents/0readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/documents/0readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/documents/Asset Pricing.xmind" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/documents/Asset Pricing.xmind" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/documents/factor zoo.xmind" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/documents/factor zoo.xmind" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators/6 liquidity.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators/6 liquidity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators/indicators_filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators/indicators_filter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/a.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/a.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/core/ff5.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/core/ff5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/core/timeSeriesRegression.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/core/timeSeriesRegression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/tool.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/tool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/factorModel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/factorModel/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -102,6 +91,7 @@
         <option value="$PROJECT_DIR$/utils/parse_xml.py" />
         <option value="$PROJECT_DIR$/playingField/parse_JEL.py" />
         <option value="$PROJECT_DIR$/projects/crawler/A standard frame of crawler.py" />
+        <option value="$PROJECT_DIR$/learning_python/dataScience/statistics/Fstats.py" />
       </list>
     </option>
   </component>
@@ -115,9 +105,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1929" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
+    <option name="x" value="-1930" />
+    <option name="y" value="-10" />
+    <option name="width" value="1939" />
     <option name="height" value="1060" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -159,6 +149,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -166,35 +157,16 @@
               <item name="zht" type="b2602c69:ProjectViewProjectNode" />
               <item name="zht" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="researchTopics" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="researchTopics" type="462c0819:PsiDirectoryNode" />
-              <item name="assetPricing1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="researchTopics" type="462c0819:PsiDirectoryNode" />
-              <item name="assetPricing1" type="462c0819:PsiDirectoryNode" />
-              <item name="relevant" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="request&#9;null&#9;null&#10;summary_statistics&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/researchTopics/assetPricing2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -509,7 +481,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.46006748" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.34177214" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20911528" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21179625" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.25938338" />
@@ -593,13 +565,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/researchTopics/assetPricing/template.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="370" selection-start-line="370" selection-end-line="370" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/mathu.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -855,13 +820,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/researchTopics/assetPricing2/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="584" column="28" lean-forward="true" selection-start-line="584" selection-start-column="28" selection-end-line="584" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/researchTopics/assetPricing2/main.py" />
     <entry file="file://$PROJECT_DIR$/utils/statistic_number_of_total_code_lines.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-194" />
@@ -916,6 +875,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learning_python/dataScience/statistics/Fstats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#133#151#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
