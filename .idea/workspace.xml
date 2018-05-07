@@ -6,41 +6,7 @@
     <bookmark url="file://$PROJECT_DIR$/researchTopics/assetPricing2/data/din.py" line="37" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="update">
-      <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/asset_pricing_test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/dictionaries/zht.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/data/gta/crawler_sxu.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/data/gta/crawler_sxu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/data/gta/crawler_zncj.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/data/gta/crawler_zncj.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/data/gta/crawler_zncj2.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/data/gta/crawler_zncj2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/projects/crawler/520mylib/getAccounts.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/crawler/520mylib/getAccounts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/projects/crawler/520mylib/selenium.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/crawler/520mylib/selenium.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login1.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login2.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login3.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login4_ok.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login4_ok.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login5.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login6.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login6.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login7.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login7.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/loginYesterday.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/loginYesterday.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/xinximenhu.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/xinximenhu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/武汉大学宿舍系统密码破解.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/武汉大学宿舍系统密码破解.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/projects/zotero/studyNotes.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/zotero/studyNotes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/quantitative/internship/cj/yjyg/tonghuashun_yjyg.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/quantitative/internship/cj/yjyg/tonghuashun_yjyg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/quantitative/internship/rf/stock_monitor/monitor/send_mail.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/quantitative/internship/rf/stock_monitor/monitor/send_mail.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/study/python/send_mail.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/study/python/send_mail.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/util/mail.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/util/mail.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/util/mysql.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/util/mysql.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/util/send_mail.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/util/send_mail.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py27/zht/util/武汉大学宿舍系统密码破解.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/util/武汉大学宿舍系统密码破解.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/mailu.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/mailu.py" afterDir="false" />
-    </list>
+    <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -136,8 +102,8 @@
       <file leaf-file-name="getAccounts.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/py27/zht/projects/crawler/520mylib/getAccounts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="296">
+              <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -638,7 +604,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523719872431</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="update">
+      <created>1525689055121</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1525689055121</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -658,15 +631,15 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.49226442" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.41209564" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.36005625" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.34177214" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27815014" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27815014" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.4556962" />
       <window_info anchor="right" id="SciView" order="3" weight="0.25938338" />
-      <window_info anchor="right" id="Structure" order="3" side_tool="true" weight="0.20439914" />
+      <window_info anchor="right" id="Structure" order="3" side_tool="true" weight="0.20375335" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.57102674" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1095,8 +1068,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/py27/zht/projects/crawler/520mylib/getAccounts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="296">
+          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
         </state>
       </provider>
     </entry>
