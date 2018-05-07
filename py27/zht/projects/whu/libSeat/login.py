@@ -13,8 +13,6 @@ from captchaRecognization import getCaptcha
 
 # url=r'http://seat.lib.whu.edu.cn/'
 
-username='2016201050151'
-password='100779'
 
 url=r'http://seat.lib.whu.edu.cn/login?username=%s'%username
 

@@ -13,9 +13,6 @@ from captchaRecognization import getCaptcha
 
 # url=r'http://seat.lib.whu.edu.cn/'
 
-username='2016201050151'
-password='100779'
-
 urlMain=r'http://seat.lib.whu.edu.cn/login?targetUri=/'
 
 session=requests.session()

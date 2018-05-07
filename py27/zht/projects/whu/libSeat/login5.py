@@ -13,8 +13,7 @@ import cStringIO
 from captchaRecognization import detectCaptcha
 
 
-username='2016201050151'
-password='100779'
+
 
 urlMain=r'http://seat.lib.whu.edu.cn/login?targetUri=/'
 

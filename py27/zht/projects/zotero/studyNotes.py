@@ -4,7 +4,7 @@
 from pyzotero import zotero
 
 
-zot=zotero.Zotero('4127316','user','EK5f2IeDcXjAkbZAOrJyRJmW')
+zot=zotero.Zotero()
 
 items=zot.top(limit=100)
 

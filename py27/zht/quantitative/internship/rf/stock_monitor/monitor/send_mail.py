@@ -11,14 +11,12 @@ from email.mime.text import MIMEText
 mailto_list = ['986340770@qq.com', '13163385579@163.com']
 # ===============================================================================
 # mail_host="smtp.163.com"  #设置服务器
-# mail_user="datadev1"    #用户名
-# mail_pass="datadev2015"   #口令
+
 # mail_postfix="163.com"  #发件箱的后缀
 # ===============================================================================
 
 mail_host = "smtp.qq.com"
-mail_user = '929434043'
-mail_pass = 'mnbyjmvjochubdga'
+
 mail_postfix = "qq.com"
 
 

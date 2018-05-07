@@ -16,7 +16,7 @@ import chardet
 import Queue
 import sys
 
-db=MySQLdb.connect(host='localhost',user='root',passwd='986340770',db='yjyg',charset='utf8')
+db=MySQLdb.connect(host='localhost',user='root',,db='yjyg',charset='utf8')
 cursor=db.cursor()
 cursor.execute('SET NAMES utf8')
 sql_create_table='''

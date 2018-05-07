@@ -16,8 +16,6 @@ import numpy as np
 from datetime import datetime
 
 
-username='2016201050151'
-password='100779'
 
 
 session=requests.session()

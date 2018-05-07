@@ -16,8 +16,7 @@ headers = {
     'Cookie':'JSESSIONID=8E3E8290C971CDCB22317EAFFA024FCF'#TODO
 }
 postdata={
-    'username':'2016201050151',
-    'password':'100779',
+
     'captcha':'vi7e4'#TODO
 }
 

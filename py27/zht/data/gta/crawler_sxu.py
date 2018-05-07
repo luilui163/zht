@@ -15,10 +15,10 @@ header1={
     'Referer':'http://www.520mylib.com/db/goExtranceEx?id=891&num=1'
 }
 form={
-    'username':'lisheng',
-    'password':'123456',
-    'user':'lisheng',
-    'pass':'123456'
+    'username':,
+    'password':,
+    'user':,
+    'pass':
 }
 r1=session.post(url1,data=form,headers=header1)
 
@@ -35,8 +35,8 @@ header2={
 }
 
 form={
-    'UserName':'sxu123',
-    'Password':'sxu123'
+    'UserName':,
+    'Password':
 }
 r2=session.post(url2,data=form,headers=header2)
 

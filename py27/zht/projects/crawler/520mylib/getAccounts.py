@@ -21,7 +21,7 @@ header1={
 form1={
     'returnUrl':'',
     'UsernameOrEmailAddress':'986340770@qq.com',
-    'Password':'986340770@qq.com',
+    'Password':,
     'CaptchaDetext':'',
     'CaptchaImage':''
 }

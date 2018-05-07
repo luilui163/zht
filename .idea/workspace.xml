@@ -14,8 +14,32 @@
       <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/data/gta/crawler_sxu.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/data/gta/crawler_sxu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/data/gta/crawler_zncj.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/data/gta/crawler_zncj.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/data/gta/crawler_zncj2.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/data/gta/crawler_zncj2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/projects/crawler/520mylib/getAccounts.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/crawler/520mylib/getAccounts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/projects/crawler/520mylib/selenium.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/crawler/520mylib/selenium.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login1.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login2.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login3.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login4_ok.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login4_ok.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login5.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login6.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login6.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login7.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login7.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/loginYesterday.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/loginYesterday.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/xinximenhu.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/xinximenhu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/武汉大学宿舍系统密码破解.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/武汉大学宿舍系统密码破解.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/projects/zotero/studyNotes.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/zotero/studyNotes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/quantitative/internship/cj/yjyg/tonghuashun_yjyg.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/quantitative/internship/cj/yjyg/tonghuashun_yjyg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/quantitative/internship/rf/stock_monitor/monitor/send_mail.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/quantitative/internship/rf/stock_monitor/monitor/send_mail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/study/python/send_mail.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/study/python/send_mail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/util/mail.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/util/mail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/util/mysql.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/util/mysql.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/util/send_mail.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/util/send_mail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/util/武汉大学宿舍系统密码破解.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/util/武汉大学宿舍系统密码破解.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/core/ff5.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/core/ff5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/mailu.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/mailu.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,7 +53,96 @@
     <SUITE FILE_PATH="coverage/zht$parse_JEL.coverage" NAME="parse_JEL Coverage Results" MODIFIED="1524662815496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/playingField" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="login7.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login7.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="267" lean-forward="true" selection-start-line="267" selection-end-line="267" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loginYesterday.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/loginYesterday.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4">
+              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="prioritySeats.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/prioritySeats.csv">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="prioritySeats.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/prioritySeats.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="xinximenhu.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/xinximenhu.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="信息门户.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/信息门户.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+              <folding>
+                <element signature="e#36#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="信息门户1.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/信息门户1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+              <folding>
+                <element signature="e#36#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="武汉大学宿舍系统密码破解.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/武汉大学宿舍系统密码破解.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="419">
+              <caret line="66" column="21" lean-forward="true" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="studyNotes.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py27/zht/projects/zotero/studyNotes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getAccounts.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/py27/zht/projects/crawler/520mylib/getAccounts.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="353">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -41,6 +154,14 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>xml</find>
+      <find>986340770</find>
+      <find>passwd</find>
+      <find>account</find>
+      <find>13163385579</find>
+      <find>986340</find>
+      <find>password</find>
+      <find>pass</find>
+      <find>pwd</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -49,16 +170,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/researchTopics/assetPricing/a.py" />
-        <option value="$PROJECT_DIR$/data/gta/download_说明书.py" />
-        <option value="$PROJECT_DIR$/data/gta/accounts" />
-        <option value="$PROJECT_DIR$/data/gta/py36/dout.py" />
-        <option value="$PROJECT_DIR$/data/gta/py36/__init__.py" />
-        <option value="$PROJECT_DIR$/data/gta/py36/config.py" />
-        <option value="$PROJECT_DIR$/data/gta/py36/parse_src.py" />
-        <option value="$PROJECT_DIR$/data/wind/clear_data.py" />
-        <option value="$PROJECT_DIR$/data/gta/dout.py" />
-        <option value="$PROJECT_DIR$/data/wind/parse_src.py" />
         <option value="$PROJECT_DIR$/data/wind/config.py" />
         <option value="$PROJECT_DIR$/data/resset/config.py" />
         <option value="$PROJECT_DIR$/data/gta/api.py" />
@@ -85,6 +196,31 @@
         <option value="$PROJECT_DIR$/playingField/parse_JEL.py" />
         <option value="$PROJECT_DIR$/projects/crawler/A standard frame of crawler.py" />
         <option value="$PROJECT_DIR$/learning_python/dataScience/statistics/Fstats.py" />
+        <option value="$PROJECT_DIR$/py27/zht/data/gta/crawler_zncj2.py" />
+        <option value="$PROJECT_DIR$/py27/zht/data/gta/crawler_sxu.py" />
+        <option value="$PROJECT_DIR$/py27/zht/data/gta/crawler_zncj.py" />
+        <option value="$PROJECT_DIR$/py27/zht/util/武汉大学宿舍系统密码破解.py" />
+        <option value="$PROJECT_DIR$/py27/zht/projects/crawler/520mylib/getAccounts.py" />
+        <option value="$PROJECT_DIR$/py27/zht/projects/crawler/520mylib/selenium.py" />
+        <option value="$PROJECT_DIR$/py27/zht/study/python/send_mail.py" />
+        <option value="$PROJECT_DIR$/py27/zht/util/mysql.py" />
+        <option value="$PROJECT_DIR$/py27/zht/util/send_mail.py" />
+        <option value="$PROJECT_DIR$/py27/zht/quantitative/internship/rf/stock_monitor/monitor/send_mail.py" />
+        <option value="$PROJECT_DIR$/py27/zht/quantitative/internship/cj/yjyg/tonghuashun_yjyg.py" />
+        <option value="$PROJECT_DIR$/py27/zht/util/mail.py" />
+        <option value="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login5.py" />
+        <option value="$PROJECT_DIR$/utils/mailu.py" />
+        <option value="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login.py" />
+        <option value="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login1.py" />
+        <option value="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login2.py" />
+        <option value="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login3.py" />
+        <option value="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login4_ok.py" />
+        <option value="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login6.py" />
+        <option value="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login7.py" />
+        <option value="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/loginYesterday.py" />
+        <option value="$PROJECT_DIR$/py27/zht/projects/whu/xinximenhu.py" />
+        <option value="$PROJECT_DIR$/py27/zht/projects/whu/武汉大学宿舍系统密码破解.py" />
+        <option value="$PROJECT_DIR$/py27/zht/projects/zotero/studyNotes.py" />
       </list>
     </option>
   </component>
@@ -98,9 +234,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
+    <option name="x" value="-8" />
+    <option name="width" value="1937" />
     <option name="height" value="1060" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -142,7 +277,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -153,18 +287,59 @@
             <path>
               <item name="zht" type="b2602c69:ProjectViewProjectNode" />
               <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="researchTopics" type="462c0819:PsiDirectoryNode" />
+              <item name="py27" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zht" type="b2602c69:ProjectViewProjectNode" />
               <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="researchTopics" type="462c0819:PsiDirectoryNode" />
-              <item name="factorModel" type="462c0819:PsiDirectoryNode" />
+              <item name="py27" type="462c0819:PsiDirectoryNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="py27" type="462c0819:PsiDirectoryNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="py27" type="462c0819:PsiDirectoryNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="crawler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="py27" type="462c0819:PsiDirectoryNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="crawler" type="462c0819:PsiDirectoryNode" />
+              <item name="520mylib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="py27" type="462c0819:PsiDirectoryNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="whu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="py27" type="462c0819:PsiDirectoryNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="zotero" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -477,17 +652,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295838" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.49226442" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.46006748" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.41209564" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.34177214" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27412868" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27815014" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.4556962" />
       <window_info anchor="right" id="SciView" order="3" weight="0.25938338" />
       <window_info anchor="right" id="Structure" order="3" side_tool="true" weight="0.20439914" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.57102674" />
@@ -498,7 +675,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.4556962" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,176 +745,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/projects/CNKI/rename_caj.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="57" column="33" lean-forward="true" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/gta/download_rar.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/gta/get_dbid.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/gta/download_documents.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/zht/database/quantDb/sourceData/gta/data/menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132">
-          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/a/pandas_ powerful Python data analysis toolkit — pandas 0.22.0 documentation.html" />
-    <entry file="file://$PROJECT_DIR$/../../miniconda/pkgs/orange3-3.11.0-py36_0/Lib/site-packages/Orange/canvas/application/addons.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-21255" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Lib/site-packages/pandas/io/parsers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="2203" column="53" lean-forward="true" selection-start-line="2203" selection-start-column="53" selection-end-line="2203" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Lib/ntpath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/data/gta/txt2csv.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="95" column="28" lean-forward="true" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/gta/STK_ListedCoInfoAnl9.csv" />
-    <entry file="file://$PROJECT_DIR$/../Lib/typing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="2318" column="8" selection-start-line="2318" selection-start-column="8" selection-end-line="2318" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/dateu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="82" column="12" lean-forward="true" selection-start-line="82" selection-start-column="12" selection-end-line="82" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/gta/a.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="40" column="50" lean-forward="true" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/learning_python/multiprocessing/Introduction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/gta/parse_json.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="27" column="50" lean-forward="true" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/gta/parse_src.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/researchTopics/assetPricing2/main.py" />
-    <entry file="file://$PROJECT_DIR$/utils/statistic_number_of_total_code_lines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-194" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/assetPricing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="243" column="14" selection-start-line="243" selection-start-column="14" selection-end-line="243" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Lib/site-packages/tushare/trader/trader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Lib/site-packages/tushare/trader/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/gta/parse_txt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="61" column="11" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
-          <folding>
-            <element signature="e#136#145#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playingField/parse_JEL.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/parse_xml.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/crawler/A standard frame of crawler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/learning_python/dataScience/statistics/Fstats.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -773,12 +779,6 @@
         <state relative-caret-position="-1272" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects/MultipleFactorRiskModel/LICENSE">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/MultipleFactorRiskModel/macro.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/projects/MultipleFactorRiskModel/own_tech.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8017" />
@@ -809,19 +809,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects/Market-Neutral-Model/Step 2 Get Covariance Matrix.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/Market-Neutral-Model/Step 3 Construct optimal portfolio.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/projects/Market-Neutral-Model/Step 4 Final Strategy V1 with 4 factors.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-6022">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -868,20 +859,245 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projects/asset_pricing_test/run_distributions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/asset_pricing_test/novy_marx_4factor.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/projects/asset_pricing_test/100_Portfolios_Monthly_Size_Profitability_cross.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1657" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/data/gta/crawler_zncj2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/data/gta/crawler_sxu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="34" column="1" lean-forward="true" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+          <folding>
+            <element signature="e#68#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/data/gta/crawler_zncj.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/crawler/520mylib/selenium.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
+          <folding>
+            <element signature="e#63#92#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/researchTopics/assetPricing2/documents/0readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="219">
+            <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/study/python/send_mail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/util/send_mail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/study/ipython/python_cookbook_notes.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/quantitative/internship/rf/stock_monitor/monitor/send_mail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="35" column="19" lean-forward="true" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/quantitative/internship/cj/yjyg/tonghuashun_yjyg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/util/武汉大学宿舍系统密码破解.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-171">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#129#144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/util/mail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/brute_proxy1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-114">
+          <caret line="87" column="22" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/util/mysql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/mailu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-574">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login4_ok.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-574">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login6.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login7.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="267" lean-forward="true" selection-start-line="267" selection-end-line="267" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/loginYesterday.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/prioritySeats.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/prioritySeats.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/xinximenhu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/信息门户.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding>
+            <element signature="e#36#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/信息门户1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <element signature="e#36#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/武汉大学宿舍系统密码破解.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="66" column="21" lean-forward="true" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/zotero/studyNotes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/crawler/520mylib/getAccounts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
       </provider>
     </entry>
   </component>

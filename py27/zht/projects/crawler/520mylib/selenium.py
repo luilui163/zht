@@ -27,11 +27,11 @@ driver.get('http://www.520mylib.com/account/login')
 
 
 username=driver.find_element_by_id('login_username')
-username.send_keys('986340770@qq.com')
+username.send_keys()
 
 
 password=driver.find_element_by_name('Password')
-password.send_keys('986340770@qq.com')
+password.send_keys()
 
 button=driver.find_element_by_xpath('//*[@id="loginform"]/div[6]/div/div[4]/button')
 button.click()

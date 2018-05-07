@@ -261,8 +261,7 @@ class Seat:
 
 
 if __name__ == '__main__':
-    username = '2016201050151'
-    password = '100779'
+
     seat = Seat(username, password)
     seat.dfInfo.to_csv(r'D:\seatLib\info\info_%s.csv' % datetime.now().strftime('%Y%m%d-%H%M%S'))
 

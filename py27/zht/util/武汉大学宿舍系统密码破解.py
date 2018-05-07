@@ -67,6 +67,6 @@ def login(username,password):
         print 'wrong'
 
 
-login(username='2016201050153',password='100772')
+
 
 

@@ -7,9 +7,8 @@ Created on Thu Mar 31 16:06:22 2016
 
 from email.mime.text import MIMEText
 msg=MIMEText('hello,send by Python...','plain','utf-8')
-from_addr='929434043@qq.com'
-#password='qnwuwdsczxcnbdcf'
-password='mnbyjmvjochubdga'
+
+
 smtp_server='hwsmtp.exmail.qq.com'
 to_addr='13163385579@163.com'
 
