@@ -184,8 +184,7 @@ class BookSeat:
                 self.getSeatInfo()
 
 if __name__=='__main__':
-    username='2016201050151'
-    password='100779'
+
     path=r'd:\seatLib'
     #path=r'/root/libSeat/data'
     seat=BookSeat(username,password,path)

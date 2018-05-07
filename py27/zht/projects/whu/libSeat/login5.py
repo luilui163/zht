@@ -61,8 +61,7 @@ headers4 = {
     'Cookie':'='.join(r3.cookies.items()[0])
 }
 postdata4={
-    'username':'2016201050151',
-    'password':'100779',
+
     'captcha':captcha
 }
 

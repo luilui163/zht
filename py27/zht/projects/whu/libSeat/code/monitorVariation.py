@@ -266,8 +266,7 @@ class Seat:
             print 'you have stopped using seat'
 
 if __name__=='__main__':
-    username='2016201050151'
-    password='100779'
+
     path=r'd:\seatLib'
     seat=Seat(username,password,path)
 

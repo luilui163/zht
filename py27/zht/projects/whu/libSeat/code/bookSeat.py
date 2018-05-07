@@ -117,11 +117,7 @@ class BookSeat:
         self.book()
 
 if __name__=='__main__':
-    username1='2016201050151'
-    password1='100779'
 
-    username2='2016201050119'
-    password2='147540'
     #path=r'/root/libSeat/data'
     seat1=BookSeat(username1,password1)
     seat2=BookSeat(username2,password2)
