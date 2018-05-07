@@ -3,24 +3,41 @@
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/data/gta/parse_txt.py" line="20" />
     <bookmark url="file://$PROJECT_DIR$/data/gta/parse_txt.py" line="24" />
-    <bookmark url="file://$PROJECT_DIR$/researchTopics/assetPricing2/data/din.py" line="36" />
+    <bookmark url="file://$PROJECT_DIR$/researchTopics/assetPricing2/data/din.py" line="37" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="update">
-      <change afterPath="$PROJECT_DIR$/learning_python/dataScience/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning_python/dataScience/statistics/Fstats.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning_python/dataScience/statistics/__init__.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/asset_pricing_test.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/dictionaries/zht.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/empirical/Artmann/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/empirical/Artmann/analyse.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/empirical/my/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/empirical/my/compareBenchmark/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/empirical/my/compareBenchmark/playingField.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/empirical/my/compareBenchmark/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators/10 op.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators/11 inv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/test/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/test/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/test/core/test_constructFactor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/researchTopics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/.idea/assetPricing2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/.idea/assetPricing2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/a.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/a.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/core/ff5.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/core/ff5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/core/timeSeriesRegression.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/core/timeSeriesRegression.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/core/timeSeriesRegression.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/core/constructFactor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/data/dataApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/data/dataApi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/data/din.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/data/din.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/data/sampleControl.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/data/sampleControl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/documents/Asset Pricing.xmind" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/documents/Asset Pricing.xmind" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/empirical/cakici/analyse.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/empirical/cakici/Artmann.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators/4 momentum.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators/4 momentum.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/tool.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/tool.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/researchTopics/factorModel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/factorModel/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -105,9 +122,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1930" />
-    <option name="y" value="-10" />
-    <option name="width" value="1939" />
+    <option name="x" value="-1929" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
     <option name="height" value="1060" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -156,6 +173,22 @@
             <path>
               <item name="zht" type="b2602c69:ProjectViewProjectNode" />
               <item name="zht" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="learning_python" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="learning_python" type="462c0819:PsiDirectoryNode" />
+              <item name="pydata-book" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -473,6 +506,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1927" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295838" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -481,10 +515,10 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.46006748" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.34177214" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21179625" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27412868" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.25938338" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.25938338" />
       <window_info anchor="right" id="Structure" order="3" side_tool="true" weight="0.20439914" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.57102674" />
       <window_info id="Favorites" order="1" side_tool="true" />
@@ -565,141 +599,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/utils/mathu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="279" selection-start-line="279" selection-end-line="279" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/researchTopics/assetPricing/size.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1474">
-          <caret line="75" column="27" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/quantitative/internship/cq/concept/crawler/dongcai.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-440">
-          <caret line="35" column="19" lean-forward="true" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/quantitative/internship/cq/concept/crawler/dongcai1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="52" column="24" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/quantitative/internship/cq/concept/crawler/jinrongjie_spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/quantitative/internship/cq/concept/crawler/tonghuashun1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/quantitative/internship/cq/concept/crawler/tonghuashun_.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/quantitative/internship/cq/concept/crawler/zhengquanzhixing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="29" column="99" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/quantitative/internship/cq/concept/follow_index/strategy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="45" column="37" lean-forward="true" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/quantitative/internship/cq/concept/std_IR/adjust_return_index_df.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/quantitative/internship/cq/concept/change_type_of_src.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="76" column="7" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/data/gta/download_说明书.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/data/gta/crawler_sxu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1584" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/data/gta/downloadRAR.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="10" column="51" lean-forward="true" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/gta/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/data/gta/crawler_zncj2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="53" lean-forward="true" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Lib/site-packages/patoolib/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/../Lib/urllib/request.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="649" selection-start-line="649" selection-end-line="649" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/quantitative/backtest_system_yjx/backtest_system.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8272">
-          <caret line="379" lean-forward="true" selection-start-line="379" selection-end-line="379" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../WeChat/documents/WeChat Files/tyhj986340770/Files/均线策略.py" />
     <entry file="file://$PROJECT_DIR$/projects/CNKI/rename_caj.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="57" column="33" lean-forward="true" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/gta/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
@@ -722,18 +625,6 @@
         <state relative-caret-position="55">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/Market-Neutral-Model/Step 4_ Try with more factors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="42" lean-forward="true" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/Market-Neutral-Model/Step 4 Final Strategy V1 with 4 factors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3366" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
@@ -882,10 +773,145 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/gta/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="53" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/MultipleFactorRiskModel/finance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1158" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/MultipleFactorRiskModel/Find_contribution.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3875" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/MultipleFactorRiskModel/Get_flow_ev.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1253" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/MultipleFactorRiskModel/industry_return.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1272" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/MultipleFactorRiskModel/LICENSE">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/MultipleFactorRiskModel/macro.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/MultipleFactorRiskModel/own_tech.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8017" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/Market-Neutral-Model/Step 1 IC Beta and Residual of Factors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4673" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/MultipleFactorRiskModel/widgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1068" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/MultipleFactorRiskModel/total_regression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-232" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/gta/api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
-            <element signature="e#133#151#0" expanded="true" />
+            <element signature="e#118#127#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/Market-Neutral-Model/Step 2 Get Covariance Matrix.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/Market-Neutral-Model/Step 3 Construct optimal portfolio.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/Market-Neutral-Model/Step 4 Final Strategy V1 with 4 factors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6022">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/Market-Neutral-Model/Step 4_ Try with more factors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="42" lean-forward="true" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/Coursera-Asset-Pricing/Part_I_Week 2 - Homework.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/Coursera-Asset-Pricing/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SECOND">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/asset_pricing_test/utils_fama_french.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-626">
+          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/asset_pricing_test/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1866" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/asset_pricing_test/run_distributions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/asset_pricing_test/novy_marx_4factor.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/asset_pricing_test/100_Portfolios_Monthly_Size_Profitability_cross.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1657" />
       </provider>
     </entry>
   </component>
