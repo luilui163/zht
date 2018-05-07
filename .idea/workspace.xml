@@ -6,7 +6,12 @@
     <bookmark url="file://$PROJECT_DIR$/researchTopics/assetPricing2/data/din.py" line="37" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="" />
+    <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login3.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login4_ok.py" beforeDir="false" afterPath="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login4_ok.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,24 +25,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="login7.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login7.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="267" lean-forward="true" selection-start-line="267" selection-end-line="267" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loginYesterday.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/loginYesterday.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4">
-              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="prioritySeats.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/prioritySeats.csv">
           <provider selected="true" editor-type-id="text-editor" />
@@ -99,7 +86,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getAccounts.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login4_ok.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login4_ok.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="71" column="24" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
+              <folding>
+                <element signature="e#82#97#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login3.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="59" column="1" lean-forward="true" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getAccounts.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/py27/zht/projects/crawler/520mylib/getAccounts.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="296">
@@ -179,14 +187,14 @@
         <option value="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login.py" />
         <option value="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login1.py" />
         <option value="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login2.py" />
-        <option value="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login3.py" />
-        <option value="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login4_ok.py" />
         <option value="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login6.py" />
         <option value="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login7.py" />
         <option value="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/loginYesterday.py" />
         <option value="$PROJECT_DIR$/py27/zht/projects/whu/xinximenhu.py" />
         <option value="$PROJECT_DIR$/py27/zht/projects/whu/武汉大学宿舍系统密码破解.py" />
         <option value="$PROJECT_DIR$/py27/zht/projects/zotero/studyNotes.py" />
+        <option value="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login4_ok.py" />
+        <option value="$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login3.py" />
       </list>
     </option>
   </component>
@@ -274,23 +282,6 @@
               <item name="py27" type="462c0819:PsiDirectoryNode" />
               <item name="zht" type="462c0819:PsiDirectoryNode" />
               <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="crawler" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="py27" type="462c0819:PsiDirectoryNode" />
-              <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="crawler" type="462c0819:PsiDirectoryNode" />
-              <item name="520mylib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="py27" type="462c0819:PsiDirectoryNode" />
-              <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
               <item name="whu" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -299,7 +290,8 @@
               <item name="py27" type="462c0819:PsiDirectoryNode" />
               <item name="zht" type="462c0819:PsiDirectoryNode" />
               <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="zotero" type="462c0819:PsiDirectoryNode" />
+              <item name="whu" type="462c0819:PsiDirectoryNode" />
+              <item name="libSeat" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -611,7 +603,14 @@
       <option name="project" value="LOCAL" />
       <updated>1525689055121</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="update">
+      <created>1525689198465</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1525689198465</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView">
@@ -628,13 +627,13 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295838" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5013405" side_tool="true" visible="true" weight="0.32911393" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.49226442" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.36005625" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49865952" weight="0.36005625" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.34177214" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27815014" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27815014" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.4556962" />
@@ -977,20 +976,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login4_ok.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-574">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login5.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -1059,6 +1044,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/crawler/520mylib/getAccounts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/py27/zht/projects/zotero/studyNotes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -1066,10 +1058,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/projects/crawler/520mylib/getAccounts.py">
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login4_ok.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        <state relative-caret-position="275">
+          <caret line="71" column="24" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
+          <folding>
+            <element signature="e#82#97#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="59" column="1" lean-forward="true" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
         </state>
       </provider>
     </entry>
