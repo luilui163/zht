@@ -13,33 +13,9 @@
       <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/projects/asset_pricing_test/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/empirical/Artmann/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/empirical/Artmann/analyse.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/empirical/my/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/empirical/my/compareBenchmark/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/empirical/my/compareBenchmark/playingField.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/empirical/my/compareBenchmark/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators/10 op.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators/11 inv.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/test/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/test/core/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/test/core/test_constructFactor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/.idea/assetPricing2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/.idea/assetPricing2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/a.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/a.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/core/ff5.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/core/ff5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/core/timeSeriesRegression.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/core/constructFactor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/data/dataApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/data/dataApi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/data/din.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/data/din.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/data/sampleControl.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/data/sampleControl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/documents/Asset Pricing.xmind" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/documents/Asset Pricing.xmind" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/empirical/cakici/analyse.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/empirical/cakici/Artmann.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators/4 momentum.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/indicators/4 momentum.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/tool.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/tool.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/factorModel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/factorModel/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -122,7 +98,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1929" />
+    <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
     <option name="height" value="1060" />
@@ -177,18 +153,13 @@
             <path>
               <item name="zht" type="b2602c69:ProjectViewProjectNode" />
               <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="learning_python" type="462c0819:PsiDirectoryNode" />
+              <item name="researchTopics" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zht" type="b2602c69:ProjectViewProjectNode" />
               <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="learning_python" type="462c0819:PsiDirectoryNode" />
-              <item name="pydata-book" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="researchTopics" type="462c0819:PsiDirectoryNode" />
+              <item name="factorModel" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -505,8 +476,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1927" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295838" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
