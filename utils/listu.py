@@ -40,3 +40,20 @@ def chunkifyByBreakPoints(lst,breakPoints):
     sublist=[lst[ns[i-1]:ns[i]] for i in range(1,len(ns))]
     return sublist
 
+def group_with(lst, func=lambda x: x):
+    '''
+    group the list by applying func
+    Args:
+        lst:
+        func:
+
+    Returns:dict
+
+    '''
+
+    key = {}
+    for initial, transformed in zip(lst, map(func, lst)):
+        key[transformed] = [] if transformed not in key else key[
+            transformed]
+        key[transformed].append(initial)
+    return key

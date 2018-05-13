@@ -7,12 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/empirical/my/compareBenchmark/compare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/core/constructFactor.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/core/constructFactor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/core/ff5.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/core/ff5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/empirical/Chen2010/Chen2010.py" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/empirical/Chen2010/Chen2010.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/empirical/my/compareBenchmark/playingField.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/documents/Asset Pricing.xmind" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/documents/Asset Pricing.xmind" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,8 +28,8 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/learning_python/pandas_profiling/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="122">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
               <folding>
                 <element signature="e#131#150#0" expanded="true" />
               </folding>
@@ -132,8 +129,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="951" />
-    <option name="width" value="978" />
+    <option name="x" value="950" />
+    <option name="width" value="979" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -174,36 +171,12 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zht" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="learning_python" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="learning_python" type="462c0819:PsiDirectoryNode" />
-              <item name="pandas_profiling" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="request&#9;null&#9;null&#10;summary_statistics&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/researchTopics/assetPricing2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -537,23 +510,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="761" y="0" width="782" height="840" extended-state="0" />
+    <frame x="760" y="0" width="783" height="840" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295838" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5020107" side_tool="true" weight="0.38818565" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25035563" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49798927" weight="0.38818565" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.34177214" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25035563" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.50484097" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" weight="0.25938338" />
       <window_info anchor="right" id="Structure" order="3" side_tool="true" weight="0.20375335" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.57102674" />
       <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.57102674" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -679,9 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#118#127#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -979,8 +949,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/learning_python/pandas_profiling/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="122">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
           <folding>
             <element signature="e#131#150#0" expanded="true" />
           </folding>
