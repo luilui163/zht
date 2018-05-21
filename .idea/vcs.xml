@@ -4,6 +4,7 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/researchTopics/assetPricing2" vcs="Git" />
     <mapping directory="D:\app\python36\zht\learning_python\pydata-book" vcs="Git" />
+    <mapping directory="D:\app\python36\zht\projects\Barra-Model" vcs="Git" />
     <mapping directory="D:\app\python36\zht\projects\asset_pricing_test" vcs="Git" />
   </component>
 </project>
