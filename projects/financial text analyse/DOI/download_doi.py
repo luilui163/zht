@@ -55,14 +55,24 @@ def download_pdf(doi):
     href=a.split('=')[1][1:]
     urllib.request.urlretrieve(href,r'e:\a\test_pdf\{}.pdf'.format(doi.replace(r'/','_')))
 
-dois=get_all_doi()
-for doi in dois[-100:]:
-    try:
-        download_pdf(doi)
-        print(doi)
-    except Exception as e:
-        print(doi,e)
+def download_all_pdf():
+    dois=get_all_doi()
+    for doi in dois[-100:]:
+        try:
+            download_pdf(doi)
+            print(doi)
+        except Exception as e:
+            print(doi,e)
 
+directory=r'E:\a\test_doi'
+fns=os.listdir(directory)
+for fn in fns[-100:]:
+    x=open(os.path.join(directory,fn))
+    js=json.loads(json.load(x))
+    doi=js['DOI']
+    url=js['URL']
+
+    print(fn,doi,url)
 
 
 
