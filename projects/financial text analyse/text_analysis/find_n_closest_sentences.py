@@ -17,9 +17,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-
-
-#======================================cluster================================
 def tokenize_and_stem(sent):
     stemmer = nltk.stem.snowball.SnowballStemmer('english')
     tokens=[word for word in nltk.word_tokenize(sent)]
@@ -54,9 +51,7 @@ def get_dist(sents):
     # vocab_frame = pd.DataFrame({'words': totalvocab_tokenized},
     #                            index=totalvocab_stemmed)
 
-    tfidf_vectorizer=TfidfVectorizer(max_df=0.8,
-                                     max_features=200000,
-                                     min_df=1,
+    tfidf_vectorizer=TfidfVectorizer(
                                      stop_words='english',
                                      use_idf=True,
                                      tokenizer=tokenize_and_stem,
