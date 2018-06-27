@@ -7,27 +7,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/projects/financial text analyse/simple-search-engine/__init.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/financial text analyse/text_analysis/sentence.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_engine/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_engine/build_copora.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_engine/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_sentence.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internship/FT/.idea/FT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/internship/FT/.idea/FT.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internship/FT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/internship/FT/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internship/FT/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/internship/FT/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internship/FT/data/download_all_tables.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internship/FT/singleFactor/factors/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/internship/FT/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/internship/FT/tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/financial text analyse/simple-search-engine/bin/book_index.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/financial text analyse/simple-search-engine/bin/book_index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/financial text analyse/simple-search-engine/data/min_title_author.tab.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projects/financial text analyse/simple-search-engine/data/min_title_author.tab.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/financial text analyse/simple-search-engine/lib/book.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/financial text analyse/simple-search-engine/lib/book.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/financial text analyse/simple-search-engine/lib/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/financial text analyse/simple-search-engine/lib/search.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/financial text analyse/text_analysis/build_corpus.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/financial text analyse/text_analysis/build_corpus.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/financial text analyse/text_analysis/find_n_closest_sentences.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/financial text analyse/text_analysis/find_n_closest_sentences.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/pandas handbook-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/pandas handbook-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebook/pandas handbook.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebook/pandas handbook.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/financial text analyse/text_analysis/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/financial text analyse/zht_search_engine/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/financial text analyse/text_analysis/build_corpus.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/financial text analyse/zht_search_engine/build_corpus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/financial text analyse/text_analysis/find_n_closest_sentences.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/financial text analyse/zht_search_engine/find_n_closest_sentences.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/financial text analyse/text_analysis/sentence.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_engine/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/zotero/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_engine/build_copora.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/zotero/analyze_tags.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_engine/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_sentence.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/financial text analyse/zht_search_engine/zht_search_sentence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/projects/zotero/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/py27/zht/projects/zotero/studyNotes.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/documents/Asset Pricing.xmind" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/documents/Asset Pricing.xmind" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing2/documents/quantitative.xmind" beforeDir="false" afterPath="$PROJECT_DIR$/researchTopics/assetPricing2/documents/quantitative.xmind" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,6 +42,7 @@
     <SUITE FILE_PATH="coverage/zht$test.coverage" NAME="test Coverage Results" MODIFIED="1525920340461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_python/pandas_profiling" />
     <SUITE FILE_PATH="coverage/zht$build_corpus.coverage" NAME="build_corpus Coverage Results" MODIFIED="1529542778002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/financial text analyse/text_analysis" />
     <SUITE FILE_PATH="coverage/zht$find_n_closest_sentences.coverage" NAME="find_n_closest_sentences Coverage Results" MODIFIED="1529656390782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/financial text analyse/text_analysis" />
+    <SUITE FILE_PATH="coverage/zht$analyze_tags.coverage" NAME="analyze_tags Coverage Results" MODIFIED="1530117365905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero" />
     <SUITE FILE_PATH="coverage/zht$build_copora.coverage" NAME="build_copora Coverage Results" MODIFIED="1529718303654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_engine" />
     <SUITE FILE_PATH="coverage/zht$A_standard_frame_of_crawler.coverage" NAME="A standard frame of crawler Coverage Results" MODIFIED="1524916889508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/crawler" />
     <SUITE FILE_PATH="coverage/zht$download_doi.coverage" NAME="download_doi Coverage Results" MODIFIED="1529308393689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/DOI" />
@@ -49,38 +51,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="build_copora.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_engine/build_copora.py">
+      <file leaf-file-name="analyze_tags.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projects/zotero/analyze_tags.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="361">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_engine/config.py">
+      <file leaf-file-name="zotero.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../Lib/site-packages/pyzotero/zotero.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="zht_search_sentence.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_sentence.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="book.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/projects/financial text analyse/simple-search-engine/lib/book.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+            <state relative-caret-position="372">
+              <caret line="158" column="47" lean-forward="true" selection-start-line="158" selection-start-column="47" selection-end-line="158" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -107,15 +91,19 @@
       <find>pwd</find>
       <find>nltk.data.path</find>
       <find>matrix</find>
+      <find>plot</find>
+      <find>zotero</find>
     </findStrings>
+    <dirStrings>
+      <dir>D:\app\python36\zht\py27\zht\quantitative\internship\cj</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/projects/financial text analyse/simple-search-engine" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/data/gta/a.py" />
         <option value="$PROJECT_DIR$/utils/dateu.py" />
         <option value="$PROJECT_DIR$/projects/miscellaneous/pase_xml.py" />
         <option value="$PROJECT_DIR$/projects/miscellaneous/parse_xml.py" />
@@ -166,6 +154,7 @@
         <option value="$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_sentence.py" />
         <option value="$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_engine/config.py" />
         <option value="$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_engine/build_copora.py" />
+        <option value="$PROJECT_DIR$/projects/zotero/analyze_tags.py" />
       </list>
     </option>
   </component>
@@ -179,9 +168,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1939" />
     <option name="height" value="1060" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -239,29 +228,12 @@
               <item name="zht" type="b2602c69:ProjectViewProjectNode" />
               <item name="zht" type="462c0819:PsiDirectoryNode" />
               <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="financial text analyse" type="462c0819:PsiDirectoryNode" />
+              <item name="zotero" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zht" type="b2602c69:ProjectViewProjectNode" />
               <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="financial text analyse" type="462c0819:PsiDirectoryNode" />
-              <item name="simple-search-engine" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="financial text analyse" type="462c0819:PsiDirectoryNode" />
-              <item name="simple-search-engine" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="financial text analyse" type="462c0819:PsiDirectoryNode" />
-              <item name="text_analysis" type="462c0819:PsiDirectoryNode" />
+              <item name="researchTopics" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zht" type="b2602c69:ProjectViewProjectNode" />
@@ -289,17 +261,17 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\app\python36\zht\projects\financial text analyse" />
-      <recent name="D:\app\python36\zht\utils" />
-      <recent name="D:\app\python36\zht\data\gta" />
-      <recent name="D:\app\python36\zht\notebook" />
-      <recent name="D:\app\python36\zht\py27\zht\projects" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\app\python36\zht" />
       <recent name="D:\app\python36\zht\notebook" />
       <recent name="D:\app\python36\zht\projects" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\app\python36\zht\projects\financial text analyse\zht_search_engine" />
+      <recent name="D:\app\python36\zht\projects\financial text analyse" />
+      <recent name="D:\app\python36\zht\utils" />
+      <recent name="D:\app\python36\zht\data\gta" />
+      <recent name="D:\app\python36\zht\notebook" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -314,7 +286,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.build_copora">
+  <component name="RunManager" selected="Python.analyze_tags">
+    <configuration name="analyze_tags" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="zht" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/projects/zotero" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projects/zotero/analyze_tags.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="build_copora" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="zht" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -347,7 +338,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_sentence.py" />
+      <option name="SCRIPT_NAME" value="D:\app\python36\zht\projects\financial text analyse\zht_search_engine\zht_search_sentence.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -356,9 +347,11 @@
     <list>
       <item itemvalue="Python.zht_search_sentence" />
       <item itemvalue="Python.build_copora" />
+      <item itemvalue="Python.analyze_tags" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.analyze_tags" />
         <item itemvalue="Python.build_copora" />
       </list>
     </recent_temporary>
@@ -556,7 +549,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529484433164</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="update">
+      <created>1529723332735</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1529723332735</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView">
@@ -569,30 +569,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1927" y="-7" width="1550" height="848" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21581769" />
       <window_info anchor="bottom" id="TODO" order="4" weight="0.3295838" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5020107" side_tool="true" weight="0.38818565" />
-      <window_info anchor="right" id="Run" order="3" sideWeight="0.65682137" side_tool="true" weight="0.44101876" />
-      <window_info anchor="bottom" id="Version Control" order="6" sideWeight="0.49798927" weight="0.30097088" />
+      <window_info anchor="bottom" id="Version Control" order="6" sideWeight="0.49798927" weight="0.29957807" />
       <window_info anchor="right" id="Python Console" order="9" sideWeight="0.34317863" weight="0.41286862" />
+      <window_info active="true" anchor="right" id="Run" order="3" sideWeight="0.54289734" side_tool="true" visible="true" weight="0.5214477" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32901832" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2922252" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.4556962" />
       <window_info anchor="right" id="SciView" order="4" sideWeight="0.48523206" side_tool="true" weight="0.4966488" />
       <window_info anchor="right" id="Structure" order="5" sideWeight="0.5907173" side_tool="true" weight="0.37265417" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32901832" />
-      <window_info anchor="right" id="Debug" order="8" sideWeight="0.43459916" weight="0.42004263" />
       <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info anchor="right" id="Debug" order="8" sideWeight="0.4571027" visible="true" weight="0.5214477" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" x="0" y="0" width="337" height="648" id="Documentation" order="6" sideWeight="0.40486726" side_tool="true" weight="0.31233245" />
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.4556962" />
+      <window_info anchor="bottom" id="Message" order="0" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -656,69 +657,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/loginYesterday.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/xinximenhu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/信息门户.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/信息门户1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/武汉大学宿舍系统密码破解.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="66" column="21" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/projects/crawler/520mylib/getAccounts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/projects/zotero/studyNotes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="66" column="31" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/login5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1121">
-          <caret line="65" column="1" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/py27/zht/projects/whu/libSeat/code/bookSeat.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2147">
@@ -880,13 +818,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/internship/FT/singleFactor/factors/Yan.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="225" column="6" selection-start-line="225" selection-start-column="6" selection-end-line="225" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/internship/FT/singleFactor/factors/Yan.py" />
     <entry file="file://$PROJECT_DIR$/researchTopics/assetPricing2/tool.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -927,20 +859,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects/financial text analyse/text_analysis/search.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/financial text analyse/text_analysis/build_corpus.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="723">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Lib/site-packages/sklearn/feature_extraction/text.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1246">
@@ -960,50 +878,130 @@
         <state relative-caret-position="-2716" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects/financial text analyse/text_analysis/sentence_index.py">
+    <entry file="file://$PROJECT_DIR$/projects/financial text analyse/simple-search-engine/lib/book.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-113" />
+        <state relative-caret-position="135">
+          <caret line="48" column="43" lean-forward="true" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects/financial text analyse/text_analysis/find_n_closest_sentences.py">
+    <entry file="file://$PROJECT_DIR$/py27/zht/quantitative/internship/cj/yjyg/dongcai_yjyg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="35" column="40" lean-forward="true" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+        <state relative-caret-position="-2227" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/quantitative/internship/cj/zz800/factors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-665" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/quantitative/internship/cj/yjyg/beta1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_engine/build_copora.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_engine/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_sentence.py">
+    <entry file="file://$PROJECT_DIR$/projects/financial text analyse/text_analysis/util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        <state relative-caret-position="133">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/financial text analyse/zht_search_engine/zht_search_sentence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-285">
+          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/financial text analyse/zht_search_engine/find_n_closest_sentences.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/financial text analyse/zht_search_engine/build_corpus.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/financial text analyse/text_analysis/config.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/financial text analyse/text_analysis/search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2451">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#132#146#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projects/financial text analyse/text_analysis/sentence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="-361">
+          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+          <folding>
+            <element signature="e#145#159#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects/financial text analyse/simple-search-engine/lib/book.py">
+    <entry file="file://$PROJECT_DIR$/projects/financial text analyse/text_analysis/sentence_index.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+        <state relative-caret-position="-61">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playingField/parse_JEL.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#136#170#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py27/zht/projects/zotero/studyNotes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/zotero/analyze_tags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Lib/site-packages/pyzotero/zotero.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="158" column="47" lean-forward="true" selection-start-line="158" selection-start-column="47" selection-end-line="158" selection-end-column="47" />
         </state>
       </provider>
     </entry>
