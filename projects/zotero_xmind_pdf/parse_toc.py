@@ -2,8 +2,8 @@
 # Python 3.6
 # Author:Zhang Haitao
 # Email:13163385579@163.com
-# TIME:2018-07-01  22:27
-# NAME:zht-base_on_foxit.py
+# TIME:2018-07-06  11:15
+# NAME:zht-parse_toc.py
 
 import os
 import sqlite3
@@ -52,8 +52,6 @@ class Note:
         self.type=type
         self.page=page
         self.text=text
-
-
 
 def _setup_page_id_to_num(pdf, pages=None, _result=None, _num_pages=None):
     if _result is None:
@@ -242,29 +240,5 @@ def debug():
     iid='38Z9QERS'
     run(iid,mode=1)
 
-
-DEBUG=0
-
-if __name__ == '__main__':
-    if DEBUG:
-        debug()
-    else:
-        parser=argparse.ArgumentParser()
-        parser.add_argument('iid',metavar='i',type=str,help='an str for the zotero item')
-        args=parser.parse_args()
-        run(args.iid)
-
-#TODO: automatically add a xed tag to paper
-#TODO: extract the color of bookmarks, and customize style in xmind
-#TODO: use mekk to customize style
-#TODO: how to build the TOC tree
-#TODO: save xmind in a given directory
-#TODO:test with different pdf editer to check what's kind markup are supported in zotfile
-#TODO: check what notes can be identified by zotfile
-#TODO: open xmind automatically
-#TODO: links between papers
-
-
-
-
+debug()
 
