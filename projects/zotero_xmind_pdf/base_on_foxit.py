@@ -26,23 +26,23 @@ ROOTDIR=r'D:\zht\database\zoteroDB\storage'
 XMINDDIR=r'D:\zht\database\xmind\research\xed'
 
 TYPE_MAP={
-    'Highlight':'content',
-    'Squiggly':'relevant literature',
-    'Underline':'phrase',
-    'StrikeOut':'sentence',
-    'Typewriter':'ideas'
+    'highlight':'content',
+    'squiggly':'relevant literature',
+    'underline':'phrase',
+    'strikeout':'sentence',
+    'typewriter':'ideas'
 }
 
 STYLE={
-    'Bookmark':[SHAPE_RECTANGLE,'#c6c6c6','#00000'],#[shape,fill_color,font_color]
-    'Highlight':[SHAPE_UNDERLINE,'#F3F4F9','#00000'], # #F3F4F9 is the default color of the default theme
-    'Squiggly':[SHAPE_UNDERLINE,'#F3F4F9','#0aff01'],
-    'Underline':[SHAPE_UNDERLINE,'#F3F4F9','#ff0000'],
-    'StrikeOut':[SHAPE_UNDERLINE,'#F3F4F9','#00ff2a'],
-    'Typewriter':[SHAPE_UNDERLINE,'#F3F4F9','#2d00f9']
+    'bookmark':[SHAPE_RECTANGLE,'#c6c6c6','#00000'],#[shape,fill_color,font_color]
+    'highlight':[SHAPE_UNDERLINE,None,'#00000'], # #F3F4F9 is the default color of the default theme
+    'squiggly':[SHAPE_UNDERLINE,None,'#0aff01'],
+    'underline':[SHAPE_UNDERLINE,None,'#ff0000'],
+    'strikeout':[SHAPE_UNDERLINE,None,'#7CFC00'],
+    'typewriter':[SHAPE_UNDERLINE,None,'#2d00f9']
 }
 
-TYPE_ORDER=['Typewriter','Highlight', 'Underline', 'Squiggly', 'StrikeOut']
+TYPE_ORDER=['typewriter','highlight', 'underline', 'squiggly', 'strikeout']
 
 
 class Note:
@@ -159,22 +159,22 @@ def parse_fdf(iid):
     validLines=[]
     for type in TYPE_ORDER:
         for l in lines:
-            if type in l:
+            if type in l.lower():
                 validLines.append(l)
 
     notes=[]
     for l in validLines:
-        if 'Typewriter' in l:
+        if 'typewriter' in l.lower():
             # .*? no greedy
             p=r'Rect\[ ([0-9]*\.?[0-9]*) ([0-9]*\.?[0-9]*) ([0-9]*\.?[0-9]*) ([0-9]*\.?[0-9]*)\].*/Page (\d+).*/Contents\((.*?)\)'
             lx, ly, ux, uy,page,text=re.findall(p,l)[0]
             text=text.rstrip(r'\r')
-            type='Typewriter'
+            type='typewriter'
         else:
             p=r'Rect\[ ([0-9]*\.?[0-9]*) ([0-9]*\.?[0-9]*) ([0-9]*\.?[0-9]*) ([0-9]*\.?[0-9]*)\].*/Page (\d+).*/Subtype/(.*)/Type.*/Contents\((.*)\)/CA'
             lx,ly,ux,uy,page,type,text=re.findall(p,l)[0]
         # addjust page
-        notes.append(Note(float(ux),float(uy),int(page)+1,type,clean_text(text)))
+        notes.append(Note(float(ux),float(uy),int(page)+1,type.lower(),clean_text(text)))
 
     #sort by page,y,x, y denote the height in the page
     return notes,name
@@ -200,29 +200,47 @@ def get_notes_toc(iid):
         ux = 0
         uy = 10000
         page = pg_id_num_map[t.page.idnum] + 1
-        type = 'Bookmark'
+        type = 'bookmark'
         text = t['/Title']
         notes_toc.append(Note(ux, uy, page, type, text))
     return notes_toc
 
+def create_topic_style(xmd,type):
+    shape = STYLE[type][0]
+    fill_color = STYLE[type][1]
+    font_color = STYLE[type][2]
+    style = XMindDocument.create_topic_style(xmd,
+                                             shape=shape,
+                                             fill=fill_color,
+                                             line_color='#9400D3',
+                                             line_width='1pt',
+                                             font_color=font_color)
+    return style
+
 def create_xmind_with_style(iid, name, notes):
     xpath=os.path.join(XMINDDIR,name+'.xmind')
-    xm = XMindDocument.create('annotations', name)
+    xm = XMindDocument.create('annotations', iid)
     first_sheet = xm.get_first_sheet()
     root_topic = first_sheet.get_root_topic()
-    for node in notes:
-        t=root_topic.add_subtopic(node.text)
-        t.set_link('zotero://open-pdf/library/items/{}?page={}'.format(iid, node.page))
-        shape=STYLE[node.type][0]
-        fill_color=STYLE[node.type][1]
-        font_color=STYLE[node.type][2]
-        style = XMindDocument.create_topic_style(xm,
-                                                 shape=shape,
-                                                 fill=fill_color,
-                                                 line_color='#9400D3',
-                                                 line_width='1pt',
-                                                 font_color=font_color)
+    first_topic=root_topic.add_subtopic(name+'.pdf')
+    first_topic.set_link('zotero://open-pdf/library/items/{}.pdf'.format(name))
+    for note in notes:
+        t=first_topic.add_subtopic(note.text)
+        t.set_link('zotero://open-pdf/library/items/{}?page={}'.format(iid, note.page))
+        style=create_topic_style(xm,note.type)
         t.set_style(style)
+
+    # create a subtopic for strikeout, and typewriter alone
+    for s in ['typewriter','strikeout']:
+        t1=first_topic.add_subtopic(TYPE_MAP[s])
+        t1.set_style(create_topic_style(xm,s))
+        for note in notes:
+            if note.type==s:
+                t2=t1.add_subtopic(note.text)
+                t2.set_link('zotero://open-pdf/library/items/{}?page={}'.format(iid,
+                                                                               note.page))
+                style = create_topic_style(xm, note.type)
+                t2.set_style(style)
 
     xm.save(xpath)
     os.startfile(xpath, 'open')
@@ -232,18 +250,18 @@ def run(iid,mode=0):
         notes, name = parse_fdf(iid)
         notes_toc = get_notes_toc(iid)
         notes_comb = sorted(notes + notes_toc,
-                            key=lambda x: (x.page, x.uy, x.ux))
+                            key=lambda x: (x.page, -x.uy, x.ux))
         create_xmind_with_style(iid, name, notes_comb)
     else:
         notes, name = parse_fdf(iid)
         create_xmind(iid, name, notes)
 
 def debug():
-    iid='38Z9QERS'
-    run(iid,mode=1)
+    iid='VDQVBVHZ'
+    run(iid,mode=0)
 
 
-DEBUG=0
+DEBUG=1
 
 if __name__ == '__main__':
     if DEBUG:
