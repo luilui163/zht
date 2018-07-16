@@ -1,0 +1,1 @@
+start python.exe D:\app\python36\zht\projects\zotero_xmind_pdf\base_on_foxit.py %1
