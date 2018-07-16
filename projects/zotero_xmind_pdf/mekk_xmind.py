@@ -6,6 +6,8 @@
 # NAME:zht-mekk_xmind.py
 
 from mekk.xmind import XMindDocument
+from zht.projects.zotero_xmind_pdf.mekk_zht import XMindDocument
+
 
 OUTPUT=r'e:\a\mekk.xmind'
 

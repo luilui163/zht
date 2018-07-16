@@ -6,21 +6,14 @@
 # NAME:zht-base_on_foxit.py
 
 import os
-import sqlite3
-import time
-from collections import defaultdict
 import re
 
 import xmind
-from dateutil.parser import parse
-from datetime import timedelta
 import argparse
 from PyPDF2 import PdfFileReader
 from PyPDF2.pdf import Destination
-from mekk.xmind.document import TopicStyle, SHAPE_RECTANGLE, SHAPE_ELLIPSIS, \
-    SHAPE_UNDERLINE
-from mekk.xmind import XMindDocument
-
+from mekk.xmind.document import SHAPE_RECTANGLE,SHAPE_UNDERLINE
+from zht.projects.zotero_xmind_pdf.mekk_zht import XMindDocument
 
 ROOTDIR=r'D:\zht\database\zoteroDB\storage'
 XMINDDIR=r'D:\zht\database\xmind\research\xed'
@@ -33,12 +26,17 @@ TYPE_MAP={
     'typewriter':'ideas'
 }
 
+BLACK='#000000'
+BLUE='#2d00f9'
+
+
+
 STYLE={
-    'bookmark':[SHAPE_RECTANGLE,'#c6c6c6','#00000'],#[shape,fill_color,font_color]
+    'bookmark':[SHAPE_RECTANGLE,'#c6c6c6',BLACK],#[shape,fill_color,font_color]
     'highlight':[SHAPE_UNDERLINE,None,'#00000'], # #F3F4F9 is the default color of the default theme
     'squiggly':[SHAPE_UNDERLINE,None,'#0aff01'],
     'underline':[SHAPE_UNDERLINE,None,'#ff0000'],
-    'strikeout':[SHAPE_UNDERLINE,None,'#7CFC00'],
+    'strikeout':[SHAPE_UNDERLINE,None,'#8A2BE2'],
     'typewriter':[SHAPE_UNDERLINE,None,'#2d00f9']
 }
 
@@ -132,7 +130,18 @@ def create_xmind(iid,name,notes,buildTOC=True):
     #open the file
     os.startfile(xpath,'open')
 
+def valid_xml_char_ordinal(c):
+    codepoint = ord(c)
+    # conditions ordered by presumed frequency
+    return (
+        0x20 <= codepoint <= 0xD7FF or
+        codepoint in (0x9, 0xA, 0xD) or
+        0xE000 <= codepoint <= 0xFFFD or
+        0x10000 <= codepoint <= 0x10FFFF
+        )
+
 def clean_text(text):
+    text=''.join(c for c in text if valid_xml_char_ordinal(c))
     text=text.replace(r'\r\n',' ').strip()
     # text=text.replace('&#x0D;&#x0A',' ')
     text = text.replace('\\', '')
@@ -168,7 +177,8 @@ def parse_fdf(iid):
             # .*? no greedy
             p=r'Rect\[ ([0-9]*\.?[0-9]*) ([0-9]*\.?[0-9]*) ([0-9]*\.?[0-9]*) ([0-9]*\.?[0-9]*)\].*/Page (\d+).*/Contents\((.*?)\)'
             lx, ly, ux, uy,page,text=re.findall(p,l)[0]
-            text=text.rstrip(r'\r')
+            text=text.replace(r'\n',' ')
+            text=text.replace(r'\r',' ')
             type='typewriter'
         else:
             p=r'Rect\[ ([0-9]*\.?[0-9]*) ([0-9]*\.?[0-9]*) ([0-9]*\.?[0-9]*) ([0-9]*\.?[0-9]*)\].*/Page (\d+).*/Subtype/(.*)/Type.*/Contents\((.*)\)/CA'
@@ -214,7 +224,8 @@ def create_topic_style(xmd,type):
                                              fill=fill_color,
                                              line_color='#9400D3',
                                              line_width='1pt',
-                                             font_color=font_color)
+                                             font_color=font_color,
+                                             )
     return style
 
 def create_xmind_with_style(iid, name, notes):
@@ -223,16 +234,19 @@ def create_xmind_with_style(iid, name, notes):
     first_sheet = xm.get_first_sheet()
     root_topic = first_sheet.get_root_topic()
     first_topic=root_topic.add_subtopic(name+'.pdf')
-    first_topic.set_link('zotero://open-pdf/library/items/{}.pdf'.format(name))
+    first_topic.set_link('zotero://open-pdf/library/items/{}'.format(iid))
     for note in notes:
-        t=first_topic.add_subtopic(note.text)
-        t.set_link('zotero://open-pdf/library/items/{}?page={}'.format(iid, note.page))
-        style=create_topic_style(xm,note.type)
-        t.set_style(style)
+        if note.type!='strikeout':
+            t=first_topic.add_subtopic(note.text)
+            t.set_link('zotero://open-pdf/library/items/{}?page={}'.format(iid, note.page))
+            style=create_topic_style(xm,note.type)
+            t.set_style(style)
 
     # create a subtopic for strikeout, and typewriter alone
     for s in ['typewriter','strikeout']:
         t1=first_topic.add_subtopic(TYPE_MAP[s])
+        if s=='typewriter':
+            t1.add_marker('flag-red')
         t1.set_style(create_topic_style(xm,s))
         for note in notes:
             if note.type==s:
@@ -257,11 +271,11 @@ def run(iid,mode=0):
         create_xmind(iid, name, notes)
 
 def debug():
-    iid='VDQVBVHZ'
+    iid='QYVWLCGD'
     run(iid,mode=0)
 
 
-DEBUG=1
+DEBUG=0
 
 if __name__ == '__main__':
     if DEBUG:
@@ -281,6 +295,9 @@ if __name__ == '__main__':
 #TODO: check what notes can be identified by zotfile
 #TODO: open xmind automatically
 #TODO: links between papers
+#TODO: when the paper has two columns,take 'management science' for example, if
+# we just sort on page,ux and uy, the result is a mess
+
 
 
 
