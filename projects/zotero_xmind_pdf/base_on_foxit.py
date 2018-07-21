@@ -18,13 +18,21 @@ from zht.projects.zotero_xmind_pdf.mekk_zht import XMindDocument
 ROOTDIR=r'D:\zht\database\zoteroDB\storage'
 XMINDDIR=r'D:\zht\database\xmind\research\xed'
 
-TYPE_MAP={
+TYPE_MAP_fdf={
     'highlight':'content',
     'squiggly':'relevant literature',
     'underline':'phrase',
     'strikeout':'sentence',
     'typewriter':'ideas'
 }
+TYPE_MAP_xfdf={
+    'highlight':'content',
+    'squiggly':'relevant literature',
+    'underline':'phrase',
+    'strikeout':'sentence',
+    'freetext':'ideas'
+}
+
 
 BLACK='#000000'
 BLUE='#2d00f9'
@@ -37,19 +45,21 @@ STYLE={
     'squiggly':[SHAPE_UNDERLINE,None,'#0aff01'],
     'underline':[SHAPE_UNDERLINE,None,'#ff0000'],
     'strikeout':[SHAPE_UNDERLINE,None,'#8A2BE2'],
-    'typewriter':[SHAPE_UNDERLINE,None,'#2d00f9']
+    'typewriter':[SHAPE_UNDERLINE,None,'#2d00f9'],
+    'freetext':[SHAPE_UNDERLINE,None,'#2d00f9']
 }
 
 TYPE_ORDER=['typewriter','highlight', 'underline', 'squiggly', 'strikeout']
 
 
 class Note:
-    def __init__(self,ux,uy,page,type,text):
+    def __init__(self,ux,uy,page,type,text,color=None):
         self.ux=ux
         self.uy=uy
         self.type=type
         self.page=page
         self.text=text
+        self.color=color
 
 
 
@@ -118,7 +128,7 @@ def create_xmind(iid,name,notes,buildTOC=True):
     types=[t for t in TYPE_ORDER if t in [n.type for n in notes]]
     for type in types:
         sub=t.addSubTopic()
-        sub.setTitle(TYPE_MAP[type])
+        sub.setTitle(TYPE_MAP_fdf[type])
         for node in [n for n in notes if n.type==type]:
             sub_=sub.addSubTopic()
             sub_.setTitle(node.text)
@@ -159,6 +169,17 @@ def parse_fdf(iid):
     name=fn[:-4]
     with open(os.path.join(directory,fn),encoding='utf8',errors='ignore') as f:
         lines=f.readlines()
+    #TODO: how to parse fdf contains Chinese character?
+    # from encodings.aliases import aliases
+    # ecs = list(set(aliases.values()))
+    #
+    # with open(r'e:\a\test.txt','w') as f:
+    #     for ec in ecs:
+    #         try:
+    #             text=open(os.path.join(directory, fn), encoding=ec,errors='ignore').readlines()[270]
+    #             f.write("{}---------------------->{}\n\n".format(ec,text))
+    #         except:
+    #             pass
 
     lines=[l for l in lines if 'Contents' in l]
 
@@ -189,12 +210,40 @@ def parse_fdf(iid):
     #sort by page,y,x, y denote the height in the page
     return notes,name
 
+def parse_xfdf(iid):
+    directory=os.path.join(ROOTDIR,iid)
+    fn=[n for n in os.listdir(directory) if n.endswith('.xfdf')][0]
+    name=fn[:-5]
+    from bs4 import BeautifulSoup
+    soup=BeautifulSoup(open(os.path.join(directory,fn),encoding='utf8').read(),'lxml')
+    notes=[]
+    for _type in TYPE_MAP_xfdf.keys():
+        anns=soup.findAll(_type)
+        for ann in anns:
+            if ann.text:
+                page=int(ann['page'])+1
+                # color=ann['color']
+                lx, ly, ux, uy=(float(s) for s in ann['rect'].split(','))
+                text=ann.p.text.replace('\r\n','').replace('\n','')
+                # text=clean_text(ann.text)
+                notes.append((Note(ux,uy,page,_type,text)))
+    return notes,name
+
+
 def get_notes_toc(iid):
     fp = get_filepath(iid)
     pdf = PdfFileReader(open(fp, 'rb'))
+    if pdf.isEncrypted:
+        '''
+        https://stackoverflow.com/questions/26242952/pypdf-2-decrypt-not-working
+
+        test with 6ZMKYDPP
+        '''
+        #TODO: parse the bookmark when the pdf is encrypted.
+        print('PDF is encrypted, can not parse the bookmarks.')
+        return []
     pg_id_num_map = _setup_page_id_to_num(pdf)
     toc = pdf.getOutlines()
-
     f_toc = []
 
     def flatten_toc(toc):
@@ -208,7 +257,7 @@ def get_notes_toc(iid):
     notes_toc = []
     for t in f_toc:
         ux = 0
-        uy = 10000
+        uy = 10000 # just set a random large number
         page = pg_id_num_map[t.page.idnum] + 1
         type = 'bookmark'
         text = t['/Title']
@@ -244,7 +293,7 @@ def create_xmind_with_style(iid, name, notes):
 
     # create a subtopic for strikeout, and typewriter alone
     for s in ['typewriter','strikeout']:
-        t1=first_topic.add_subtopic(TYPE_MAP[s])
+        t1=first_topic.add_subtopic(TYPE_MAP_fdf[s])
         if s=='typewriter':
             t1.add_marker('flag-red')
         t1.set_style(create_topic_style(xm,s))
@@ -261,7 +310,14 @@ def create_xmind_with_style(iid, name, notes):
 
 def run(iid,mode=0):
     if mode==0:
-        notes, name = parse_fdf(iid)
+
+        directory = os.path.join(ROOTDIR, iid)
+        xfdfs=[n for n in os.listdir(directory) if n.endswith('.xfdf')]
+        if len(xfdfs)>0:
+            notes,name=parse_xfdf(iid)
+        else:
+            notes,name=parse_fdf(iid)
+
         notes_toc = get_notes_toc(iid)
         notes_comb = sorted(notes + notes_toc,
                             key=lambda x: (x.page, -x.uy, x.ux))
@@ -271,11 +327,12 @@ def run(iid,mode=0):
         create_xmind(iid, name, notes)
 
 def debug():
-    iid='QYVWLCGD'
+    iid='FBSPMJSM'
     run(iid,mode=0)
 
 
 DEBUG=0
+
 
 if __name__ == '__main__':
     if DEBUG:
@@ -286,6 +343,12 @@ if __name__ == '__main__':
         args=parser.parse_args()
         run(args.iid)
 
+#TODO: how to parse fdf contains Chinese character?   FBSPMJSM
+#TODO: use adobe acrobat reader to export the comments as .xfdf, this format is more clear and easy to parse. But it seems only support a several annotation formats.
+#TODO: Chinese characters can not be identified appropariate,refer to HXFA72N7
+#TODO: read tags from zotero's sqlite and then add it to the .xmind
+#TODO: can we develop tool to make .xmind to be interactive with pdf, that is, if we delete an annotation in .xmind, it will also be deleted in pdf,and once we add a new annotation in pdf, it will automatically update in .xmind just like docear
+#TODO: how to set the font? "open Sans"
 #TODO: automatically add a xed tag to paper
 #TODO: extract the color of bookmarks, and customize style in xmind
 #TODO: use mekk to customize style

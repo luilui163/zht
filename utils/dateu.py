@@ -70,7 +70,7 @@ def freq_end(x, freq):
 
     :param x:array-like,usually it can be df.index
     :param freq: offsets from pandas.tseries.offsets,such as 'Y','M','D'
-    :return:
+    :return:calendar end of month,year or day.
     '''
     if freq=='Y':
         #for freq=='Y',the element in x must be like 1995.
