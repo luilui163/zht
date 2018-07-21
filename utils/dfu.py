@@ -8,6 +8,8 @@
 import pandas as pd
 import ast
 import operator
+import numpy as np
+
 
 _ops = {'<': operator.lt, '>': operator.gt,
        '<=': operator.le, '>=': operator.ge,
@@ -175,3 +177,53 @@ def join_dfs(xs):
         return s
     else:#there is both singleIndex dataframe and multiIndex dataframe
         return m.join(s,how='outer')
+
+
+def myroll(df, window):
+    '''
+    refer to
+        https://stackoverflow.com/questions/39501277/efficient-python-pandas-stock-beta-calculation-on-many-dataframes
+    '''
+    #TODO: This method will consume too much memory, as an alternative, my_rolling_apply is memory saving but it is much slower
+
+
+    # stack df.values window-times shifted once at each stack
+    roll_array = np.dstack([df.values[i:i + window, :] for i in range(len(df.index) - window + 1)]).T
+    # roll_array is now a 3-D array and can be read into
+    # a pandas panel object
+    panel = pd.Panel(roll_array,
+                     items=df.index[window - 1:],
+                     major_axis=df.columns,
+                     minor_axis=pd.Index(range(window), name='roll'))
+    # convert to dataframe and pivot + groupby
+    # is now ready for any action normally performed
+    # on a groupby object
+    #trick: filter_observations=False
+    return panel.to_frame(filter_observations=False).unstack().T.groupby(level=0)
+
+
+def my_rolling_apply(df, func, w, min_periods=None, fillna='mean'):
+    '''
+    Args:
+        df:DataFrame,with datetime index
+        w: window
+        func: function to apply, func should apply on a dataframe and return a Series
+
+    Returns:DataFrame
+
+    '''
+    if min_periods is None:
+        min_periods=int(w*3/4)
+
+    days=df.index.tolist()
+    ss=[]
+    for day in days[w:]:
+        print('Rolling: {}'.format(day))
+        sub = df.loc[days[days.index(day) - w + 1]:day]
+        sub = sub.dropna(thresh=min_periods, axis=1)
+        if fillna=='mean':
+            sub = sub.fillna(sub.mean())  # Trick: fillna with average
+        s=func(sub)
+        ss.append(s)
+    frame = pd.concat(ss, axis=1, keys=days[w:],sort=True).T
+    return frame
