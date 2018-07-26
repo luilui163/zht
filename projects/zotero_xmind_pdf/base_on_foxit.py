@@ -40,7 +40,7 @@ BLUE='#2d00f9'
 
 
 STYLE={
-    'bookmark':[SHAPE_RECTANGLE,'#c6c6c6',BLACK],#[shape,fill_color,font_color]
+    'title':[SHAPE_RECTANGLE,'#c6c6c6',BLACK],#[shape,fill_color,font_color]
     'highlight':[SHAPE_UNDERLINE,None,'#00000'], # #F3F4F9 is the default color of the default theme
     'squiggly':[SHAPE_UNDERLINE,None,'#0aff01'],
     'underline':[SHAPE_UNDERLINE,None,'#ff0000'],
@@ -53,13 +53,25 @@ TYPE_ORDER=['typewriter','highlight', 'underline', 'squiggly', 'strikeout']
 
 
 class Note:
-    def __init__(self,ux,uy,page,type,text,color=None):
+    def __init__(self,lx,ly,ux,uy,page,type,text,position=-1,color=None):
+        self.lx=lx
+        self.ly=ly
         self.ux=ux
         self.uy=uy
         self.type=type
         self.page=page
         self.text=text
+        self.position=position # which part of the annotation belongs, -1 denotes left,1 denotes right
         self.color=color
+
+    def __eq__(self, other):
+        return (self.type==other.type and self.text==other.text and self.color==other.color and self.page==other.page)
+
+    def __hash__(self):
+        return hash((self.type,self.text,self.color,self.page))
+
+    def __lt__(self, other):
+        raise NotImplementedError
 
 
 
@@ -205,7 +217,8 @@ def parse_fdf(iid):
             p=r'Rect\[ ([0-9]*\.?[0-9]*) ([0-9]*\.?[0-9]*) ([0-9]*\.?[0-9]*) ([0-9]*\.?[0-9]*)\].*/Page (\d+).*/Subtype/(.*)/Type.*/Contents\((.*)\)/CA'
             lx,ly,ux,uy,page,type,text=re.findall(p,l)[0]
         # addjust page
-        notes.append(Note(float(ux),float(uy),int(page)+1,type.lower(),clean_text(text)))
+        if len(text)>0:
+            notes.append(Note(float(lx),float(ly),float(ux),float(uy),int(page)+1,type.lower(),clean_text(text)))
 
     #sort by page,y,x, y denote the height in the page
     return notes,name
@@ -216,17 +229,18 @@ def parse_xfdf(iid):
     name=fn[:-5]
     from bs4 import BeautifulSoup
     soup=BeautifulSoup(open(os.path.join(directory,fn),encoding='utf8').read(),'lxml')
+    # soup=BeautifulSoup(open(os.path.join(directory,fn),'rb').read(),'lxml')
     notes=[]
     for _type in TYPE_MAP_xfdf.keys():
         anns=soup.findAll(_type)
         for ann in anns:
             if ann.text:
                 page=int(ann['page'])+1
-                # color=ann['color']
+                color=ann['color']
                 lx, ly, ux, uy=(float(s) for s in ann['rect'].split(','))
-                text=ann.p.text.replace('\r\n','').replace('\n','')
-                # text=clean_text(ann.text)
-                notes.append((Note(ux,uy,page,_type,text)))
+                text=ann.p.text.replace('\x8e ','fi').replace('\r\n',' ').replace('\n',' ')
+                if len(text)>0:
+                    notes.append((Note(lx=lx,ly=ly,ux=ux,uy=uy,page=page,type=_type,text=text,color=color)))
     return notes,name
 
 
@@ -256,12 +270,14 @@ def get_notes_toc(iid):
     flatten_toc(toc)
     notes_toc = []
     for t in f_toc:
+        lx=0
+        ly=10000
         ux = 0
         uy = 10000 # just set a random large number
         page = pg_id_num_map[t.page.idnum] + 1
-        type = 'bookmark'
+        type ='title'
         text = t['/Title']
-        notes_toc.append(Note(ux, uy, page, type, text))
+        notes_toc.append(Note(lx,ly,ux, uy, page, type, text))
     return notes_toc
 
 def create_topic_style(xmd,type):
@@ -308,9 +324,88 @@ def create_xmind_with_style(iid, name, notes):
     xm.save(xpath)
     os.startfile(xpath, 'open')
 
-def run(iid,mode=0):
-    if mode==0:
+def create_xmind_stacked(iid,name,notes):
+    xpath=os.path.join(XMINDDIR,name+'.xmind')
+    xm = XMindDocument.create('annotations', iid)
+    first_sheet = xm.get_first_sheet()
+    root_topic = first_sheet.get_root_topic()
+    first_topic=root_topic.add_subtopic(name+'.pdf')
+    first_topic.set_link('zotero://open-pdf/library/items/{}'.format(iid))
 
+    ns1=[note for note in notes if note.type not in ['strikeout']]
+    last_title=first_topic
+    for note in ns1:
+        if note.type=='title':
+            t=first_topic.add_subtopic(note.text)
+            last_title=t
+        else:
+            t=last_title.add_subtopic(note.text)
+        t.set_link(
+            'zotero://open-pdf/library/items/{}?page={}'.format(iid, note.page))
+        style = create_topic_style(xm, note.type)
+        t.set_style(style)
+
+    # create a subtopic for strikeout, and typewriter alone
+    for s in ['typewriter','strikeout']:
+        t1=first_topic.add_subtopic(TYPE_MAP_fdf[s])
+        if s=='typewriter':
+            t1.add_marker('flag-red')
+        t1.set_style(create_topic_style(xm,s))
+        for note in notes:
+            if note.type==s:
+                t2=t1.add_subtopic(note.text)
+                t2.set_link('zotero://open-pdf/library/items/{}?page={}'.format(iid,
+                                                                               note.page))
+                style = create_topic_style(xm, note.type)
+                t2.set_style(style)
+
+    xm.save(xpath)
+    os.startfile(xpath, 'open')
+
+
+def identify_position(notes):
+    '''
+    identify the position of the notes, determine which part the notes appear,
+    left or right
+
+    :param notes:
+    :return:
+    '''
+    min_left=99999
+    max_right=0
+    min_page=100000
+    for note in notes:
+        if note.type in ['highlight','squiggly','underline','strikeout']:
+            if note.lx<min_left:
+                min_left=note.lx
+            if note.ux>max_right:
+                max_right=note.ux
+            if note.page<min_page:
+                min_page=note.page
+
+    thresh=0.5*(min_left+max_right)
+    for note in notes:
+        if note.type in ['highlight','squiggly','underline','strikeout']:
+            if note.ux<thresh:
+                note.position=-1 #-1 denote left, 1 denote right
+            elif note.lx>thresh:
+                note.position=1
+            elif note.page==min_page:
+                # trick: the notes in first annotation page may belong to abstract, but, usually, the abstract part won't be divided into left part and right part,so we just skip it
+                pass
+            else:
+                raise ValueError('Can not identify the position of : \n\n"{}" \n{}'.format(note.type,note.text))
+    return notes
+
+def identify_title(notes):
+    for note in notes:
+        if note.type=='underline' and note.color=='#FFFFFF':
+            note.type='title'
+    return notes
+
+
+def run(iid,column=1,mode=0,title_mode='annotation'):
+    if mode==0:
         directory = os.path.join(ROOTDIR, iid)
         xfdfs=[n for n in os.listdir(directory) if n.endswith('.xfdf')]
         if len(xfdfs)>0:
@@ -318,21 +413,31 @@ def run(iid,mode=0):
         else:
             notes,name=parse_fdf(iid)
 
-        notes_toc = get_notes_toc(iid)
-        notes_comb = sorted(notes + notes_toc,
-                            key=lambda x: (x.page, -x.uy, x.ux))
-        create_xmind_with_style(iid, name, notes_comb)
+        notes=list(set(notes))#trick:handle duplicates
+
+        if column==2:
+            notes=identify_position(notes)
+        if title_mode=='annotation':
+            notes=identify_title(notes)
+            notes=sorted(notes,key=lambda x:(x.page,x.position,-x.uy,x.ux))
+            create_xmind_stacked(iid,name,notes)
+            # create_xmind_with_style(iid,name,notes)
+        else:
+            notes_toc = get_notes_toc(iid)
+            notes_comb = sorted(notes + notes_toc,
+                                key=lambda x: (x.page,x.position,-x.uy, x.ux))
+            create_xmind_with_style(iid, name, notes_comb)
     else:
         notes, name = parse_fdf(iid)
         create_xmind(iid, name, notes)
 
 def debug():
-    iid='FBSPMJSM'
-    run(iid,mode=0)
+    iid='3N4UJRP3'
+    run(iid,column=2)
 
 
-DEBUG=0
 
+DEBUG=1
 
 if __name__ == '__main__':
     if DEBUG:
@@ -340,9 +445,11 @@ if __name__ == '__main__':
     else:
         parser=argparse.ArgumentParser()
         parser.add_argument('iid',metavar='i',type=str,help='an str for the zotero item')
+        parser.add_argument('column',metavar='c',type=int,help='column number of the paper')
         args=parser.parse_args()
-        run(args.iid)
-
+        run(args.iid,args.column)
+#TODO: filter duplicates automatically
+#TODO: why not use annotation to identify the titles, so we do not need to parse the bookmarks. In the other hand, we can identify the specific position of the title in the page.
 #TODO: how to parse fdf contains Chinese character?   FBSPMJSM
 #TODO: use adobe acrobat reader to export the comments as .xfdf, this format is more clear and easy to parse. But it seems only support a several annotation formats.
 #TODO: Chinese characters can not be identified appropariate,refer to HXFA72N7

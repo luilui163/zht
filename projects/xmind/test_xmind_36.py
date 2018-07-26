@@ -54,6 +54,12 @@ t5=r2.addSubTopic()
 t5.setTitle('fifth node')
 t5.setURLHyperlink('zotero_xmind_pdf://open-pdf/library/items/68Y48YIT?page=5')
 
+# r2.removeChild(t5)
+
+t5.removePosition()
+
+
+
 # create a detached topic whose (invisible) parent is the root
 d1 = r2.addSubTopic(topics_type=TOPIC_DETACHED)
 d1.setTitle("detached topic")
@@ -70,4 +76,5 @@ rel = s2.createRelationship(t1.getID(), t2.getID(), "test")
 
 # and we save
 xmind.save(w, r"e:\a\test2.xmind")
+
 

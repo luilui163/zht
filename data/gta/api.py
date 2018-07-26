@@ -12,5 +12,8 @@ from zht.data.gta.config import SRC
 def read_gta(tbname, *args, **kwargs):
     return pd.read_csv(os.path.join(SRC,tbname+'.csv'),*args,**kwargs)
 
-
+def read_df_from_gta(tbname, varname, indname, colname):
+    table=read_gta(tbname)
+    df=pd.pivot_table(table,varname,indname,colname)
+    return df
 

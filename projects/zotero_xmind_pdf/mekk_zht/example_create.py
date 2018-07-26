@@ -24,9 +24,30 @@ root_topic.add_subtopic('detached topic',detached=True)
 t.add_subtopic('another detached',detached=True)
 t.add_marker('flag-red')
 
+# root_topic.doc.doc_tag.remove(t.doc.doc_tag)
+test=root_topic.doc.doc_tag
+
+# for ch in test.getchildren():
+#     test.remove(ch)
+
+
+dir(root_topic.doc.doc_tag)
+
+
+
+#
+#
+# import lxml.etree._Element
+#
+# type(root_topic.doc.doc_tag)
+#
+# dir(root_topic)
+#
+# dir(root_topic.doc.doc_tag)
+#
 
 root_topic.add_subtopic('link example').set_link('http://mekk.waw.pl')
-root_topic.add_subtopic('attachment example').set_attachment(open('a.py').read(),'.txt')
+# root_topic.add_subtopic('attachment example').set_attachment(open('a.py').read(),'.txt')
 root_topic.add_subtopic('with note').set_note('''This is just some dummy note.''')
 
 MARKER_CODE = "40g6170ftul9bo17p1r31nqk2a"
