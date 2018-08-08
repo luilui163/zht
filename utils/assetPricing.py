@@ -5,14 +5,13 @@
 # NAME:assetPricing-assetPricing.py
 
 import numpy as np
-import scipy
+from scipy import stats
 
 import pandas as pd
 from pandas.io.formats.format import format_percentiles
 import statsmodels.formula.api as sm
 
 from zht.utils import mathu
-
 
 def GRS_test(factor,resid,alpha):
     '''
@@ -36,6 +35,14 @@ def GRS_test(factor,resid,alpha):
         pvalue[0,0]:1x1 scalar of P-value from an F-Distribution
 
     '''
+    #TODO: compare with researchTopics.assetPricing2.relevant.reg.regress#GRS_test
+
+
+    #check the type of the input data
+    for _d in [factor,resid,alpha]:
+        if not isinstance(_d,np.matrix):
+            raise TypeError('{} is not a np.matrix'.format(_d))
+
     T, N = resid.shape
     L = factor.shape[1]
 
@@ -45,8 +52,44 @@ def GRS_test(factor,resid,alpha):
     GRS = (T * 1.0 / N) * ((T - N - L) * 1.0 / (T - L - 1)) \
           * (alpha.T * np.linalg.inv(cov_e) * alpha)\
           / (1 + mu_mean.T * np.linalg.inv(cov_f) * mu_mean)
-    pvalue = scipy.stats.f.sf(GRS, N, (T - N - L))
-    return GRS[0,0],pvalue[0,0]
+    cdf = stats.f.cdf(GRS, N, (T - N - L))
+    return GRS[0,0],1-cdf[0,0]
+
+def run_GRS_test(model,asset):
+    '''
+
+    Args:
+        model:DataFrame,(T,L) do not contain intercept
+        asset:DataFrame,(T,N) asset to pricing,for example, it can be a set of portfolios sorted by size
+
+    Returns:
+
+    '''
+    comb=pd.concat([model,asset],axis=1,join='inner')
+    comb=comb.dropna()
+
+    a=np.array(comb.loc[:,model.columns])
+    A=np.hstack([np.ones([len(a),1]),a])
+
+    resid=[]
+    alpha=[]
+    for col in asset.columns:
+        y=comb.loc[:,col]
+        beta=np.linalg.lstsq(A,y,rcond=None)[0]
+        res=y-np.dot(A,beta)
+        al=beta[0]
+
+        resid.append(res)
+        alpha.append(al)
+    resid=pd.concat(resid,axis=1)
+
+    factor=np.matrix(a)
+    resid=np.matrix(resid.values)
+    alpha=np.matrix(alpha).T
+
+    grs,p=GRS_test(factor,resid,alpha)
+    return grs,p
+
 
 def summary_statistics(data,percentiles=(0.05, 0.25, 0.5, 0.75, 0.95),axis=1):
     '''

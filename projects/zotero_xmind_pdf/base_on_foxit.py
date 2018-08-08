@@ -15,15 +15,18 @@ from PyPDF2.pdf import Destination
 from mekk.xmind.document import SHAPE_RECTANGLE,SHAPE_UNDERLINE
 from zht.projects.zotero_xmind_pdf.mekk_zht import XMindDocument
 
-ROOTDIR=r'D:\zht\database\zoteroDB\storage'
-XMINDDIR=r'D:\zht\database\xmind\research\xed'
+DIR_ROOT= r'D:\zht\database\zoteroDB\storage'
+DIR_XMIND= r'D:\zht\database\xmind\research\xed'
+DIR_XFDF=r'D:\zht\database\xfdf'
+
 
 TYPE_MAP_fdf={
     'highlight':'content',
     'squiggly':'relevant literature',
     'underline':'phrase',
     'strikeout':'sentence',
-    'typewriter':'ideas'
+    'typewriter':'ideas',
+    'freetext':'ideas'
 }
 TYPE_MAP_xfdf={
     'highlight':'content',
@@ -74,7 +77,6 @@ class Note:
         raise NotImplementedError
 
 
-
 def _setup_page_id_to_num(pdf, pages=None, _result=None, _num_pages=None):
     if _result is None:
         _result = {}
@@ -109,9 +111,9 @@ def build_toc(iid,outlines, pg_id_num_map, parent):
             build_toc(iid,ol, pg_id_num_map, parent)
 
 def get_filepath(iid):
-    fns=os.listdir(os.path.join(ROOTDIR,iid))
+    fns=os.listdir(os.path.join(DIR_ROOT, iid))
     paperName=[fn for fn in fns if fn.endswith('.pdf')][0]
-    return os.path.join(ROOTDIR,iid,paperName)
+    return os.path.join(DIR_ROOT, iid, paperName)
 
 def create_xmind(iid,name,notes,buildTOC=True):
     '''
@@ -147,7 +149,7 @@ def create_xmind(iid,name,notes,buildTOC=True):
             link='zotero://open-pdf/library/items/{}?page={}'.format(iid,node.page)#trick:open pdf by zotero
             sub_.setURLHyperlink(link)
 
-    xpath=os.path.join(XMINDDIR,name+'.xmind')
+    xpath=os.path.join(DIR_XMIND, name + '.xmind')
     xmind.save(w,xpath)
     #open the file
     os.startfile(xpath,'open')
@@ -176,7 +178,7 @@ def parse_fdf(iid):
     :param iid: str, like '68Y48YIT'
     :return: (list,str), the list contains a bunch of [lx,ly,ux,uy,page,type,text]
     '''
-    directory=os.path.join(ROOTDIR,iid)
+    directory=os.path.join(DIR_ROOT, iid)
     fn=[n for n in os.listdir(directory) if n.endswith('.fdf')][0]
     name=fn[:-4]
     with open(os.path.join(directory,fn),encoding='utf8',errors='ignore') as f:
@@ -224,11 +226,30 @@ def parse_fdf(iid):
     return notes,name
 
 def parse_xfdf(iid):
-    directory=os.path.join(ROOTDIR,iid)
-    fn=[n for n in os.listdir(directory) if n.endswith('.xfdf')][0]
-    name=fn[:-5]
+    dir_item = os.path.join(DIR_ROOT, iid)
+    try:# xfdf appears in the directory of zotero item
+        fn=[n for n in os.listdir(dir_item) if n.endswith('.xfdf')][0]
+        name=fn[:-5]
+        xfdf_path=os.path.join(dir_item,fn)
+    except:# xfdf appears in DIR_XFDF
+        fn_pdfs=[n for n in os.listdir(dir_item) if n.endswith('.pdf')]
+        if len(fn_pdfs)==0: # only one pdf appears in the directory of zotero item
+            fn=fn_pdfs[0]
+            name=fn[:-4]
+        else:
+            name=None
+            for fn_pdf in fn_pdfs:
+                '''multiple pdfs appear in the directory of zotero item, 
+                we need to match them with the .xfdf files in DIR_XFDF to find
+                the target.'''
+                _nm=fn_pdf[:-4]
+                if _nm in [n[:-5] for n in os.listdir(DIR_XFDF)]:
+                    name=_nm
+                    break
+        xfdf_path = os.path.join(DIR_XFDF, name + '.xfdf')
+
     from bs4 import BeautifulSoup
-    soup=BeautifulSoup(open(os.path.join(directory,fn),encoding='utf8').read(),'lxml')
+    soup=BeautifulSoup(open(xfdf_path,encoding='utf8').read(),'lxml')
     # soup=BeautifulSoup(open(os.path.join(directory,fn),'rb').read(),'lxml')
     notes=[]
     for _type in TYPE_MAP_xfdf.keys():
@@ -236,13 +257,14 @@ def parse_xfdf(iid):
         for ann in anns:
             if ann.text:
                 page=int(ann['page'])+1
-                color=ann['color']
+                color=ann['color'] if _type not in ['freetext'] else None #freetext does not contain color attribute
                 lx, ly, ux, uy=(float(s) for s in ann['rect'].split(','))
-                text=ann.p.text.replace('\x8e ','fi').replace('\r\n',' ').replace('\n',' ')
+                contents=ann.find('contents-richtext')
+                text=contents.text.replace('\x8e ','fi').replace('\r\n',' ').replace('\n',' ').strip()
+                # text=ann.text.replace('\x8e ','fi').replace('\r\n',' ').replace('\n',' ').strip()
                 if len(text)>0:
                     notes.append((Note(lx=lx,ly=ly,ux=ux,uy=uy,page=page,type=_type,text=text,color=color)))
     return notes,name
-
 
 def get_notes_toc(iid):
     fp = get_filepath(iid)
@@ -294,7 +316,7 @@ def create_topic_style(xmd,type):
     return style
 
 def create_xmind_with_style(iid, name, notes):
-    xpath=os.path.join(XMINDDIR,name+'.xmind')
+    xpath=os.path.join(DIR_XMIND, name + '.xmind')
     xm = XMindDocument.create('annotations', iid)
     first_sheet = xm.get_first_sheet()
     root_topic = first_sheet.get_root_topic()
@@ -325,7 +347,7 @@ def create_xmind_with_style(iid, name, notes):
     os.startfile(xpath, 'open')
 
 def create_xmind_stacked(iid,name,notes):
-    xpath=os.path.join(XMINDDIR,name+'.xmind')
+    xpath=os.path.join(DIR_XMIND, name + '.xmind')
     xm = XMindDocument.create('annotations', iid)
     first_sheet = xm.get_first_sheet()
     root_topic = first_sheet.get_root_topic()
@@ -345,23 +367,37 @@ def create_xmind_stacked(iid,name,notes):
         style = create_topic_style(xm, note.type)
         t.set_style(style)
 
+    # for s in ['typewriter','freetext','strikeout']:
+    #     t1=first_topic.add_subtopic(TYPE_MAP_fdf[s])
+    #     if s in ['typewriter','freetext']:
+    #         t1.add_marker('flag-red')
+    #     t1.set_style(create_topic_style(xm,s))
+    #     for note in notes:
+    #         if note.type==s:
+    #             t2=t1.add_subtopic(note.text)
+    #             t2.set_link('zotero://open-pdf/library/items/{}?page={}'.format(iid,
+    #                                                                            note.page))
+    #             style = create_topic_style(xm, note.type)
+    #             t2.set_style(style)
+
     # create a subtopic for strikeout, and typewriter alone
-    for s in ['typewriter','strikeout']:
-        t1=first_topic.add_subtopic(TYPE_MAP_fdf[s])
-        if s=='typewriter':
-            t1.add_marker('flag-red')
-        t1.set_style(create_topic_style(xm,s))
-        for note in notes:
-            if note.type==s:
-                t2=t1.add_subtopic(note.text)
-                t2.set_link('zotero://open-pdf/library/items/{}?page={}'.format(iid,
-                                                                               note.page))
-                style = create_topic_style(xm, note.type)
-                t2.set_style(style)
+    for s in ['typewriter','freetext','strikeout']:
+        ns=[n for n in notes if n.type==s]
+        if len(ns)>0:
+            t1 = first_topic.add_subtopic(TYPE_MAP_fdf[s])
+            if s in ['typewriter', 'freetext']:
+                t1.add_marker('flag-red')
+            t1.set_style(create_topic_style(xm, s))
+            for note in notes:
+                if note.type==s:
+                    t2=t1.add_subtopic(note.text)
+                    t2.set_link('zotero://open-pdf/library/items/{}?page={}'.format(iid,
+                                                                                   note.page))
+                    style = create_topic_style(xm, note.type)
+                    t2.set_style(style)
 
     xm.save(xpath)
     os.startfile(xpath, 'open')
-
 
 def identify_position(notes):
     '''
@@ -399,24 +435,34 @@ def identify_position(notes):
 
 def identify_title(notes):
     for note in notes:
-        if note.type=='underline' and note.color=='#FFFFFF':
+        if note.type=='strikeout' and note.color=='#FFFFFF':
             note.type='title'
     return notes
 
+def filter_notes(notes):
+    notes = list(set(notes))  # trick:handle duplicates
+    notes=[n for n in notes if len(n.text)>2]# delete those short notes
+    return notes
 
-def run(iid,column=1,mode=0,title_mode='annotation'):
+
+def run(iid,mode=0,title_mode='annotation'):
     if mode==0:
-        directory = os.path.join(ROOTDIR, iid)
-        xfdfs=[n for n in os.listdir(directory) if n.endswith('.xfdf')]
-        if len(xfdfs)>0:
-            notes,name=parse_xfdf(iid)
-        else:
+        directory = os.path.join(DIR_ROOT, iid)
+        fdfs=[n for n in os.listdir(directory) if n.endswith('.fdf')]
+        if len(fdfs)>0:
             notes,name=parse_fdf(iid)
+        else:
+            notes,name=parse_xfdf(iid)
+        # try:
+        #     notes,name=parse_xfdf(iid)
+        # except:
+        #     notes,name=parse_fdf(iid)
 
-        notes=list(set(notes))#trick:handle duplicates
-
-        if column==2:
+        notes=filter_notes(notes)
+        try:
             notes=identify_position(notes)
+        except:
+            pass
         if title_mode=='annotation':
             notes=identify_title(notes)
             notes=sorted(notes,key=lambda x:(x.page,x.position,-x.uy,x.ux))
@@ -432,12 +478,13 @@ def run(iid,column=1,mode=0,title_mode='annotation'):
         create_xmind(iid, name, notes)
 
 def debug():
-    iid='3N4UJRP3'
-    run(iid,column=2)
+    iid='EC5QKQ52'
+    run(iid)
 
 
 
 DEBUG=1
+
 
 if __name__ == '__main__':
     if DEBUG:
@@ -445,10 +492,11 @@ if __name__ == '__main__':
     else:
         parser=argparse.ArgumentParser()
         parser.add_argument('iid',metavar='i',type=str,help='an str for the zotero item')
-        parser.add_argument('column',metavar='c',type=int,help='column number of the paper')
+        # parser.add_argument('column',metavar='c',type=int,help='column number of the paper')
         args=parser.parse_args()
-        run(args.iid,args.column)
-#TODO: filter duplicates automatically
+        run(args.iid)
+
+#TODO: automatically output .xfdf with the help of 按键精灵
 #TODO: why not use annotation to identify the titles, so we do not need to parse the bookmarks. In the other hand, we can identify the specific position of the title in the page.
 #TODO: how to parse fdf contains Chinese character?   FBSPMJSM
 #TODO: use adobe acrobat reader to export the comments as .xfdf, this format is more clear and easy to parse. But it seems only support a several annotation formats.
