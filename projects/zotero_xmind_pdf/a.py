@@ -8,34 +8,29 @@ import sqlite3
 import sys
 import os
 import re
+import pandas as pd
+from webcolors import rgb_to_hex
 
-path1=r'E:\a\DEMO Food Quality - A Global Challenge (2)\DEMO Food Quality - A Global Challenge (2).sqlite'
+with open(r'e:\a\foxit.fdf',encoding='utf8',errors='ignore') as f:
+    lines=f.readlines()
 
-import zipfile
-
-# zip_ref=zipfile.ZipFile(path,'r')
-# zip_ref.extractall(r'e:\a\test_ctv')
-# zip_ref.close()
-
-import magic
+lines=[l for l in lines if 'Contents' in l]
 
 
+color_list=l.split(']')[0].split('[ ')[-1].split(' ')
+color = rgb_to_hex(list(int(round(float(c) * 255)) for c in color_list))
 
-conn=sqlite3.connect(path1)
+text=l.split('Annot/Contents(')[-1].split(')/CA')[0]
+text = _filter_text(text)
 
-c=conn.cursor()
+rect=l.split(']/F')[0].split('Rect[ ')[-1].split(' ')
+left, bottom, right, top = (float(r) for r in rect)
 
-q='select * from annotation'
+_type=l.split('Subtype/')[-1].split('/Type')[0].lower()
+page=int(l.split('/RC')[0].split('/Page ')[-1])
 
-c.execute(q)
-
-items=c.fetchall()
-
-item=items[0]
-
-item[0].decode('windows-1251')
+print(page,_type,color_list,rect,text)
 
 
-import chardet
 
-chardet.detect(item[0])
+

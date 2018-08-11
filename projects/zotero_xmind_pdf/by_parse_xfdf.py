@@ -13,20 +13,33 @@ import argparse
 from PyPDF2 import PdfFileReader
 from PyPDF2.pdf import Destination
 from mekk.xmind.document import SHAPE_RECTANGLE,SHAPE_UNDERLINE
+from webcolors import rgb_to_hex
 from zht.projects.zotero_xmind_pdf.mekk_zht import XMindDocument
 
 DIR_ROOT= r'D:\zht\database\zoteroDB\storage'
 DIR_XMIND= r'D:\zht\database\xmind\research\xed'
 DIR_XFDF=r'D:\zht\database\xfdf'
+DIR_FDF=r'D:\zht\database\fdf'
 
 BLACK='#000000'
 BLUE='#2d00f9'
 GREEN='#6BE05F'
+BUGN='#27AE60'
 WHITE='#FFFFFF'
+RED='#FE2600'
+
 
 TITLE_COLOR=WHITE
 
-
+def valid_xml_char_ordinal(c):
+    codepoint = ord(c)
+    # conditions ordered by presumed frequency
+    return (
+        0x20 <= codepoint <= 0xD7FF or
+        codepoint in (0x9, 0xA, 0xD) or
+        0xE000 <= codepoint <= 0xFFFD or
+        0x10000 <= codepoint <= 0x10FFFF
+        )
 
 class Note:
     TYPE_MAP_xfdf = {
@@ -43,9 +56,9 @@ class Note:
         'content': [SHAPE_UNDERLINE, None, BLACK],
         # #F3F4F9 is the default color of the default theme
         'literature': [SHAPE_UNDERLINE, None, GREEN],
-        'phrase': [SHAPE_UNDERLINE, None, '#ff0000'],
-        'sentence': [SHAPE_UNDERLINE, None, '#8A2BE2'],
-        'ideas': [SHAPE_UNDERLINE, None, '#2d00f9']
+        'phrase': [SHAPE_UNDERLINE, None, BLUE],
+        'sentence': [SHAPE_UNDERLINE, None, BUGN],
+        'ideas': [SHAPE_UNDERLINE, None, RED]
     }
 
     def __init__(self, left,right,top,bottom, page, annotation_type, text, position=-1, color=None):
@@ -84,7 +97,7 @@ class Note:
         elif anno_type == 'freetext':
             return 'ideas'
         elif anno_type == 'strikeout':
-            if color == TITLE_COLOR:
+            if color.upper() == TITLE_COLOR:
                 return 'title'
             else:
                 return 'sentence'
@@ -94,33 +107,49 @@ class Note:
 class Summary:
     def __init__(self,iid):
         self.iid=iid
-        self.xfdf_path,self.pdf_name=self._get_path_and_name()
+        self.annot_path,self.pdf_name=self._get_path_and_name()
         self.run()
 
     def _get_path_and_name(self):
         dir_item = os.path.join(DIR_ROOT, self.iid)
-        try:  # xfdf appears in the directory of zotero item
-            fn = [n for n in os.listdir(dir_item) if n.endswith('.xfdf')][0]
-            name = fn[:-5]
-            xfdf_path = os.path.join(dir_item, fn)
-        except:  # xfdf appears in DIR_XFDF
+        name=None
+        annot_path=None
+        xfdfs=[n for n in os.listdir(dir_item) if n.endswith('.xfdf')]
+        fdfs=[n for n in os.listdir(dir_item) if n.endswith('.fdf')]
+        if len(xfdfs)>0:#xfdf appears in the directory of zotero item
+            name=xfdfs[0][:-5]
+            annot_path=os.path.join(dir_item,xfdfs[0])
+        elif len(fdfs)>0:
+            name=fdfs[0][:-4]
+            annot_path=os.path.join(dir_item,fdfs[0])
+        else:# xfdf appears in DIR_XFDF
             fn_pdfs = [n for n in os.listdir(dir_item) if n.endswith('.pdf')]
-            if len(
-                    fn_pdfs) == 0:  # only one pdf appears in the directory of zotero item
+            if len(fn_pdfs) ==1:  # only one pdf appears in the directory of zotero item
                 fn = fn_pdfs[0]
                 name = fn[:-4]
+                p_xfdf=os.path.join(DIR_XFDF,name+'.xfdf')
+                p_fdf=os.path.join(DIR_FDF,name+'.fdf')
+                if os.path.exists(p_xfdf):
+                    annot_path=p_xfdf
+                elif os.path.exists(p_fdf):
+                    annot_path=p_fdf
             else:
-                name = None
                 for fn_pdf in fn_pdfs:
                     '''multiple pdfs appear in the directory of zotero item, 
                     we need to match them with the .xfdf files in DIR_XFDF to find
                     the target.'''
-                    _nm = fn_pdf[:-4]
-                    if _nm in [n[:-5] for n in os.listdir(DIR_XFDF)]:
-                        name = _nm
+                    p_xfdf = os.path.join(DIR_XFDF, fn_pdf[:-4] + '.xfdf')
+                    p_fdf = os.path.join(DIR_XFDF, fn_pdf[:-4] + '.xfdf')
+
+                    if os.path.exists(p_xfdf):
+                        name=fn_pdf[:-4]
+                        annot_path=p_xfdf
                         break
-            xfdf_path = os.path.join(DIR_XFDF, name + '.xfdf')
-        return xfdf_path,name
+                    elif os.path.exists(p_fdf):
+                        name=fn_pdf[:-4]
+                        annot_path=p_fdf
+                        break
+        return annot_path,name
 
     def parse_xfdf(self):
         '''
@@ -128,7 +157,9 @@ class Summary:
         :return:
         '''
         from bs4 import BeautifulSoup
-        soup = BeautifulSoup(open(self.xfdf_path, encoding='utf8').read(), 'lxml')
+        with open(self.annot_path,encoding='utf8') as f:
+            soup=BeautifulSoup(f.read(),'lxml')
+        # soup = BeautifulSoup(open(self.xfdf_path, encoding='utf8').read(), 'lxml')
         # soup=BeautifulSoup(open(os.path.join(directory,fn),'rb').read(),'lxml')
         notes = []
         for _type in Note.TYPE_MAP_xfdf.keys():
@@ -143,15 +174,63 @@ class Summary:
                     # left_bottom,left_top,right_bottom,right_top = (float(s) for s in ann['rect'].split(','))
 
                     contents = ann.find('contents-richtext')
-                    text = contents.text.replace('\x8e ', 'fi').replace('\r\n',
-                                                                        ' ').replace(
-                        '\n', ' ').strip()
+                    text = contents.text.replace('\x8e ', 'fi').replace('\r\n',' ').replace('\n', ' ').strip()
                     # text=ann.text.replace('\x8e ','fi').replace('\r\n',' ').replace('\n',' ').strip()
-                    if len(text) > 0:
-                        notes.append(
-                            (Note(left=left,right=right,top=top,bottom=bottom, page=page,
-                                  annotation_type=_type, text=text,
-                                  color=color)))
+                    notes.append((Note(left=left,right=right,top=top,bottom=bottom, page=page,
+                              annotation_type=_type, text=text,
+                              color=color)))
+        return notes
+
+    def parse_fdf_from_adobe(self):
+        def _filter_text(text):
+            text=text.replace('\(','(').replace('\)',')')
+            text=text.replace('\\r\\n',' ').strip()
+            text=''.join(c for c in text if valid_xml_char_ordinal(c))#filter out invalid characteristics
+            return text
+
+        with open(self.annot_path,encoding='utf8',errors='ignore') as f:
+            text=f.read()
+        annots = text.split('0 obj\n')
+        annots=[ann for ann in annots if ann.startswith('<</Border')]
+
+        notes=[]
+        for t in annots:
+            color_list = t.split(']/CA')[0].split('[')[-1].split(' ')
+            color = rgb_to_hex(list(int(round(float(c) * 255)) for c in color_list))
+            text = '/Contents('.join(t.split('/Contents(')[1:]).split(')/CreationDate(')[0]
+            text=_filter_text(text)
+            rect = t.split('/Rect[')[-1].split(']')[0].split(' ')
+            left, bottom, right, top = (float(r) for r in rect)
+            _type = t.split('Subtype/')[-1].split('/')[0].lower()
+            page = int(t.split('/Popup')[0].split('Page ')[-1])+1
+            notes.append(Note(left=left,right=right,top=top,bottom=bottom, page=page,
+                              annotation_type=_type, text=text,
+                              color=color))
+        return notes
+
+    def parse_fdf_from_foxit(self):
+        def _filter_text(text):
+            text=text.replace('\(','(').replace('\)',')')
+            text=text.replace('\\r\\n',' ').strip()
+            text=''.join(c for c in text if valid_xml_char_ordinal(c))#filter out invalid characteristics
+            return text
+
+        with open(self.annot_path, encoding='utf8', errors='ignore') as f:
+            lines = f.readlines()
+        lines = [l for l in lines if 'Contents' in l]
+        notes=[]
+        for l in lines:
+            color_list = l.split(']')[0].split('[ ')[-1].split(' ')
+            color = rgb_to_hex(list(int(round(float(c) * 255)) for c in color_list))
+            text = l.split('Annot/Contents(')[-1].split(')/CA')[0]
+            text = _filter_text(text)
+            rect = l.split(']/F')[0].split('Rect[ ')[-1].split(' ')
+            left, bottom, right, top = (float(r) for r in rect)
+            _type = l.split('Subtype/')[-1].split('/Type')[0].lower()
+            page = int(l.split('/RC')[0].split('/Page ')[-1])+1
+            notes.append(Note(left=left, right=right, top=top, bottom=bottom, page=page,
+                              annotation_type=_type, text=text,
+                              color=color))
         return notes
 
     @staticmethod
@@ -261,46 +340,49 @@ class Summary:
                 t1.set_style(Summary.create_topic_style(xm, s))
                 for note in ns:
                     t2 = t1.add_subtopic(note.text)
-                    t2.set_link(
-                        'zotero://open-pdf/library/items/{}?page={}'.format(
-                            self.iid,
-                            note.page))
+                    t2.set_link('zotero://open-pdf/library/items/{}?page={}'.format(self.iid,note.page))
                     style = Summary.create_topic_style(xm, s)
                     t2.set_style(style)
-
-                # for note in notes:
-                #     if note.content_type == s:
-                #         t2 = t1.add_subtopic(note.text)
-                #         t2.set_link(
-                #             'zotero://open-pdf/library/items/{}?page={}'.format(
-                #                 self.iid,
-                #                 note.page))
-                #         style = Summary.create_topic_style(xm, s)
-                #         t2.set_style(style)
 
         xm.save(xpath)
         os.startfile(xpath, 'open')
 
+    @staticmethod
+    def clean_notes(notes):
+
+        # 'a b s t r a c t'
+        for n in notes:
+            if n.text.replace(' ','').lower()=='abstract':
+                n.text=n.text.replace(' ','')
+
+        return [n for n in notes if len(n.text)>2]
+
     def run(self):
-        notes=self.parse_xfdf()
+        if self.annot_path.endswith('.xfdf'):
+            notes=self.parse_xfdf()
+        else:
+            with open(self.annot_path,encoding='utf8',errors='ignore') as f:
+                lines=f.readlines()
+            if lines[1].startswith('%'):
+                notes=self.parse_fdf_from_adobe()
+            else:
+                notes=self.parse_fdf_from_foxit()
         # try:
         #     notes=self._identify_note_position(notes)
         # except:
         #     pass
-
+        notes=self.clean_notes(notes)
         notes=self._identify_note_position(notes)
         # notes = sorted(notes, key=lambda x: (x.page, x.position, -x.bottom,x.left,-x.top,x.right))
         notes = sorted(notes, key=lambda x: (x.page, x.position,-x.top,x.right, -x.bottom,x.left))
 
         self.create_xmind_stacked(notes)
 
-
 def debug():
-    iid='T8Z36B47'
+    iid='XMMKXX37'
     Summary(iid)
 
-DEBUG=0
-
+DEBUG=1
 
 if __name__ == '__main__':
     if DEBUG:
@@ -311,6 +393,8 @@ if __name__ == '__main__':
         # parser.add_argument('column',metavar='c',type=int,help='column number of the paper')
         args=parser.parse_args()
         Summary(args.iid)
+
+#TODO: combine notes splitted by pages
 #TODO: read zotero.sqlite to find iid itself rather than input manually
 #TODO: automatically output .xfdf with the help of 按键精灵
 #TODO: why not use annotation to identify the titles, so we do not need to parse the bookmarks. In the other hand, we can identify the specific position of the title in the page.

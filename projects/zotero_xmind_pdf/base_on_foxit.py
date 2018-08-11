@@ -478,7 +478,7 @@ def run(iid,mode=0,title_mode='annotation'):
         create_xmind(iid, name, notes)
 
 def debug():
-    iid='EC5QKQ52'
+    iid='XMMKXX37'
     run(iid)
 
 
