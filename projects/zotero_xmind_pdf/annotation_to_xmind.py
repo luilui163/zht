@@ -3,10 +3,11 @@
 # Author:Zhang Haitao
 # Email:13163385579@163.com
 # TIME:2018-08-06  20:08
-# NAME:zht-by_parse_xfdf.py
+# NAME:zht-annotation_to_xmind.py
 
 import os
 import re
+from collections import OrderedDict
 
 import xmind
 import argparse
@@ -210,27 +211,69 @@ class Summary:
 
     def parse_fdf_from_foxit(self):
         def _filter_text(text):
-            text=text.replace('\(','(').replace('\)',')')
-            text=text.replace('\\r\\n',' ').strip()
+            str_map={
+                '\(':'(',
+                '\)':')',
+                '\\x82':'fl',
+                '\\x83':'fi',
+                '\\x84':'——',
+                '\\x85':'-',
+                '\\x8a':'-',
+                '\\x8d':'“',
+                '\\x8e':'”',
+                # '\\x8e':'"',
+                '\\x90':"'",
+                '\\xa4':'ff',
+                '\\xb4':'a´',
+                '\\xd7':'x',
+                '\\xef':'ï',
+                '\\xf8':'ø',
+                '\\xfe\\xff':'',
+                '\\r\\n':' ',
+                '\\r':' ',
+                '  ':' ',
+                #refer to http://mindprod.com/jgloss/ascii.html
+            }
+
             text=''.join(c for c in text if valid_xml_char_ordinal(c))#filter out invalid characteristics
+            for k in str_map.keys():
+                text=text.replace(k,str_map[k])
+
             return text
 
-        with open(self.annot_path, encoding='utf8', errors='ignore') as f:
+        # with open(self.annot_path, encoding='utf8', errors='ignore') as f:
+        #     lines = f.readlines()
+        with open(self.annot_path, encoding='utf8', errors='backslashreplace') as f:
             lines = f.readlines()
+
+
         lines = [l for l in lines if 'Contents' in l]
         notes=[]
         for l in lines:
-            color_list = l.split(']')[0].split('[ ')[-1].split(' ')
-            color = rgb_to_hex(list(int(round(float(c) * 255)) for c in color_list))
-            text = l.split('Annot/Contents(')[-1].split(')/CA')[0]
-            text = _filter_text(text)
-            rect = l.split(']/F')[0].split('Rect[ ')[-1].split(' ')
-            left, bottom, right, top = (float(r) for r in rect)
-            _type = l.split('Subtype/')[-1].split('/Type')[0].lower()
-            page = int(l.split('/RC')[0].split('/Page ')[-1])+1
-            notes.append(Note(left=left, right=right, top=top, bottom=bottom, page=page,
-                              annotation_type=_type, text=text,
-                              color=color))
+            if 'FreeTextTypewriter' in l:
+                text=l.split('/Contents(')[-1].split(')/')[0]
+                text=_filter_text(text)
+                rect=l.split(']')[0].split('[ ')[1].split(' ')
+                left, bottom, right, top = (float(r) for r in rect)
+                _type='freetext'
+                page=int(l.split('/AP')[0].split('/Page ')[-1])+1
+                color=None
+                notes.append(Note(left=left, right=right, top=top, bottom=bottom, page=page,
+                                  annotation_type=_type, text=text,
+                                  color=color))
+            else:
+                color_list = l.split(']')[0].split('[ ')[-1].split(' ')
+                color = rgb_to_hex(list(int(round(float(c) * 255)) for c in color_list))
+                text = l.split('Annot/Contents(')[-1].split(')/CA')[0]
+                text = _filter_text(text)
+                rect = l.split(']/F')[0].split('Rect[ ')[-1].split(' ')
+                left, bottom, right, top = (float(r) for r in rect)
+                _type = l.split('Subtype/')[-1].split('/Type')[0].lower()
+                page = int(l.split('/RC')[0].split('/Page ')[-1])+1
+                notes.append(Note(left=left, right=right, top=top, bottom=bottom, page=page,
+                                  annotation_type=_type, text=text,
+                                  color=color))
+
         return notes
 
     @staticmethod
@@ -379,10 +422,10 @@ class Summary:
         self.create_xmind_stacked(notes)
 
 def debug():
-    iid='XMMKXX37'
+    iid='98P4J96F'
     Summary(iid)
 
-DEBUG=1
+DEBUG=0
 
 if __name__ == '__main__':
     if DEBUG:

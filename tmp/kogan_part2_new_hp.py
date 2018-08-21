@@ -140,11 +140,10 @@ def get_matched_number(X,Y):
     return matched_num
 
 def _for_one_combination(args):
-    i,_names,simulated_factors=args
+    _names,simulated_factors=args
     model_factor_names = ['const', 'rp'] + list(_names)
     model = np.matrix(simulated_factors[model_factor_names])#trick: matrix
     assets = np.matrix(simulated_factors.drop(model_factor_names, axis=1)) #trick: matrix
-    # print(i)
     return _names,get_matched_number(model,assets)
 
 def get_data():
@@ -157,13 +156,11 @@ def simulate_onetime(_id,benchmark,raw_factors,realized_result,anomaly_num):
                                         anomaly_num)
     simulated_factors = sm.add_constant(simulated_factors)
     def args_generator():
-        i=0
-        for _names in itertools.combinations([col for col in simulated_factors.columns if col not in ['const', 'rp']], 2):
-            i+=1
-            yield i,_names,simulated_factors
+        for _names in itertools.combinations([col for col  in simulated_factors.columns if col not in ['const', 'rp']], 2):
+            yield _names,simulated_factors
 
-    # results=multi_task(_for_one_combination,args_generator(),8)
-    results=[_for_one_combination(args) for args in args_generator()]
+    results=multi_task(_for_one_combination,args_generator(),8)
+    # results=[_for_one_combination(args) for args in args_generator()]
     _names_l=[r[0] for r in results]
     _matched_l=[r[1] for r in results]
     index=pd.MultiIndex.from_tuples(_names_l)
@@ -171,13 +168,49 @@ def simulate_onetime(_id,benchmark,raw_factors,realized_result,anomaly_num):
     print(_id)
     return matched_series
 
-def simulate(sim_num=10):
-    ANOMALY_NUM = 100
+def simulate(sim_num=10,anomaly_num=0):
     benchmark, raw_factors = get_data()
     realized_result = pricing_assets(benchmark, raw_factors)
-    ss=[simulate_onetime(i,benchmark,raw_factors,realized_result,ANOMALY_NUM) for i in range(sim_num)]
+    ss=[simulate_onetime(i,benchmark,raw_factors,realized_result,anomaly_num) for i in range(sim_num)]
     df=pd.concat(ss,axis=1)
-    df.to_pickle(r'e:\a\df.pkl')
+    df.to_pickle(r'E:\tmp_kogan\{}_{}.pkl'.format(anomaly_num,sim_num))
+
+def run():
+    for anomaly_num in [50,60,110]:#fixme:
+        simulate(sim_num=100,anomaly_num=anomaly_num)
+        print(anomaly_num)
+
+    # for sim_num in [1,10]:
+    #     simulate(sim_num,anomaly_num=0)
+
+def analyze_with_barchart():
+
+    df = pd.read_pickle(r'e:\a\df.pkl')
+
+    import matplotlib.pyplot as plt
+
+    counts = df.stack().value_counts().reindex(range(200))
+    plt.figure(figsize=(20, 8))
+    counts.plot.bar()
+    plt.savefig(r'e:\a\sampled_10_100.pdf')
+
+
+def analyze():
+    ans=[0, 10, 50, 100, 150, 194]
+    df=pd.concat([pd.read_pickle(r'e:\tmp_kogan\{}_1.pkl'.format(an)) for an in ans],axis=1,keys=ans)
+    df.plot.kde(bw_method=0.3).get_figure().savefig(r'e:\tmp_kogan\distribution.pdf')
+
+# df=pd.concat([pd.read_pickle(r'e:\tmp_kogan\0_{}.pkl'.format(i)) for i in [1,10]],axis=1,keys=[1,10])
+#
+# df.plot.kde(bw_method=0.3).get_figure().show()
+
+
+if __name__ == '__main__':
+    run()
+
+
+
+
 
 
 def profiler_get_matched():
@@ -199,6 +232,30 @@ def profiler_simulate_onetime():
     # get_matched_number(benchmark,raw_factors)
     lp.print_stats()
 
+def profiler_for_one_combination():
+    ANOMALY_NUM = 100
+    benchmark, raw_factors = get_data()
+    realized_result = pricing_assets(benchmark, raw_factors)
+    simulated_factors = bootstrap_kogan(benchmark, raw_factors, realized_result,
+                                        ANOMALY_NUM)
+    simulated_factors = sm.add_constant(simulated_factors)
+
+    # def args_generator():
+    #     i=0
+    #     for _names in itertools.combinations([col for col in simulated_factors.columns if col not in ['const', 'rp']], 2):
+    #         i+=1
+    #         yield i,_names,simulated_factors
+
+    i=0
+    _names=simulated_factors.columns[100:102]
+
+    args=(i, _names, simulated_factors)
+    lp = LineProfiler()
+    lp_wrapper = lp(_for_one_combination)
+    lp_wrapper(args)
+    # get_matched_number(benchmark,raw_factors)
+    lp.print_stats()
+
 
 def debug():
     benchmark, raw_factors = get_data()
@@ -206,18 +263,8 @@ def debug():
     get_matched_number(benchmark,raw_factors)
 
 
-if __name__ == '__main__':
-    profiler_simulate_onetime()
-
 # if __name__ == '__main__':
-#     simulate()
+#     profiler_simulate_onetime()
+    # profiler_for_one_combination()
 
-# matched_series=simulate_onetime()
-
-
-# if __name__ == '__main__':
-#     import time
-#     t1=time.time()
-#     simulate_onetime()
-#     print(time.time()-t1)
 

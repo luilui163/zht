@@ -10,11 +10,11 @@ from pandas.tseries.offsets import MonthEnd, Day, YearEnd
 import time
 
 
-def get_today():
+def get_today(format='%Y-%m-%d'):
     '''
     :return: date as string like '2018-02-01'
     '''
-    today=datetime.datetime.today().strftime('%Y-%m-%d')
+    today=datetime.datetime.today().strftime(format)
     return today
 
 def get_year():
