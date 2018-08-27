@@ -103,7 +103,8 @@ class Note:
             else:
                 return 'sentence'
         else:
-            raise ValueError
+            return 'content'
+            # raise ValueError
 
 class Summary:
     def __init__(self,iid):
@@ -214,6 +215,7 @@ class Summary:
             str_map={
                 '\(':'(',
                 '\)':')',
+                '\\\\':'"', #replace '\\' with '"'
                 '\\x82':'fl',
                 '\\x83':'fi',
                 '\\x84':'——',
@@ -224,15 +226,23 @@ class Summary:
                 # '\\x8e':'"',
                 '\\x90':"'",
                 '\\xa4':'ff',
-                '\\xb4':'a´',
+                '\\xb1':'α',
+                '\\xb2':'β',
+                '\\xb3':'γ',
+                '\\xb4':'δ',
+                '\\xb5':'ε',
+                '\\xc1':'ρ',
                 '\\xd7':'x',
                 '\\xef':'ï',
+                '\\xf6':'ö',
                 '\\xf8':'ø',
-                '\\xfe\\xff':'',
+                '\\xfe':'+',
+                # '\\xfe\\xff':'',
                 '\\r\\n':' ',
                 '\\r':' ',
                 '  ':' ',
-                #refer to http://mindprod.com/jgloss/ascii.html
+                '+\\xff':'',
+                #http://mindprod.com/jgloss/ascii.html
             }
 
             text=''.join(c for c in text if valid_xml_char_ordinal(c))#filter out invalid characteristics
@@ -266,7 +276,8 @@ class Summary:
                 color = rgb_to_hex(list(int(round(float(c) * 255)) for c in color_list))
                 text = l.split('Annot/Contents(')[-1].split(')/CA')[0]
                 text = _filter_text(text)
-                rect = l.split(']/F')[0].split('Rect[ ')[-1].split(' ')
+                rect=''.join(l.split('Rect[ ')[1:]).split(']/')[0].split(' ')
+                # rect = l.split(']/F')[0].split('Rect[ ')[-1].split(' ')
                 left, bottom, right, top = (float(r) for r in rect)
                 _type = l.split('Subtype/')[-1].split('/Type')[0].lower()
                 page = int(l.split('/RC')[0].split('/Page ')[-1])+1
@@ -422,7 +433,7 @@ class Summary:
         self.create_xmind_stacked(notes)
 
 def debug():
-    iid='98P4J96F'
+    iid='L3G6K8J7'
     Summary(iid)
 
 DEBUG=0
