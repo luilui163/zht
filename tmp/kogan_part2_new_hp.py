@@ -6,6 +6,7 @@
 # NAME:zht-base_on_foxit.py
 import itertools
 import multiprocessing
+import os
 import random
 
 import numpy as np
@@ -19,6 +20,7 @@ import statsmodels.api as sm
 
 CRITIC=0.05
 
+DIR=r'e:\tmp_kogan'
 
 def multi_task(func, args_iter, n=4):
     pool=multiprocessing.Pool(n)
@@ -147,124 +149,86 @@ def _for_one_combination(args):
     return _names,get_matched_number(model,assets)
 
 def get_data():
-    benchmark=pd.read_pickle(r'E:\tmp_kogan\benchmark.pkl')
-    raw_factors=pd.read_pickle(r'E:\tmp_kogan\raw_factors.pkl')
+    benchmark=pd.read_pickle(os.path.join(DIR,'benchmark.pkl'))
+    raw_factors=pd.read_pickle(os.path.join(DIR,'raw_factors.pkl'))
+    # benchmark=pd.read_pickle(r'E:\tmp_kogan\benchmark.pkl')
+    # raw_factors=pd.read_pickle(r'E:\tmp_kogan\raw_factors.pkl')
     return benchmark,raw_factors
+
+def match_with_all_possible_three_factor_models(factors):
+    '''
+    :param factors:DataFrame, factors must contain two columns named ['const','rp']
+    :return: MultiIndex Series
+    '''
+    def args_generator():
+        for _names in itertools.combinations([col for col  in factors.columns if col not in ['const', 'rp']], 2):
+            yield _names,factors
+    results=multi_task(_for_one_combination,args_generator(),6)
+    _names_l=[r[0] for r in results]
+    _matched_l=[r[1] for r in results]
+    index=pd.MultiIndex.from_tuples(_names_l)
+    matched_series=pd.Series(_matched_l,index=index)
+    return matched_series
+
+def get_realized_result():
+    benchmark, raw_factors = get_data()
+    raw_factors['rp']=benchmark['rp']
+    raw_factors['const']=1
+    realized=match_with_all_possible_three_factor_models(raw_factors)
+    realized.to_pickle(os.path.join(DIR,'realized.pkl'))
+
+# if __name__ == '__main__':
+#     get_realized_result()
+
+
 
 def simulate_onetime(_id,benchmark,raw_factors,realized_result,anomaly_num):
     simulated_factors = bootstrap_kogan(benchmark, raw_factors, realized_result,
                                         anomaly_num)
     simulated_factors = sm.add_constant(simulated_factors)
-    def args_generator():
-        for _names in itertools.combinations([col for col  in simulated_factors.columns if col not in ['const', 'rp']], 2):
-            yield _names,simulated_factors
+    # def args_generator():
+    #     for _names in itertools.combinations([col for col  in simulated_factors.columns if col not in ['const', 'rp']], 2):
+    #         yield _names,simulated_factors
+    return match_with_all_possible_three_factor_models(simulated_factors)
 
-    results=multi_task(_for_one_combination,args_generator(),8)
-    # results=[_for_one_combination(args) for args in args_generator()]
-    _names_l=[r[0] for r in results]
-    _matched_l=[r[1] for r in results]
-    index=pd.MultiIndex.from_tuples(_names_l)
-    matched_series=pd.Series(_matched_l,index=index)
-    print(_id)
-    return matched_series
+    # results=multi_task(_for_one_combination,args_generator(),6)
+    # # results=[_for_one_combination(args) for args in args_generator()]
+    # _names_l=[r[0] for r in results]
+    # _matched_l=[r[1] for r in results]
+    # index=pd.MultiIndex.from_tuples(_names_l)
+    # matched_series=pd.Series(_matched_l,index=index)
+    # print(_id)
+    # return matched_series
 
 def simulate(sim_num=10,anomaly_num=0):
     benchmark, raw_factors = get_data()
     realized_result = pricing_assets(benchmark, raw_factors)
     ss=[simulate_onetime(i,benchmark,raw_factors,realized_result,anomaly_num) for i in range(sim_num)]
     df=pd.concat(ss,axis=1)
-    df.to_pickle(r'E:\tmp_kogan\{}_{}.pkl'.format(anomaly_num,sim_num))
+    df.to_pickle(os.path.join(DIR,f'{anomaly_num}_{sim_num}.pkl'))
+    # df.to_pickle(r'E:\tmp_kogan\{}_{}.pkl'.format(anomaly_num,sim_num))
 
 def run():
-    for anomaly_num in [50,60,110]:#fixme:
+    for anomaly_num in [60,110]:#fixme:
         simulate(sim_num=100,anomaly_num=anomaly_num)
         print(anomaly_num)
 
-    # for sim_num in [1,10]:
-    #     simulate(sim_num,anomaly_num=0)
-
-def analyze_with_barchart():
-
-    df = pd.read_pickle(r'e:\a\df.pkl')
-
-    import matplotlib.pyplot as plt
-
-    counts = df.stack().value_counts().reindex(range(200))
-    plt.figure(figsize=(20, 8))
-    counts.plot.bar()
-    plt.savefig(r'e:\a\sampled_10_100.pdf')
-
-
-def analyze():
-    ans=[0, 10, 50, 100, 150, 194]
-    df=pd.concat([pd.read_pickle(r'e:\tmp_kogan\{}_1.pkl'.format(an)) for an in ans],axis=1,keys=ans)
-    df.plot.kde(bw_method=0.3).get_figure().savefig(r'e:\tmp_kogan\distribution.pdf')
-
-# df=pd.concat([pd.read_pickle(r'e:\tmp_kogan\0_{}.pkl'.format(i)) for i in [1,10]],axis=1,keys=[1,10])
-#
-# df.plot.kde(bw_method=0.3).get_figure().show()
-
-
-if __name__ == '__main__':
-    run()
-
-
-
-
-
-
-def profiler_get_matched():
-    benchmark,raw_factors=get_data()
-    benchmark,raw_factors=np.matrix(benchmark),np.matrix(raw_factors)
-    lp=LineProfiler()
-    lp_wrapper=lp(get_matched_number)
-    lp_wrapper(benchmark,raw_factors)
-    # get_matched_number(benchmark,raw_factors)
-    lp.print_stats()
-
-def profiler_simulate_onetime():
-    ANOMALY_NUM = 100
-    benchmark, raw_factors = get_data()
-    realized_result = pricing_assets(benchmark, raw_factors)
-    lp = LineProfiler()
-    lp_wrapper = lp(simulate_onetime)
-    lp_wrapper(0,benchmark,raw_factors,realized_result,ANOMALY_NUM)
-    # get_matched_number(benchmark,raw_factors)
-    lp.print_stats()
-
-def profiler_for_one_combination():
-    ANOMALY_NUM = 100
-    benchmark, raw_factors = get_data()
-    realized_result = pricing_assets(benchmark, raw_factors)
-    simulated_factors = bootstrap_kogan(benchmark, raw_factors, realized_result,
-                                        ANOMALY_NUM)
-    simulated_factors = sm.add_constant(simulated_factors)
-
-    # def args_generator():
-    #     i=0
-    #     for _names in itertools.combinations([col for col in simulated_factors.columns if col not in ['const', 'rp']], 2):
-    #         i+=1
-    #         yield i,_names,simulated_factors
-
-    i=0
-    _names=simulated_factors.columns[100:102]
-
-    args=(i, _names, simulated_factors)
-    lp = LineProfiler()
-    lp_wrapper = lp(_for_one_combination)
-    lp_wrapper(args)
-    # get_matched_number(benchmark,raw_factors)
-    lp.print_stats()
-
-
-def debug():
-    benchmark, raw_factors = get_data()
-    benchmark, raw_factors = np.matrix(benchmark), np.matrix(raw_factors)
-    get_matched_number(benchmark,raw_factors)
-
-
-# if __name__ == '__main__':
-#     profiler_simulate_onetime()
-    # profiler_for_one_combination()
-
+def get_fig5():
+    '''Fig5'''
+    ans=[0, 10, 50,60,100,110, 150, 194]
+    ss=[]
+    for an in ans:
+        # s=pd.read_pickle(r'e:\tmp_kogan\{}_100.pkl'.format(an)).stack()
+        df=pd.read_pickle(os.path.join(DIR,f'{an}_100.pkl'))
+        s = df.apply(lambda s: s.value_counts() / len(s)).reindex(index=range(1, 194)).fillna(0).mean(axis=1)
+        s.name=an
+        ss.append(s)
+        print(an)
+    realized = pd.read_pickle(os.path.join(DIR, 'realized.pkl'))
+    realized=realized.value_counts()/len(realized)
+    realized=realized.reindex(index=range(194))
+    realized.name='realized'
+    comb=pd.concat(ss+[realized],axis=1)
+    # comb.plot.kde(bw_method=0.3).get_figure().savefig(os.path.join(DIR,'distribution_all.pdf'))
+    comb.plot().get_figure().savefig(os.path.join(DIR,'distribution_all.pdf'))
 

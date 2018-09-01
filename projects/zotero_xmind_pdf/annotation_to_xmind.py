@@ -223,6 +223,7 @@ class Summary:
                 '\\x8a':'-',
                 '\\x8d':'“',
                 '\\x8e':'”',
+                '\\x8f\\x8f':'"',
                 # '\\x8e':'"',
                 '\\x90':"'",
                 '\\xa4':'ff',
@@ -231,8 +232,10 @@ class Summary:
                 '\\xb3':'γ',
                 '\\xb4':'δ',
                 '\\xb5':'ε',
+                '\\xbb':'λ',
                 '\\xc1':'ρ',
                 '\\xd7':'x',
+                '\\xe1':'á',
                 '\\xef':'ï',
                 '\\xf6':'ö',
                 '\\xf8':'ø',
@@ -280,7 +283,8 @@ class Summary:
                 # rect = l.split(']/F')[0].split('Rect[ ')[-1].split(' ')
                 left, bottom, right, top = (float(r) for r in rect)
                 _type = l.split('Subtype/')[-1].split('/Type')[0].lower()
-                page = int(l.split('/RC')[0].split('/Page ')[-1])+1
+                page=int(l.split('/Page ')[1].split('/')[0])+1
+                # page = int(l.split('/RC')[0].split('/Page ')[-1])+1
                 notes.append(Note(left=left, right=right, top=top, bottom=bottom, page=page,
                                   annotation_type=_type, text=text,
                                   color=color))
@@ -433,7 +437,7 @@ class Summary:
         self.create_xmind_stacked(notes)
 
 def debug():
-    iid='L3G6K8J7'
+    iid='CKIHD3J4'
     Summary(iid)
 
 DEBUG=0
