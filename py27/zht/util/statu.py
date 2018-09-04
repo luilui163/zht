@@ -262,7 +262,7 @@ def famaMacBeth(formula, time_label, df, lags=5):
     pvalues = []
     for x in params_labels:
         params.append(means[x].params['Intercept'])
-        stderrs.append(means[x].bse['Intercept'])
+        stderrs.append(means[x].bse['Intercept']) #trick: stderr = std / sqrt(n-1)
         tvalues.append(means[x].tvalues['Intercept'])
         pvalues.append(means[x].pvalues['Intercept'])
 
