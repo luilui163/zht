@@ -12,57 +12,61 @@ import pandas as pd
 import numpy as np
 
 
-from memory_profiler import profile
-#
-# fp=open(os.path.join(DIR_TMP,'memory_debug.log'),'a')
-fp=open('memory_debug.log','a')
-
-
-# names=os.listdir(r'G:\FT_Users\HTZhang\FT\data_mining\result')
-# name = names[0]
+dirpath=r'E:\a\a'
+csvpath=r'e:\a\csv1'
 
 
 
-# @profile(precision=4)
-def tmp_func():
-    # global name
-    # name='2-ratio_history_compound_growth-tot_bal_netcash_inc-tot_profit'
-    # df = pd.read_pickle(os.path.join(r'G:\FT_Users\HTZhang\FT\data_mining\result', name, 'monthly.pkl'))
+def txt2csv(fn):
+    path=os.path.join(dirpath,fn)
+    c=open(path,encoding='ISO-8859-1',newline='\r\n').read()
+    '''
+    By using notepad++ to show all the hiden character we can know that the line seperate is CRLF,that is,'\r\n'
+    '''
+    lines=c.split('\r\n')
+    header=lines[0].split('\t')
+    items=[]
+    invalid=0
+    for line in lines[1:-1]:
+        #TODO: use regex to clear the data
+        # l1=line.replace('\n','')
+        # l2=re.sub('\t\t+', '\t', l1)
+        # row=l2.split('\t')
 
-    pd.DataFrame()
-    pd.DataFrame()
+        # line=line.replace('\n','')
+        # line=re.sub('\t\t+','\t',line)
 
-    # np.array((3,4))
-    # print(df.info())
-    # df = df.groupby('month_end').filter(
-    #     lambda s: len(s) > 300)  # trick: at least 300 samples in each month
-    # df[name] = df[name].groupby('month_end').apply(outlier)
-    # df[name] = df[name].groupby('month_end').apply(z_score)
-    # df = df.iloc[:, 0].unstack().T
-    # df.to_pickle(name+'.pkl')
-    # print(name)
-    return
+        row=line.split('\t')
+        if len(row)==len(header):
+            items.append(row)
+        else:
+            invalid+=1
+    df=pd.DataFrame(items,columns=header)
+    df.to_csv(os.path.join(csvpath,fn[:-4]+'.csv'),encoding='ISO-8859-1')
+    print(len(lines)-3,invalid)
+    return fn,len(lines)-3,invalid
+
+def parse_all():
+    fns=os.listdir(dirpath)
+    for fn in fns:
+        txt2csv(fn)
+        print(fn)
+
+def select_base_variables():
+    fns=os.listdir(csvpath)
+    ss=[]
+    for fn in fns:
+        df=pd.read_csv(os.path.join(csvpath,fn),index_col=0,encoding='gbk')
+        s=df.iloc[0,:]
+        ss.append(s)
+
+    df=pd.concat(ss,axis=0,keys=[fn[:-4] for fn in fns])
+    df=df.to_frame().reset_index()
+    df.head()
+    df.columns=['sname','indicator','name']
+
+    df.to_csv(r'e:\a\df.csv',encoding='gbk')
 
 
-
-
-@profile(precision=4,stream=fp)
-def run():
-    # print(names.__sizeof__()/(1024*1024))
-    # name='2-ratio_history_compound_growth-tot_bal_netcash_inc-tot_profit'
-    # name=names[0]
-    # name=copy.copy(names[0])
-    # del names
-    # print(locals())
-    tmp_func()
-
-
-
-    # print(locals())
-
-    # for nm in names[:2]:
-    #     tmp_func(nm)
-
-if __name__ == '__main__':
-    run()
-    # run()
+# if __name__ == '__main__':
+#     parse_all()
