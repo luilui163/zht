@@ -6,12 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="update">
       <change afterPath="$PROJECT_DIR$/internship/FT/server/xiangqi/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/python_chen/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/python_chen/task1-trading_system.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/zotero_xmind_pdf/merge_pdf/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/zotero_xmind_pdf/merge_pdf/merge_pdf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/python_chen/2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/a.py" beforeDir="false" afterPath="$PROJECT_DIR$/a.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/wind/update_financial_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/wind/update_financial_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internship/FT/.idea/FT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/internship/FT/.idea/FT.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internship/FT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/internship/FT/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internship/FT/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/internship/FT/config.py" afterDir="false" />
@@ -23,8 +21,8 @@
       <change beforePath="$PROJECT_DIR$/projects/Coursera-Asset-Pricing" beforeDir="false" afterPath="$PROJECT_DIR$/projects/Coursera-Asset-Pricing" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/Python-Financial-Tools" beforeDir="false" afterPath="$PROJECT_DIR$/projects/Python-Financial-Tools" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/financial text analyse/document_cluster" beforeDir="false" afterPath="$PROJECT_DIR$/projects/financial text analyse/document_cluster" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/python_chen/task1-trading_system.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/python_chen/task1-trading_system.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/researchTopics/assetPricing3/data/din_derivative.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/python_chen/1.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,10 +41,10 @@
     <SUITE FILE_PATH="coverage/zht$parse_JEL.coverage" NAME="parse_JEL Coverage Results" MODIFIED="1524662815496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/playingField" />
     <SUITE FILE_PATH="coverage/zht$HaiTong_hp_new.coverage" NAME="HaiTong_hp_new Coverage Results" MODIFIED="1534767056650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tmp" />
     <SUITE FILE_PATH="coverage/zht$split.coverage" NAME="split Coverage Results" MODIFIED="1532013942777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
-    <SUITE FILE_PATH="coverage/zht$example_create.coverage" NAME="example_create Coverage Results" MODIFIED="1532277101601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_zht" />
+    <SUITE FILE_PATH="coverage/zht$example_create.coverage" NAME="example_create Coverage Results" MODIFIED="1537356893646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_zht" />
     <SUITE FILE_PATH="coverage/zht$build_corpus.coverage" NAME="build_corpus Coverage Results" MODIFIED="1529542778002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/financial text analyse/text_analysis" />
     <SUITE FILE_PATH="coverage/zht$merge_pdf.coverage" NAME="merge_pdf Coverage Results" MODIFIED="1536503889198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf/merge_pdf" />
-    <SUITE FILE_PATH="coverage/zht$update_financial_data.coverage" NAME="update_financial_data Coverage Results" MODIFIED="1535592137369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data/wind" />
+    <SUITE FILE_PATH="coverage/zht$update_financial_data.coverage" NAME="update_financial_data Coverage Results" MODIFIED="1537516897939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data/wind" />
     <SUITE FILE_PATH="coverage/zht$backup.coverage" NAME="backup Coverage Results" MODIFIED="1533717891623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/zht$zht_search_sentence.coverage" NAME="zht_search_sentence Coverage Results" MODIFIED="1529716665035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/financial text analyse/text_analysis" />
     <SUITE FILE_PATH="coverage/zht$zotero.coverage" NAME="zotero Coverage Results" MODIFIED="1530147632499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Lib/site-packages/pyzotero" />
@@ -58,24 +56,34 @@
     <SUITE FILE_PATH="coverage/zht$test.coverage" NAME="test Coverage Results" MODIFIED="1525920340461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_python/pandas_profiling" />
     <SUITE FILE_PATH="coverage/zht$find_n_closest_sentences.coverage" NAME="find_n_closest_sentences Coverage Results" MODIFIED="1529656390782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/financial text analyse/text_analysis" />
     <SUITE FILE_PATH="coverage/zht$notes2xmind.coverage" NAME="notes2xmind Coverage Results" MODIFIED="1530522362311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero" />
-    <SUITE FILE_PATH="coverage/zht$task1_trading_system.coverage" NAME="task1-trading_system Coverage Results" MODIFIED="1537270726686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/python_chen" />
+    <SUITE FILE_PATH="coverage/zht$task1_trading_system.coverage" NAME="task1-trading_system Coverage Results" MODIFIED="1537353257632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/python_chen" />
     <SUITE FILE_PATH="coverage/zht$HaiTong_hp.coverage" NAME="HaiTong_hp Coverage Results" MODIFIED="1534586424183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tmp" />
     <SUITE FILE_PATH="coverage/zht$A_standard_frame_of_crawler.coverage" NAME="A standard frame of crawler Coverage Results" MODIFIED="1524916889508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/crawler" />
     <SUITE FILE_PATH="coverage/zht$by_parse_xfdf.coverage" NAME="by_parse_xfdf Coverage Results" MODIFIED="1534050425912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
     <SUITE FILE_PATH="coverage/zht$1.coverage" NAME="1 Coverage Results" MODIFIED="1536752734145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/python_chen" />
     <SUITE FILE_PATH="coverage/zht$mekk_xmind.coverage" NAME="mekk_xmind Coverage Results" MODIFIED="1531453244605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
-    <SUITE FILE_PATH="coverage/zht$test_xmind_36.coverage" NAME="test_xmind_36 Coverage Results" MODIFIED="1532275352443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/xmind" />
+    <SUITE FILE_PATH="coverage/zht$test_xmind_36.coverage" NAME="test_xmind_36 Coverage Results" MODIFIED="1537356622352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/xmind" />
     <SUITE FILE_PATH="coverage/zht$parse_toc.coverage" NAME="parse_toc Coverage Results" MODIFIED="1530885503991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
     <SUITE FILE_PATH="coverage/zht$Natural_language_processing_with_python.coverage" NAME="Natural language processing with python Coverage Results" MODIFIED="1529324803108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_python/NLTK" />
     <SUITE FILE_PATH="coverage/zht$analyze_tags.coverage" NAME="analyze_tags Coverage Results" MODIFIED="1530332940031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero" />
     <SUITE FILE_PATH="coverage/zht$build_copora.coverage" NAME="build_copora Coverage Results" MODIFIED="1529718303654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_engine" />
-    <SUITE FILE_PATH="coverage/zht$a.coverage" NAME="a Coverage Results" MODIFIED="1537081825292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/zht$a.coverage" NAME="a Coverage Results" MODIFIED="1537421226962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/zht$download.coverage" NAME="download Coverage Results" MODIFIED="1532655467614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/download_youtube" />
     <SUITE FILE_PATH="coverage/zht$xmind.coverage" NAME="xmind Coverage Results" MODIFIED="1530451529960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/xmind" />
     <SUITE FILE_PATH="coverage/zht$test_xmind.coverage" NAME="test_xmind Coverage Results" MODIFIED="1530452527327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/xmind" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="update_financial_data.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/wind/update_financial_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1003">
+              <caret line="357" column="32" lean-forward="true" selection-start-line="357" selection-start-column="32" selection-end-line="357" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -86,9 +94,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getchi</find>
-      <find>bookmark</find>
-      <find>GRS</find>
       <find>label</find>
       <find>identif</find>
       <find>type</find>
@@ -116,6 +121,9 @@
       <find>haitong</find>
       <find>tvalue</find>
       <find>PdfFileReader</find>
+      <find>style</find>
+      <find>09-18</find>
+      <find>w.</find>
     </findStrings>
     <replaceStrings>
       <replace>strikout</replace>
@@ -138,7 +146,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/projects/zotero/analyze_tags.py" />
         <option value="$PROJECT_DIR$/projects/xmind/xmind.py" />
         <option value="$PROJECT_DIR$/../Lib/site-packages/xmind/core/__init__.py" />
         <option value="$PROJECT_DIR$/projects/xmind/test_xmind.py" />
@@ -181,14 +188,15 @@
         <option value="$PROJECT_DIR$/tmp/kogan_part2_new_hp.py" />
         <option value="$PROJECT_DIR$/tmp/HaiTong_hp_new.py" />
         <option value="$PROJECT_DIR$/data/wind/wind_hp.py" />
-        <option value="$PROJECT_DIR$/data/wind/update_financial_data.py" />
         <option value="$PROJECT_DIR$/researchTopics/assetPricing2/core/main.py" />
         <option value="$PROJECT_DIR$/projects/portfolio_optimization/HaiTong_hp_new.py" />
         <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/merge_pdf/merge_pdf.py" />
         <option value="$PROJECT_DIR$/projects/python_chen/1.py" />
+        <option value="$PROJECT_DIR$/projects/python_chen/task1-trading_system.py" />
+        <option value="$PROJECT_DIR$/projects/python_chen/2.py" />
         <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py" />
         <option value="$PROJECT_DIR$/a.py" />
-        <option value="$PROJECT_DIR$/projects/python_chen/task1-trading_system.py" />
+        <option value="$PROJECT_DIR$/data/wind/update_financial_data.py" />
       </list>
     </option>
   </component>
@@ -202,10 +210,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1939" />
-    <option name="height" value="1060" />
+    <option name="x" value="951" />
+    <option name="width" value="978" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -215,6 +222,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -222,29 +230,17 @@
               <item name="zht" type="b2602c69:ProjectViewProjectNode" />
               <item name="zht" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zht" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="python_chen" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/app/python36/zht/a.py&#10;famaMacBeth&#9;null&#9;null&#10;GRS_test&#9;null&#9;null&#10;tostring&#9;null&#9;null&#10;request&#9;null&#9;null&#10;summary_statistics&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -281,26 +277,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.task1-trading_system">
-    <configuration name="1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="zht" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/projects/python_chen" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projects/python_chen/1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.update_financial_data">
     <configuration name="a" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="zht" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -320,7 +297,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="merge_pdf" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="example_create" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="zht" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -328,12 +305,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/projects/zotero_xmind_pdf/merge_pdf" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_zht" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projects/zotero_xmind_pdf/merge_pdf/merge_pdf.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_zht/example_create.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -353,6 +330,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projects/python_chen/task1-trading_system.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="test_xmind_36" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="zht" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/projects/xmind" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projects/xmind/test_xmind_36.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -380,17 +376,17 @@
     <list>
       <item itemvalue="Python.update_financial_data" />
       <item itemvalue="Python.a" />
-      <item itemvalue="Python.merge_pdf" />
-      <item itemvalue="Python.1" />
       <item itemvalue="Python.task1-trading_system" />
+      <item itemvalue="Python.test_xmind_36" />
+      <item itemvalue="Python.example_create" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.task1-trading_system" />
-        <item itemvalue="Python.a" />
-        <item itemvalue="Python.1" />
-        <item itemvalue="Python.merge_pdf" />
         <item itemvalue="Python.update_financial_data" />
+        <item itemvalue="Python.a" />
+        <item itemvalue="Python.example_create" />
+        <item itemvalue="Python.test_xmind_36" />
+        <item itemvalue="Python.task1-trading_system" />
       </list>
     </recent_temporary>
   </component>
@@ -709,7 +705,14 @@
       <option name="project" value="LOCAL" />
       <updated>1536059237583</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="update">
+      <created>1537272027074</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1537272027074</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TodoView">
@@ -727,26 +730,26 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3275862" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.31879196" side_tool="true" weight="0.48174158" />
       <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.6812081" visible="true" weight="0.39466292" />
-      <window_info anchor="right" id="Python Console" order="7" sideWeight="0.36376405" weight="0.33355704" />
-      <window_info anchor="right" id="Run" order="6" sideWeight="0.5421348" side_tool="true" visible="true" weight="0.34161073" />
-      <window_info anchor="right" id="Terminal" order="11" sideWeight="0.76865673" side_tool="true" weight="0.3315565" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15503356" />
+      <window_info anchor="right" id="Python Console" order="7" sideWeight="0.31320226" weight="0.32416108" />
+      <window_info anchor="right" id="Run" order="6" sideWeight="0.5955056" side_tool="true" weight="0.4147651" />
+      <window_info anchor="right" id="Terminal" order="11" sideWeight="0.29213482" side_tool="true" weight="0.4161074" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12013423" />
       <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.44803372" />
-      <window_info anchor="right" id="SciView" order="5" sideWeight="0.63623595" side_tool="true" weight="0.3" />
+      <window_info anchor="right" id="SciView" order="5" sideWeight="0.64044946" side_tool="true" weight="0.2946309" />
       <window_info anchor="right" id="Structure" order="8" sideWeight="0.8216292" side_tool="true" weight="0.2785235" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info anchor="right" id="Debug" order="4" sideWeight="0.45786518" weight="0.46778524" />
+      <window_info anchor="right" id="Debug" order="4" sideWeight="0.40449437" visible="true" weight="0.15771812" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="10" sideWeight="0.5948276" side_tool="true" weight="0.5399787" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" x="0" y="0" width="337" height="648" id="Documentation" order="3" sideWeight="0.40486726" side_tool="true" weight="0.31233245" />
       <window_info anchor="right" id="Database" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info active="true" anchor="bottom" id="Concurrent Activities Diagram" order="8" weight="0.46923077" />
     </layout>
   </component>
@@ -810,11 +813,16 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="266" />
+      <option name="time" value="279" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>'1559816880010500378' in l</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>order.num==1100</expression-string>
         <language-id>Python</language-id>
@@ -827,11 +835,6 @@
       </expression>
       <expression>
         <expression-string>'Breckenfelder' in l</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>'1559816880010500378' in l</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -870,55 +873,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_zht/document.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="279" selection-start-line="279" selection-end-line="279" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/internship/FT/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114">
-          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/base_on_foxit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3781">
-          <caret line="207" selection-start-line="207" selection-end-line="207" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../wind/bin/WindPy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../wind/bin/installWindPy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="47" column="4" lean-forward="true" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/researchTopics/assetPricing2/data/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/wind/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Lib/site-packages/numba/six.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
@@ -1052,13 +1006,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Lib/site-packages/WindPy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="121" column="22" lean-forward="true" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/dateu.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -1096,24 +1043,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/wind/update_financial_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2678">
-          <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/researchTopics/assetPricing2/core/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/portfolio_optimization/HaiTong_hp_new.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="107" column="15" lean-forward="true" selection-start-line="107" selection-start-column="15" selection-end-line="107" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -1138,13 +1071,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/merge_pdf/merge_pdf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/internship/FT/xiangqi/zhuxiangqi/self_lib/premium_func.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2642">
@@ -1166,13 +1092,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="238" column="28" selection-start-line="238" selection-start-column="28" selection-end-line="238" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/gta/parse_txt.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -1180,30 +1099,351 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects/python_chen/task1-trading_system.py">
+    <entry file="file://$PROJECT_DIR$/projects/python_chen/2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="171" column="51" selection-start-line="171" selection-start-column="51" selection-end-line="171" selection-end-column="51" />
-          <folding>
-            <element signature="e#146#157#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="95">
+          <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/a.py">
+    <entry file="file://$PROJECT_DIR$/projects/xmind/test_xmind_36.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="55" column="27" lean-forward="true" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
-          <folding>
-            <element signature="e#130#139#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-324">
+          <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/merge_pdf/merge_pdf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/python_chen/task1-trading_system.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="256" lean-forward="true" selection-start-line="256" selection-end-line="256" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/portfolio_optimization/HaiTong_hp_new.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="482" column="51" lean-forward="true" selection-start-line="482" selection-start-column="51" selection-end-line="482" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_zht/xmlutil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_zht/document.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="275" column="42" lean-forward="true" selection-start-line="275" selection-start-column="42" selection-end-line="275" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_zht/example_create.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_zht/id_gen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projects/python_chen/1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        <state relative-caret-position="132">
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="357" column="14" selection-start-line="357" selection-start-column="14" selection-end-line="357" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="162" column="50" lean-forward="true" selection-start-line="162" selection-start-column="50" selection-end-line="162" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Lib/site-packages/WindPy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="819" column="48" lean-forward="true" selection-start-line="819" selection-start-column="48" selection-end-line="819" selection-end-column="48" />
+          <folding>
+            <element signature="e#24#118#1" />
+            <element signature="e#266#431#0" />
+            <element signature="e#266#395#1" />
+            <element signature="e#469#894#0" />
+            <element signature="e#478#894#0" />
+            <element signature="e#936#1006#0" />
+            <element signature="e#945#1006#0" />
+            <element signature="e#1042#1357#0" />
+            <element signature="e#1042#1079#1" />
+            <element signature="e#1127#1357#0" />
+            <element signature="e#1396#1468#0" />
+            <element signature="e#1405#1468#0" />
+            <element signature="e#1501#2299#0" />
+            <element signature="e#1510#2299#0" />
+            <element signature="e#2424#2439#1" />
+            <element signature="e#3154#3333#1" />
+            <element signature="e#3374#4037#0" />
+            <element signature="e#3374#3440#1" />
+            <element signature="e#3490#3762#0" />
+            <element signature="e#3807#3914#0" />
+            <element signature="e#3962#3979#0" />
+            <element signature="e#4020#4037#0" />
+            <element signature="e#4047#4114#1" />
+            <element signature="e#4169#4282#0" />
+            <element signature="e#4254#4282#0" />
+            <element signature="e#4832#4880#0" />
+            <element signature="e#12646#13276#0" />
+            <element signature="e#12646#12666#0" />
+            <element signature="e#12941#13049#0" />
+            <element signature="e#13076#13276#0" />
+            <element signature="e#13358#14565#0" />
+            <element signature="e#13421#13600#0" />
+            <element signature="e#13688#13772#0" />
+            <element signature="e#13843#13959#0" />
+            <element signature="e#13911#13959#0" />
+            <element signature="e#14030#14147#0" />
+            <element signature="e#14099#14147#0" />
+            <element signature="e#14174#14310#0" />
+            <element signature="e#14339#14459#0" />
+            <element signature="e#14703#24026#0" />
+            <element signature="e#14703#14998#1" />
+            <element signature="e#15039#15441#0" />
+            <element signature="e#15482#15486#0" />
+            <element signature="e#15531#17802#0" />
+            <element signature="e#15563#16359#0" />
+            <element signature="e#15883#15927#0" />
+            <element signature="e#16004#16216#0" />
+            <element signature="e#16033#16091#0" />
+            <element signature="e#16157#16216#0" />
+            <element signature="e#16405#16981#0" />
+            <element signature="e#16654#16698#0" />
+            <element signature="e#16779#16838#0" />
+            <element signature="e#17078#17649#0" />
+            <element signature="e#17443#17649#0" />
+            <element signature="e#17855#17872#0" />
+            <element signature="e#17913#17930#0" />
+            <element signature="e#17977#18262#0" />
+            <element signature="e#18327#18405#0" />
+            <element signature="e#18455#18736#0" />
+            <element signature="e#18794#18954#0" />
+            <element signature="e#19022#19733#0" />
+            <element signature="e#19808#21267#0" />
+            <element signature="e#19808#19904#1" />
+            <element signature="e#21301#21343#0" />
+            <element signature="e#21457#24026#0" />
+            <element signature="e#21517#21560#0" />
+            <element signature="e#22137#23436#0" />
+            <element signature="e#22405#22473#0" />
+            <element signature="e#22622#22690#0" />
+            <element signature="e#22876#23019#0" />
+            <element signature="e#23108#23209#0" />
+            <element signature="e#23263#23362#0" />
+            <element signature="e#23437#23477#0" />
+            <element signature="e#24074#24475#0" />
+            <element signature="e#24561#24645#0" />
+            <element signature="e#24733#24816#0" />
+            <element signature="e#24912#25631#0" />
+            <element signature="e#25036#25266#0" />
+            <element signature="e#25150#25266#0" />
+            <element signature="e#25340#25607#0" />
+            <element signature="e#25465#25607#0" />
+            <element signature="e#25723#26442#0" />
+            <element signature="e#25847#26077#0" />
+            <element signature="e#25961#26077#0" />
+            <element signature="e#26151#26418#0" />
+            <element signature="e#26276#26418#0" />
+            <element signature="e#26521#26635#0" />
+            <element signature="e#26718#26746#0" />
+            <element signature="e#26959#27034#0" />
+            <element signature="e#27701#28097#0" />
+            <element signature="e#28486#29806#0" />
+            <element signature="e#28872#28924#0" />
+            <element signature="e#29399#29743#0" />
+            <element signature="e#29467#29743#0" />
+            <element signature="e#29523#29662#0" />
+            <element signature="e#29940#31272#0" />
+            <element signature="e#30323#30375#0" />
+            <element signature="e#30856#31200#0" />
+            <element signature="e#30924#31200#0" />
+            <element signature="e#30980#31119#0" />
+            <element signature="e#31406#32734#0" />
+            <element signature="e#31789#31841#0" />
+            <element signature="e#32318#32662#0" />
+            <element signature="e#32386#32662#0" />
+            <element signature="e#32442#32581#0" />
+            <element signature="e#32847#34066#0" />
+            <element signature="e#33139#33191#0" />
+            <element signature="e#33650#33994#0" />
+            <element signature="e#33718#33994#0" />
+            <element signature="e#33774#33913#0" />
+            <element signature="e#34188#35413#0" />
+            <element signature="e#34481#34533#0" />
+            <element signature="e#34997#35341#0" />
+            <element signature="e#35065#35341#0" />
+            <element signature="e#35121#35260#0" />
+            <element signature="e#35540#36574#0" />
+            <element signature="e#35767#35819#0" />
+            <element signature="e#36158#36502#0" />
+            <element signature="e#36226#36502#0" />
+            <element signature="e#36282#36421#0" />
+            <element signature="e#36683#37532#0" />
+            <element signature="e#36873#36925#0" />
+            <element signature="e#37116#37460#0" />
+            <element signature="e#37184#37460#0" />
+            <element signature="e#37240#37379#0" />
+            <element signature="e#37627#38084#0" />
+            <element signature="e#37824#37876#0" />
+            <element signature="e#38198#39133#0" />
+            <element signature="e#38463#38515#0" />
+            <element signature="e#38717#39061#0" />
+            <element signature="e#38785#39061#0" />
+            <element signature="e#38841#38980#0" />
+            <element signature="e#39270#40060#0" />
+            <element signature="e#39748#39800#0" />
+            <element signature="e#40199#41558#0" />
+            <element signature="e#40607#40659#0" />
+            <element signature="e#41142#41486#0" />
+            <element signature="e#41210#41486#0" />
+            <element signature="e#41266#41405#0" />
+            <element signature="e#41662#42569#0" />
+            <element signature="e#41924#41976#0" />
+            <element signature="e#42153#42497#0" />
+            <element signature="e#42221#42497#0" />
+            <element signature="e#42277#42416#0" />
+            <element signature="e#42676#43976#0" />
+            <element signature="e#42916#42968#0" />
+            <element signature="e#43034#43141#0" />
+            <element signature="e#43176#43517#0" />
+            <element signature="e#43348#43517#0" />
+            <element signature="e#43573#43917#0" />
+            <element signature="e#43641#43917#0" />
+            <element signature="e#43697#43836#0" />
+            <element signature="e#44082#45054#0" />
+            <element signature="e#44322#44374#0" />
+            <element signature="e#44440#44586#0" />
+            <element signature="e#44621#45017#0" />
+            <element signature="e#44848#45017#0" />
+            <element signature="e#45160#46134#0" />
+            <element signature="e#45402#45454#0" />
+            <element signature="e#45520#45666#0" />
+            <element signature="e#45701#46097#0" />
+            <element signature="e#45928#46097#0" />
+            <element signature="e#46230#47128#0" />
+            <element signature="e#46470#46522#0" />
+            <element signature="e#46691#47035#0" />
+            <element signature="e#46759#47035#0" />
+            <element signature="e#46815#46954#0" />
+            <element signature="e#47233#47718#0" />
+            <element signature="e#47451#47503#0" />
+            <element signature="e#47800#48057#0" />
+            <element signature="e#48126#48287#0" />
+            <element signature="e#48471#50019#0" />
+            <element signature="e#48847#49002#0" />
+            <element signature="e#49164#49216#0" />
+            <element signature="e#49495#49974#0" />
+            <element signature="e#49709#49788#0" />
+            <element signature="e#49845#49974#0" />
+            <element signature="e#50129#50641#0" />
+            <element signature="e#50390#50442#0" />
+            <element signature="e#50785#51474#0" />
+            <element signature="e#51178#51230#0" />
+            <element signature="e#51610#52185#0" />
+            <element signature="e#51896#51948#0" />
+            <element signature="e#52297#52728#0" />
+            <element signature="e#52465#52517#0" />
+            <element signature="e#52828#53264#0" />
+            <element signature="e#53006#53058#0" />
+            <element signature="e#53355#53698#0" />
+            <element signature="e#53446#53498#0" />
+            <element signature="e#53774#54081#0" />
+            <element signature="e#54215#55214#0" />
+            <element signature="e#54930#54982#0" />
+            <element signature="e#55327#55968#0" />
+            <element signature="e#55698#55750#0" />
+            <element signature="e#56109#56944#0" />
+            <element signature="e#56648#56700#0" />
+            <element signature="e#57053#57397#0" />
+            <element signature="e#57144#57196#0" />
+            <element signature="e#57492#57833#0" />
+            <element signature="e#57583#57635#0" />
+            <element signature="e#57938#58411#0" />
+            <element signature="e#58145#58197#0" />
+            <element signature="e#58518#58929#0" />
+            <element signature="e#58669#58721#0" />
+            <element signature="e#59029#59275#0" />
+            <element signature="e#59388#59817#0" />
+            <element signature="e#59553#59605#0" />
+            <element signature="e#59928#60357#0" />
+            <element signature="e#60093#60145#0" />
+            <element signature="e#60502#61758#0" />
+            <element signature="e#60822#60874#0" />
+            <element signature="e#61342#61686#0" />
+            <element signature="e#61410#61686#0" />
+            <element signature="e#61466#61605#0" />
+            <element signature="e#61866#62374#0" />
+            <element signature="e#62116#62168#0" />
+            <element signature="e#62494#63005#0" />
+            <element signature="e#62745#62797#0" />
+            <element signature="e#63154#64485#0" />
+            <element signature="e#63541#63593#0" />
+            <element signature="e#64069#64413#0" />
+            <element signature="e#64137#64413#0" />
+            <element signature="e#64193#64332#0" />
+            <element signature="e#64587#65466#0" />
+            <element signature="e#64828#64880#0" />
+            <element signature="e#65050#65394#0" />
+            <element signature="e#65118#65394#0" />
+            <element signature="e#65174#65313#0" />
+            <element signature="e#65568#66447#0" />
+            <element signature="e#65809#65861#0" />
+            <element signature="e#66031#66375#0" />
+            <element signature="e#66099#66375#0" />
+            <element signature="e#66155#66294#0" />
+            <element signature="e#66511#66788#0" />
+            <element signature="e#66511#66677#1" />
+            <element signature="e#66695#66761#0" />
+            <element signature="e#66845#67088#1" />
+            <element signature="e#67106#68109#0" />
+            <element signature="e#67133#67647#0" />
+            <element signature="e#67672#68109#0" />
+            <element signature="e#68139#68173#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/wind/update_financial_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="357" column="32" lean-forward="true" selection-start-line="357" selection-start-column="32" selection-end-line="357" selection-end-column="32" />
         </state>
       </provider>
     </entry>

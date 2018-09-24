@@ -170,8 +170,8 @@ class Trading_system:
                             columns=['time','num','side','order_type','price'])
         df_bid=pd.DataFrame([[od.time,od.num,od.side,od.order_type,od.price] for od in self.bid_ob.limit_orders],
                             columns=['time','num','side','order_type','price'])
-        df_ask.to_csv(os.path.join(DIR,f'{snapname}-ask.csv'))
-        df_bid.to_csv(os.path.join(DIR,f'{snapname}-bid.csv'))
+        # df_ask.to_csv(os.path.join(DIR,f'{snapname}-ask.csv'))
+        # df_bid.to_csv(os.path.join(DIR,f'{snapname}-bid.csv'))
 
     # TODO: mid-price
     # TODO:the price of random generated buy limit order should be smaller than mid-price

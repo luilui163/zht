@@ -473,3 +473,15 @@ if __name__ == '__main__':
 #TODO: open xmind automatically
 #TODO: links between papers
 #TODO: when the paper has two columns,take 'management science' for example, if
+'''
+1. store the unique id of every annotation from .fdf or .xfdf and generate id for 
+reach xmind element based on the id from annotation. With the id mapped from 
+annotation to xmind element, we can monitor the annotations in pdf and update
+the new added annotation without changing the structure of the xmind. We can also
+store the annotation time in the id of xmind element.  Similiar to the function 
+in docear.
+
+
+
+'''
+
