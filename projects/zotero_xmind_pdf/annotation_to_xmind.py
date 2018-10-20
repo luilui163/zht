@@ -6,13 +6,13 @@
 # NAME:zht-annotation_to_xmind.py
 
 import os
-import re
-from collections import OrderedDict
+# import re
+# from collections import OrderedDict
 
-import xmind
+# import xmind
 import argparse
-from PyPDF2 import PdfFileReader
-from PyPDF2.pdf import Destination
+# from PyPDF2 import PdfFileReader
+# from PyPDF2.pdf import Destination
 from mekk.xmind.document import SHAPE_RECTANGLE,SHAPE_UNDERLINE
 from webcolors import rgb_to_hex
 from zht.projects.zotero_xmind_pdf.mekk_zht import XMindDocument
@@ -223,7 +223,8 @@ class Summary:
                 '\\x8a':'-',
                 '\\x8d':'“',
                 '\\x8e':'”',
-                '\\x8f\\x8f':'"',
+                '\\x8f':"'",
+                # '\\x8f\\x8f':'"',
                 # '\\x8e':'"',
                 '\\x90':"'",
                 '\\xa4':'ff',
@@ -438,7 +439,7 @@ class Summary:
         self.create_xmind_stacked(notes)
 
 def debug():
-    iid='CKIHD3J4'
+    iid='7JHC6TZC'
     Summary(iid)
 
 DEBUG=0

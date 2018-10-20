@@ -2,243 +2,252 @@
 # Python 3.6
 # Author:Zhang Haitao
 # Email:13163385579@163.com
-# TIME:2018-07-06  11:15
+# TIME:2018-10-20  08:52
 # NAME:zht-parse_toc.py
-
 import os
-import sqlite3
-import time
-from collections import defaultdict
-import re
-
-import xmind
-from dateutil.parser import parse
-from datetime import timedelta
-import argparse
-from PyPDF2 import PdfFileReader
-from PyPDF2.pdf import Destination
-from mekk.xmind.document import TopicStyle, SHAPE_RECTANGLE, SHAPE_ELLIPSIS, \
-    SHAPE_UNDERLINE
-from mekk.xmind import XMindDocument
+import shutil
+from xml.etree import ElementTree as ET
+import string
+import pandas as pd
+from PyPDF2 import PdfFileWriter,PdfFileReader
+import subprocess
+from bs4 import BeautifulSoup
 
 
-ROOTDIR=r'D:\zht\database\zoteroDB\storage'
-XMINDDIR=r'D:\zht\database\xmind\research\xed'
+class AddBookmarks:
+    def __init__(self,pdf_path,method='bs'):
+        self.pdf_path=pdf_path
+        self.method=method
+        self.df=self.parse_pdf()
+        self.add_bookmarks()
 
-TYPE_MAP={
-    'Highlight':'content',
-    'Squiggly':'relevant literature',
-    'Underline':'phrase',
-    'StrikeOut':'sentence',
-    'Typewriter':'ideas'
-}
+    def get_root(self):
+        xml_path=self.pdf_path[:-4]+'.xml'
+        subprocess.call(['python', r'D:\app\python36\Scripts\pdf2txt.py', '-o', xml_path, self.pdf_path])
+        with open(xml_path,'r',encoding='utf8') as f:
+            s=f.read()
+        tree=ET.fromstring(s)
+        # tree=ET.parse(xml_path)
+        root=tree.getroot()
+        os.remove(xml_path)
+        return root
 
-STYLE={
-    'Bookmark':[SHAPE_RECTANGLE,'#c6c6c6','#00000'],#[shape,fill_color,font_color]
-    'Highlight':[SHAPE_UNDERLINE,'#F3F4F9','#00000'], # #F3F4F9 is the default color of the default theme
-    'Squiggly':[SHAPE_UNDERLINE,'#F3F4F9','#0aff01'],
-    'Underline':[SHAPE_UNDERLINE,'#F3F4F9','#ff0000'],
-    'StrikeOut':[SHAPE_UNDERLINE,'#F3F4F9','#00ff2a'],
-    'Typewriter':[SHAPE_UNDERLINE,'#F3F4F9','#2d00f9']
-}
-
-TYPE_ORDER=['Typewriter','Highlight', 'Underline', 'Squiggly', 'StrikeOut']
-
-
-class Note:
-    def __init__(self,ux,uy,page,type,text):
-        self.ux=ux
-        self.uy=uy
-        self.type=type
-        self.page=page
-        self.text=text
-
-def _setup_page_id_to_num(pdf, pages=None, _result=None, _num_pages=None):
-    if _result is None:
-        _result = {}
-    if pages is None:
-        _num_pages = []
-        pages = pdf.trailer["/Root"].getObject()["/Pages"].getObject()
-    t = pages["/Type"]
-    if t == "/Pages":
-        for page in pages["/Kids"]:
-            _result[page.idnum] = len(_num_pages)
-            _setup_page_id_to_num(pdf, page.getObject(), _result, _num_pages)
-    elif t == "/Page":
-        _num_pages.append(1)
-    return _result
-
-def parse_toc(iid):
-    fp = get_filepath(iid)
-    pdf = PdfFileReader(open(fp, 'rb'))
-    pg_id_num_map = _setup_page_id_to_num(pdf)
-    toc = pdf.getOutlines()
-    return toc,pg_id_num_map
-
-def build_toc(iid,outlines, pg_id_num_map, parent):
-    if isinstance(outlines,Destination):
-        node=parent.addSubTopic()
-        node.setTitle(outlines['/Title'])
-        page=pg_id_num_map[outlines.page.idnum]+1
-        link = 'zotero://open-pdf/library/items/{}?page={}'.format(iid, page)
-        node.setURLHyperlink(link)
-    else:
-        for ol in outlines:
-            build_toc(iid,ol, pg_id_num_map, parent)
-
-def get_filepath(iid):
-    fns=os.listdir(os.path.join(ROOTDIR,iid))
-    paperName=[fn for fn in fns if fn.endswith('.pdf')][0]
-    return os.path.join(ROOTDIR,iid,paperName)
-
-def create_xmind(iid,name,notes,buildTOC=True):
-    '''
-    :param name:name of the pdf or .fdf, does not contain suffix
-    :param notes: list, each element containts a list,[type,content,page]
-    [y,x,page,type,text]
-    :return:
-    '''
-    w=xmind.load('123.xmind')
-    s=w.getPrimarySheet()
-    s.setTitle(name)
-    r=s.getRootTopic()
-    r.setTitle('annotations')
-    t=r.addSubTopic()
-    t.setTitle(name+'.pdf')
-    # t.setURLHyperlink(os.path.join(directory,name+'.pdf'))
-    t.setURLHyperlink('zotero://open-pdf/library/items/{}'.format(iid))
-
-    if buildTOC:
-        node_toc= t.addSubTopic()
-        node_toc.setTitle('TOC')
-        toc,pg_id_num_map=parse_toc(iid)
-        build_toc(iid,toc,pg_id_num_map,node_toc)
-
-    notes=sorted(notes,key=lambda x:(x.page,x.uy,x.ux))
-    types=[t for t in TYPE_ORDER if t in [n.type for n in notes]]
-    for type in types:
-        sub=t.addSubTopic()
-        sub.setTitle(TYPE_MAP[type])
-        for node in [n for n in notes if n.type==type]:
-            sub_=sub.addSubTopic()
-            sub_.setTitle(node.text)
-            link='zotero://open-pdf/library/items/{}?page={}'.format(iid,node.page)#trick:open pdf by zotero
-            sub_.setURLHyperlink(link)
-
-    xpath=os.path.join(XMINDDIR,name+'.xmind')
-    xmind.save(w,xpath)
-    #open the file
-    os.startfile(xpath,'open')
-
-def clean_text(text):
-    text=text.replace(r'\r\n',' ').strip()
-    # text=text.replace('&#x0D;&#x0A',' ')
-    text = text.replace('\\', '')
-    text = text.lstrip(r',.?')
-    text = text.rstrip('(,')
-    return text
-
-def parse_fdf(iid):
-    '''
-    :param iid: str, like '68Y48YIT'
-    :return: (list,str), the list contains a bunch of [lx,ly,ux,uy,page,type,text]
-    '''
-    directory=os.path.join(ROOTDIR,iid)
-    fn=[n for n in os.listdir(directory) if n.endswith('.fdf')][0]
-    name=fn[:-4]
-    with open(os.path.join(directory,fn),encoding='utf8',errors='ignore') as f:
-        lines=f.readlines()
-
-    lines=[l for l in lines if 'Contents' in l]
-
-    # with open(os.path.join(directory,fn),encoding='iso-8859-15') as f:
-    #     lines=f.readlines()
-
-    validLines=[]
-    for type in TYPE_ORDER:
-        for l in lines:
-            if type in l:
-                validLines.append(l)
-
-    notes=[]
-    for l in validLines:
-        if 'Typewriter' in l:
-            # .*? no greedy
-            p=r'Rect\[ ([0-9]*\.?[0-9]*) ([0-9]*\.?[0-9]*) ([0-9]*\.?[0-9]*) ([0-9]*\.?[0-9]*)\].*/Page (\d+).*/Contents\((.*?)\)'
-            lx, ly, ux, uy,page,text=re.findall(p,l)[0]
-            text=text.rstrip(r'\r')
-            type='Typewriter'
+    @staticmethod
+    def detect_line_size(textline):
+        size_l = []
+        for _text in textline:
+            if _text.text in string.ascii_letters:
+                size_l.append(float(_text.attrib['size']))
+        if len(size_l) > 0:
+            return sum(size_l) / len(size_l)
         else:
-            p=r'Rect\[ ([0-9]*\.?[0-9]*) ([0-9]*\.?[0-9]*) ([0-9]*\.?[0-9]*) ([0-9]*\.?[0-9]*)\].*/Page (\d+).*/Subtype/(.*)/Type.*/Contents\((.*)\)/CA'
-            lx,ly,ux,uy,page,type,text=re.findall(p,l)[0]
-        # addjust page
-        notes.append(Note(float(ux),float(uy),int(page)+1,type,clean_text(text)))
+            return 0
 
-    #sort by page,y,x, y denote the height in the page
-    return notes,name
+    @staticmethod
+    def is_bold_line(textline, thresh=0.5):
+        count_bold = 0
+        total = 0
 
-def get_notes_toc(iid):
-    fp = get_filepath(iid)
-    pdf = PdfFileReader(open(fp, 'rb'))
-    pg_id_num_map = _setup_page_id_to_num(pdf)
-    toc = pdf.getOutlines()
-
-    f_toc = []
-
-    def flatten_toc(toc):
-        if isinstance(toc, Destination):
-            return f_toc.append(toc)
+        for _text in textline:
+            if 'font' in _text.attrib:
+                if 'bold' in _text.attrib['font'].lower():
+                    count_bold += 1
+            total += 1
+        if count_bold / total > thresh:
+            return True
         else:
-            for t in toc:
-                flatten_toc(t)
+            return False
 
-    flatten_toc(toc)
-    notes_toc = []
-    for t in f_toc:
-        ux = 0
-        uy = 10000
-        page = pg_id_num_map[t.page.idnum] + 1
-        type = 'Bookmark'
-        text = t['/Title']
-        notes_toc.append(Note(ux, uy, page, type, text))
-    return notes_toc
+    def by_etree(self):
+        root=self.get_root()
+        items = []
+        for page in root:
+            page_id = int(page.attrib['id'])  # start from 1
+            for textbox in page:
+                if textbox.tag == 'textbox':
+                    line_id = int(textbox.attrib['id'])  # start from 0
+                    textline = textbox.find('textline')
+                    line_content = ''.join([t.text for t in textline]).strip()
+                    line_size = self.detect_line_size(textline)
+                    is_bold = self.is_bold_line(textline)
+                    items.append((page_id, line_id, is_bold, line_size, line_content))
 
-def create_xmind_with_style(iid, name, notes):
-    xpath=os.path.join(XMINDDIR,name+'.xmind')
-    xm = XMindDocument.create('annotations', name)
-    first_sheet = xm.get_first_sheet()
-    root_topic = first_sheet.get_root_topic()
-    for node in notes:
-        t=root_topic.add_subtopic(node.text)
-        t.set_link('zotero://open-pdf/library/items/{}?page={}'.format(iid, node.page))
-        shape=STYLE[node.type][0]
-        fill_color=STYLE[node.type][1]
-        font_color=STYLE[node.type][2]
-        style = XMindDocument.create_topic_style(xm,
-                                                 shape=shape,
-                                                 fill=fill_color,
-                                                 line_color='#9400D3',
-                                                 line_width='1pt',
-                                                 font_color=font_color)
-        t.set_style(style)
+        df = pd.DataFrame(items, columns=['page_id', 'line_id', 'is_bold', 'line_size', 'line_content'])
+        return df
 
-    xm.save(xpath)
-    os.startfile(xpath, 'open')
+    def _merge_lines(self,df):
+        # merge the lines sharing the same horizon
+        df['line_spread_backward'] = df['top'] - df['top'].shift(1)
+        df['line_spread_forward'] = df['top'] - df['top'].shift(-1)
 
-def run(iid,mode=0):
-    if mode==0:
-        notes, name = parse_fdf(iid)
-        notes_toc = get_notes_toc(iid)
-        notes_comb = sorted(notes + notes_toc,
-                            key=lambda x: (x.page, x.uy, x.ux))
-        create_xmind_with_style(iid, name, notes_comb)
-    else:
-        notes, name = parse_fdf(iid)
-        create_xmind(iid, name, notes)
+        cols = [col for col in df.columns if col != 'line_content'] + ['line_content']
+        df = df[cols]
+
+        newdf = pd.DataFrame(columns=df.columns)
+        newdf = newdf.append(df.iloc[0, :])
+
+        for i in range(1, df.shape[0]):
+            current_row = df.iloc[i, :]
+            if current_row['line_spread_backward'] == 0:
+                newdf.at[newdf.index[-1], 'line_content'] = ' '.join([newdf.at[newdf.index[-1], 'line_content'], current_row['line_content']])
+                newdf.at[newdf.index[-1], 'right'] = current_row['right']
+                newdf.at[newdf.index[-1], 'line_spread_forward'] = current_row['line_spread_forward']
+            else:
+                newdf = newdf.append(current_row)
+
+        # trick: the value is rounded to three decimal places.
+        newdf['line_spread'] = newdf[['line_spread_backward', 'line_spread_forward']].abs().min(axis=1).round(3)
+        return newdf
+
+    def _identify_title_lines(self,df):
+        '''
+        Several methods to identify titles:
+        1. font
+        2. line_spread
+        3. prefix
+        4. length (5 to 70)
+
+        font seems to be the most powerful tool to find titles
+
+        The main noise comes from the table and formula in the text.
+        '''
+        # TODO: the first page is exceptional
+
+        # narrow the scope down
+        body_spread = df['line_spread'].value_counts().index[0]
+        df['score1'] = df['line_spread'].map(lambda x: 0 if x == body_spread else 1)
+
+        df['len'] = df['line_content'].map(lambda s: len(s.replace(' ', '')))
+        df['score2'] = df['len'].map(lambda x: 1 if 5 <= x <= 70 else 0)
+
+        prefixes = ('Abstract', 'I', 'V', 'X', 'Appendix', 'Introduction', 'Table', 'Fig',
+                    '1', '2', '3', '4', '5', '6', '7', '8', '9')
+        df['score3'] = df['line_content'].map(lambda x: 1 if x.startswith(prefixes) else 0)
+
+        body_font = df['font'].value_counts().index[0]
+        df['score4'] = df['font'].map(lambda x: 0 if x == body_font else 1)
+
+        df['score'] = df[[col for col in df.columns if col.startswith('score')]].sum(axis=1)
+        # df=df.sort_values('score',ascending=False)
+
+        target_font = df[df['score'] == df['score'].max()]['font'].value_counts().index[0]
+        df['is_title'] = df['font'].map(lambda x: True if x == target_font else False)
+        return df
+
+    def by_bs(self):
+        THRESH = 0.5
+        xml_path=self.pdf_path[:-4]+'.xml'
+        if not os.path.exists(xml_path):
+            subprocess.call(['python', r'D:\app\python36\Scripts\pdf2txt.py', '-o', xml_path, self.pdf_path])
+
+        with open(xml_path, 'r', encoding='utf8') as f:
+            s = f.read()
+
+        #delete xml file
+        # os.remove(xml_path)
+
+        soup = BeautifulSoup(s, 'xml')
+        pages = soup.find_all('page')
+
+        items = []
+        for page in pages:
+            page_id = int(page['id'])  # trick: starts from 1
+            textboxs = page.find_all('textbox')
+
+            line_id=0
+            for textbox in textboxs:# textbox represents a paragraph
+                # textline represents a row
+                textlines=textbox.find_all('textline')
+                for textline in textlines:
+                    line_content = textline.text.replace('\n', '')
+                    #left,bottom,right,top
+                    l,b,r,t=(float(i) for i in textline['bbox'].split(','))
+                    if len(line_content.replace(' ', '')) > 0:
+                        # we do not use textbox id, since each textbox may contains multiple lines
+                        line_id+=1
+
+                        texts = list(textline.find_all('text'))
+
+                        # identify font
+                        fonts=[t['font'] for t in texts if 'font' in t.attrs]
+                        font=max(set(fonts),key=fonts.count)
+
+                        # # identify whether contains bold characters
+                        # is_bold = False
+                        # text_with_font = [t for t in texts if 'font' in t.attrs]
+                        # if len([t for t in text_with_font if 'bold' in t['font'].lower()]) > THRESH * len(text_with_font):
+                        #     is_bold = True
+
+                        # identify size of each line
+                        no_empty_text = [t for t in texts if t.text in string.ascii_letters]
+                        line_size = 0
+                        if len(no_empty_text) > 0:
+                            line_size = sum(float(t['size']) for t in no_empty_text) / len(no_empty_text)
+
+                        items.append((page_id, line_id, l,r,b,t,font, line_size, line_content))
+
+        df = pd.DataFrame(items, columns=['page_id', 'line_id','left','right','bottom','top','font', 'line_size', 'line_content'])
+        df=df.sort_values(['page_id','line_id'])
+        df=self._merge_lines(df)
+        df=self._identify_title_lines(df)
+        return df
+
+    def parse_pdf(self):
+        if self.method=='bs':
+            df=self.by_bs()
+        else:
+            df=self.by_etree()
+        return df
+
+    def add_bookmarks(self):
+        title_df = self.df[self.df['is_title']] #trick: use font to identify the titles
+
+        pdfReader = PdfFileReader(self.pdf_path)
+        if pdfReader.isEncrypted:
+            # TODO: decrypt error   refer to https://stackoverflow.com/questions/26242952/pypdf-2-decrypt-not-working
+            #-------------------
+            # pdfReader._override_encryption=True
+            # pdfReader._flatten()
+            #----------------------
+            # pdfReader.decrypt('')
+            #TODO: decrypt
+            print(f'Encrypted file:\n\t\t {self.pdf_path}')
+            pass
+        else:
+            pdfWriter = PdfFileWriter()
+            for page in range(pdfReader.numPages):
+                page_obj = pdfReader.getPage(page)
+                pdfWriter.addPage(page_obj)
+
+            for _, row in title_df.iterrows():
+                pdfWriter.addBookmark(row['line_content'], row['page_id'] - 1)  # trick: the pagenum in pyPdf2 starts with 0
+
+            with open(self.pdf_path, 'wb') as f:
+                pdfWriter.write(f)
 
 def debug():
-    iid='38Z9QERS'
-    run(iid,mode=1)
+    directory=r'E:\a\test_pdfminer'
+    fn='Cakici et al- 2015- Cross-sectional stock return predictability in China.pdf'
+    path=os.path.join(directory,fn)
+    AddBookmarks(path)
 
-debug()
+DEBUG=0
+
+if __name__ == '__main__':
+    if DEBUG:
+        debug()
+    else:
+        directory=r'E:\a\test_pdfminer'
+        fns=os.listdir(directory)
+        fns=[fn for fn in fns if fn.endswith('.pdf')]
+
+        for fn in fns:
+            path=os.path.join(directory,fn)
+            AddBookmarks(path)
+            print(path)
+
+
+
+#TODO: if there is any bookmarks, skip the item
+#TODO: multi_process
 

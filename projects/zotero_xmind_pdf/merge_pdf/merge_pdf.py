@@ -18,6 +18,34 @@ https://smallpdf.com/merge-pdf
 use pdfmerger.jar  (github)
 '''
 
+def by_pdfrw():
+    '''
+    The problem with this package is that the bookmarks can not be conveyed
+    to the new combined pdf.
+
+    :return:
+    '''
+    import os
+    from pdfrw import PdfReader, PdfWriter, IndirectPdfDict
+
+    directory = r'E:\a\test_pdfminer'
+
+    fns = os.listdir(directory)
+
+    outfn = os.path.join(directory, 'output.pdf')
+
+    writer = PdfWriter()
+    for inpfn in fns:
+        writer.addpages(PdfReader(os.path.join(directory, inpfn)).pages)
+
+    writer.trailer.Info = IndirectPdfDict(
+        Title='your title goes here',
+        Author='your name goes here',
+        Subject='what is it all about?',
+        Creator='some script goes here',
+    )
+    writer.write(outfn)
+
 
 
 fns=os.listdir(r'E:\a\tag_China\files')
@@ -75,3 +103,5 @@ with open(r'e:\a\result.pdf', 'wb') as fout:
 
 
 print(i)
+
+

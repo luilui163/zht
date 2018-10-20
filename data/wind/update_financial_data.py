@@ -27,13 +27,11 @@ def test_wind():
     data=w.wss("000001.SZ,000002.SZ,000004.SZ,000005.SZ", "trade_code")
     return
 
-
 def wrapper_log(func):
     def wrapper(*args,**kwargs):
         print('start---->',func.__name__)
         return func(*args,**kwargs)
     return wrapper
-
 
 def chunks(iterable, size=500):
     '''chunks an iterable into n smaller generator with the given maximium size for each generator,
@@ -123,6 +121,8 @@ def get_ann_dt_df(date):
         codes=get_stkcd_list(date)
         result = w.wsd(','.join(codes), "stm_issuingdate", "ED-2Q", date,
                        "Period=Q;Days=Alldays")
+        if result.ErrorCode is not 0:
+            raise ValueError
         ann_dt = pd.DataFrame(result.Data, index=result.Codes,
                               columns=result.Times).T
         ann_dt.to_pickle(path)
@@ -222,7 +222,7 @@ def _read_financial_cache(fn):
 
 def combine_cache(date):
     fns=os.listdir(os.path.join(DIR,'financial_cache'))
-    ss=multi_process(_read_financial_cache, fns, n=8)
+    ss=multi_process(_read_financial_cache, fns, n=30)
     keys=((fn.split('_')[0],fn.split('_')[1][:-4]) for fn in fns)
 
     comb=pd.concat(ss,axis=1,keys=keys,sort=True).T
@@ -308,23 +308,27 @@ def update_ipodate(date):
     old_codes=get_latest(date,'stkcd_list')
     all_codes=get_stkcd_list(date)
     new_codes=[c for c in all_codes if c not in old_codes]
-
-    #TODO: new_code is a single str
-    ipodata=w.wss(','.join(new_codes), "ipo_date")
-    if ipodata.ErrorCode is not 0:
-        raise ValueError
-    old_data=get_latest(date,'ipo_date','csv')
-    increment=pd.DataFrame(ipodata.Data[0],index=ipodata.Codes,columns=['ipo_date'])
-    new=pd.concat([old_data,increment],axis=0).sort_index()
+    if len(new_codes)>0:
+        #TODO: new_code is a single str
+        ipodata=w.wss(','.join(new_codes), "ipo_date")
+        if ipodata.ErrorCode is not 0:
+            raise ValueError
+        increment=pd.DataFrame(ipodata.Data[0],index=ipodata.Codes,columns=['ipo_date'])
+        old_data=get_latest(date,'ipo_date','csv')
+        new=pd.concat([old_data,increment],axis=0).sort_index()
+    else:
+        new=get_latest(date,'ipo_date','csv')
     new.to_csv(path)
 
+
 def get_test_dates_list():
-    directory=r'E:\wind\stkcd_list'
+    directory=os.path.join(DIR,'stkcd_list')
     fns=os.listdir(directory)
     dates=[fn[:-4] for fn in fns]
+    dates=sorted(dates,key=lambda x:pd.to_datetime(x))
     return dates
 
-def update_all(date=None):
+def update_single_date(date=None):
     if date is None:
         date=get_today()
 
@@ -333,21 +337,35 @@ def update_all(date=None):
     update_consensus(date)
     update_fundamental(date)
 
+
+def update_periods(start,end=None):
+    if end is None:
+        end=get_today()
+    dates=pd.date_range(start=start,end=end,freq='D')
+    dates=[d.strftime(DATE_FORMAT) for d in dates]
+    for date in dates:
+        update_single_date(date)
+        print(date)
+
 def debug():
     dates=pd.date_range(start='2018-08-30',end=get_today(),freq='D')
     dates=[d.strftime(DATE_FORMAT) for d in dates]
     for date in dates:
         print(f'Updating data for ------>{date}')
-        update_all(date)
+        update_single_date(date)
 
 def debug1():
-    date='2018-09-15'
-    update_ipodate(date)
+    dates=get_test_dates_list()[14:]
 
+    for date in dates:
+        update_financial(date)
+        print(date)
 
 if __name__ == '__main__':
-    # update_all()
-    debug()
+    update_periods(start='2018-09-01')
+
+
+
 
 
 
