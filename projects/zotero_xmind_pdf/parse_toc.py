@@ -113,25 +113,52 @@ class AddBookmarks:
         '''
         # TODO: the first page is exceptional
 
+        bk=df.copy()
+
         # narrow the scope down
         body_spread = df['line_spread'].value_counts().index[0]
-        df['score1'] = df['line_spread'].map(lambda x: 0 if x == body_spread else 1)
+        df['score_size'] = df['line_spread'].map(lambda x: 0 if x == body_spread else 1)
 
         df['len'] = df['line_content'].map(lambda s: len(s.replace(' ', '')))
-        df['score2'] = df['len'].map(lambda x: 1 if 5 <= x <= 70 else 0)
+        df['score_len'] = df['len'].map(lambda x: 1 if 5 <= x <= 100 else 0)
 
         prefixes = ('Abstract', 'I', 'V', 'X', 'Appendix', 'Introduction', 'Table', 'Fig',
                     '1', '2', '3', '4', '5', '6', '7', '8', '9')
-        df['score3'] = df['line_content'].map(lambda x: 1 if x.startswith(prefixes) else 0)
+        df['score_prefix'] = df['line_content'].map(lambda x: 1 if x.startswith(prefixes) else 0)
 
         body_font = df['font'].value_counts().index[0]
-        df['score4'] = df['font'].map(lambda x: 0 if x == body_font else 1)
+        df['score_font'] = df['font'].map(lambda x: 0 if x == body_font else 1)
+
+        df['score_bold']=df['font'].map(lambda x:1 if 'bold' in x.lower() else 0)
+        #TODO: first page
+
+        leftmost=df['left'].min()
+        df['score_left']=df['left'].map(lambda x:1 if x<=leftmost+1 else 0) # add 1, since the setype may be not so precise
+
+        # fitler out lines with size being equal to 0
+        df['score_linesize']=df['line_size'].map(lambda x:-100 if x==0 else 0)
 
         df['score'] = df[[col for col in df.columns if col.startswith('score')]].sum(axis=1)
-        # df=df.sort_values('score',ascending=False)
 
-        target_font = df[df['score'] == df['score'].max()]['font'].value_counts().index[0]
-        df['is_title'] = df['font'].map(lambda x: True if x == target_font else False)
+        # target_font = df[df['score'] == df['score'].max()]['font'].value_counts().index[0]
+        # df['is_title']=df.apply(
+        #     lambda s:True if s['score']==df['score'].max() and
+        #                      s['font']==target_font else False,axis=1)
+
+        df['is_title']=df['score'].map(lambda x:True if x==df['score'].max() else False)
+
+        # df['is_title'] = df['font'].map(lambda x: True if x == target_font else False)
+
+        # df=df.sort_values('is_title',ascending=False)
+
+        # df['font'].value_counts()
+        #
+        #
+        # df=df.sort_values('score',ascending=False)
+        #
+        # a=df['left'].value_counts().sort_index()
+
+
         return df
 
     def by_bs(self):
@@ -179,10 +206,11 @@ class AddBookmarks:
                         #     is_bold = True
 
                         # identify size of each line
-                        no_empty_text = [t for t in texts if t.text in string.ascii_letters]
+                        with_size=[t for t in texts if 'size' in t.attrs]
+                        # no_empty_text = [t for t in texts if len(t.text)>0]
                         line_size = 0
-                        if len(no_empty_text) > 0:
-                            line_size = sum(float(t['size']) for t in no_empty_text) / len(no_empty_text)
+                        if len(with_size) > 0:
+                            line_size = sum(float(t['size']) for t in with_size) / len(with_size)
 
                         items.append((page_id, line_id, l,r,b,t,font, line_size, line_content))
 
@@ -227,7 +255,7 @@ class AddBookmarks:
 
 def debug():
     directory=r'E:\a\test_pdfminer'
-    fn='Cakici et al- 2015- Cross-sectional stock return predictability in China.pdf'
+    fn="Cheema and Nartea- 2017- Momentum returns, market states, and market dynamics - Is China different.pdf"
     path=os.path.join(directory,fn)
     AddBookmarks(path)
 
