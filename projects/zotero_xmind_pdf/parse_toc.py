@@ -6,6 +6,7 @@
 # NAME:zht-parse_toc.py
 import os
 import shutil
+from collections import Counter
 from xml.etree import ElementTree as ET
 import string
 import pandas as pd
@@ -250,13 +251,46 @@ class AddBookmarks:
             with open(self.pdf_path, 'wb') as f:
                 pdfWriter.write(f)
 
+def identify_font_and_size(texts, thresh_font=0.8, thresh_size=0.8):
+    '''
+    Identify whether the text properties, especially font and size, are consistent.
+    usually, the formula contains multiple fonts and sizes
+
+    :param texts:
+    :return:
+    '''
+    texts=[t for t in texts if 'size' in t.attrs]
+    fonts=[t['font'] for t in texts]
+    sizes=[float(t['size']) for t in texts]
+    common_font=Counter(fonts).most_common(1)[0]
+    common_size=Counter(sizes).most_common(1)[0]
+    if common_font[1]/len(fonts)>thresh_font and common_size[1]/len(sizes)>thresh_size:
+        return common_font[0],common_size[0]
+    else:
+        return None,None
+
 def identify_based_on_textbox():
+    '''
+    A possible title textbox must have the following properties:
+    1. no intersection with other textbox
+    2. at least two textlines inside the textbox?
+    3. consistency of the font,size and bottom top
+
+
+    Notes:
+    1. "<text> </text>" represents a blank space
+    2. each textline represents a row
+    3.
+
+    :return:
+    '''
     import pandas as pd
     from bs4 import BeautifulSoup
 
-    path = r'E:\a\test_pdfminer\Westerlund et al- 2015- Testing for stock return predictability in a large Chinese panel.xml'
+    xml_path = r'E:\a\test_pdfminer\Westerlund et al- 2015- Testing for stock return predictability in a large Chinese panel.xml'
+    # pdf_path = r'E:\a\test_pdfminer\Westerlund et al- 2015- Testing for stock return predictability in a large Chinese panel.pdf'
 
-    with open(path, encoding='utf8') as f:
+    with open(xml_path, encoding='utf8') as f:
         soup = BeautifulSoup(f.read(), 'xml')
 
     pages = soup.find_all('page')
@@ -264,6 +298,9 @@ def identify_based_on_textbox():
     items = []
     for page in pages:
         page_id = int(page['id'])
+        page_width=float(page['bbox'].split(',')[2])
+        page_height=float(page['bbox'].split(',')[3])
+
         textboxs = page.find_all('textbox')
 
         for textbox in textboxs:
@@ -272,28 +309,73 @@ def identify_based_on_textbox():
             box_content = textbox.text.replace('\n', '')
 
             textlines = textbox.find_all('textline')
-            if len(textlines) > 0:
+            num_textline = len(textlines)
+            texts=textbox.find_all('text')
+            if len(texts)>0:
                 texts = textlines[0].find_all('text')
-                fonts = [t['font'] for t in texts if 'font' in t.attrs]
-                font = max(set(fonts), key=fonts.count)
+                font,size=identify_font_and_size(texts)
+                # fonts = [t['font'] for t in texts if 'font' in t.attrs]
+                # sizes=[float(t['size']) for t in texts if 'size' in t.attrs]
+                # font = max(set(fonts), key=fonts.count)
+                # charater_size=max(set(sizes),key=sizes.count)
 
-                num_textline = len(textbox.find_all('textline'))
 
-                items.append((page_id, textbox_id, num_textline, font, left, right, bottom, top, box_content))
+                items.append((page_id, page_width,page_height,textbox_id, num_textline, font,size,left, right, bottom, top, box_content))
 
-    df = pd.DataFrame(items, columns=['page_id', 'textbox_id', 'num_textline', 'font', 'left', 'right', 'bottom', 'top', 'box_content'])
+    df = pd.DataFrame(items, columns=['page_id','page_width','page_height','textbox_id',
+                                      'num_textline', 'font','size','left', 'right', 'bottom', 'top', 'box_content'])
 
-    df['top-bottom'] = df['top'] - df['bottom']
+    _s=pd.Series(df['page_height'],index=df['page_id'])
+    page_height_s=_s[~_s.index.duplicated(keep='first')]
+    page_height_s[0]=0
+    page_height_s=page_height_s.sort_index()
+    _map_series=pd.Series(page_height_s.cumsum().values,index=page_height_s.index[::-1])
 
-    test = df[df['num_textline'] == 1]
+    def get_height_offset(page_id):return _map_series[page_id]
+
+    df['height_offset']=df['page_id'].map(get_height_offset)
+    df['bottom_adj']=df['bottom']+df['height_offset']
+    df['top_adj']=df['top']+df['height_offset']
+
+    df['box_spread_up']=df['bottom_adj'].shift(1)-df['top_adj']
+    df['box_spread_down']=df['bottom_adj']-df['top_adj'].shift(-1)
+
+    df['len_content']=df['box_content'].map(len)
+    df['top-bottom']=df['top']-df['bottom']
+
+    df=df.sort_values('box_spread_down',ascending=False)
+
+
+    test = df[df['num_textline'] <=2]
+    test1=test[(5<=test['len_content']) & (test['len_content']<=100)]
+    test2=test1[test1['box_spread_down']>0] # fixme: min line spread
+    test2=test2[test2['box_spread_up']>0]
+
+    test2=test2[~test2['box_content'].duplicated(keep=False)]
+    test2=test2[test2['size'].notnull()]
+
+    common_size=df['size'].value_counts()
+
+
+    #TODO: combine textbox with textline
+
+
+    test2=test2.sort_values('font')
+    test2=test2.sort_values('left')
+    test2=test2.sort_values('top-bottom')
+
+    df['top-bottom'].value_counts()
+    df['box_spread_up'].value_counts()
 
     test = test.sort_values('font')
 
     test = test.sort_values('top-bottom')
     test = test.sort_values('left')
 
-    df['box_spread_backward'] = df['top'] - df['bottom'].shift(1)
-    df['box_spread_forward'] = df['bottom'] - df['top'].shift(-1)
+
+
+    # df['box_spread_backward'] = df['top'] - df['bottom'].shift(1)
+    # df['box_spread_forward'] = df['bottom'] - df['top'].shift(-1)
 
     df['box_spread'] = df[['box_spread_backward', 'box_spread_forward']].abs().min(axis=1)
 
@@ -301,6 +383,13 @@ def identify_based_on_textbox():
     test = test.sort_values('box_spread')
     df = df.sort_values('box_spread')
     #TODO:
+
+
+
+if __name__ == '__main__':
+    identify_based_on_textbox()
+
+
 
 
 
@@ -316,22 +405,22 @@ DEBUG=0
 def task(path):
     AddBookmarks(path)
 
-if __name__ == '__main__':
-    if DEBUG:
-        debug()
-    else:
-        directory=r'E:\a\test_pdfminer'
-        fns=os.listdir(directory)
-        fns=[fn for fn in fns if fn.endswith('.pdf')]
-
-        paths=[]
-        for fn in fns:
-            path=os.path.join(directory,fn)
-            paths.append(path)
-
-        from zht.tools import multi_process
-
-        multi_process(task,paths,n=6)
+# if __name__ == '__main__':
+#     if DEBUG:
+#         debug()
+#     else:
+#         directory=r'E:\a\test_pdfminer'
+#         fns=os.listdir(directory)
+#         fns=[fn for fn in fns if fn.endswith('.pdf')]
+#
+#         paths=[]
+#         for fn in fns:
+#             path=os.path.join(directory,fn)
+#             paths.append(path)
+#
+#         from zht.tools import multi_process
+#
+#         multi_process(task,paths,n=6)
 
 
 

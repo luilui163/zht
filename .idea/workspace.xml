@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="">
       <change afterPath="$PROJECT_DIR$/internship/FT/server/xiangqi/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/python_chen/task3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internship/FT/.idea/FT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/internship/FT/.idea/FT.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internship/FT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/internship/FT/.idea/workspace.xml" afterDir="false" />
@@ -17,7 +15,6 @@
       <change beforePath="$PROJECT_DIR$/projects/Coursera-Asset-Pricing" beforeDir="false" afterPath="$PROJECT_DIR$/projects/Coursera-Asset-Pricing" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/Python-Financial-Tools" beforeDir="false" afterPath="$PROJECT_DIR$/projects/Python-Financial-Tools" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/financial text analyse/document_cluster" beforeDir="false" afterPath="$PROJECT_DIR$/projects/financial text analyse/document_cluster" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/zotero_xmind_pdf/a.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/zotero_xmind_pdf/a.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xed/xed/38Z9QERS.xmind" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/xed/xed/Allen et al- 2018- Dissecting the Long-Term Performance of the Chinese Stock Market.xmind" beforeDir="false" />
@@ -185,7 +182,7 @@
     <SUITE FILE_PATH="coverage/zht$1.coverage" NAME="1 Coverage Results" MODIFIED="1536752734145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/python_chen" />
     <SUITE FILE_PATH="coverage/zht$mekk_xmind.coverage" NAME="mekk_xmind Coverage Results" MODIFIED="1531453244605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
     <SUITE FILE_PATH="coverage/zht$test_xmind_36.coverage" NAME="test_xmind_36 Coverage Results" MODIFIED="1537356622352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/xmind" />
-    <SUITE FILE_PATH="coverage/zht$parse_toc.coverage" NAME="parse_toc Coverage Results" MODIFIED="1540051170890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
+    <SUITE FILE_PATH="coverage/zht$parse_toc.coverage" NAME="parse_toc Coverage Results" MODIFIED="1540315451430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
     <SUITE FILE_PATH="coverage/zht$Natural_language_processing_with_python.coverage" NAME="Natural language processing with python Coverage Results" MODIFIED="1529324803108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_python/NLTK" />
     <SUITE FILE_PATH="coverage/zht$analyze_tags.coverage" NAME="analyze_tags Coverage Results" MODIFIED="1530332940031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero" />
     <SUITE FILE_PATH="coverage/zht$build_copora.coverage" NAME="build_copora Coverage Results" MODIFIED="1529718303654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_engine" />
@@ -202,8 +199,8 @@
       <file leaf-file-name="annotation_to_xmind.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="69" column="40" lean-forward="true" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
+            <state relative-caret-position="19">
+              <caret line="69" column="40" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
               <folding>
                 <element signature="e#146#155#0" expanded="true" />
               </folding>
@@ -211,26 +208,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="task3.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/projects/python_chen/task3.py">
+      <file leaf-file-name="parse_toc.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-              <folding>
-                <element signature="e#131#146#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="392">
+              <caret line="359" column="40" selection-start-line="359" selection-start-column="40" selection-end-line="359" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parse_toc.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py">
+      <file leaf-file-name="frame.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Lib/site-packages/pandas/core/frame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="311" selection-start-line="311" selection-end-line="311" />
-              <folding>
-                <element signature="e#135#144#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="221">
+              <caret line="386" selection-start-line="386" selection-end-line="386" />
             </state>
           </provider>
         </entry>
@@ -246,7 +237,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fast-changing</find>
       <find>print</find>
       <find>results</find>
       <find>famaMacBeth</find>
@@ -276,6 +266,7 @@
       <find>is_bold</find>
       <find>trading_d</find>
       <find>info.pkl</find>
+      <find>generator_financial_indicators</find>
     </findStrings>
     <replaceStrings>
       <replace>strikout</replace>
@@ -347,8 +338,8 @@
         <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py" />
         <option value="$PROJECT_DIR$/../Lib/site-packages/PyPDF2/pdf.py" />
         <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/a.py" />
-        <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py" />
         <option value="$PROJECT_DIR$/projects/python_chen/task3.py" />
+        <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py" />
       </list>
     </option>
   </component>
@@ -363,9 +354,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-70" />
-    <option name="y" value="-18" />
-    <option name="width" value="1937" />
-    <option name="height" value="1067" />
+    <option name="y" value="-19" />
+    <option name="width" value="1938" />
+    <option name="height" value="1068" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -441,7 +432,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.task3">
+  <component name="RunManager" selected="Python.parse_toc">
     <configuration name="debug_pdf2txt" type="PythonConfigurationType" factoryName="Python">
       <module name="zht" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -506,8 +497,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.task3" />
         <item itemvalue="Python.parse_toc" />
+        <item itemvalue="Python.task3" />
       </list>
     </recent_temporary>
   </component>
@@ -862,7 +853,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540050690687</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="update">
+      <created>1540264916191</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1540264916191</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TodoView">
@@ -878,30 +876,30 @@
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19463088" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3275862" />
-      <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.31879196" side_tool="true" weight="0.48174158" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.6812081" weight="0.39466292" />
-      <window_info anchor="right" id="Python Console" order="7" sideWeight="0.31601125" visible="true" weight="0.2147651" />
-      <window_info anchor="right" id="Run" order="6" sideWeight="0.68398875" side_tool="true" visible="true" weight="0.2147651" />
-      <window_info anchor="right" id="SciView" order="5" sideWeight="0.24719101" side_tool="true" weight="0.36308724" />
-      <window_info anchor="right" id="Structure" order="8" sideWeight="0.7050562" side_tool="true" weight="0.32080537" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.6812081" weight="0.35955057" />
+      <window_info anchor="right" id="Python Console" order="7" sideWeight="0.31601125" weight="0.2147651" />
+      <window_info anchor="right" id="Run" order="6" sideWeight="0.68398875" side_tool="true" weight="0.2147651" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.7050562" weight="0.18398876" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.19731544" />
+      <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.44803372" />
+      <window_info active="true" anchor="right" id="SciView" order="5" sideWeight="0.5955056" side_tool="true" visible="true" weight="0.56845635" />
+      <window_info anchor="right" id="Structure" order="8" sideWeight="0.7050562" side_tool="true" weight="0.32080537" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info anchor="right" id="Debug" order="4" sideWeight="0.39185393" weight="0.24161074" />
+      <window_info anchor="right" id="Debug" order="4" sideWeight="0.40449437" visible="true" weight="0.56845635" />
+      <window_info active="true" anchor="bottom" id="Concurrent Activities Diagram" order="8" weight="0.46923077" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="10" sideWeight="0.5948276" side_tool="true" weight="0.5399787" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.44803372" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" x="0" y="0" width="337" height="648" id="Documentation" order="3" sideWeight="0.40486726" side_tool="true" weight="0.31233245" />
       <window_info anchor="right" id="Database" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Concurrent Activities Diagram" order="8" weight="0.46923077" />
+      <window_info anchor="bottom" id="Cvs" order="1" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="10" sideWeight="0.5948276" side_tool="true" weight="0.5399787" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -959,8 +957,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py</url>
-          <line>165</line>
+          <line>166</line>
           <option name="timeStamp" value="288" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py</url>
+          <line>362</line>
+          <option name="timeStamp" value="293" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -970,11 +973,13 @@
         <breakpoint enabled="true" type="python-exception">
           <condition expression="'1559816880010500378' in l" language="Python" />
           <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="condition" value="'1559816880010500378' in l" />
             <option name="notifyOnTerminate" value="true" />
+            <option name="myCondition" value="'1559816880010500378' in l" />
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="291" />
+      <option name="time" value="294" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -1034,13 +1039,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/internship/FT/xiangqi/zhuxiangqi/self_lib/premium_func.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2642">
-          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/gta/parse_txt.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -1357,33 +1355,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py">
+    <entry file="file://$PROJECT_DIR$/projects/python_chen/task3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="311" selection-start-line="311" selection-end-line="311" />
-          <folding>
-            <element signature="e#135#144#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="479">
+          <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="69" column="40" lean-forward="true" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
+        <state relative-caret-position="19">
+          <caret line="69" column="40" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
           <folding>
             <element signature="e#146#155#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects/python_chen/task3.py">
+    <entry file="file://$PROJECT_DIR$/../Lib/site-packages/pandas/core/frame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-          <folding>
-            <element signature="e#131#146#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="386" selection-start-line="386" selection-end-line="386" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="359" column="40" selection-start-line="359" selection-start-column="40" selection-end-line="359" selection-end-column="40" />
         </state>
       </provider>
     </entry>
