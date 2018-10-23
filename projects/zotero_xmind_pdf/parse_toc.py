@@ -113,7 +113,7 @@ class AddBookmarks:
         '''
         # TODO: the first page is exceptional
 
-        bk=df.copy()
+        # bk=df.copy()
 
         # narrow the scope down
         body_spread = df['line_spread'].value_counts().index[0]
@@ -124,6 +124,8 @@ class AddBookmarks:
 
         prefixes = ('Abstract', 'I', 'V', 'X', 'Appendix', 'Introduction', 'Table', 'Fig',
                     '1', '2', '3', '4', '5', '6', '7', '8', '9')
+        #TODO: How about A,B,C,D ? some papers use characters to list paragraphs
+
         df['score_prefix'] = df['line_content'].map(lambda x: 1 if x.startswith(prefixes) else 0)
 
         body_font = df['font'].value_counts().index[0]
@@ -132,8 +134,10 @@ class AddBookmarks:
         df['score_bold']=df['font'].map(lambda x:1 if 'bold' in x.lower() else 0)
         #TODO: first page
 
+
         leftmost=df['left'].min()
         df['score_left']=df['left'].map(lambda x:1 if x<=leftmost+1 else 0) # add 1, since the setype may be not so precise
+        #fixme: for paper with two columns (such as those from JFE) this method is highly biased.
 
         # fitler out lines with size being equal to 0
         df['score_linesize']=df['line_size'].map(lambda x:-100 if x==0 else 0)
@@ -199,15 +203,8 @@ class AddBookmarks:
                         fonts=[t['font'] for t in texts if 'font' in t.attrs]
                         font=max(set(fonts),key=fonts.count)
 
-                        # # identify whether contains bold characters
-                        # is_bold = False
-                        # text_with_font = [t for t in texts if 'font' in t.attrs]
-                        # if len([t for t in text_with_font if 'bold' in t['font'].lower()]) > THRESH * len(text_with_font):
-                        #     is_bold = True
-
                         # identify size of each line
                         with_size=[t for t in texts if 'size' in t.attrs]
-                        # no_empty_text = [t for t in texts if len(t.text)>0]
                         line_size = 0
                         if len(with_size) > 0:
                             line_size = sum(float(t['size']) for t in with_size) / len(with_size)
@@ -253,6 +250,60 @@ class AddBookmarks:
             with open(self.pdf_path, 'wb') as f:
                 pdfWriter.write(f)
 
+def identify_based_on_textbox():
+    import pandas as pd
+    from bs4 import BeautifulSoup
+
+    path = r'E:\a\test_pdfminer\Westerlund et al- 2015- Testing for stock return predictability in a large Chinese panel.xml'
+
+    with open(path, encoding='utf8') as f:
+        soup = BeautifulSoup(f.read(), 'xml')
+
+    pages = soup.find_all('page')
+
+    items = []
+    for page in pages:
+        page_id = int(page['id'])
+        textboxs = page.find_all('textbox')
+
+        for textbox in textboxs:
+            textbox_id = int(textbox['id'])
+            left, bottom, right, top = (float(x) for x in textbox['bbox'].split(','))
+            box_content = textbox.text.replace('\n', '')
+
+            textlines = textbox.find_all('textline')
+            if len(textlines) > 0:
+                texts = textlines[0].find_all('text')
+                fonts = [t['font'] for t in texts if 'font' in t.attrs]
+                font = max(set(fonts), key=fonts.count)
+
+                num_textline = len(textbox.find_all('textline'))
+
+                items.append((page_id, textbox_id, num_textline, font, left, right, bottom, top, box_content))
+
+    df = pd.DataFrame(items, columns=['page_id', 'textbox_id', 'num_textline', 'font', 'left', 'right', 'bottom', 'top', 'box_content'])
+
+    df['top-bottom'] = df['top'] - df['bottom']
+
+    test = df[df['num_textline'] == 1]
+
+    test = test.sort_values('font')
+
+    test = test.sort_values('top-bottom')
+    test = test.sort_values('left')
+
+    df['box_spread_backward'] = df['top'] - df['bottom'].shift(1)
+    df['box_spread_forward'] = df['bottom'] - df['top'].shift(-1)
+
+    df['box_spread'] = df[['box_spread_backward', 'box_spread_forward']].abs().min(axis=1)
+
+    test = df[df['num_textline'] == 1]
+    test = test.sort_values('box_spread')
+    df = df.sort_values('box_spread')
+    #TODO:
+
+
+
 def debug():
     directory=r'E:\a\test_pdfminer'
     fn="Cheema and Nartea- 2017- Momentum returns, market states, and market dynamics - Is China different.pdf"
@@ -260,6 +311,10 @@ def debug():
     AddBookmarks(path)
 
 DEBUG=0
+
+
+def task(path):
+    AddBookmarks(path)
 
 if __name__ == '__main__':
     if DEBUG:
@@ -269,10 +324,15 @@ if __name__ == '__main__':
         fns=os.listdir(directory)
         fns=[fn for fn in fns if fn.endswith('.pdf')]
 
+        paths=[]
         for fn in fns:
             path=os.path.join(directory,fn)
-            AddBookmarks(path)
-            print(path)
+            paths.append(path)
+
+        from zht.tools import multi_process
+
+        multi_process(task,paths,n=6)
+
 
 
 

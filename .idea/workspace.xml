@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="update">
+    <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="">
       <change afterPath="$PROJECT_DIR$/internship/FT/server/xiangqi/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning_python/python3_study_notes/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning_python/python3_study_notes/logger.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/python_chen/3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/python_chen/task2-groupby.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/xmind_to_doc/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/xmind_to_doc/convert.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/zotero_xmind_pdf/debug_dumppdf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/zotero_xmind_pdf/debug_pdf2txt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/zotero_xmind_pdf/merge_pdf/by_pdfrw.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/zotero_xmind_pdf/test_pdfrw/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/zotero_xmind_pdf/test_pdfrw/a.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/python_chen/task3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/wind/update_financial_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/wind/update_financial_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internship/FT/.idea/FT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/internship/FT/.idea/FT.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internship/FT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/internship/FT/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internship/FT/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/internship/FT/config.py" afterDir="false" />
@@ -28,10 +18,128 @@
       <change beforePath="$PROJECT_DIR$/projects/Python-Financial-Tools" beforeDir="false" afterPath="$PROJECT_DIR$/projects/Python-Financial-Tools" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/financial text analyse/document_cluster" beforeDir="false" afterPath="$PROJECT_DIR$/projects/financial text analyse/document_cluster" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/zotero_xmind_pdf/a.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/zotero_xmind_pdf/a.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/zotero_xmind_pdf/base_on_foxit.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/zotero_xmind_pdf/merge_pdf/merge_pdf.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/zotero_xmind_pdf/merge_pdf/merge_pdf.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/38Z9QERS.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Allen et al- 2018- Dissecting the Long-Term Performance of the Chinese Stock Market.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Artmann et al- 2012- The Cross-Section of German Stock Returns - New Data and New Evidence.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Asness et al- 2013- Value and Momentum Everywhere.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Bai et al- 2016- Have financial markets become more informative.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Baker et al- 2017- Detecting Anomalies - The Relevance and Power of Standard Asset Pricing Tests.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Barber et al- 2016- Which Factors Matter to Investors - Evidence from Mutual Fund Flows.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Bartram and Grinblatt- 2017- Agnostic fundamental analysis works.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Bo et al. - A Model of Anomaly Discovery.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Bond et al- 2012- The Real Effects of Financial Markets.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Brunnermeier et al- 2017- China’s model of managing the financial system.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Bryzgalova- 2015- Spurious factors in linear asset pricing models.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Cakici et al- 2015- Cross-sectional stock return predictability in China.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Calluzzo et al- 2018- When Anomalies Are Publicized Broadly, Do Institutions Trade Accordingly.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Carpenter et al- 2018- The Real Value of China's Stock Market.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Cheema and Nartea- 2017- Momentum returns, market states, and market dynamics - Is China different.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Chen and Velikov- 2018- Accounting for the Anomaly Zoo - A Trading Cost Perspective.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Chen and Zimmermann- 2018- Publication Bias and the Cross-Section of Stock Returns.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Chen et al- 2010- On the predictability of Chinese stock returns.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Cheung et al- 2015- Value, Size, Momentum, Dividend Yield, and Volatility in China’s A-Share Market.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Chiah et al- 2016- A Better Model - An Empirical Investigation of the Fama–French Five-factor Model in Australia.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Chordia et al- 2017- p-Hacking - Evidence from Two Million Trading Strategies.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Chou et al. - 2015 - Panel Data Analysis and Bootstrapping Application.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Clark and McCracken- 2010- Reality Checks and Nested Forecast Model Comparisons.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Cochrane- 2011- Presidential Address - Discount Rates.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Da et al- 2014- Frog in the Pan - Continuous Information and Momentum.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/DeMiguel et al- 2018- A Portfolio Perspective on the Multitude of Firm Characteristics.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Engelberg et al- 2017- Anomalies and News.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Engelberg et al- 2018- Analysts and Anomalies.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Explaining Anomalies in Australia with a Five-Factor Asset Pricing Model.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Fama and French- 2010- Luck versus Skill in the Cross-Section of Mutual Fund Returns.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Fama and French- 2017- Choosing Factors.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Fan et al- 2007- Politically connected CEOs, corporate governance, and Post-IPO performance of China's newly partially privatized firms☆.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Feng et al. - 2017 - Taming the Factor Zoo.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Frazzini et al. - 2012 - Trading Costs of Asset Pricing Anomalies.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Freyberger et al. - 2017 - Dissecting characteristics nonparametrically.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Gourio- 2012- Disaster Risk and Business Cycles.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Goyal- 2012- Empirical cross-sectional asset pricing - a survey.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Goyenko et al- 2009- Do liquidity measures measure liquidity.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Gray and Vogel- 2016- Quantitative Momentum - A Practitioner's Guide to Building a Momentum-Based Stock Selection System.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Green et al- 2013- The supraview of return predictive signals.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Green et al- 2017- The Characteristics That Provide Independent Information About Average U.s. Monthly Stock Returns.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Greenwood and Shleifer- 2014- Expectations of Returns and Expected Returns.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Guo and Zhang and Zhang and Zhang- 2017- The five-factor asset pricing model tests for the Chinese stock market.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Han et al- 2013- A New Anomaly - The Cross-Sectional Profitability of Technical Analysis.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Han et al- 2016- A trend factor - Any economic gains from using information over investment horizons.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Han et al- 2016- Taming Momentum Crashes - A Simple Stop-Loss Strategy.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Han et al- 2018- Anomalies Enhanced - Don’t be passive as information arrives.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Han et al- 2018- How Many Firm Characteristics Drive US Stock Returns.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Han et al- 2018- Volume and Return - The Role of Mispricing.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Harvey and Liu- 2016- Lucky factors.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Harvey and Liu- 2018- Detecting Repeatable Performance.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Harvey and Liu- 2018- False (and Missed) Discoveries in Financial Economics.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Harvey et al- 2016- ...and the Cross-Section of Expected Returns.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Haugen and Baker- 1996- Commonality in the determinants of expected stock returns.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/He et al- 2018- Failure of Existing Factor Models in Explaining Individual Stock Returns - Evidence from a Predictability Test.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Hilliard and Zhang- 2015- Size and price-to-book effects - Evidence from the Chinese stock markets.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Hong et al- 2007- Do industries lead stock markets.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Hou and Mo and Xue and Zhang- 2018- q5.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Hsu et al- 2017- Anomalies in Chinese A-Shares.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Hu et al- 2018- Fama–French in China - Size and Value Factors in Chinese Stock Returns.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Huang et al- 2018- Sentiment Across Asset Markets.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Huang et al- 2018- Time-Series Momentum - Is It There.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Huang et al- 2018- Twin Momentum - Fundamental Trends Matter.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/JIANG et al- 2011- How Predictable is the Chinese Stock Market.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Jacobs- 2015- What explains the dynamics of 100 anomalies.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Jagannathan et al- 2010- Cross-Sectional Asset Pricing Tests.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Jiang and Jin and Tang- 2018- Dissecting the Effectiveness of Firm Financial Strength in Predicting Chinese Stock Market.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Jiang and Qi and Tang- 2016- Q-Theory, Mispricing, and Profitability Premium - Evidence from China.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Jiang et al- 2017- Manager Sentiment and Stock Returns.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Jiang et al- 2018- Firm Characteristics and Chinese Stocks.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Jiang et al- 2018- Stock Return Asymmetry - Beyond Skewness.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Kakashadze- 2016- 101 Formulaic Alphas.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Kelly et al- 2018- Characteristics Are Covariances - A Unified Model of Risk and Return.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Kogan and Tian- 2015- Firm Characteristics and Empirical Factor Models - A Model-Mining Experiment.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Kokkonen and Suominen- 2015- Hedge Funds and Stock Market Efficiency.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Kosowski and Naik and Teo- 2007- Do hedge funds deliver alpha - A Bayesian and bootstrap analysis.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Kosowski et al- 2006- Can mutual fund “stars” really pick stocks - New evidence from a bootstrap analysis.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Kozak et al- 2017- Interpreting Factor Models.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Kozak et al- 2017- Shrinking the Cross Section.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Lee et al. - 2017 - Reverse Mergers, Shell Value, and Regulation Risk .xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Lewellen and Nagel and Shanken- 2010- A skeptical appraisal of asset pricing tests.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Lewellen- 2015- The Cross-section of Expected Stock Returns.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Light et al- 2017- Aggregation of Information About the Cross Section of Stock Returns - A Latent Variable Approach.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Lin et al- 2017- Forecasting Corporate Bond Returns with a Large Set of Predictors - An Iterated Combination Approach.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Lin- 2017- Noisy prices and the Fama–French five-factor asset pricing model in China.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Linnainmaa and Roberts- 2018- The History of the Cross-Section of Stock Returns.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Liu et al- 2018- Size and Value in China.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Lu et al- 2018- Anomalies Abroad - Beyond Data Mining.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Maio and Philip- 2018- Economic activity and momentum profits - Further evidence.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Maio and Santa-Clara- 2017- Short-Term Interest Rates and Stock Market Anomalies.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Mclean and Pontiff- 2016- Does Academic Research Destroy Stock Return Predictability.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Messmer and Audrino- 2017- The (Adaptive) Lasso in the Zoo - Firm Characteristic Selection in the Cross-Section of Expected Returns.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Nagel- 2013- Empirical Cross-Sectional Asset Pricing.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Neely et al- 2014- Forecasting the Equity Risk Premium - The Role of Technical Indicators.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Novy-Marx and Velikov- 2016- A Taxonomy of Anomalies and Their Trading Costs.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Novy-Marx- 2015- Fundamentally, momentum is fundamental momentum.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Novy-Marx- 2015- How Can a Q-Theoretic Model Price Momentum.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Pan et al- 2016- Speculative Trading and Stock Returns.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Patari and Leivo- 2017- A Closer Look at Value Premium - Literature Review and Synthesis.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Rapach and Zhou- 2013- Chapter 6 - Forecasting Stock Returns.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Rapach et al- 2018- Dynamic Return Dependencies Across Industries - A Machine Learning Approach.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Richardson et al- 2010- Accounting anomalies and fundamental analysis - A review of recent research advances.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Safdar and Yan- 2017- Information risk, stock returns, and asset pricing - Evidence from China.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Shi et al- 2018- Do IPOs Affect Market Price - Evidence from China.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Song and Xiong- 2018- Risks in China’s Financial System.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Stambaugh et al- 2012- The short of it - Investor sentiment and anomalies.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Stambaugh et al- 2014- The long of it - Odds that investor sentiment spuriously predicts anomaly returns.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Stock and Watson- 2002- Macroeconomic Forecasting Using Diffusion Indexes.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Stock and Watson- 2017- Twenty Years of Time Series Econometrics in Ten Pictures.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Subrahmanyam- 2010- The Cross-Section of Expected Stock Returns - What Have We Learnt from the Past Twenty-Five Years of Research.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Sunder et al- 2017- Pilot CEOs and corporate innovation.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Wang et al- 2017- The high-volume return premium - Does it exist in the Chinese stock market.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Xing et al- 2018- Discovering Bayesian Market Views for Intelligent Asset Allocation.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Xu and Zhang- 2014- The Fama-French Three Factors in Chinese Stock Market.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Yan and Zheng- 2017- Fundamental Analysis and the Cross-Section of Stock Returns - A Data-Mining Approach.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Yuan- 2015- Market-wide attention, trading, and stock returns.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/Zheng et al- 2018- Sentiment hedging - How hedge funds adjust their exposure to market sentiment.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/backtestging strategies based on multiple signals.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/代 and 孔- 2017- 高管海外经历是否能提升企业投资效率.xmind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xed/xed/田利辉 and 王冠英- 2014- 我国股票定价五因素模型 - 交易量如何影响股票收益率.xmind" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,6 +158,7 @@
     <SUITE FILE_PATH="coverage/zht$by_pdfrw.coverage" NAME="by_pdfrw Coverage Results" MODIFIED="1539962777282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf/merge_pdf" />
     <SUITE FILE_PATH="coverage/zht$parse_JEL.coverage" NAME="parse_JEL Coverage Results" MODIFIED="1524662815496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/playingField" />
     <SUITE FILE_PATH="coverage/zht$HaiTong_hp_new.coverage" NAME="HaiTong_hp_new Coverage Results" MODIFIED="1534767056650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tmp" />
+    <SUITE FILE_PATH="coverage/zht$task3.coverage" NAME="task3 Coverage Results" MODIFIED="1540261189523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/python_chen" />
     <SUITE FILE_PATH="coverage/zht$split.coverage" NAME="split Coverage Results" MODIFIED="1532013942777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
     <SUITE FILE_PATH="coverage/zht$example_create.coverage" NAME="example_create Coverage Results" MODIFIED="1537356893646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_zht" />
     <SUITE FILE_PATH="coverage/zht$build_corpus.coverage" NAME="build_corpus Coverage Results" MODIFIED="1529542778002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/financial text analyse/text_analysis" />
@@ -76,7 +185,7 @@
     <SUITE FILE_PATH="coverage/zht$1.coverage" NAME="1 Coverage Results" MODIFIED="1536752734145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/python_chen" />
     <SUITE FILE_PATH="coverage/zht$mekk_xmind.coverage" NAME="mekk_xmind Coverage Results" MODIFIED="1531453244605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
     <SUITE FILE_PATH="coverage/zht$test_xmind_36.coverage" NAME="test_xmind_36 Coverage Results" MODIFIED="1537356622352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/xmind" />
-    <SUITE FILE_PATH="coverage/zht$parse_toc.coverage" NAME="parse_toc Coverage Results" MODIFIED="1540043721026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
+    <SUITE FILE_PATH="coverage/zht$parse_toc.coverage" NAME="parse_toc Coverage Results" MODIFIED="1540051170890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
     <SUITE FILE_PATH="coverage/zht$Natural_language_processing_with_python.coverage" NAME="Natural language processing with python Coverage Results" MODIFIED="1529324803108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_python/NLTK" />
     <SUITE FILE_PATH="coverage/zht$analyze_tags.coverage" NAME="analyze_tags Coverage Results" MODIFIED="1530332940031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero" />
     <SUITE FILE_PATH="coverage/zht$build_copora.coverage" NAME="build_copora Coverage Results" MODIFIED="1529718303654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_engine" />
@@ -88,44 +197,37 @@
     <SUITE FILE_PATH="coverage/zht$test_xmind.coverage" NAME="test_xmind Coverage Results" MODIFIED="1530452527327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/xmind" />
     <SUITE FILE_PATH="coverage/zht$debug_pdf2txt__1_.coverage" NAME="debug_pdf2txt (1) Coverage Results" MODIFIED="1539961083384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="parse_toc.py" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="308">
-                    <caret line="74" selection-start-line="74" selection-end-line="75" />
-                    <folding>
-                      <element signature="e#135#144#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="annotation_to_xmind.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8081">
-              <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            <state relative-caret-position="348">
+              <caret line="69" column="40" lean-forward="true" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
+              <folding>
+                <element signature="e#146#155#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parse_toc.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="task3.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/projects/python_chen/task3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+              <folding>
+                <element signature="e#131#146#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parse_toc.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="569">
-              <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
+            <state>
+              <caret line="311" selection-start-line="311" selection-end-line="311" />
               <folding>
                 <element signature="e#135#144#0" expanded="true" />
               </folding>
@@ -144,10 +246,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>standard</find>
-      <find />
-      <find>Chinese</find>
-      <find>take</find>
       <find>fast-changing</find>
       <find>print</find>
       <find>results</find>
@@ -174,6 +272,10 @@
       <find>pass</find>
       <find>decry</find>
       <find>decrypt</find>
+      <find>le</find>
+      <find>is_bold</find>
+      <find>trading_d</find>
+      <find>info.pkl</find>
     </findStrings>
     <replaceStrings>
       <replace>strikout</replace>
@@ -196,8 +298,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Lib/site-packages/mekk/xmind/__init__.py" />
-        <option value="$PROJECT_DIR$/../Lib/site-packages/mekk/xmind/id_gen.py" />
         <option value="$PROJECT_DIR$/../Lib/site-packages/mekk/xmind/xmlutil.py" />
         <option value="$PROJECT_DIR$/../Lib/site-packages/mekk/xmind/document.py" />
         <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_zht/__init__.py" />
@@ -236,7 +336,6 @@
         <option value="$PROJECT_DIR$/projects/python_chen/task2-groupby.py" />
         <option value="$PROJECT_DIR$/data/wind/update_financial_data.py" />
         <option value="$PROJECT_DIR$/learning_python/python3_study_notes/logger.py" />
-        <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/a.py" />
         <option value="$PROJECT_DIR$/projects/xmind_to_doc/convert.py" />
         <option value="$PROJECT_DIR$/projects/python_chen/3.py" />
         <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/debug_pdf2txt.py" />
@@ -246,7 +345,10 @@
         <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/test_pdfrw/a.py" />
         <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/pdftitle.py" />
         <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py" />
+        <option value="$PROJECT_DIR$/../Lib/site-packages/PyPDF2/pdf.py" />
+        <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/a.py" />
         <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py" />
+        <option value="$PROJECT_DIR$/projects/python_chen/task3.py" />
       </list>
     </option>
   </component>
@@ -260,10 +362,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1940" />
-    <option name="height" value="1100" />
+    <option name="x" value="-70" />
+    <option name="y" value="-18" />
+    <option name="width" value="1937" />
+    <option name="height" value="1067" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -290,7 +392,7 @@
               <item name="zht" type="b2602c69:ProjectViewProjectNode" />
               <item name="zht" type="462c0819:PsiDirectoryNode" />
               <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="zotero_xmind_pdf" type="462c0819:PsiDirectoryNode" />
+              <item name="python_chen" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -301,8 +403,8 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/app/python36/zht/a.py&#10;famaMacBeth&#9;null&#9;null&#10;GRS_test&#9;null&#9;null&#10;tostring&#9;null&#9;null&#10;request&#9;null&#9;null&#10;summary_statistics&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/projects/zotero_xmind_pdf/debug_dumppdf.py" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -313,18 +415,18 @@
     <option name="myShowDebugConsoleByDefault" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\app\python36\zht\projects\portfolio_optimization" />
-      <recent name="D:\app\python36\zht\projects\zotero_xmind_pdf\mekk_zht" />
-      <recent name="D:\app\python36\zht\projects\financial text analyse\zht_search_engine" />
-      <recent name="D:\app\python36\zht\projects\financial text analyse" />
-      <recent name="D:\app\python36\zht\utils" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\app\python36\zht\projects\zotero_xmind_pdf\mekk_zht" />
       <recent name="D:\app\python36\zht" />
       <recent name="D:\app\python36\zht\notebook" />
       <recent name="D:\app\python36\zht\projects" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\app\python36\zht" />
+      <recent name="D:\app\python36\zht\projects\portfolio_optimization" />
+      <recent name="D:\app\python36\zht\projects\zotero_xmind_pdf\mekk_zht" />
+      <recent name="D:\app\python36\zht\projects\financial text analyse\zht_search_engine" />
+      <recent name="D:\app\python36\zht\projects\financial text analyse" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -339,7 +441,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.task3">
     <configuration name="debug_pdf2txt" type="PythonConfigurationType" factoryName="Python">
       <module name="zht" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -378,8 +480,33 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="task3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="zht" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/projects/python_chen" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projects/python_chen/task3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.debug_pdf2txt" />
+      <item itemvalue="Python.parse_toc" />
+      <item itemvalue="Python.task3" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.task3" />
         <item itemvalue="Python.parse_toc" />
       </list>
     </recent_temporary>
@@ -721,7 +848,21 @@
       <option name="project" value="LOCAL" />
       <updated>1537780019197</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="update">
+      <created>1540044041510</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1540044041510</updated>
+    </task>
+    <task id="LOCAL-00048" summary="update">
+      <created>1540050690687</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1540050690687</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TodoView">
@@ -737,30 +878,30 @@
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19463088" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3275862" />
+      <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.31879196" side_tool="true" weight="0.48174158" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.6812081" weight="0.39466292" />
-      <window_info anchor="right" id="Python Console" order="7" sideWeight="0.49297753" visible="true" weight="0.24295302" />
-      <window_info anchor="right" id="Run" order="6" sideWeight="0.5070225" side_tool="true" weight="0.28255033" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.7050562" weight="0.18539326" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.1590604" />
-      <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.44803372" />
-      <window_info anchor="right" id="SciView" order="5" sideWeight="0.5070225" side_tool="true" visible="true" weight="0.24295302" />
+      <window_info anchor="right" id="Python Console" order="7" sideWeight="0.31601125" visible="true" weight="0.2147651" />
+      <window_info anchor="right" id="Run" order="6" sideWeight="0.68398875" side_tool="true" visible="true" weight="0.2147651" />
+      <window_info anchor="right" id="SciView" order="5" sideWeight="0.24719101" side_tool="true" weight="0.36308724" />
       <window_info anchor="right" id="Structure" order="8" sideWeight="0.7050562" side_tool="true" weight="0.32080537" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.7050562" weight="0.18398876" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info anchor="right" id="Debug" order="4" sideWeight="0.38904494" weight="0.39597315" />
-      <window_info active="true" anchor="bottom" id="Concurrent Activities Diagram" order="8" weight="0.46923077" />
+      <window_info anchor="right" id="Debug" order="4" sideWeight="0.39185393" weight="0.24161074" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="10" sideWeight="0.5948276" side_tool="true" weight="0.5399787" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.44803372" />
       <window_info anchor="right" x="0" y="0" width="337" height="648" id="Documentation" order="3" sideWeight="0.40486726" side_tool="true" weight="0.31233245" />
       <window_info anchor="right" id="Database" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="1" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="10" sideWeight="0.5948276" side_tool="true" weight="0.5399787" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info active="true" anchor="bottom" id="Concurrent Activities Diagram" order="8" weight="0.46923077" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -816,6 +957,11 @@
           <line>279</line>
           <option name="timeStamp" value="282" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py</url>
+          <line>165</line>
+          <option name="timeStamp" value="288" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -824,13 +970,11 @@
         <breakpoint enabled="true" type="python-exception">
           <condition expression="'1559816880010500378' in l" language="Python" />
           <properties notifyOnTerminate="true" exception="BaseException">
-            <option name="condition" value="'1559816880010500378' in l" />
             <option name="notifyOnTerminate" value="true" />
-            <option name="myCondition" value="'1559816880010500378' in l" />
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="285" />
+      <option name="time" value="291" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -890,35 +1034,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/wind/wind_hp.py" />
-    <entry file="file://$PROJECT_DIR$/../Lib/site-packages/pandas/core/reshape/concat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="258" selection-start-line="258" selection-end-line="258" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/researchTopics/assetPricing2/core/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/a.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Lib/site-packages/PyPDF2/merger.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="182" lean-forward="true" selection-start-line="182" selection-end-line="182" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/internship/FT/xiangqi/zhuxiangqi/self_lib/premium_func.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2642">
@@ -1059,13 +1174,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/a.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projects/python_chen/3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1091,9 +1199,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="239" column="54" lean-forward="true" selection-start-line="239" selection-start-column="54" selection-end-line="239" selection-end-column="54" />
-          <folding>
-            <element signature="e#158#190#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1108,30 +1213,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#128#169#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/pdftitle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2268">
-          <caret line="164" column="7" lean-forward="true" selection-start-line="164" selection-start-column="7" selection-end-line="164" selection-end-column="7" />
-          <folding>
-            <element signature="e#707#720#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/base_on_zotfile.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/base_on_foxit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9249" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/pdftitle.py" />
+    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/base_on_foxit.py" />
     <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/add_tags.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-642" />
@@ -1174,9 +1260,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="61" column="43" lean-forward="true" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
-          <folding>
-            <element signature="e#129#139#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1190,24 +1273,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Lib/site-packages/PyPDF2/pdf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="1998" column="38" lean-forward="true" selection-start-line="1998" selection-start-column="38" selection-end-line="1998" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/merge_pdf/merge_pdf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="61" column="24" lean-forward="true" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8081">
-          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1236,18 +1305,84 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="109" column="44" lean-forward="true" selection-start-line="109" selection-start-column="44" selection-end-line="109" selection-end-column="44" />
-          <folding>
-            <element signature="e#129#139#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Lib/site-packages/PyPDF2/pdf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="1989" selection-start-line="1989" selection-end-line="1989" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Lib/site-packages/bs4/element.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="996" selection-start-line="996" selection-end-line="996" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/a.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/researchTopics/assetPricing2/data/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/researchTopics/assetPricing2/data/dataApi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="229" column="4" selection-start-line="229" selection-start-column="4" selection-end-line="229" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/researchTopics/assetPricing2/core/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="468" column="19" selection-start-line="468" selection-start-column="19" selection-end-line="468" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
+        <state>
+          <caret line="311" selection-start-line="311" selection-end-line="311" />
           <folding>
             <element signature="e#135#144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="69" column="40" lean-forward="true" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
+          <folding>
+            <element signature="e#146#155#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/python_chen/task3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding>
+            <element signature="e#131#146#0" expanded="true" />
           </folding>
         </state>
       </provider>
