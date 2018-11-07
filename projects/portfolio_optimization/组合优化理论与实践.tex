@@ -1,0 +1,328 @@
+\documentclass[UTF8,11pt]{ctexart}
+\usepackage{geometry}
+%\geometry{a4paper,scale=0.8}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[colorlinks,urlcolor=blue,anchorcolor=blue]{hyperref}
+\usepackage{apacite}
+\bibliographystyle{apacite}
+
+
+\title{组合优化理论与实践}
+\author{张海涛\thanks{武汉大学经济与管理学院，金融工程硕士，学号：2016201050151，Email：13163385579@163.com,本文中涉及的 python 代码和 latex 源码可在我的 Github 下载 \href{https://github.com/zhanghaitao1/zht/tree/master/projects/portfolio_optimization}{https://github.com/zhanghaitao1/zht/tree/master/projects/portfolio\_optimization}}}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+本文介绍了量化领域组合优化涉及到的理论背景和相关的优化问题，同时也介绍了如何用python 去求解带约束的优化问题。第一节介绍了组合优化的一般框架；第二节介绍了python比较常用的优化工具；第三部分引入结构化风险模型以优化模型的输入参数；第四部分对比分析了常见的四种风险管理模型。
+\end{abstract}
+
+
+\newpage
+
+\section{组合优化的一般框架}\label{section:kuangjia}
+
+均值-方差的组合优化框架 （Mean-Variance Optimization, MVO) 由 Markowitz 于1952年提出，至今已有60余年历史，虽然也有不少学者 MVO 的诸多不足，但目前尚没有比较成熟的, 可以替代 MVO 的框架，MVO 也是目前业界普遍使用的组合优化框架。
+
+maximize
+\begin{equation}
+x^\prime r - c^\prime|w-w_0|-\lambda x^\prime \Sigma x
+\end{equation}
+
+subject to
+\begin{gather}
+w=w^b+x                                 \qquad \mbox{权重关系}\\
+x^\prime \Sigma x \le \sigma^2          \qquad \mbox{跟踪误差}\\
+\lVert w-w_0 \rVert \le \delta          \qquad \mbox{换手约束}\\
+w_{min}\le w \le w_{max}                \qquad \mbox{权重上下限}\\
+f_{min} \le X_f^\prime x \le f_{max}    \qquad \mbox{风险因子暴露}\\
+1^\prime (w>0) \le n_{max}              \qquad \mbox{股票数量约束}
+\end{gather}
+其中$x$, $w$, $w_0$, $w^b$ 分别是样本空间中各股票的主动权重向量， 目标绝对权重向量， 初始权重向量和基准组合的权重向量， 当$w^b=0$时， 指数增强组合的优化框架退化为一般组合的优化框架。
+
+上述组合优化涉及到四个模块，alpha 模型，风险模型，交易成本模型和其他约束部分。其中，alpha 模型在组合优化中表现为 $r$, $r$ 表示预期收益率，风险模型表现为股票的协方差矩阵预测 $\Sigma$， 交易成本模型影响交易惩罚项和换手约束的设定。
+
+\textbf{组合优化并不一定会提高组合业绩表现， 但他能实现投资组合的精确控制， 包括组合风险暴露， 换手率， 个股权重上下限， 跟踪误差等， 降低策略收益的不确定性}。 另外组合优化体系的扩展性强， 可以把交易冲击成本， 参数估计误差， 主观投资调整等融入到一个体系中求解。因此， 组合优化是一套结构完备， 功能性强的理论， 但好的理论并不能保证好的实践结果，投资使用中会碰到许多技术问题。一是基于历史数据准确的估计出优化问题的输入变量： 股票收益率 r 和收益协方差矩阵 $\Sigma$, 第二是用数值算法求出最优解。
+\subsection{其他常见优化函数和约束条件}
+
+常见优化函数：
+\begin{align}
+\mbox{最大化预期收益率}\qquad & max_w \quad w^\prime \mu\\
+\mbox{最小化组合方差}\qquad  & min_w \quad w^\prime \Sigma w\\
+\mbox{最大化效用函数}\qquad  & max_w\quad w^\prime\mu -\frac{1}{2}\lambda w^\prime \Sigma w\\
+\mbox{最大化信息比率}\qquad & max_w\quad w^\prime\mu/\sqrt{w^\prime \Sigma w}
+\end{align}
+
+常见约束条件：
+\begin{align}
+\mbox{组合约束}\qquad & w^\prime e=1\\
+\mbox{个股权重限制}\qquad & d\le w\le \mu\\
+\mbox{预期收益率下限}\qquad & w^\prime \mu \ge \mu_0 \\
+\mbox{与其波动率上限}\qquad & w^\prime V w \le \sigma^2\\
+\mbox{风格偏离限制} \qquad & l\le w^\prime F \le \mu\\
+\mbox{因子中性处理} \qquad & w_A^\prime I_{\{i \in D\}}=0\\
+\mbox{风险贡献度限制} \qquad & w\circ(V w)\le c\cdot w^\prime V w
+\end{align}
+
+\section{组合优化求解}
+本章讨论第\ref{section:kuangjia}节中提到的第一个问题。本章主要介绍如何用python解决在组合优化中遇到的优化问题，关于详细的算法和数据论证可以参考\citeA{boydConvexOptimization2004} 和 \citeA{nocedalNumericalOptimization2006},关于凸优化\href{https://web.stanford.edu/~boyd/cvxbook/}{这里有Boyd的公开课}。关于优化理论在金融领域的应用 \citeA{cornuejolsOptimizationMethodsFinance2006} 有系统的介绍, \citeA{boydMultiPeriodTradingConvex2017} 介绍了如何用凸优化解决当期和多期的组合优化问题，并提出了一个一般的框架，并且基于此作者开发了一个开源的 python 工具包 \href{http://cvxportfolio.org/}{cvxportfolio}.
+
+%组合优化中碰到最多的是如下的二次规划问题：
+%\begin{alignat}{2}
+%min_{x\in R^n}\quad &\alpha^\prime x +\frac{1}{2}x^\prime \Sigma x &\\
+%\mathrm{s.t.}\quad & a_i^\prime x=b_i\quad for\quad i \in \epsilon,\\
+% & a_i^\prime x \ge b_i \quad for \quad i \in J
+%\end{alignat}
+%
+%其中$\Sigma$表示协方差矩阵， 是一个正定矩阵，因此目标函数是一个凸函数，而约束条件都是线性的。这种类型的二次规划成为 \textbf{凸二次规划}， 它在数值求解上有许多便利之处， 比如说， 股票权重大小一般$[0,1]$ 之间，因此上述约束条件可行域如果非空的化，是一个有界闭集，凸函数在欧式空间的有界闭集上一定有最小值，而且是全局最小值。凸二次规划和线性规划是我们在做组合优化时会碰到的最易求解的优化问题类型，有快速收敛的数值算法， 因此我们在做组合优化时应尽可能地把问题转化成凸二次规划。
+
+Python 解决优化问题的工具主要有 \href{https://docs.scipy.org/doc/scipy/reference/tutorial/optimize.html}{scipy.optimize}, \href{https://cvxopt.org/userguide/intro.html}{cvxopt} 和 \href{http://www.cvxpy.org/}{cvxpy}. scipy.optimize 可以求解一些简单的线性优化问题，对于非线性问题用起来比较复杂。cvxopt 功能强大，依赖的库比较多，安装比较麻烦. cvxpy 封装了cvxopt，可以自动把问题转化为标准形式，并根据定义的问题，调用相应的解法器，与 matlab 中的 cvx toolbox 相似，但是速度更慢。
+
+
+\section{参数估计}
+在第\ref{section:kuangjia}节中介绍组合优化的一般框架时， 我们假设模型的输入变量： 预期收益率 $x$ 和协方差矩阵$\Sigma$ 都是确定值， 但实际操作中， 这些值只能基于历史数据去估算， 有很大的估计误差，而组合优化结果对这些误差十分敏感。 要想该井组合提高预期收益率和协方差矩阵的估计。 类似 BARRA 的因子结构化风险模型可以有效降低估计误差，具备很强的实用价值，也是业界目前使用最广的风险模型。
+
+\textbf{结构化风险因子模型}利用一组共同因子和一个仅有与该股票有关的特质因子解释股票的收益率， 并利用共同因子和特质因子的波动率来解释股票收益率的波动。 结构化多因子风险模型的优势在于，通过识别重要的因子，可以降低问题的规模，只要因子的个数不变，即使股票组合的数量发生变化， 处理问题的复杂度也不会发生变化。
+
+结构化多因子风险模型首先对收益率进行简单的线性分解， 分解方程中包含四个组成部分： 股票收益率， 因子暴露， 因子收益率和特质因子收益率。 第 $j$ 只股票的线性分解如下：
+\begin{equation}
+r_j=x_1f_1+x_2f_2+x_3f_3+x_4f_4+\cdots+x_Kf_K+\mu_j
+\end{equation}
+其中， $r_j$ 表示第$j$只股票的收益率； $x_k$表示第$j$只股票在第$k$ 个因子上的暴露（也称因子载荷）； $f_k$ 表示第 $j$ 只股票第 $k$ 各因子的因子收益率(即每单位因子暴露所承载的收益率)； $\mu_j$ 表示第 $j$ 只股票的特质因子收益率。
+
+那么对于一个包含 N 只股票的投资组合， 假设该组合的权重为  $w=(w_1,w_2,\ldots,w_N)^\prime$， 那么组合收益率可以表示为：
+\begin{equation}
+R_p=\sum_{j=1}^{N}w_n(\sum_{k=1}^{K}x_{jk}f_{jk}+\mu_j)
+\end{equation}
+假设每只股票的特质因子收益率与共同因子收益率不想管， 并且每只股票的特质因子收益率也不相关。那么组合的风险结构为
+\begin{equation}
+\sigma_p^2=w^\prime(XFX^\prime+\Delta)w
+\end{equation}
+其中，$X$ 表示 $N$ 只个股在 $K$ 个风险因子上的因子载荷矩阵($N \times K$):
+\begin{equation}
+	X=\begin{bmatrix}
+	x_{1,1} & \cdots & x_{1,K}\\
+	\vdots & \ddots & \vdots\\
+	x_{N,1} & \cdots & x_{N,K}
+	\end{bmatrix}
+\end{equation}
+$F$ 表示 $K$ 个因子的因子收益率协方差矩阵($K \times K$):
+\begin{equation}
+F=\begin{bmatrix}
+Var(f_1) & \cdots & Cov(f_1,f_K)\\
+\cdots & \ddots & \cdots\\
+Cov(f_K,f_1) & \cdots & Var(f_K)
+\end{bmatrix}
+\end{equation}
+$\Delta$ 表示$N$ 只股票的特质因子收益率协方差矩阵($N \times N$):
+\begin{equation}
+\Delta=\begin{bmatrix}
+Var(\mu_1) & 0 & \cdots &0\\
+0 &Var(\mu_2)& \cdots & 0\\
+\cdots & \cdots &\ddots & \cdots\\
+0 & 0 & \cdots & Var(\mu_N)
+\end{bmatrix}
+\end{equation}
+由于我们假设每只股票的特质因子收益率相关性为0， 因此 $\Delta$ 为对角矩阵。
+在组合充分分散或者股票个股风险有限的假设下，组合的风险等于组合的因子风险：
+\begin{equation}
+\sigma_p^2 \approx w^\prime X F X^\prime w
+\end{equation}
+股票在各个因子上都有已知的风险暴露 $F_t$（因子值）， 若组合个股权重为 $w$,那么组合相对于基准的风格偏离为：
+\begin{equation}
+F_{p,t}=(w^\prime-w_b^\prime) F_t
+\end{equation}
+
+%因子的风险贡献度可以表示为：
+%\begin{equation}
+%RC=\frac{Xw}{\sigma_p}\cdot\frac{\partial \sigma_p}{\partial X} \approx \frac{X \circ (F	 X)}{X^\prime \Sigma X} \
+%\end{equation}
+
+\section{优化问题举例}
+\subsection{最大化预期收益组合的优化问题}
+作为对比，首先构建一种无特殊风险约束的多因子组合---最大化预期收益组合。
+组合的预期收益为：
+\begin{equation}
+E(r_{t+1})=w^\prime \mu=w^\prime X E(f_{t+1})
+\end{equation}
+最大化一起收益组合的目标函数为组合收益率，这里，为了简化计算以因子的历史收益均值作为下一期因子收益率的预期：
+\begin{equation}
+max_w\quad w^\prime \mu
+\end{equation}
+组合构建中常见的约束条件包括： 组合约束（个股权重之和等于1）； 做空限制（个股权重大于等于0），权重上限（例如，个股权重不超过1\%)等：
+\begin{equation}
+s.t. \quad w^\prime e=1, 0\le w \le 1\%
+\end{equation}
+结果见图 \ref{fig:figs0}。
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{backtest_0}
+		\caption{对冲收益}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{style_deviation_0}
+		\caption{风格偏离}
+	\end{subfigure}
+	\caption{最大化预期收益}
+	\label{fig:figs0}
+\end{figure}
+
+
+\subsection{约束组合跟踪误差}
+组合相对于业绩基准的主动管理风险可以用跟踪误差衡量。 为了降低组合风险，可以添加约束条件，约束组合相对于基准的跟踪误差。
+
+假设组合的主动管理风险约等于组合的因子风险， 组合的目标跟踪误差为$\sigma_0$, 那么对应的约束条件则可以表示为：
+\begin{equation}
+(w-w_b)^\prime(F\Sigma F)(w-w_b)\le \sigma_0^2
+\end{equation}
+分别设定$\sigma_0=0.05$ 和 0.03， 回测结果见图 \ref{fig:figs1} 和图 \ref{fig:figs2}。
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{backtest_1}
+		\caption{对冲收益}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{style_deviation_1}
+		\caption{风格偏离}
+	\end{subfigure}
+	\caption{约束跟踪误差$\sigma_0=0.05$}
+	\label{fig:figs1}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{backtest_2}
+		\caption{对冲收益}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{style_deviation_2}
+		\caption{风格偏离}
+	\end{subfigure}
+	\caption{约束跟踪误差$\sigma_0=0.03$}
+	\label{fig:figs2}
+\end{figure}
+
+\subsection{控制组合风格偏离}
+对于多因子而言， 风格偏离是主动管理风险的主要来源。 约束跟踪误差将组合主动管理风险当作一个整体进行管理， 达到间接约束组合风格偏离的目的。 同样地， 也可以直接对组合风格偏离进行控制。
+
+组合的风格偏离等于组合相对基准的个股权重偏离乘以个股的风险暴露：
+\begin{equation}
+F_A=w_A^\prime F
+\end{equation}
+通过设置$F_A$的上下界， 达到约束组合风格偏离的目的：
+\begin{equation}
+l\le F_A \le \mu
+\end{equation}
+我们将前中文的组合跟踪误差约束替换为风格偏离的约束：
+\begin{equation}
+|w_A^\prime F|\le x
+\end{equation}
+分别令$x=0.5$ 与 1, 结果见图 \ref{fig:figs3} 和图 \ref{fig:figs4}。
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{backtest_3}
+		\caption{对冲收益}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{style_deviation_3}
+		\caption{风格偏离}
+	\end{subfigure}
+	\caption{控制风格偏离$x=1$}
+	\label{fig:figs3}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{backtest_4}
+		\caption{对冲收益}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{style_deviation_4}
+		\caption{风格偏离}
+	\end{subfigure}
+	\caption{控制风格偏离$x=0.5$}
+	\label{fig:figs4}
+\end{figure}
+
+\subsection{匹配风险因子分布}
+无论是约束组合跟踪误差还是控制风格偏离， 都基于线性的因子模型。 如果股票收益率与因子之间的关系是非线性的， 简单地控制风格偏离未必能够有效控制因子风险。如果股票收益与因子之间地关系是非线性的， 即使相同风格偏离的组合，所对应的风险也可能是不同的。 而在实际情形中， 线性因子模型只是一种近似假设。 例如，市值的二次项就对于股票的收益有着显著的解释能力。 如果想要控制市值因子上的风险， 就需要同时控制市值与非线性市值的偏离。
+
+在线性模型假设下，具有相同因子暴露的组合也具有相同的风险， 因此只要控制组合因子的暴露就能控制对应的因子风险。 而在非线性假设下， 即使不知道股票收益与因子之间的具体关系， 只要组合的因子分布与基准的因子分布相匹配，也能有效控制风险。
+
+按总市值将全市场均匀分为 10 组，计算中证 500 指数在各市值分组的权重，以近似指数成分股的市值分布。为了更好地控制组合的市值因子风险， 尽可能匹配选股组合与业绩基准的市值分布，也就是所谓的“市值中性”。 假设基准市值分组$D$的权重为$w_D$， 那么组合在该分组的权重也应为$w_D$:
+\begin{equation}
+w_A^\prime I_{\{i\in D\}}=0
+\end{equation}
+类似的，对于“行业中性”，可以将行业$0-1$ 虚拟变量作为组合中的风险因子。 若基准对应的行业权重为$w_I$， 那么组合在该行业的因子暴露也应为$w_I$。 行业中性对应的约束条件为：
+\begin{equation}
+w_A^\prime I_{\{i\in I\}}=0
+\end{equation}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{backtest_5}
+		\caption{对冲收益}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{style_deviation_5}
+		\caption{风格偏离}
+	\end{subfigure}
+	\caption{匹配风险因子分布}
+	\label{fig:figs5}
+\end{figure}
+
+\subsection{几种风险管理方法的比较}
+上述四种类型的组合，从“无因子风险管理”，“因子风险整体管理”，“管理因子偏离的均值", 到”管理因子偏离的分布”， 在因子风险管理方面愈发严格。而在降低了收益模型中因子的暴露后，组合的超额收益也随之降低。此外，通过风险管理，投资者可以将组合的预期超额收益的波动控制在目标范围内， 至于超额收益的方向， 更多的还是依赖于alpha模型的搭建。
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{pnl}
+		\caption{对冲收益}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{style_deviation}
+		\caption{风格偏离}
+	\end{subfigure}
+	\caption{各种约束方式对比}
+	\label{fig:figs6}
+\end{figure}
+
+\newpage
+\bibliography{bib1}
+\end{document}

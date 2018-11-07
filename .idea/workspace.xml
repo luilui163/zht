@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/projects/portfolio_optimization/portfolio_optimization_ppt.py" line="340" mnemonic="1" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="update">
       <change afterPath="$PROJECT_DIR$/internship/FT/server/xiangqi/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/financial_engineering/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/financial_engineering/option pricing with monte-carlo simulation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/financial_engineering/option_pricing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmp/golden.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/portfolio_optimization/portfolio_optimization_ppt.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internship/FT/.idea/FT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/internship/FT/.idea/FT.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internship/FT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/internship/FT/.idea/workspace.xml" afterDir="false" />
@@ -19,9 +19,6 @@
       <change beforePath="$PROJECT_DIR$/projects/Coursera-Asset-Pricing" beforeDir="false" afterPath="$PROJECT_DIR$/projects/Coursera-Asset-Pricing" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/Python-Financial-Tools" beforeDir="false" afterPath="$PROJECT_DIR$/projects/Python-Financial-Tools" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/financial text analyse/document_cluster" beforeDir="false" afterPath="$PROJECT_DIR$/projects/financial text analyse/document_cluster" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/portfolio_optimization/HaiTong_hp_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/portfolio_optimization/portfolio_optimization.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xed/xed/38Z9QERS.xmind" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/xed/xed/Allen et al- 2018- Dissecting the Long-Term Performance of the Chinese Stock Market.xmind" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/xed/xed/Artmann et al- 2012- The Cross-Section of German Stock Returns - New Data and New Evidence.xmind" beforeDir="false" />
@@ -204,14 +201,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="portfolio_optimization.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="portfolio_optimization.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projects/portfolio_optimization/portfolio_optimization.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="524" lean-forward="true" selection-start-line="524" selection-end-line="524" />
-              <folding>
-                <element signature="e#141#163#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="259">
+              <caret line="201" selection-start-line="201" selection-end-line="201" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="portfolio_optimization_ppt.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/projects/portfolio_optimization/portfolio_optimization_ppt.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1095">
+              <caret line="451" lean-forward="true" selection-start-line="451" selection-end-line="451" />
             </state>
           </provider>
         </entry>
@@ -280,7 +283,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_zht/example_parse.py" />
         <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_zht/example_create.py" />
         <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_zht/document.py" />
         <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/split2.py" />
@@ -331,6 +333,7 @@
         <option value="$PROJECT_DIR$/projects/portfolio_optimization/HaiTong_hp_new.py" />
         <option value="$USER_HOME$/Documents/WeChat Files/tyhj986340770/Files/scrape5.py" />
         <option value="$PROJECT_DIR$/projects/portfolio_optimization/portfolio_optimization.py" />
+        <option value="$PROJECT_DIR$/projects/portfolio_optimization/portfolio_optimization_ppt.py" />
       </list>
     </option>
   </component>
@@ -344,10 +347,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1060" />
+    <option name="x" value="-2498" />
+    <option name="y" value="-23" />
+    <option name="width" value="1920" />
+    <option name="height" value="1043" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -375,6 +378,45 @@
               <item name="projects" type="462c0819:PsiDirectoryNode" />
               <item name="portfolio_optimization" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="python36" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="python36" type="462c0819:PsiDirectoryNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="python36" type="462c0819:PsiDirectoryNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zht" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="python36" type="462c0819:PsiDirectoryNode" />
+              <item name="zht" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
+              <item name="portfolio_optimization" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -398,6 +440,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\app\python36\zht\projects\portfolio_optimization" />
       <recent name="D:\app\python36\zht\projects\zotero_xmind_pdf\mekk_zht" />
       <recent name="D:\app\python36\zht" />
       <recent name="D:\app\python36\zht\notebook" />
@@ -549,13 +592,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1518332427077</updated>
-    </task>
-    <task id="LOCAL-00002" summary="create python36_zht">
-      <created>1520857970713</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1520857970713</updated>
     </task>
     <task id="LOCAL-00003" summary="add a new function to a.py">
       <created>1520858439407</created>
@@ -893,7 +929,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540315795020</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="update">
+      <created>1541585162565</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1541585162566</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TodoView">
@@ -906,8 +949,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1927" y="-7" width="1550" height="848" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3272472" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.31879196" side_tool="true" weight="0.48174158" />
@@ -1012,7 +1054,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="297" />
+      <option name="time" value="304" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -1072,13 +1114,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/projects/python_chen/task1-trading_system.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="112" column="16" lean-forward="true" selection-start-line="112" selection-start-column="16" selection-end-line="112" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Lib/site-packages/numpy/core/_methods.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
@@ -1329,6 +1364,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
           <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
+          <folding>
+            <element signature="e#168#186#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1426,11 +1464,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projects/portfolio_optimization/portfolio_optimization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="524" lean-forward="true" selection-start-line="524" selection-end-line="524" />
-          <folding>
-            <element signature="e#141#163#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="259">
+          <caret line="201" selection-start-line="201" selection-end-line="201" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/portfolio_optimization/portfolio_optimization_ppt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="451" lean-forward="true" selection-start-line="451" selection-end-line="451" />
         </state>
       </provider>
     </entry>
