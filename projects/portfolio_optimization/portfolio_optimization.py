@@ -3,7 +3,6 @@
 # Author:Zhang Haitao
 # Email:13163385579@163.com
 # TIME:2018-08-19  10:41
-# NAME:zht-HaiTong_hp_new.py
 
 import multiprocessing
 import pickle
@@ -70,7 +69,7 @@ risk_active: 1 x 1, active risk,
 #     triangular Choelsky factor of E such that C.T @ C = E
 
 '''
-
+#fixme: RC seems to be wrong!
 
 DIR=r'D:\zht\database\quantDb\projects\portfolio_optimization\haitong'
 DIR_RAW=os.path.join(DIR,'raw_data')
@@ -87,7 +86,6 @@ def multi_task(func, args_iter, n=8):
     pool.join()
     #refer to https://stackoverflow.com/questions/38271547/when-should-we-call-multiprocessing-pool-join
     return results
-
 
 def outlier(s, k=4.5):
     '''
@@ -108,7 +106,6 @@ def outlier(s, k=4.5):
 def z_score(x):
     return (x - np.mean(x)) / np.std(x)
 
-
 def clean_raw_factors():
     for factor in FACTORS:
         s=pd.read_pickle(os.path.join(DIR_RAW,factor+'.pkl')).stack().swaplevel()
@@ -127,6 +124,11 @@ def clean_raw_factors():
         print(factor)
 
 def get_factor_loading():
+    '''
+    factor loading is z_scored indicator
+
+    :return:
+    '''
     ss=[]
     for factor in FACTORS:
         if factor =='cumRet':
@@ -148,6 +150,19 @@ def reg(df):
     return r
 
 def get_realized_factor_return():
+    '''
+    cross sectional regression: regress the return of time t on the factor loadings from time t-1.
+    This method is different with 'pure factor' of BARRA model. In this function we regress the return
+    run a multiple linear regression and the slopes are the factor returns. For BARRA model, we obtain
+    the "pure factor" return by controlling the the risk exposure on all the other controlling factors.
+    Refer to BARRA or 27_20150427-国泰君安-国泰君安数量化专题之五十七：基于组合权重优化的风格中性多因子选股策略-099750 .pdf
+    for details about BARRA model.
+
+    For each time t, we run a cross sectional regression to get factor returns of the corresponding month.
+    With groupby('month_end') we get the time series of the factor returns.
+
+    :return:
+    '''
     factor_loading=pd.read_pickle(os.path.join(DIR_TMP,'factor_loading.pkl'))
     comb = factor_loading.groupby('stkcd').shift(1) # trick: regress the return at time t on factor_loading at time t-1
     ret = pd.read_pickle(os.path.join(DIR_RAW, 'ret.pkl')).stack()
@@ -160,6 +175,11 @@ def get_realized_factor_return():
     realized_factor_return.to_pickle(os.path.join(DIR_TMP,'realized_factor_return.pkl'))
 
 def get_predicted_factor_return():
+    '''
+    We treat history average factor returns as the predicted factor returns.
+
+    :return:
+    '''
     factor_return=pd.read_pickle(os.path.join(DIR_TMP,'realized_factor_return.pkl'))
     predicted=factor_return.rolling(WINDOW_HISTORY).mean().shift(1)# trick:use the indicator of time t-1 to regress on return of time t
     predicted.to_pickle(os.path.join(DIR_TMP,'predicted_factor_return.pkl'))
@@ -170,7 +190,7 @@ def get_predicted_factor_return():
 
 def get_zz500_weight():
     indexweight=pd.read_csv(os.path.join(DIR_RAW,'aindexhs300freeweight.csv'),names=['id','s_info_windcode','s_con_windcode','trade_dt','i_weight','opdate','opmode'])
-    indexweight['s_info_windcode'].value_counts()
+    # indexweight['s_info_windcode'].value_counts()
     weight_zz500=indexweight[indexweight['s_info_windcode']=='000905.SH']
     weight_zz500['trade_dt']=pd.to_datetime(weight_zz500['trade_dt'].astype(str))
     con_weight=pd.pivot_table(weight_zz500,'i_weight','trade_dt','s_con_windcode')
@@ -497,8 +517,8 @@ def summarize():
     sp.to_csv(os.path.join(DIR_RESULT,'style_exposure.csv'),encoding='gbk')
 
 
-# if __name__ == '__main__':
-#     for mode in range(6):
-#         run(mode)
-summarize()
+if __name__ == '__main__':
+    for mode in range(6):
+        run(mode)
+    summarize()
 

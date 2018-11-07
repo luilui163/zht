@@ -386,8 +386,8 @@ def identify_based_on_textbox():
 
 
 
-if __name__ == '__main__':
-    identify_based_on_textbox()
+# if __name__ == '__main__':
+#     identify_based_on_textbox()
 
 
 
@@ -405,26 +405,27 @@ DEBUG=0
 def task(path):
     AddBookmarks(path)
 
-# if __name__ == '__main__':
-#     if DEBUG:
-#         debug()
-#     else:
-#         directory=r'E:\a\test_pdfminer'
-#         fns=os.listdir(directory)
-#         fns=[fn for fn in fns if fn.endswith('.pdf')]
-#
-#         paths=[]
-#         for fn in fns:
-#             path=os.path.join(directory,fn)
-#             paths.append(path)
-#
-#         from zht.tools import multi_process
-#
-#         multi_process(task,paths,n=6)
+if __name__ == '__main__':
+    if DEBUG:
+        debug()
+    else:
+        directory=r'E:\a\test_pdfminer'
+        fns=os.listdir(directory)
+        fns=[fn for fn in fns if fn.endswith('.pdf')]
+
+        paths=[]
+        for fn in fns:
+            path=os.path.join(directory,fn)
+            paths.append(path)
+
+        from zht.tools import multi_process
+
+        multi_process(task,paths,n=6)
 
 
 
 
 #TODO: if there is any bookmarks, skip the item
 #TODO: multi_process
+#TODO: we can also think about create a parser for each type of journal
 

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="">
+    <list default="true" id="00d9242a-ef82-4b95-92b7-4db7c70f9606" name="Default" comment="update">
       <change afterPath="$PROJECT_DIR$/internship/FT/server/xiangqi/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/financial_engineering/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/financial_engineering/option pricing with monte-carlo simulation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/financial_engineering/option_pricing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/golden.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internship/FT/.idea/FT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/internship/FT/.idea/FT.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internship/FT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/internship/FT/.idea/workspace.xml" afterDir="false" />
@@ -15,6 +19,8 @@
       <change beforePath="$PROJECT_DIR$/projects/Coursera-Asset-Pricing" beforeDir="false" afterPath="$PROJECT_DIR$/projects/Coursera-Asset-Pricing" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/Python-Financial-Tools" beforeDir="false" afterPath="$PROJECT_DIR$/projects/Python-Financial-Tools" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/financial text analyse/document_cluster" beforeDir="false" afterPath="$PROJECT_DIR$/projects/financial text analyse/document_cluster" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/portfolio_optimization/HaiTong_hp_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/portfolio_optimization/portfolio_optimization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xed/xed/38Z9QERS.xmind" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/xed/xed/Allen et al- 2018- Dissecting the Long-Term Performance of the Chinese Stock Market.xmind" beforeDir="false" />
@@ -148,80 +154,64 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/zht$base_on_zotfile.coverage" NAME="base_on_zotfile Coverage Results" MODIFIED="1530537669140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
     <SUITE FILE_PATH="coverage/zht$a__1_.coverage" NAME="a (1) Coverage Results" MODIFIED="1538736250296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
-    <SUITE FILE_PATH="coverage/zht$base_on_foxit.coverage" NAME="base_on_foxit Coverage Results" MODIFIED="1533967202909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
     <SUITE FILE_PATH="coverage/zht$add_tags.coverage" NAME="add_tags Coverage Results" MODIFIED="1533019195860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
+    <SUITE FILE_PATH="coverage/zht$task3.coverage" NAME="task3 Coverage Results" MODIFIED="1540261189523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/python_chen" />
+    <SUITE FILE_PATH="coverage/zht$split.coverage" NAME="split Coverage Results" MODIFIED="1532013942777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
+    <SUITE FILE_PATH="coverage/zht$build_corpus.coverage" NAME="build_corpus Coverage Results" MODIFIED="1529542778002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/financial text analyse/text_analysis" />
+    <SUITE FILE_PATH="coverage/zht$update_financial_data.coverage" NAME="update_financial_data Coverage Results" MODIFIED="1538055333859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data/wind" />
+    <SUITE FILE_PATH="coverage/zht$debug_dumppdf.coverage" NAME="debug_dumppdf Coverage Results" MODIFIED="1539965145019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
+    <SUITE FILE_PATH="coverage/zht$option_pricing_with_monte_carlo_simulation.coverage" NAME="option pricing with monte-carlo simulation Coverage Results" MODIFIED="1540736967205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/financial_engineering" />
+    <SUITE FILE_PATH="coverage/zht$Unnamed.coverage" NAME="debug_pdf2txt Coverage Results" MODIFIED="1540019554827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Scripts" />
+    <SUITE FILE_PATH="coverage/zht$annotation_to_xmind.coverage" NAME="annotation_to_xmind Coverage Results" MODIFIED="1539957415961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
+    <SUITE FILE_PATH="coverage/zht$find_n_closest_sentences.coverage" NAME="find_n_closest_sentences Coverage Results" MODIFIED="1529656390782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/financial text analyse/text_analysis" />
+    <SUITE FILE_PATH="coverage/zht$notes2xmind.coverage" NAME="notes2xmind Coverage Results" MODIFIED="1530522362311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero" />
+    <SUITE FILE_PATH="coverage/zht$A_standard_frame_of_crawler.coverage" NAME="A standard frame of crawler Coverage Results" MODIFIED="1524916889508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/crawler" />
+    <SUITE FILE_PATH="coverage/zht$by_parse_xfdf.coverage" NAME="by_parse_xfdf Coverage Results" MODIFIED="1534050425912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
+    <SUITE FILE_PATH="coverage/zht$test_xmind_36.coverage" NAME="test_xmind_36 Coverage Results" MODIFIED="1537356622352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/xmind" />
+    <SUITE FILE_PATH="coverage/zht$parse_toc.coverage" NAME="parse_toc Coverage Results" MODIFIED="1540640818520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
+    <SUITE FILE_PATH="coverage/zht$analyze_tags.coverage" NAME="analyze_tags Coverage Results" MODIFIED="1530332940031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero" />
+    <SUITE FILE_PATH="coverage/zht$task2_groupby.coverage" NAME="task2-groupby Coverage Results" MODIFIED="1537843235260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/python_chen" />
+    <SUITE FILE_PATH="coverage/zht$3.coverage" NAME="3 Coverage Results" MODIFIED="1537965398728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/python_chen" />
+    <SUITE FILE_PATH="coverage/zht$test_xmind.coverage" NAME="test_xmind Coverage Results" MODIFIED="1530452527327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/xmind" />
+    <SUITE FILE_PATH="coverage/zht$base_on_foxit.coverage" NAME="base_on_foxit Coverage Results" MODIFIED="1533967202909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
     <SUITE FILE_PATH="coverage/zht$download_doi.coverage" NAME="download_doi Coverage Results" MODIFIED="1529308393689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/DOI" />
     <SUITE FILE_PATH="coverage/zht$wind_api.coverage" NAME="wind_api Coverage Results" MODIFIED="1534835555719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data/wind" />
     <SUITE FILE_PATH="coverage/zht$by_pdfrw.coverage" NAME="by_pdfrw Coverage Results" MODIFIED="1539962777282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf/merge_pdf" />
     <SUITE FILE_PATH="coverage/zht$parse_JEL.coverage" NAME="parse_JEL Coverage Results" MODIFIED="1524662815496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/playingField" />
     <SUITE FILE_PATH="coverage/zht$HaiTong_hp_new.coverage" NAME="HaiTong_hp_new Coverage Results" MODIFIED="1534767056650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tmp" />
-    <SUITE FILE_PATH="coverage/zht$task3.coverage" NAME="task3 Coverage Results" MODIFIED="1540261189523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/python_chen" />
-    <SUITE FILE_PATH="coverage/zht$split.coverage" NAME="split Coverage Results" MODIFIED="1532013942777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
     <SUITE FILE_PATH="coverage/zht$example_create.coverage" NAME="example_create Coverage Results" MODIFIED="1537356893646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_zht" />
-    <SUITE FILE_PATH="coverage/zht$build_corpus.coverage" NAME="build_corpus Coverage Results" MODIFIED="1529542778002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/financial text analyse/text_analysis" />
     <SUITE FILE_PATH="coverage/zht$merge_pdf.coverage" NAME="merge_pdf Coverage Results" MODIFIED="1536503889198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf/merge_pdf" />
-    <SUITE FILE_PATH="coverage/zht$update_financial_data.coverage" NAME="update_financial_data Coverage Results" MODIFIED="1538055333859" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data/wind" />
-    <SUITE FILE_PATH="coverage/zht$debug_dumppdf.coverage" NAME="debug_dumppdf Coverage Results" MODIFIED="1539965145019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
     <SUITE FILE_PATH="coverage/zht$backup.coverage" NAME="backup Coverage Results" MODIFIED="1533717891623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/zht$zht_search_sentence.coverage" NAME="zht_search_sentence Coverage Results" MODIFIED="1529716665035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/financial text analyse/text_analysis" />
     <SUITE FILE_PATH="coverage/zht$zotero.coverage" NAME="zotero Coverage Results" MODIFIED="1530147632499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Lib/site-packages/pyzotero" />
     <SUITE FILE_PATH="coverage/zht$kogan_part2_new_hp.coverage" NAME="kogan_part2_new_hp Coverage Results" MODIFIED="1535013072116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tmp" />
-    <SUITE FILE_PATH="coverage/zht$Unnamed.coverage" NAME="debug_pdf2txt Coverage Results" MODIFIED="1540019554827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Scripts" />
     <SUITE FILE_PATH="coverage/zht$split2.coverage" NAME="split2 Coverage Results" MODIFIED="1532317018654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
     <SUITE FILE_PATH="coverage/zht$dumppdf.coverage" NAME="dumppdf Coverage Results" MODIFIED="1539959571867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Scripts" />
     <SUITE FILE_PATH="coverage/zht$document.coverage" NAME="document Coverage Results" MODIFIED="1530886344115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Lib/site-packages/mekk/xmind" />
-    <SUITE FILE_PATH="coverage/zht$annotation_to_xmind.coverage" NAME="annotation_to_xmind Coverage Results" MODIFIED="1539957415961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
     <SUITE FILE_PATH="coverage/zht$debug_pdf2txt.coverage" NAME="debug_pdf2txt Coverage Results" MODIFIED="1539960169733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
     <SUITE FILE_PATH="coverage/zht$test.coverage" NAME="test Coverage Results" MODIFIED="1525920340461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_python/pandas_profiling" />
-    <SUITE FILE_PATH="coverage/zht$find_n_closest_sentences.coverage" NAME="find_n_closest_sentences Coverage Results" MODIFIED="1529656390782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/financial text analyse/text_analysis" />
-    <SUITE FILE_PATH="coverage/zht$notes2xmind.coverage" NAME="notes2xmind Coverage Results" MODIFIED="1530522362311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero" />
+    <SUITE FILE_PATH="coverage/zht$scrape5.coverage" NAME="scrape5 Coverage Results" MODIFIED="1541519367129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Documents/WeChat Files/tyhj986340770/Files" />
     <SUITE FILE_PATH="coverage/zht$task1_trading_system.coverage" NAME="task1-trading_system Coverage Results" MODIFIED="1537353257632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/python_chen" />
     <SUITE FILE_PATH="coverage/zht$HaiTong_hp.coverage" NAME="HaiTong_hp Coverage Results" MODIFIED="1534586424183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tmp" />
-    <SUITE FILE_PATH="coverage/zht$A_standard_frame_of_crawler.coverage" NAME="A standard frame of crawler Coverage Results" MODIFIED="1524916889508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/crawler" />
-    <SUITE FILE_PATH="coverage/zht$by_parse_xfdf.coverage" NAME="by_parse_xfdf Coverage Results" MODIFIED="1534050425912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
     <SUITE FILE_PATH="coverage/zht$1.coverage" NAME="1 Coverage Results" MODIFIED="1536752734145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/python_chen" />
     <SUITE FILE_PATH="coverage/zht$mekk_xmind.coverage" NAME="mekk_xmind Coverage Results" MODIFIED="1531453244605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
-    <SUITE FILE_PATH="coverage/zht$test_xmind_36.coverage" NAME="test_xmind_36 Coverage Results" MODIFIED="1537356622352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/xmind" />
-    <SUITE FILE_PATH="coverage/zht$parse_toc.coverage" NAME="parse_toc Coverage Results" MODIFIED="1540315451430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
     <SUITE FILE_PATH="coverage/zht$Natural_language_processing_with_python.coverage" NAME="Natural language processing with python Coverage Results" MODIFIED="1529324803108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/learning_python/NLTK" />
-    <SUITE FILE_PATH="coverage/zht$analyze_tags.coverage" NAME="analyze_tags Coverage Results" MODIFIED="1530332940031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero" />
     <SUITE FILE_PATH="coverage/zht$build_copora.coverage" NAME="build_copora Coverage Results" MODIFIED="1529718303654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/financial text analyse/text_analysis/zht_search_engine" />
-    <SUITE FILE_PATH="coverage/zht$task2_groupby.coverage" NAME="task2-groupby Coverage Results" MODIFIED="1537843235260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/python_chen" />
     <SUITE FILE_PATH="coverage/zht$a.coverage" NAME="a Coverage Results" MODIFIED="1537421226962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/zht$3.coverage" NAME="3 Coverage Results" MODIFIED="1537965398728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/python_chen" />
     <SUITE FILE_PATH="coverage/zht$download.coverage" NAME="download Coverage Results" MODIFIED="1532655467614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/download_youtube" />
     <SUITE FILE_PATH="coverage/zht$xmind.coverage" NAME="xmind Coverage Results" MODIFIED="1530451529960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/xmind" />
-    <SUITE FILE_PATH="coverage/zht$test_xmind.coverage" NAME="test_xmind Coverage Results" MODIFIED="1530452527327" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/xmind" />
     <SUITE FILE_PATH="coverage/zht$debug_pdf2txt__1_.coverage" NAME="debug_pdf2txt (1) Coverage Results" MODIFIED="1539961083384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/projects/zotero_xmind_pdf" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="annotation_to_xmind.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py">
+      <file leaf-file-name="portfolio_optimization.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/projects/portfolio_optimization/portfolio_optimization.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="69" column="40" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
+            <state relative-caret-position="536">
+              <caret line="524" lean-forward="true" selection-start-line="524" selection-end-line="524" />
               <folding>
-                <element signature="e#146#155#0" expanded="true" />
+                <element signature="e#141#163#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parse_toc.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="359" column="40" selection-start-line="359" selection-start-column="40" selection-end-line="359" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="frame.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Lib/site-packages/pandas/core/frame.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="386" selection-start-line="386" selection-end-line="386" />
             </state>
           </provider>
         </entry>
@@ -237,8 +227,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>print</find>
-      <find>results</find>
       <find>famaMacBeth</find>
       <find>indname</find>
       <find>corr</find>
@@ -267,11 +255,14 @@
       <find>trading_d</find>
       <find>info.pkl</find>
       <find>generator_financial_indicators</find>
+      <find>xrange</find>
+      <find>realized_factor_return.pkl</find>
     </findStrings>
     <replaceStrings>
       <replace>strikout</replace>
       <replace>None</replace>
       <replace>factor</replace>
+      <replace>range</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\app\python36\zht\py27\zht\quantitative\internship\cj</dir>
@@ -289,12 +280,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Lib/site-packages/mekk/xmind/xmlutil.py" />
-        <option value="$PROJECT_DIR$/../Lib/site-packages/mekk/xmind/document.py" />
-        <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_zht/__init__.py" />
-        <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_xmind.py" />
-        <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/split.py" />
-        <option value="$PROJECT_DIR$/utils/dfu.py" />
         <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_zht/example_parse.py" />
         <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_zht/example_create.py" />
         <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_zht/document.py" />
@@ -319,7 +304,6 @@
         <option value="$PROJECT_DIR$/tmp/HaiTong_hp_new.py" />
         <option value="$PROJECT_DIR$/data/wind/wind_hp.py" />
         <option value="$PROJECT_DIR$/researchTopics/assetPricing2/core/main.py" />
-        <option value="$PROJECT_DIR$/projects/portfolio_optimization/HaiTong_hp_new.py" />
         <option value="$PROJECT_DIR$/projects/python_chen/1.py" />
         <option value="$PROJECT_DIR$/projects/python_chen/task1-trading_system.py" />
         <option value="$PROJECT_DIR$/projects/python_chen/2.py" />
@@ -335,11 +319,18 @@
         <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/merge_pdf/merge_pdf.py" />
         <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/test_pdfrw/a.py" />
         <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/pdftitle.py" />
-        <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py" />
         <option value="$PROJECT_DIR$/../Lib/site-packages/PyPDF2/pdf.py" />
         <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/a.py" />
         <option value="$PROJECT_DIR$/projects/python_chen/task3.py" />
+        <option value="$PROJECT_DIR$/tmp/golden.py" />
         <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py" />
+        <option value="$PROJECT_DIR$/projects/financial_engineering/option_pricing.py" />
+        <option value="$PROJECT_DIR$/projects/financial_engineering/option pricing with monte-carlo simulation.py" />
+        <option value="$PROJECT_DIR$/researchTopics/assetPricing2/used_outside_project/get_all_financial_indicators.py" />
+        <option value="$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py" />
+        <option value="$PROJECT_DIR$/projects/portfolio_optimization/HaiTong_hp_new.py" />
+        <option value="$USER_HOME$/Documents/WeChat Files/tyhj986340770/Files/scrape5.py" />
+        <option value="$PROJECT_DIR$/projects/portfolio_optimization/portfolio_optimization.py" />
       </list>
     </option>
   </component>
@@ -353,10 +344,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-70" />
-    <option name="y" value="-19" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
     <option name="width" value="1938" />
-    <option name="height" value="1068" />
+    <option name="height" value="1060" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -366,7 +357,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -383,19 +373,20 @@
               <item name="zht" type="b2602c69:ProjectViewProjectNode" />
               <item name="zht" type="462c0819:PsiDirectoryNode" />
               <item name="projects" type="462c0819:PsiDirectoryNode" />
-              <item name="python_chen" type="462c0819:PsiDirectoryNode" />
+              <item name="portfolio_optimization" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/app/python36/zht/a.py&#10;famaMacBeth&#9;null&#9;null&#10;GRS_test&#9;null&#9;null&#10;tostring&#9;null&#9;null&#10;request&#9;null&#9;null&#10;summary_statistics&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -413,11 +404,11 @@
       <recent name="D:\app\python36\zht\projects" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\app\python36\zht\researchTopics\assetPricing2\used_outside_project" />
+      <recent name="D:\app\python36\zht\researchTopics\assetPricing2" />
       <recent name="D:\app\python36\zht" />
       <recent name="D:\app\python36\zht\projects\portfolio_optimization" />
       <recent name="D:\app\python36\zht\projects\zotero_xmind_pdf\mekk_zht" />
-      <recent name="D:\app\python36\zht\projects\financial text analyse\zht_search_engine" />
-      <recent name="D:\app\python36\zht\projects\financial text analyse" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -432,7 +423,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.parse_toc">
+  <component name="RunManager" selected="Python.scrape5">
     <configuration name="debug_pdf2txt" type="PythonConfigurationType" factoryName="Python">
       <module name="zht" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -452,6 +443,25 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="option pricing with monte-carlo simulation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="zht" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/projects/financial_engineering" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projects/financial_engineering/option pricing with monte-carlo simulation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="parse_toc" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="zht" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -466,6 +476,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="scrape5" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="zht" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Documents/WeChat Files/tyhj986340770/Files" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Documents/WeChat Files/tyhj986340770/Files/scrape5.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -494,9 +523,13 @@
       <item itemvalue="Python.debug_pdf2txt" />
       <item itemvalue="Python.parse_toc" />
       <item itemvalue="Python.task3" />
+      <item itemvalue="Python.option pricing with monte-carlo simulation" />
+      <item itemvalue="Python.scrape5" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.scrape5" />
+        <item itemvalue="Python.option pricing with monte-carlo simulation" />
         <item itemvalue="Python.parse_toc" />
         <item itemvalue="Python.task3" />
       </list>
@@ -516,13 +549,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1518332427077</updated>
-    </task>
-    <task id="LOCAL-00001" summary="create python36_zht">
-      <created>1520857713057</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1520857713057</updated>
     </task>
     <task id="LOCAL-00002" summary="create python36_zht">
       <created>1520857970713</created>
@@ -860,7 +886,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540264916191</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="update">
+      <created>1540315795019</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1540315795020</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TodoView">
@@ -876,21 +909,21 @@
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3275862" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3272472" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.31879196" side_tool="true" weight="0.48174158" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.6812081" weight="0.35955057" />
-      <window_info anchor="right" id="Python Console" order="7" sideWeight="0.31601125" weight="0.2147651" />
-      <window_info anchor="right" id="Run" order="6" sideWeight="0.68398875" side_tool="true" weight="0.2147651" />
+      <window_info anchor="right" id="Python Console" order="7" sideWeight="0.58848315" weight="0.35033557" />
+      <window_info anchor="right" id="Run" order="6" sideWeight="0.375" side_tool="true" weight="0.39395973" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.7050562" weight="0.18398876" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.19731544" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14630872" />
       <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.44803372" />
-      <window_info active="true" anchor="right" id="SciView" order="5" sideWeight="0.5955056" side_tool="true" visible="true" weight="0.56845635" />
-      <window_info anchor="right" id="Structure" order="8" sideWeight="0.7050562" side_tool="true" weight="0.32080537" />
+      <window_info anchor="bottom" id="Find" order="7" weight="0.44662923" />
+      <window_info anchor="right" id="SciView" order="5" sideWeight="0.41011235" side_tool="true" weight="0.39395973" />
+      <window_info anchor="right" id="Structure" order="8" sideWeight="0.41151685" side_tool="true" weight="0.15369128" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info anchor="right" id="Debug" order="4" sideWeight="0.40449437" visible="true" weight="0.56845635" />
-      <window_info active="true" anchor="bottom" id="Concurrent Activities Diagram" order="8" weight="0.46923077" />
+      <window_info anchor="right" id="Debug" order="4" sideWeight="0.625" weight="0.51946306" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="10" sideWeight="0.5948276" side_tool="true" weight="0.5399787" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -899,7 +932,7 @@
       <window_info anchor="right" id="Database" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="1" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="10" sideWeight="0.5948276" side_tool="true" weight="0.5399787" />
+      <window_info active="true" anchor="bottom" id="Concurrent Activities Diagram" order="8" weight="0.46923077" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -979,7 +1012,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="294" />
+      <option name="time" value="297" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -1039,90 +1072,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/gta/parse_txt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/python_chen/2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/xmind/test_xmind_36.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-324">
-          <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/portfolio_optimization/HaiTong_hp_new.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="482" column="51" lean-forward="true" selection-start-line="482" selection-start-column="51" selection-end-line="482" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_zht/xmlutil.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_zht/example_create.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/mekk_zht/id_gen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects/python_chen/1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="357" column="14" selection-start-line="357" selection-start-column="14" selection-end-line="357" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/a.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="162" column="50" lean-forward="true" selection-start-line="162" selection-start-column="50" selection-end-line="162" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Lib/site-packages/WindPy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="819" column="48" lean-forward="true" selection-start-line="819" selection-start-column="48" selection-end-line="819" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Lib/calendar.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="122" selection-start-line="122" selection-end-line="122" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projects/python_chen/task1-trading_system.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -1362,27 +1311,126 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py">
+    <entry file="file://$PROJECT_DIR$/../Lib/site-packages/pandas/core/frame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="69" column="40" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
-          <folding>
-            <element signature="e#146#155#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="5624">
+          <caret line="386" selection-start-line="386" selection-end-line="386" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Lib/site-packages/pandas/core/frame.py">
+    <entry file="file://$PROJECT_DIR$/tmp/golden.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="386" selection-start-line="386" selection-end-line="386" />
+        <state relative-caret-position="1064">
+          <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/financial_engineering/option pricing with monte-carlo simulation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/parse_toc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="359" column="40" selection-start-line="359" selection-start-column="40" selection-end-line="359" selection-end-column="40" />
+        <state relative-caret-position="1923">
+          <caret line="419" lean-forward="true" selection-start-line="419" selection-end-line="419" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/researchTopics/assetPricing2/used_outside_project/data_for_fm_regression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/zotero_xmind_pdf/annotation_to_xmind.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="240" column="28" selection-start-line="240" selection-start-column="28" selection-end-line="240" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/financial_engineering/option_pricing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2659">
+          <caret line="314" column="37" selection-start-line="314" selection-start-column="37" selection-end-line="314" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/海通/code.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="226" column="55" lean-forward="true" selection-start-line="226" selection-start-column="55" selection-end-line="226" selection-end-column="81" />
+          <folding>
+            <element signature="e#141#163#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/Barra-Model/build factor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="651" column="60" lean-forward="true" selection-start-line="651" selection-start-column="60" selection-end-line="651" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/Barra-Model/prototype.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/Barra-Model/risk and regress.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="331" lean-forward="true" selection-start-line="331" selection-end-line="331" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/researchTopics/assetPricing2/used_outside_project/get_all_financial_indicators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-551">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#164#183#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/WeChat Files/tyhj986340770/Files/scrape5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#114#148#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Lib/site-packages/cvxpy/problems/problem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="210" column="9" selection-start-line="210" selection-start-column="9" selection-end-line="210" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/portfolio_optimization/portfolio_optimization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="524" lean-forward="true" selection-start-line="524" selection-end-line="524" />
+          <folding>
+            <element signature="e#141#163#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
